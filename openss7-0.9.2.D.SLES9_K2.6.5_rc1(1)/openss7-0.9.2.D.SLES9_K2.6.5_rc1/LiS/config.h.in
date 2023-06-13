@@ -1,0 +1,1186 @@
+/* config.h.in.  Generated from configure.ac by autoheader.  */
+
+/* Does what LIS_CONFIG_SAFE and SAFE used to. The name of this macro was a
+   spectacularly poor choice given that we are compiling kernel modules. */
+#undef CONFIG_DEV
+
+/* Define to one of `_getb67', `GETB67', `getb67' for Cray-2 and Cray-YMP
+   systems. This function is required for `alloca.c' support on those systems.
+   */
+#undef CRAY_STACKSEG_END
+
+/* Define to 1 if using `alloca.c'. */
+#undef C_ALLOCA
+
+/* Define this macro for debugging source code. */
+#undef DEBUG
+
+/* Unused. */
+#undef DO_ADDERROR
+
+/* Unused. */
+#undef DO_STREAMDEBUG
+
+/* Unused. */
+#undef FIFO_DEBUG
+
+/* Unused. */
+#undef FIFO_IMPL
+
+/* Unused. */
+#undef GCOM
+
+/* Unused. */
+#undef GCOM_OPEN
+
+/* This is necessary due to RedHat mangling of kernel header files. RedHat
+   removes get_empty_inode() from <linux/fs.h> and makes new_inode()
+   non-inline and removes it from the header file (now a function call).
+   Autoconf will check your header files. The code will try to use whatever is
+   defined here to get an empty inode. Neither a check of the header files nor
+   a running kernel symbol table will guarantee that those symbols are
+   exported and usable by LiS. If you get depmod errors on instalation
+   mentioning either of these functions, then this is probably the cause. */
+#undef GET_EMPTY_INODE
+
+/* Define to 1 if you have `alloca', as a function or macro. */
+#undef HAVE_ALLOCA
+
+/* Define to 1 if you have <alloca.h> and it should be used (not on Ultrix).
+   */
+#undef HAVE_ALLOCA_H
+
+/* Define to 1 if you have the `atexit' function. */
+#undef HAVE_ATEXIT
+
+/* Define to 1 if you have the `bzero' function. */
+#undef HAVE_BZERO
+
+/* The symbol cdev_put is not exported by some kernels. Define this to the
+   address of cdev_put in the kernel system map so that kernel modules can be
+   properly supported. */
+#undef HAVE_CDEV_PUT_ADDR
+
+/* The symbol cdev_put is not exported by some kernels. Define this if the
+   symbol cdev_put is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_CDEV_PUT_EXPORT
+
+/* The symbol compat_ptr is not exported by some kernels. Define this to the
+   address of compat_ptr in the kernel system map so that kernel modules can
+   be properly supported. */
+#undef HAVE_COMPAT_PTR_ADDR
+
+/* The symbol compat_ptr is not exported by some kernels. Define this if the
+   symbol compat_ptr is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_COMPAT_PTR_EXPORT
+
+/* The symbol compat_ptr is not exported by some kernels. Define this if the
+   symbol compat_ptr is either exported by your kernel, or can be stripped
+   from the symbol map, so that kernel modules can be supported properly. */
+#undef HAVE_COMPAT_PTR_SYMBOL
+
+/* Define to 1 if you have the <dlfcn.h> header file. */
+#undef HAVE_DLFCN_H
+
+/* Define to 1 if you don't have `vprintf' but do have `_doprnt.' */
+#undef HAVE_DOPRNT
+
+/* Define to 1 if you have the <fcntl.h> header file. */
+#undef HAVE_FCNTL_H
+
+/* Define to 1 if you have the `fork' function. */
+#undef HAVE_FORK
+
+/* Define to 1 if you have the `gettimeofday' function. */
+#undef HAVE_GETTIMEOFDAY
+
+/* The symbol get_empty_inode is not exported by some kernels. Define this to
+   the address of get_empty_inode in the kernel system map so that kernel
+   modules can be properly supported. */
+#undef HAVE_GET_EMPTY_INODE_ADDR
+
+/* The symbol get_empty_inode is not exported by some kernels. Define this if
+   the symbol get_empty_inode is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_GET_EMPTY_INODE_EXPORT
+
+/* The symbol get_empty_inode is not exported by some kernels. Define this if
+   the symbol get_empty_inode is either exported by your kernel, or can be
+   stripped from the symbol map, so that kernel modules can be supported
+   properly. */
+#undef HAVE_GET_EMPTY_INODE_SYMBOL
+
+/* Set if inode_operation lookup function takes nameidata pointer. */
+#undef HAVE_INODE_OPERATIONS_LOOKUP_NAMEIDATA
+
+/* Define to 1 if you have the <inttypes.h> header file. */
+#undef HAVE_INTTYPES_H
+
+/* The symbol ioctl32_hash_table is not exported by some kernels. Define this
+   to the address of ioctl32_hash_table in the kernel system map so that
+   kernel modules can be properly supported. */
+#undef HAVE_IOCTL32_HASH_TABLE_ADDR
+
+/* The symbol ioctl32_hash_table is not exported by some kernels. Define this
+   if the symbol ioctl32_hash_table is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_IOCTL32_HASH_TABLE_EXPORT
+
+/* The symbol ioctl32_hash_table is not exported by some kernels. Define this
+   if the symbol ioctl32_hash_table is either exported by your kernel, or can
+   be stripped from the symbol map, so that kernel modules can be supported
+   properly. */
+#undef HAVE_IOCTL32_HASH_TABLE_SYMBOL
+
+/* The symbol ioctl32_sem is not exported by some kernels. Define this to the
+   address of ioctl32_sem in the kernel system map so that kernel modules can
+   be properly supported. */
+#undef HAVE_IOCTL32_SEM_ADDR
+
+/* The symbol ioctl32_sem is not exported by some kernels. Define this if the
+   symbol ioctl32_sem is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_IOCTL32_SEM_EXPORT
+
+/* The symbol ioctl32_sem is not exported by some kernels. Define this if the
+   symbol ioctl32_sem is either exported by your kernel, or can be stripped
+   from the symbol map, so that kernel modules can be supported properly. */
+#undef HAVE_IOCTL32_SEM_SYMBOL
+
+/* Define to 1 if kernel function access_ok() exists. */
+#undef HAVE_KFUNC_ACCESS_OK
+
+/* Define to 1 if kernel function atomic_add_return() exists. */
+#undef HAVE_KFUNC_ATOMIC_ADD_RETURN
+
+/* Define to 1 if kernel function check_region() exists. */
+#undef HAVE_KFUNC_CHECK_REGION
+
+/* Define to 1 if kernel function cli() exists. */
+#undef HAVE_KFUNC_CLI
+
+/* Define to 1 if kernel function compat_ptr() exists. */
+#undef HAVE_KFUNC_COMPAT_PTR
+
+/* Define to 1 if kernel function cpumask_scnprintf() exists. */
+#undef HAVE_KFUNC_CPUMASK_SCNPRINTF
+
+/* Define to 1 if kernel function cpu_raise_softirq() exists. */
+#undef HAVE_KFUNC_CPU_RAISE_SOFTIRQ
+
+/* Define to 1 if kernel function finish_wait() exists. */
+#undef HAVE_KFUNC_FINISH_WAIT
+
+/* Define to 1 if kernel function force_delete() exists. */
+#undef HAVE_KFUNC_FORCE_DELETE
+
+/* Define to 1 if kernel function generic_delete_inode() exists. */
+#undef HAVE_KFUNC_GENERIC_DELETE_INODE
+
+/* Define to 1 if kernel function iget_locked() exists. */
+#undef HAVE_KFUNC_IGET_LOCKED
+
+/* Define to 1 if kernel function interruptible_sleep_on() exists. */
+#undef HAVE_KFUNC_INTERRUPTIBLE_SLEEP_ON
+
+/* Define to 1 if kernel function kern_umount() exists. */
+#undef HAVE_KFUNC_KERN_UMOUNT
+
+/* Define to 1 if kernel function module_put() exists. */
+#undef HAVE_KFUNC_MODULE_PUT
+
+/* Define to 1 if kernel function MOD_DEC_USE_COUNT() exists. */
+#undef HAVE_KFUNC_MOD_DEC_USE_COUNT
+
+/* Define to 1 if kernel function MOD_INC_USE_COUNT() exists. */
+#undef HAVE_KFUNC_MOD_INC_USE_COUNT
+
+/* Define to 1 if kernel function num_online_cpus() exists. */
+#undef HAVE_KFUNC_NUM_ONLINE_CPUS
+
+/* Define to 1 if kernel function path_lookup() exists. */
+#undef HAVE_KFUNC_PATH_LOOKUP
+
+/* Define to 1 if kernel function pcibios_find_class() exists. */
+#undef HAVE_KFUNC_PCIBIOS_FIND_CLASS
+
+/* Define to 1 if kernel function pcibios_find_device() exists. */
+#undef HAVE_KFUNC_PCIBIOS_FIND_DEVICE
+
+/* Define to 1 if kernel function pcibios_init() exists. */
+#undef HAVE_KFUNC_PCIBIOS_INIT
+
+/* Define to 1 if kernel function pcibios_present() exists. */
+#undef HAVE_KFUNC_PCIBIOS_PRESENT
+
+/* Define to 1 if kernel function pcibios_read_config_byte() exists. */
+#undef HAVE_KFUNC_PCIBIOS_READ_CONFIG_BYTE
+
+/* Define to 1 if kernel function pcibios_read_config_dword() exists. */
+#undef HAVE_KFUNC_PCIBIOS_READ_CONFIG_DWORD
+
+/* Define to 1 if kernel function pcibios_read_config_word() exists. */
+#undef HAVE_KFUNC_PCIBIOS_READ_CONFIG_WORD
+
+/* Define to 1 if kernel function pcibios_write_config_byte() exists. */
+#undef HAVE_KFUNC_PCIBIOS_WRITE_CONFIG_BYTE
+
+/* Define to 1 if kernel function pcibios_write_config_dword() exists. */
+#undef HAVE_KFUNC_PCIBIOS_WRITE_CONFIG_DWORD
+
+/* Define to 1 if kernel function pcibios_write_config_word() exists. */
+#undef HAVE_KFUNC_PCIBIOS_WRITE_CONFIG_WORD
+
+/* Define to 1 if kernel function pci_dac_dma_sync_single() exists. */
+#undef HAVE_KFUNC_PCI_DAC_DMA_SYNC_SINGLE
+
+/* Define to 1 if kernel function pci_dac_dma_sync_single_for_cpu() exists. */
+#undef HAVE_KFUNC_PCI_DAC_DMA_SYNC_SINGLE_FOR_CPU
+
+/* Define to 1 if kernel function pci_dac_dma_sync_single_for_device() exists.
+   */
+#undef HAVE_KFUNC_PCI_DAC_DMA_SYNC_SINGLE_FOR_DEVICE
+
+/* Define to 1 if kernel function pci_dac_dma_to_offset() exists. */
+#undef HAVE_KFUNC_PCI_DAC_DMA_TO_OFFSET
+
+/* Define to 1 if kernel function pci_dac_dma_to_page() exists. */
+#undef HAVE_KFUNC_PCI_DAC_DMA_TO_PAGE
+
+/* Define to 1 if kernel function pci_dac_page_to_dma() exists. */
+#undef HAVE_KFUNC_PCI_DAC_PAGE_TO_DMA
+
+/* Define to 1 if kernel function pci_dac_set_dma_mask() exists. */
+#undef HAVE_KFUNC_PCI_DAC_SET_DMA_MASK
+
+/* Define to 1 if kernel function pci_dma_sync_sg() exists. */
+#undef HAVE_KFUNC_PCI_DMA_SYNC_SG
+
+/* Define to 1 if kernel function pci_dma_sync_single() exists. */
+#undef HAVE_KFUNC_PCI_DMA_SYNC_SINGLE
+
+/* Define to 1 if kernel function pci_find_class() exists. */
+#undef HAVE_KFUNC_PCI_FIND_CLASS
+
+/* Define to 1 if kernel function prepare_to_wait() exists. */
+#undef HAVE_KFUNC_PREPARE_TO_WAIT
+
+/* Define to 1 if kernel function prepare_to_wait_exclusive() exists. */
+#undef HAVE_KFUNC_PREPARE_TO_WAIT_EXCLUSIVE
+
+/* Define to 1 if kernel function process_group() exists. */
+#undef HAVE_KFUNC_PROCESS_GROUP
+
+/* Define to 1 if kernel function read_trylock() exists. */
+#undef HAVE_KFUNC_READ_TRYLOCK
+
+/* Define to 1 if kernel function register_ioctl32_conversion() exists. */
+#undef HAVE_KFUNC_REGISTER_IOCTL32_CONVERSION
+
+/* Define to 1 if kernel function set_cpus_allowed_yield() exists. */
+#undef HAVE_KFUNC_SET_CPUS_ALLOWED_YIELD
+
+/* Define to 1 if kernel function set_user_nice() exists. */
+#undef HAVE_KFUNC_SET_USER_NICE
+
+/* Define to 1 if kernel function sleep_on() exists. */
+#undef HAVE_KFUNC_SLEEP_ON
+
+/* Define to 1 if kernel function sleep_on_timeout() exists. */
+#undef HAVE_KFUNC_SLEEP_ON_TIMEOUT
+
+/* Define to 1 if kernel function sti() exists. */
+#undef HAVE_KFUNC_STI
+
+/* Define to 1 if kernel function to_kdev_t() exists. */
+#undef HAVE_KFUNC_TO_KDEV_T
+
+/* Define to 1 if kernel function try_module_get() exists. */
+#undef HAVE_KFUNC_TRY_MODULE_GET
+
+/* Define to 1 if kernel function unregister_ioctl32_conversion() exists. */
+#undef HAVE_KFUNC_UNREGISTER_IOCTL32_CONVERSION
+
+/* Define to 1 if kernel function write_trylock() exists. */
+#undef HAVE_KFUNC_WRITE_TRYLOCK
+
+/* Define to 1 if kernel function __symbol_get() exists. */
+#undef HAVE_KFUNC___SYMBOL_GET
+
+/* Define to 1 if kernel function __symbol_put() exists. */
+#undef HAVE_KFUNC___SYMBOL_PUT
+
+/* Define to 1 if you have the <asm/ioctl32.h> header file. */
+#undef HAVE_KINC_ASM_IOCTL32_H
+
+/* Define to 1 if you have the <asm/softirq.h> header file. */
+#undef HAVE_KINC_ASM_SOFTIRQ_H
+
+/* Define to 1 if you have the <asm/uaccess.h> header file. */
+#undef HAVE_KINC_ASM_UACCESS_H
+
+/* Define to 1 if you have the <linux/cdev.h> header file. */
+#undef HAVE_KINC_LINUX_CDEV_H
+
+/* Define to 1 if you have the <linux/compat.h> header file. */
+#undef HAVE_KINC_LINUX_COMPAT_H
+
+/* Define to 1 if you have the <linux/cpumask.h> header file. */
+#undef HAVE_KINC_LINUX_CPUMASK_H
+
+/* Define to 1 if you have the <linux/hardirq.h> header file. */
+#undef HAVE_KINC_LINUX_HARDIRQ_H
+
+/* Define to 1 if you have the <linux/ioctl32.h> header file. */
+#undef HAVE_KINC_LINUX_IOCTL32_H
+
+/* Define to 1 if you have the <linux/kdev_t.h> header file. */
+#undef HAVE_KINC_LINUX_KDEV_T_H
+
+/* Define to 1 if you have the <linux/kref.h> header file. */
+#undef HAVE_KINC_LINUX_KREF_H
+
+/* Define to 1 if you have the <linux/kthread.h> header file. */
+#undef HAVE_KINC_LINUX_KTHREAD_H
+
+/* Define to 1 if you have the <linux/locks.h> header file. */
+#undef HAVE_KINC_LINUX_LOCKS_H
+
+/* Define to 1 if you have the <linux/namei.h> header file. */
+#undef HAVE_KINC_LINUX_NAMEI_H
+
+/* Define to 1 if you have the <linux/namespace.h> header file. */
+#undef HAVE_KINC_LINUX_NAMESPACE_H
+
+/* Define to 1 if you have the <linux/rwsem.h> header file. */
+#undef HAVE_KINC_LINUX_RWSEM_H
+
+/* Define to 1 if you have the <linux/security.h> header file. */
+#undef HAVE_KINC_LINUX_SECURITY_H
+
+/* Define to 1 if you have the <linux/slab.h> header file. */
+#undef HAVE_KINC_LINUX_SLAB_H
+
+/* Define to 1 if you have the <linux/statfs.h> header file. */
+#undef HAVE_KINC_LINUX_STATFS_H
+
+/* Define to 1 if you have the <linux/syscalls.h> header file. */
+#undef HAVE_KINC_LINUX_SYSCALLS_H
+
+/* Define to 1 if kernel macro access_ok() exists. */
+#undef HAVE_KMACRO_ACCESS_OK
+
+/* Define to 1 if kernel macro cpumask_scnprintf() exists. */
+#undef HAVE_KMACRO_CPUMASK_SCNPRINTF
+
+/* Define to 1 if kernel macro MOD_DEC_USE_COUNT() exists. */
+#undef HAVE_KMACRO_MOD_DEC_USE_COUNT
+
+/* Define to 1 if kernel macro MOD_INC_USE_COUNT() exists. */
+#undef HAVE_KMACRO_MOD_INC_USE_COUNT
+
+/* Define to 1 if kernel macro num_online_cpus() exists. */
+#undef HAVE_KMACRO_NUM_ONLINE_CPUS
+
+/* Define to 1 if kernel macro read_trylock() exists. */
+#undef HAVE_KMACRO_READ_TRYLOCK
+
+/* Define to 1 if kernel macro write_trylock() exists. */
+#undef HAVE_KMACRO_WRITE_TRYLOCK
+
+/* Define to 1 if `flush' is member of `struct file_operations'. */
+#undef HAVE_KMEMB_STRUCT_FILE_OPERATIONS_FLUSH
+
+/* Define to 1 if `get_sb' is member of `struct file_system_type'. */
+#undef HAVE_KMEMB_STRUCT_FILE_SYSTEM_TYPE_GET_SB
+
+/* Define to 1 if `read_super' is member of `struct file_system_type'. */
+#undef HAVE_KMEMB_STRUCT_FILE_SYSTEM_TYPE_READ_SUPER
+
+/* Define to 1 if `i_mutex' is member of `struct inode'. */
+#undef HAVE_KMEMB_STRUCT_INODE_I_MUTEX
+
+/* Define to 1 if `kref' is member of `struct kobject'. */
+#undef HAVE_KMEMB_STRUCT_KOBJECT_KREF
+
+/* Define to 1 if `f_type' is member of `struct kstatfs'. */
+#undef HAVE_KMEMB_STRUCT_KSTATFS_F_TYPE
+
+/* Define to 1 if `s_fs_info' is member of `struct super_block'. */
+#undef HAVE_KMEMB_STRUCT_SUPER_BLOCK_S_FS_INFO
+
+/* Define to 1 if `u.generic_sbp' is member of `struct super_block'. */
+#undef HAVE_KMEMB_STRUCT_SUPER_BLOCK_U_GENERIC_SBP
+
+/* Define to 1 if `drop_inode' is member of `struct super_operations'. */
+#undef HAVE_KMEMB_STRUCT_SUPER_OPERATIONS_DROP_INODE
+
+/* Define to 1 if `read_inode2' is member of `struct super_operations'. */
+#undef HAVE_KMEMB_STRUCT_SUPER_OPERATIONS_READ_INODE2
+
+/* Define to 1 if `namespace.sem' is member of `struct task_struct'. */
+#undef HAVE_KMEMB_STRUCT_TASK_STRUCT_NAMESPACE_SEM
+
+/* Define to 1 if `pgrp' is member of `struct task_struct'. */
+#undef HAVE_KMEMB_STRUCT_TASK_STRUCT_PGRP
+
+/* Define to 1 if `session' is member of `struct task_struct'. */
+#undef HAVE_KMEMB_STRUCT_TASK_STRUCT_SESSION
+
+/* Define to 1 if the system has the type 'irqreturn_t'. */
+#undef HAVE_KTYPE_IRQRETURN_T
+
+/* Define to 1 if you have the `c' library (-lc). */
+#undef HAVE_LIBC
+
+/* Define to 1 if you have the <libintl.h> header file. */
+#undef HAVE_LIBINTL_H
+
+/* Define to 1 if you have the `pthread' library (-lpthread). */
+#undef HAVE_LIBPTHREAD
+
+/* Define to 1 if you have the <limits.h> header file. */
+#undef HAVE_LIMITS_H
+
+/* Define to 1 if you have the <locale.h> header file. */
+#undef HAVE_LOCALE_H
+
+/* Define to 1 if `lstat' has the bug that it succeeds when given the
+   zero-length file name argument. */
+#undef HAVE_LSTAT_EMPTY_STRING_BUG
+
+/* Define to 1 if your system has a GNU libc compatible `malloc' function, and
+   to 0 otherwise. */
+#undef HAVE_MALLOC
+
+/* Define to 1 if you have the <malloc.h> header file. */
+#undef HAVE_MALLOC_H
+
+/* Define to 1 if you have the <memory.h> header file. */
+#undef HAVE_MEMORY_H
+
+/* Define to 1 if you have the `memset' function. */
+#undef HAVE_MEMSET
+
+/* The symbol new_inode is not exported by some kernels. Define this to the
+   address of new_inode in the kernel system map so that kernel modules can be
+   properly supported. */
+#undef HAVE_NEW_INODE_ADDR
+
+/* The symbol new_inode is not exported by some kernels. Define this if the
+   symbol new_inode is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_NEW_INODE_EXPORT
+
+/* The symbol new_inode is not exported by some kernels. Define this if the
+   symbol new_inode is either exported by your kernel, or can be stripped from
+   the symbol map, so that kernel modules can be supported properly. */
+#undef HAVE_NEW_INODE_SYMBOL
+
+/* The symbol path_lookup is not exported by some kernels. Define this if the
+   symbol path_lookup is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_PATH_LOOKUP_EXPORT
+
+/* The symbol put_filp is not exported by some kernels. Define this to the
+   address of put_filp in the kernel system map so that kernel modules can be
+   properly supported. */
+#undef HAVE_PUT_FILP_ADDR
+
+/* The symbol put_filp is not exported by some kernels. Define this if the
+   symbol put_filp is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_PUT_FILP_EXPORT
+
+/* The symbol raise_softirq is not exported by some kernels. Define this if
+   the symbol raise_softirq is exported by your kernel so that kernel modules
+   can be supported properly. */
+#undef HAVE_RAISE_SOFTIRQ_EXPORT
+
+/* The symbol raise_softirq_irqoff is not exported by some kernels. Define
+   this if the symbol raise_softirq_irqoff is exported by your kernel so that
+   kernel modules can be supported properly. */
+#undef HAVE_RAISE_SOFTIRQ_IRQOFF_EXPORT
+
+/* The symbol recalc_sigpending_tsk is not exported by some kernels. Define
+   this to the address of recalc_sigpending_tsk in the kernel system map so
+   that kernel modules can be properly supported. */
+#undef HAVE_RECALC_SIGPENDING_TSK_ADDR
+
+/* The symbol recalc_sigpending_tsk is not exported by some kernels. Define
+   this if the symbol recalc_sigpending_tsk is exported by your kernel so that
+   kernel modules can be supported properly. */
+#undef HAVE_RECALC_SIGPENDING_TSK_EXPORT
+
+/* The symbol recalc_sigpending_tsk is not exported by some kernels. Define
+   this if the symbol recalc_sigpending_tsk is either exported by your kernel,
+   or can be stripped from the symbol map, so that kernel modules can be
+   supported properly. */
+#undef HAVE_RECALC_SIGPENDING_TSK_SYMBOL
+
+/* Define to 1 if you have the `select' function. */
+#undef HAVE_SELECT
+
+/* Define to 1 if `stat' has the bug that it succeeds when given the
+   zero-length file name argument. */
+#undef HAVE_STAT_EMPTY_STRING_BUG
+
+/* Define to 1 if you have the <stddef.h> header file. */
+#undef HAVE_STDDEF_H
+
+/* Define to 1 if you have the <stdint.h> header file. */
+#undef HAVE_STDINT_H
+
+/* Define to 1 if you have the <stdlib.h> header file. */
+#undef HAVE_STDLIB_H
+
+/* Define to 1 if you have the `strchr' function. */
+#undef HAVE_STRCHR
+
+/* Define to 1 if you have the `strerror' function. */
+#undef HAVE_STRERROR
+
+/* Define to 1 if you have the <strings.h> header file. */
+#undef HAVE_STRINGS_H
+
+/* Define to 1 if you have the <string.h> header file. */
+#undef HAVE_STRING_H
+
+/* Define to 1 if you have the `strrchr' function. */
+#undef HAVE_STRRCHR
+
+/* Define to 1 if you have the `strtol' function. */
+#undef HAVE_STRTOL
+
+/* Define to 1 if you have the `strtoul' function. */
+#undef HAVE_STRTOUL
+
+/* Define to 1 if `st_blksize' is member of `struct stat'. */
+#undef HAVE_STRUCT_STAT_ST_BLKSIZE
+
+/* Define to 1 if `st_blocks' is member of `struct stat'. */
+#undef HAVE_STRUCT_STAT_ST_BLOCKS
+
+/* Define to 1 if `st_rdev' is member of `struct stat'. */
+#undef HAVE_STRUCT_STAT_ST_RDEV
+
+/* Define to 1 if your `struct stat' has `st_blocks'. Deprecated, use
+   `HAVE_STRUCT_STAT_ST_BLOCKS' instead. */
+#undef HAVE_ST_BLOCKS
+
+/* Define to 1 if you have the <sys/ioctl.h> header file. */
+#undef HAVE_SYS_IOCTL_H
+
+/* The symbol sys_mknod is not exported by some kernels. Define this to the
+   address of sys_mknod in the kernel system map so that kernel modules can be
+   properly supported. */
+#undef HAVE_SYS_MKNOD_ADDR
+
+/* The symbol sys_mknod is not exported by some kernels. Define this if the
+   symbol sys_mknod is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_SYS_MKNOD_EXPORT
+
+/* The symbol sys_mount is not exported by some kernels. Define this to the
+   address of sys_mount in the kernel system map so that kernel modules can be
+   properly supported. */
+#undef HAVE_SYS_MOUNT_ADDR
+
+/* The symbol sys_mount is not exported by some kernels. Define this if the
+   symbol sys_mount is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_SYS_MOUNT_EXPORT
+
+/* Define to 1 if you have the <sys/mount.h> header file. */
+#undef HAVE_SYS_MOUNT_H
+
+/* Define to 1 if you have the <sys/select.h> header file. */
+#undef HAVE_SYS_SELECT_H
+
+/* Define to 1 if you have the <sys/socket.h> header file. */
+#undef HAVE_SYS_SOCKET_H
+
+/* Define to 1 if you have the <sys/stat.h> header file. */
+#undef HAVE_SYS_STAT_H
+
+/* Define to 1 if you have the <sys/time.h> header file. */
+#undef HAVE_SYS_TIME_H
+
+/* Define to 1 if you have the <sys/types.h> header file. */
+#undef HAVE_SYS_TYPES_H
+
+/* The symbol sys_umount is not exported by some kernels. Define this to the
+   address of sys_umount in the kernel system map so that kernel modules can
+   be properly supported. */
+#undef HAVE_SYS_UMOUNT_ADDR
+
+/* The symbol sys_umount is not exported by some kernels. Define this if the
+   symbol sys_umount is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_SYS_UMOUNT_EXPORT
+
+/* The symbol sys_unlink is not exported by some kernels. Define this to the
+   address of sys_unlink in the kernel system map so that kernel modules can
+   be properly supported. */
+#undef HAVE_SYS_UNLINK_ADDR
+
+/* The symbol sys_unlink is not exported by some kernels. Define this if the
+   symbol sys_unlink is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_SYS_UNLINK_EXPORT
+
+/* Define to 1 if you have <sys/wait.h> that is POSIX.1 compatible. */
+#undef HAVE_SYS_WAIT_H
+
+/* Define to 1 if you have the <termios.h> header file. */
+#undef HAVE_TERMIOS_H
+
+/* Define if do_settimeofday takes struct timespec and returns int. */
+#undef HAVE_TIMESPEC_DO_SETTIMEOFDAY
+
+/* Define to 1 if you have the <unistd.h> header file. */
+#undef HAVE_UNISTD_H
+
+/* Define to 1 if you have the <values.h> header file. */
+#undef HAVE_VALUES_H
+
+/* Define to 1 if you have the `vfork' function. */
+#undef HAVE_VFORK
+
+/* Define to 1 if you have the <vfork.h> header file. */
+#undef HAVE_VFORK_H
+
+/* Define to 1 if you have the `vprintf' function. */
+#undef HAVE_VPRINTF
+
+/* Define to 1 if `fork' works. */
+#undef HAVE_WORKING_FORK
+
+/* Define to 1 if `vfork' works. */
+#undef HAVE_WORKING_VFORK
+
+/* define to inline directive */
+#undef INLINE
+
+/* Define if you want interrupt flags stored as int instead of unsigned long.
+   The kernel always uses unsigned long. It is generally a bad idea to use int
+   when the kernel uses unsigned long. If in doubt, leave this undefined. */
+#undef INT_PSW
+
+/* Unused. */
+#undef IP2XINET_DEBUG
+
+/* Define if compiling for LINUX. */
+#undef LINUX
+
+/* Define for the linux 2.4 kernel series. */
+#undef LINUX_2_4
+
+/* Define for the linux 2.6 kernel series. */
+#undef LINUX_2_6
+
+/* Define if an autoconf.h file was generated. LISAUTOCONF is used by
+   "include/sys/LiS/linux-mdep.h" to know when to include "LiS/sys/autoconf.h"
+   and to prevent linux from including its own. In autoconf we do this by
+   setting the appropriate include directory order in the makefile. Our local
+   "include/linux/autoconf.h" will be included in preference to the kernel
+   one. I don't know about LiS's practice of mucking around with include file
+   wrapper macros. A renaming of some macros would kil portability. We never
+   define this macro even when we build our own autoconf but we do mark it in
+   gcom's old config.in file when we build it. */
+#undef LISAUTOCONF
+
+/* Define if a modversions.h file needs to be included. */
+#undef LISMODVERS
+
+/* Always define this for an LIS_2_18 distribution. */
+#undef LIS_2_18
+
+/* Define if you want atomic_t for statistics elements. Otherwise the LiS uses
+   int. It is generally a bad idea to use atomic_t as many drivers are unaware
+   of this enhancement. */
+#undef LIS_ATOMIC_STATS
+
+/* Setting this macro is pointless (now). LiS uses it to set another useless
+   macro called SAFE which is never checked anywhere in the LiS code. Perhaps
+   Matt will use this macro (again), so I left it in here. */
+#undef LIS_CONFIG_SAFE
+
+/* Setting this macro is pointless (now). LiS uses it to set another useless
+   macro called TEST which is never checked anywhere in the LiS code. Perhaps
+   Matt will use this macro (again), so I left it in here. */
+#undef LIS_DEBUG
+
+/* Define this macro when your <sys/types.h> has major_t already defined and
+   you are building for a user target to keen LiS source files from redefining
+   major_t. */
+#undef LIS_HAVE_MAJOR_T
+
+/* Define this macro when your <sys/types.h> has o_uid_t and o_gid_t already
+   defined and you are building for a user target to keep LiS source files
+   from redefining o_uid_t and o_gid_t. */
+#undef LIS_HAVE_O_UID_T
+
+/* LiS source code wants this defined when it is configured for debug. */
+#undef LIS_SRC
+
+/* Setting this macro is pointless (now). LiS uses it to set another useless
+   macro called TEST which is never checked anywhere in the LiS code. Perhaps
+   Matt will use this macro (again), so I left it in here. */
+#undef LIS_TESTING
+
+/* Define to 1 if `lstat' dereferences a symlink specified with a trailing
+   slash. */
+#undef LSTAT_FOLLOWS_SLASHED_SYMLINK
+
+/* Define to 1 if `major', `minor', and `makedev' are declared in <mkdev.h>.
+   */
+#undef MAJOR_IN_MKDEV
+
+/* Define to 1 if `major', `minor', and `makedev' are declared in
+   <sysmacros.h>. */
+#undef MAJOR_IN_SYSMACROS
+
+/* Unused. */
+#undef NOKSRC
+
+/* Define to 1 if your C compiler doesn't accept -c and -o together. */
+#undef NO_MINUS_C_MINUS_O
+
+/* Name of package */
+#undef PACKAGE
+
+/* Define to the address where bug reports for this package should be sent. */
+#undef PACKAGE_BUGREPORT
+
+/* The package release date. */
+#undef PACKAGE_DATE
+
+/* The Debian Epoch. This defaults to 0. */
+#undef PACKAGE_DEBEPOCH
+
+/* The Debian Release. This defaults to 0. */
+#undef PACKAGE_DEBRELEASE
+
+/* The Package Epoch. This defaults to 1. */
+#undef PACKAGE_EPOCH
+
+/* The Linux kernel version without EXTRAVERSION. */
+#undef PACKAGE_KNUMBER
+
+/* The Linux kernel version for which the package was configured. */
+#undef PACKAGE_KVERSION
+
+/* Define to the full name of this package. */
+#undef PACKAGE_NAME
+
+/* The Package Release. This defaults to Custom. */
+#undef PACKAGE_RELEASE
+
+/* The RPM Distribution. This defaults to automatic detection. */
+#undef PACKAGE_RPMDIST
+
+/* The RPM Epoch. This defaults to 0. */
+#undef PACKAGE_RPMEPOCH
+
+/* The RPM Extra Release string. This defaults to automatic detection. */
+#undef PACKAGE_RPMEXTRA
+
+/* The RPM Extra Release string. This defaults to automatic detection. */
+#undef PACKAGE_RPMEXTRA2
+
+/* The RPM Release. This defaults to 1. */
+#undef PACKAGE_RPMRELEASE
+
+/* Define to the full name and version of this package. */
+#undef PACKAGE_STRING
+
+/* Define to the one symbol short name of this package. */
+#undef PACKAGE_TARNAME
+
+/* Define to the version of this package. */
+#undef PACKAGE_VERSION
+
+/* Unused. */
+#undef PIPE_DEBUG
+
+/* When defined, slab allocation will poison memory and redzone. This should
+   be done when in debugging or test modes. */
+#undef POISON_MEM
+
+/* Define if compiling for QNX. */
+#undef QNX
+
+/* This is necessary due to RedHat 2.6 patches ot kernel header files. RedHat
+   changes recalc_sigpending to take void instead of a task_struct pointer and
+   defines a new recalc_sigpending_tsk to take the other's place. Autoconf
+   will check your header files. The code will try to use recalc_sigpending()
+   if this is defined, or recalc_sigpending(current) otherwise. */
+#undef RCVOID
+
+/* Define as the return type of signal handlers (`int' or `void'). */
+#undef RETSIGTYPE
+
+/* Define if you have redhat kernel 2.4.2 */
+#undef RH_71_KLUDGE
+
+/* Define to the type of arg 1 for `select'. */
+#undef SELECT_TYPE_ARG1
+
+/* Define to the type of args 2, 3 and 4 for `select'. */
+#undef SELECT_TYPE_ARG234
+
+/* Define to the type of arg 5 for `select'. */
+#undef SELECT_TYPE_ARG5
+
+/* Define to 1 if the `setpgrp' function takes no argument. */
+#undef SETPGRP_VOID
+
+/* Set if you have function set_cpus_allowed to tell LiS to use the available
+   function. */
+#undef SET_CPUS_ALLOWED
+
+/* This is necessary due to RedHat 2.6 patches to kernel header files. RedHat
+   changes some of the use of sigmask_lock. Autoconf will check your header
+   files. The code will lock sigmask_lock when required. */
+#undef SIGMASKLOCK
+
+/* Define for solaris style cmn_err(). This should always be defined for
+   Linux, otherwise, the newlines generated at the beginning of cmn_err() will
+   mess up the appearance of your logs. */
+#undef SOLARIS_STYLE_CMN_ERR
+
+/* Unused. */
+#undef SOPRI_BACKGROUND
+
+/* Unused. */
+#undef SOPRI_INTERACTIVE
+
+/* Unused. */
+#undef SOPRI_NORMAL
+
+/* If using the C implementation of alloca, define if you know the
+   direction of stack growth for your system; otherwise it will be
+   automatically deduced at run-time.
+	STACK_DIRECTION > 0 => grows toward higher addresses
+	STACK_DIRECTION < 0 => grows toward lower addresses
+	STACK_DIRECTION = 0 => direction of growth unknown */
+#undef STACK_DIRECTION
+
+/* define to static directive */
+#undef STATIC
+
+/* Define to 1 if the `S_IS*' macros in <sys/stat.h> do not work properly. */
+#undef STAT_MACROS_BROKEN
+
+/* Define to 1 if you have the ANSI C header files. */
+#undef STDC_HEADERS
+
+/* Unused. */
+#undef STREAMS_DEBUG
+
+/* If you have a regparms kernel, define to the the number of register
+   parameters passed to functions that LiS exports. This is for binary
+   compatibility. */
+#undef STREAMS_REGPARM
+
+/* Unused. */
+#undef TC_PRIO_BESTEFFORT
+
+/* Unused. */
+#undef TC_PRIO_BULK
+
+/* Unused. */
+#undef TC_PRIO_INTERACTIVE
+
+/* Define to 1 if you can safely include both <sys/time.h> and <time.h>. */
+#undef TIME_WITH_SYS_TIME
+
+/* Define if compiling for USER. */
+#undef USER
+
+/* Define this macro to use Linux kernel memory caches for queue structures
+   and other highly used structures for some performance improvement. For the
+   best improvement, use Linux Fast-STREAMS. */
+#undef USE_KMEM_CACHE
+
+/* Define this macro to use the kernel memory caches for timer structures
+   rather than sequential list searches. This can really break, especially on
+   SMP and is not safe at all. It is disabled by default. */
+#undef USE_KMEM_TIMER
+
+/* Define (always) for kernel thread queues. */
+#undef USE_KTHREAD
+
+/* Define to use LiS backware compatible constants (which have no bearing in
+   reality). Leave this undefined to get Solaris/Unixware compatible
+   constants. */
+#undef USE_OLD_CONSTS
+
+/* Unused. */
+#undef USE_VOID_PUT_PROC
+
+/* Version number of package */
+#undef VERSION
+
+/* Define for linux 2.5.48+ .ko kernel modules. */
+#undef WITH_KO_MODULES
+
+/* Define when building as user mode. */
+#undef _BSD_SOURCE
+
+/* Define for kernel symbol debugging. This has the effect of defeating
+   inlines, making static declarations global, and activating all debugging
+   macros. */
+#undef _DEBUG
+
+/* Enable GNU extensions on systems that have them.  */
+#ifndef _GNU_SOURCE
+# undef _GNU_SOURCE
+#endif
+
+/* Define when compiling for HPPA. This define is only used for linux kernel
+   target. This is really the wrong way to go about doing this: the function
+   should be checked for by autoconf instead of placing the architectural
+   dependencies in the LiS source. The define is used in "head/linux-mdep.c"
+   to determine whether lis_pci_cleanup exists; "head/linux/exports.c" to
+   determine whether a bunch of functions are available; "head/osif.c" to
+   determine whether a bunch of PCI DMA mapping functions are available. */
+#undef _HPPA_LIS_
+
+/* Define for maximum performance and minimum size. This has the effect of
+   disabling all safety debugging macros. */
+#undef _NONE
+
+/* Define for kernel image testing (profiling). This has the effect of -O0 -g,
+   and setting assertions to TEST. */
+#undef _OPTIMIZE_NONE
+
+/* Define for kernel image normal optimization. This has the effect of -O2 -g,
+   and setting assertions to SAFE. */
+#undef _OPTIMIZE_NORMAL
+
+/* Define for kernel image size optimizations. This has the effect of -Os and
+   no -g, and disabling all assertions. */
+#undef _OPTIMIZE_SIZE
+
+/* Define for kernel image speed optimizations. This has the effect of -O3 -g,
+   and disabling all assertions. */
+#undef _OPTIMIZE_SPEED
+
+/* Define when compiling for PPC64. This define is only used for linux kernel
+   target. This is really the wrong way to go about doing this: the function
+   should be checked for by autoconf instead of placing the architectural
+   dependencies in the LiS source. The define is used in "head/linux-mdep.c"
+   to determine whether lis_pci_cleanup exists; "head/linux/exports.c" to
+   determine whether a bunch of functions are available; "head/osif.c" to
+   determine whether a bunch of PCI DMA mapping functions are available;
+   "include/sys/osif.h" to determine whether a bunch of PCI DMA mapping
+   functions are available. */
+#undef _PPC64_LIS_
+
+/* Define when compiling for PPC. This define is only used for linux kernel
+   target. This is really the wrong way to go about doing this: the function
+   should be checked for by autoconf instead of placing the architectural
+   dependencies in the LiS source. The define is used in
+   <LiS/include/sys/osif.h> and "head/osif.c" to determine whether PCI BIOS is
+   present; in (head/linux-mdep.c) to determine whether cpu binding is
+   possible; to determine whether spin_is_locked() is available in
+   "head/linux/lislocks.c"; in "head/mod.c" to determine whether to define
+   struct pt_regs; and in <LiS/include/sys/lislocks.h> to determine the size
+   of semaphore memory. */
+#undef _PPC_LIS_
+
+/* Use this macro like fastcall. It is set to an attribute with the number of
+   parameters passed to exported LiS functions when there is a regparms
+   kernel. This is for binary compatibility. */
+#if defined __i386__ || defined __x86_64__ || defined __k8__
+#undef _RP
+#else
+#define _RP
+#endif
+
+/* Define when compiling for S390X. This define is only used for the linux
+   kernel target. This is really the wrong way to go about doing this: the
+   function should be checked for by autoconf instead of placing the
+   architectural depdendencies in the LiS source. The define is used in
+   "head/linux-mdep.c" to determine whether lis_pci_cleanup exists;
+   "head/linux/exports.c" to determine whether a bunch of functions are
+   available; "head/osif.c" to determine whether a bunch of PCI DMA mapping
+   functions are available; "include/sys/osif.h" to determine whether a bunch
+   of PCI DMA mapping functions are available. */
+#undef _S390X_LIS_
+
+/* Define when compiling for S390. Strangely enough, _S390_LIS_ is never
+   checked without _S390X_LIS_. Rendering it as an alias for the above. */
+#undef _S390_LIS_
+
+/* Define for kernel safety. This has the effect of enabling safety debugging
+   macros. This is the default. */
+#undef _SAFE
+
+/* Define when compiling for Sparc64. This define is only used for the linux
+   kernel target. This is really the wrong way to go about doing this: the
+   function should be checked for by autoconf instead of placing the
+   architectural dependencies in the LiS source. The define is used to
+   determine when ioremap functions are not available <LiS/include/osif.h>.
+   Strangely enough, none of the other checks are performed as for _SPARC_LIS_
+   below. */
+#undef _SPARC64_LIS_
+
+/* Define when compiling for Sparc. This define is used for the linux kernel
+   target. This is really the wrong way to go about doing this: the function
+   should be checked for by autoconf instead of placing architectural
+   depedencies in the LiS source. The define is used to determine when ioremap
+   functions are not available <LiS/include/osif.h>, when PCI BIOS is not
+   present (head/osif.c), and when <linux/poll.h> is missing POLLMSG
+   <LiS/include/sys/poll.h> */
+#undef _SPARC_LIS_
+
+/* Define when building as user mode. */
+#undef _SVID_SOURCE
+
+/* Define for kernel testing. This has the same effect as _DEBUG for now. */
+#undef _TEST
+
+/* Define when compiling for X86_64. This define is only used for linux kernel
+   target. This is really the wrong way to go about doing this: the function
+   should be checked for by autoconf instead of placing the architectural
+   dependencies in the LiS source. The define is used in "head/linux-mdep.c"
+   to determine whether lis_pci_cleanup exists; "head/linux/exports.c" to
+   determine whether a bunch of functions are available; "head/osif.c" to
+   determine whether a bunch of PCI DMA mapping functions are available;
+   "include/sys/osif.h" to determine whether a bunch of PCI DMA mapping
+   functions are available. */
+#undef _X86_64_LIS_
+
+/* Define when building as user mode. I added this one. Actually, it should
+   always be defined. We really need to do an AH_VERBATIM here to check if it
+   is already defined. */
+#undef _XOPEN_SOURCE
+
+/* Define for RedHat BIGMEM kernel. */
+#undef __BOOT_KERNEL_BIGMEM
+
+/* Define for RedHat BOOT kernel. */
+#undef __BOOT_KERNEL_BOOT
+
+/* Define for RedHat DEBUG kernel. */
+#undef __BOOT_KERNEL_DEBUG
+
+/* Define for RedHat/Mandrake ENTERPRISE kernel. */
+#undef __BOOT_KERNEL_ENTERPRISE
+
+/* Define for RedHat HUGEMEM kernel. */
+#undef __BOOT_KERNEL_HUGEMEM
+
+/* Define for RedHat/Mandrake kernel. */
+#undef __BOOT_KERNEL_H_
+
+/* Define for Mandrake I586_UP_1GB kernel. */
+#undef __BOOT_KERNEL_I586_UP_1GB
+
+/* Define for Mandrake I686_UP_4GB kernel. */
+#undef __BOOT_KERNEL_I686_UP_4GB
+
+/* Define for Mandrake I686_UP_64GB kernel. */
+#undef __BOOT_KERNEL_I686_UP_64GB
+
+/* Define for Mandrake MAXIMUM kernel. */
+#undef __BOOT_KERNEL_MAXIMUM
+
+/* Define for Mandrake P3_SMP_64GB kernel. */
+#undef __BOOT_KERNEL_P3_SMP_64GB
+
+/* Define for RedHat/Mandrake SECURE kernel. */
+#undef __BOOT_KERNEL_SECURE
+
+/* Define for RedHat/Mandrake SMP kernel. */
+#undef __BOOT_KERNEL_SMP
+
+/* Define for RedHat/Mandrake UP kernel. */
+#undef __BOOT_KERNEL_UP
+
+/* Define for alpha RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_alpha
+
+/* Define for athlon RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_athlon
+
+/* Define for i386 RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_i386
+
+/* Define for i586 RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_i586
+
+/* Define for i686 RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_i686
+
+/* Define for ia32e RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_ia32e
+
+/* Define for ia64 RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_ia64
+
+/* Define for ppc RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_ppc
+
+/* Define for ppc64 RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_ppc64
+
+/* Define for s390 RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_s390
+
+/* Define for s390x RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_s390x
+
+/* Define for sparc RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_sparc
+
+/* Define for sparc64 RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_sparc64
+
+/* Define for x86_64 RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_x86_64
+
+/* Define for SMP compile. */
+#undef __SMP__
+
+/* Define to empty if `const' does not conform to ANSI C. */
+#undef const
+
+/* Define to `int' if <sys/types.h> doesn't define. */
+#undef gid_t
+
+/* Define to `__inline__' or `__inline' if that's what the C compiler
+   calls it, or to nothing if 'inline' is not supported under any name.  */
+#ifndef __cplusplus
+#undef inline
+#endif
+
+/* Define to rpl_malloc if the replacement function should be used. */
+#undef malloc
+
+/* Define to `int' if <sys/types.h> does not define. */
+#undef mode_t
+
+/* Define to `long' if <sys/types.h> does not define. */
+#undef off_t
+
+/* Define to `int' if <sys/types.h> does not define. */
+#undef pid_t
+
+/* Define to `unsigned' if <sys/types.h> does not define. */
+#undef size_t
+
+/* Define to `int' if <sys/types.h> doesn't define. */
+#undef uid_t
+
+/* Define as `fork' if `vfork' does not work. */
+#undef vfork
+
+/* Define to empty if the keyword `volatile' does not work. Warning: valid
+   code using `volatile' can become incorrect without. Disable with care. */
+#undef volatile

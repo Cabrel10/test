@@ -1,0 +1,122 @@
+Source: lis
+Section: devel
+Priority: optional
+Maintainer: Brian F. G. Bidulock <bidulock@openss7.org>
+Standards-Version: 3.5.6.1
+Build-Depends: kernel-sourcecode-2.6 | kernel-devel-2.6,
+ gcc (>= 2.95.3), groff (>= 1.17.2), groff-base (>= 1.17.2),
+ gzip (>= 1.3.2), texinfo (>= 4.0), tetex-base (>=1.0),
+ tetex-bin (>=1.0), tetex-extra (>=1.0), gs (>= 6.51)
+
+Package: lis-core-2.18.4.rc2
+Architecture: any
+Section: base
+Priority: optional
+Provides: lis-core, STREAMS-core, STREAMS-core-2.18.4.rc2
+Conflicts: STREAMS-core, STREAMS-core-2.18.4.rc2
+Replaces: STREAMS-core, STREAMS-core-2.18.4.rc2
+Depends: kernel-2.6.17-1.2139_FC5 (= 2.6.17),
+ lis-init (= 2.18.4.rc2-0)
+Pre-Depends: kernel-2.6.17-1.2139_FC5 (= 2.6.17)
+Description: Core kernel modules for Linux STREAMS (LiS)
+ Kernel modules that provide the Linux kernel SVR 4 STREAMS
+ facility.  Includes assorted Linux Fast-STREAMS drivers and modules for
+ Linux STREAMS (LiS).  These binaries are heavily tied to the kernel for
+ which they were compiled: applies to kernel version 2.6.17-1.2139_FC5.
+
+Package: lis-info-2.18.4.rc2
+Architecture: any
+Section: base
+Priority: optional
+Provides: STREAMS-info, lis-info
+Depends: kernel-2.6.17-1.2139_FC5 (= 2.6.17)
+Description: Kernel module versions for Linux STREAMS (LiS)
+ Kernel modules symbol information for development of kernel modules
+ against the core kernel modules included in the lis-core package.
+ Symbol information is tied to the core kernel modules and kernel for
+ which they were compiled:  these apply to core kernel modules
+ lis-core-2.6.17-1.2139_FC5 for kernel version 2.6.17-1.2139_FC5.
+
+Package: lis-lib
+Architecture: any
+Section: base
+Priority: optional
+Provides: STREAMS-lib
+Conflicts: STREAMS-lib
+Replaces: STREAMS-lib
+Depends: ${shlibs:Depends}
+Suggests: lis-devel (= 2.18.4.rc2-0)
+Description: Shared libraries for Linux STREAMS (LiS)
+ Run-time shared libraries necessary to run applications programs and
+ utilities developed for Linux STREAMS (LiS).
+
+Package: lis-util
+Architecture: any
+Section: base
+Priority: optional
+Provides: STREAMS-util
+Conflicts: STREAMS-util
+Replaces: STREAMS-util
+Depends: lis-lib (= 2.18.4.rc2-0), ${shlibs:Depends}
+Suggests: lis-devel (= 2.18.4.rc2-0)
+Description: Utitlity and test programs for Linux STREAMS (LiS)
+ Adminstration and configuration test utilities and commands for
+ Linux STREAMS (LiS).
+
+Package: lis-devel
+Architecture: any
+Section: devel
+Priority: optional
+Provides: STREAMS-devel
+Suggests: lis-doc (= 2.18.4.rc2-0)
+Description: C headers and static libraries for Linux STREAMS (LiS)
+ Static libraries and kernel headers to develop Linux STREAMS (LiS)
+ modules and drivers; user-space headers and static libraries required
+ to compile Linux STREAMS (LiS) applications programs.
+
+Package: lis-init
+Architecture: all
+Section: base
+Priority: optional
+Provides: STREAMS-init
+Conflicts: STREAMS-init
+Replaces: STREAMS-init
+Depends: lis-util(= 2.18.4.rc2-0), ${misc:Depends}
+Description: Init scripts and config files for Linux STREAMS (LiS)
+ SysV init scripts and configuration files for Linux STREAMS (LiS) for
+ Linux Fast-STREAMS.
+
+Package: lis-dev
+Architecture: all
+Section: base
+Priority: optional
+Provides: STREAMS-dev
+Conflicts: STREAMS-dev
+Replaces: STREAMS-dev
+Description: Character devices for Linux STREAMS (LiS)
+ Character special device definitions necessary to run applications
+ programs and utilities developed for Linux STREAMS (LiS).
+
+Package: lis-doc
+Architecture: all
+Section: doc
+Priority: optional
+Provides: STREAMS-doc
+Conflicts: STREAMS-doc
+Replaces: STREAMS-doc
+Description: Documentation and man pages for Linux STREAMS (LiS)
+ Pdf and html documentation for installation and the development of
+ Linux STREAMS (LiS) applications, modules and drivers; and all
+ Linux STREAMS (LiS) manual pages and info files for both kernel and
+ user-space functions.
+
+Package: lis-source
+Architecture: all
+Section: devel
+Priority: optional
+Provides: STREAMS-source
+Description: Source code for Linux STREAMS (LiS)
+ Source code for building the Linux STREAMS (LiS) release: autoconf
+ configuration utilities necessary to create and distribute this dpkg --
+ required for recompiling against recompiled kernel.
+

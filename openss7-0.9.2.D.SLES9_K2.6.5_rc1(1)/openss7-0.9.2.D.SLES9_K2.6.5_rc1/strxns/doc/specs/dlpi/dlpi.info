@@ -1,0 +1,249 @@
+This is /home/brian/rel/strxns/doc/specs/dlpi/dlpi.info, produced by makeinfo
+version 4.8 from /home/brian/rel/strxns/doc/specs/dlpi/dlpi.texi.
+
+INFO-DIR-SECTION OpenGroup
+START-INFO-DIR-ENTRY
+* DLPI: (dlpi).                 Data Link Provider Interface Specification
+END-INFO-DIR-ENTRY
+
+This file documents the X/Open Data Link Provider Interface.
+
+This is Edition 0.9.2, last updated 2006-07-11, for OpenSS7 XNS Networking
+version 0.9.2 release 4.rc2 published by OpenSS7 Corporation
+(http://www.openss7.com/).  This specification was originally published by UNIX
+International OSI Work Group in Revision: 2.0.0 (1992/08/17).
+
+Copyright (C) 2001-2005  OpenSS7 Corporation (http://www.openss7.com/)
+Copyright (C) 1997-2000  Brian F. G. Bidulock <bidulock@openss7.org>
+Copyright (C) 1992       UNIX International, Inc.
+
+All Rights Reserved.
+
+Permission is granted to make and distribute verbatim copies of this manual
+provided the copyright notice and this permission notice are preserved on all
+copies.
+
+Permission to use, copy, modify, and distribute this documentation for any
+purpose and without fee is hereby granted, provided that the above copyright
+notice appears in all copies and that both that copyright notice and this
+permission notice appear in supporting documentation, and that the name UNIX
+International not be used in advertising or publicity pertaining to distribution
+of the software without specific, written prior permission.  UNIX International
+makes no representations about the suitability of this documentation for any
+purpose.  It is provided "as is" without express or implied warranty.
+
+Permission is granted to copy and distribute modified versions of this manual
+under the conditions for verbatim copying, provided the entire resulting
+derived work is distributed under the terms of a permission notice identical to
+this one.
+
+Permission is granted to copy and distribute translations of this manual into
+another language, under the above conditions for modified versions.
+
+
+Indirect:
+dlpi.info-1: 2006
+dlpi.info-2: 296658
+
+Tag Table:
+(Indirect)
+Node: Top2006
+Node: Introduction2599
+Ref: Introduction-Footnote-16063
+Ref: Introduction-Footnote-26206
+Node: Model of the Data Link Layer6301
+Node: Model of the Service Interface7136
+Ref: Figure 18292
+Node: Modes of Communication10605
+Node: Connection-mode Service (1)12028
+Node: Connectionless-mode Service14624
+Node: Acknowledged Connectionless-mode Service15762
+Node: DLPI Addressing16619
+Ref: Figure 218154
+Node: Physical Attachment Identification18216
+Node: Data Link User Identification21032
+Node: The Connection Management Stream24035
+Node: DLPI Services25363
+Ref: Table 1a28576
+Ref: Table 1b30248
+Ref: Table 1c32809
+Node: Local Management Services32879
+Node: Information Reporting Service33508
+Ref: Figure 334388
+Node: Attach Service34452
+Ref: Figure 435474
+Ref: Figure 536134
+Node: Bind Service36207
+Ref: Figure 638092
+Ref: Figure 739447
+Ref: Figure 840153
+Ref: Figure 940870
+Ref: Figure 1041624
+Ref: Figure 1142374
+Node: Connection-mode Services42447
+Node: Connection Establishment Service42973
+Node: Normal Connection Establishment43470
+Ref: Figure 1244807
+Ref: Figure 1346006
+Node: Connection Establishment Rejections46597
+Ref: Figure 1447906
+Ref: Figure 1548657
+Ref: Figure 1649706
+Ref: Figure 1750475
+Ref: Figure 1851604
+Node: Data Transfer Service51699
+Ref: Figure 1953040
+Node: Connection Release Service53104
+Ref: Figure 2054380
+Ref: Figure 2155136
+Ref: Figure 2255856
+Ref: Figure 2356615
+Node: Reset Service56707
+Ref: Figure 2459947
+Ref: Figure 2560163
+Ref: Figure 2660372
+Ref: Figure 2760609
+Node: Connectionless-mode Services60699
+Node: Connectionless Data Transfer Service61582
+Ref: Figure 2862880
+Node: QOS Management Service (1)62948
+Ref: Figure 2963969
+Node: Error Reporting Service (1)64037
+Ref: Figure 29b64988
+Node: XID and TEST Service65036
+Ref: Figure 3066579
+Ref: Figure 3167167
+Node: Acknowledged Connectionless-mode Services67227
+Node: Acknowledged Connectionless-mode Data Transfer Services68076
+Ref: Figure 3269268
+Ref: Figure 3369946
+Ref: Figure 3470556
+Node: QOS Management Service (2)70653
+Node: Error Reporting Service (2)71287
+Node: An Example71696
+Ref: Figure 3575216
+Node: DLPI Primitives75283
+Node: Local Management Service Primitives78345
+Node: PPA Initialization / De-initialization79754
+Node: Message DL_INFO_REQ (dl_info_req_t)82756
+Node: Message DL_INFO_ACK (dl_info_ack_t)83810
+Node: Message DL_ATTACH_REQ (dl_attach_req_t)92074
+Node: Message DL_DETACH_REQ (dl_detach_req_t)95019
+Node: Message DL_BIND_REQ (dl_bind_req_t)96366
+Node: Message DL_BIND_ACK (dl_bind_ack_t)106232
+Node: Message DL_UNBIND_REQ (dl_unbind_req_t)108907
+Node: Message DL_SUBS_BIND_REQ (dl_subs_bind_req_t)110540
+Node: Message DL_SUBS_BIND_ACK (dl_subs_bind_ack_t)112879
+Node: Message DL_SUBS_UNBIND_REQ (dl_subs_unbind_req_t)114052
+Node: Message DL_ENABMULTI_REQ (dl_enabmulti_req_t)115704
+Node: Message DL_DISABMULTI_REQ (dl_disabmulti_req_t)117574
+Node: Message DL_PROMISCON_REQ (dl_promiscon_re q_t)119252
+Node: Message DL_PROMISCOFF_REQ (dl_promiscoff_req_t)121175
+Node: Message DL_OK_ACK (dl_ok_ack_t)122919
+Node: Message DL_ERROR_ACK (dl_error_ack_t)124276
+Node: Connection-mode Service Primitives126222
+Node: Multi-threaded Connection Establishment127370
+Node: Message DL_CONNECT_REQ (dl_connect_req_t)129826
+Node: Message DL_CONNECT_IND (dl_connect_ind_t)133479
+Node: Message DL_CONNECT_RES (dl_connect_res_t)137984
+Node: Message DL_CONNECT_CON (dl_connec t_con_t)143085
+Node: Message DL_TOKEN_REQ (dl_token_req_t)145400
+Node: Message DL_TOKEN_ACK (dl_token_ack_t)146496
+Node: Message DL_DATA_REQ147717
+Ref: Message DL_DATA_REQ-Footnote-1150182
+Node: Message DL_DATA_IND150373
+Node: Message DL_DISCONNECT_REQ (dl_disconnect_req_t)151211
+Node: Message DL_DISCONNECT_IND (dl_disc onnect_ind_t)154170
+Node: Message DL_RESET_REQ (dl_reset_req_t)156953
+Node: Message DL_RESET_IND (dl_reset_ind_t)158402
+Node: Message DL_RESET_RES (dl_reset_res_t)159979
+Node: Message DL_RESET_CON (dl_reset_con_t)161215
+Node: Connectionless-mode Service Primitives161935
+Node: Message DL_UNITDATA_REQ (dl_unitdata_req_t)162594
+Node: Message DL_UNITDATA_IND (dl_unitdata_ind_t)165517
+Node: Message DL_UDERROR_IND (dl_uderror_ind_t)167422
+Node: Message DL_UDQOS_REQ (dl_udqos_req_t)169702
+Node: Primitives to handle XID and TEST operations172024
+Node: Message DL_TEST_REQ (dl_test_req_t)172976
+Node: Message DL_TEST_IND (dl_test_ind_t)175303
+Node: Message DL_TEST_RES (dl_test_res_t)177198
+Node: Message DL_TEST_CON (dl_test_con_t)178687
+Node: Message DL_XID_REQ (dl_xid_req_t)180587
+Node: Message DL_XID_IND (dl_xid_ind_t)182975
+Node: Message DL_XID_RES (dl_xid_res_t)184925
+Node: Message DL_XID_CON (dl_xid_con_t)186348
+Node: Acknowledged Connectionless-mode Service Primitives188143
+Node: Message DL_DATA_ACK_REQ (dl_data_ack_req_t)189064
+Node: Message DL_DATA_ACK_IND (dl_data_ack_ind_t)192676
+Node: Message DL_DATA_ACK_STATUS_IND (dl_data_ack_status_ind_t)195071
+Node: Message DL_REPLY_REQ (dl_reply_req_t)196726
+Node: Message DL_REPLY_IND (dl_reply_ind_t)199870
+Node: Message DL_REPLY_STATUS_IND (dl_reply_status_ind_t)201978
+Node: Message DL_REPLY_UPDATE_REQ (dl_reply_update_req_t)204207
+Node: Message DL_REPLY_UPDATE_STATUS_IND (dl_reply_update_status_ind_t)206231
+Node: Quality of Data Link Service208450
+Node: Overview of Quality of Service209217
+Node: Connection-mode Service (2)209686
+Node: QOS for Connectionless-mode and Acknowledged Connectionless-mode Service211573
+Node: QOS Parameter Definitions212935
+Ref: Table 1x214956
+Node: Throughput215201
+Node: Transit Delay216949
+Node: Priority218590
+Node: Protection220405
+Node: Residual Error Rate221958
+Node: Resilience223163
+Node: QOS Data Structures224122
+Node: Structure DL_QOS_CO_RANGE1226084
+Node: Structure DL_QOS_CO_SEL1227743
+Node: Structure DL_QOS_CL_RANGE1229487
+Node: Structure DL_QOS_CL_SEL1230691
+Node: Procedures for QOS Negotiation and Selection231981
+Node: Connection-mode QOS Negotiation233260
+Node: Connectionless-mode QOS Selection243676
+Node: References245974
+Node: Optional Primitives to perform Essential Management Functions246527
+Node: Message DL_PHYS_ADDR_REQ (dl_phys_addr_req_t)247316
+Node: Message DL_PHYS_ADDR_ACK (dl_phys_addr_ack_t)249047
+Node: Message DL_SET_PHYS_ADDR_REQ (dl_set_phys_addr_req_t)250163
+Node: Message DL_GET_STATISTICS_REQ (dl_get_statistics_req_t)252041
+Node: Message DL_GET_STATISTICS_ACK (dl_get_statistics_ack_t)253219
+Node: Allowable Sequence of DLPI Primitives254424
+Node: DLPI States255382
+Ref: Table 2a258706
+Ref: Table 2b261916
+Ref: Table 2c265988
+Node: Variables and Actions for State Transition Table266040
+Ref: Table 3267919
+Ref: Table 4268880
+Node: DLPI User-Originated Events268941
+Ref: Table 5271519
+Node: DLPI Provider-Originated Events271579
+Ref: Table 6275007
+Node: DLPI State Transition Table275069
+Ref: Table 7283309
+Ref: Table 8284209
+Ref: Table 9285449
+Ref: Table 10288059
+Ref: Table 11289913
+Node: Precedence of DLPI Primitives289992
+Node: Write Queue Precedence291989
+Ref: Table 12296600
+Node: Read Queue Precedence296658
+Ref: Table 13303355
+Node: Glossary of DLPI Terms and Acronyms303412
+Node: Acronyms303705
+Node: Terms304205
+Node: Guidelines for Protocol Independent DLS Users306849
+Node: Required Information for DLS Provider-Specific Addenda308658
+Node: DLPI Header File316649
+Node: Index367458
+Node: Concept Index367749
+Node: Protocol State Index385154
+Node: Primitive Index401364
+Node: Primitive Structure and Type Index447511
+Node: Primitive Structure Field Index462541
+Node: Primitive Values Index498735
+Node: Primitive Error Values Index519964
+
+End Tag Table

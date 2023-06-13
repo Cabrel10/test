@@ -1,0 +1,6 @@
+m4_define([AT_PACKAGE_NAME], [LiS])
+m4_define([AT_PACKAGE_TARNAME], [LiS])
+m4_define([AT_PACKAGE_VERSION], [2.18.4.rc2])
+m4_define([AT_PACKAGE_RELEASE], [4.rc2])
+m4_define([AT_PACKAGE_STRING], [LiS 2.18.4.rc2])
+m4_define([AT_PACKAGE_BUGREPORT], [bugs@openss7.org])

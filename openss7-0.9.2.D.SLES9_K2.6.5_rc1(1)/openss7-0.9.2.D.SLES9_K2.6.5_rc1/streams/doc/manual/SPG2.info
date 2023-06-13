@@ -1,0 +1,325 @@
+This is /home/brian/rel/streams/doc/manual/SPG2.info, produced by makeinfo
+version 4.8 from /home/brian/rel/streams/doc/manual/SPG2.texi.
+
+INFO-DIR-SECTION STREAMS
+START-INFO-DIR-ENTRY
+* SPG2: (SPG2).			STREAMS Programmer's Guide (Take 2)
+END-INFO-DIR-ENTRY
+
+This file provides the STREAMS Programmer's Guide for Linux Fast-STREAMS.
+
+This is Edition 6.rc2, last updated 2006-07-11, of the `Linux Fast-STREAMS
+STREAMS Programmer's Guide', for Version 0.7a Release 6.rc2.
+
+Copyright (C) 2001-2005  OpenSS7 Corporation (http://www.openss7.com/)
+Copyright (C) 1997-2000  Brian F. G. Bidulock <bidulock@openss7.org>
+
+All Rights Reserved.
+
+Permission is granted to make and distribute verbatim copies of this guide
+provided the copyright notice and this permission notice are preserved on all
+copies.
+
+Permission is granted to copy and distribute modified versions of this guide
+under the conditions for verbatim copying, provided the entire resulting
+derived work is distributed under the terms of a permission notice identical to
+this one.
+
+Permission is granted to copy and distribute translations of this guide into
+another language, under the above conditions for modified versions.
+
+
+Indirect:
+SPG2.info-1: 1183
+SPG2.info-2: 300797
+
+Tag Table:
+(Indirect)
+Node: Top1183
+Node: Acknowledgements7970
+Node: Sponsors8352
+Node: Contributors8880
+Node: Preface9377
+Ref: Preface-Footnote-119656
+Node: Introduction19701
+Node: Background20084
+Ref: Background-Footnote-123933
+Ref: Background-Footnote-224062
+Ref: Background-Footnote-324085
+Node: What is STREAMS?24109
+Ref: Figure 10131258
+Ref: Figure 10233725
+Ref: Figure 10934907
+Ref: What is STREAMS?-Footnote-141216
+Ref: What is STREAMS?-Footnote-241318
+Node: Basic Streams Operations41451
+Ref: Listing 1.144767
+Ref: Figure 10345737
+Ref: Basic Streams Operations-Footnote-147329
+Node: Components47421
+Node: Queue Component47888
+Node: Message Component52449
+Ref: Figure 10455660
+Ref: Figure 10558799
+Node: Module Component62092
+Ref: Figure 4863806
+Node: Driver Component66473
+Node: Stream Head Component69793
+Node: Multiplexing of Streams71407
+Ref: Figure 4972462
+Ref: Figure 5072842
+Ref: Figure 5173152
+Ref: Figure 4775401
+Ref: Figure 5277047
+Node: Benefits of STREAMS78524
+Node: Standardized Service Interfaces79657
+Ref: Standardized Service Interfaces-Footnote-182379
+Node: Manipulating Modules82503
+Node: Protocol Portability84308
+Ref: Figure 5384877
+Node: Protocol Substitution85943
+Ref: Figure 30086696
+Ref: Protocol Substitution-Footnote-187300
+Node: Protocol Migration87379
+Ref: Figure 5488047
+Node: Module Reusability89034
+Ref: Figure 5589634
+Node: Overview89690
+Node: Definitions90024
+Node: Concepts90128
+Node: Application Interface90256
+Node: Kernel Level Facilities90422
+Node: Subsystems90594
+Node: Mechanism90710
+Node: Mechanism Overview91241
+Ref: Mechanism Overview-Footnote-196107
+Node: Stream Construction96380
+Ref: Figure 1398293
+Ref: Figure 14102317
+Ref: Stream Construction-Footnote-1104507
+Node: Opening a STREAMS Device File104652
+Ref: Figure 15106524
+Node: Opening a STREAMS-based FIFO110472
+Ref: Figure 15b111248
+Ref: Opening a STREAMS-based FIFO-Footnote-1112791
+Ref: Opening a STREAMS-based FIFO-Footnote-2113526
+Node: Creating a STREAMS-based Pipe113637
+Ref: Figure 16114139
+Ref: Creating a STREAMS-based Pipe-Footnote-1115714
+Ref: Creating a STREAMS-based Pipe-Footnote-2116251
+Ref: Creating a STREAMS-based Pipe-Footnote-3116577
+Ref: Creating a STREAMS-based Pipe-Footnote-4116837
+Node: Adding and Removing Modules117142
+Node: Pushing Modules118679
+Node: Popping Modules120467
+Node: Closing the Stream121036
+Ref: Closing the Stream-Footnote-1124490
+Ref: Closing the Stream-Footnote-2124693
+Node: Stream Construction Example124844
+Node: Inserting Modules125348
+Ref: Listing 3.1126905
+Ref: Listing 3.2127316
+Ref: Listing 3.3127733
+Ref: Figure 17129651
+Node: Module and Driver Control130110
+Ref: Listing 3.4131334
+Ref: Module and Driver Control-Footnote-1136196
+Node: Stream Dismantling with Modules136232
+Ref: Listing 3.5136919
+Node: Stream Construction Example Summary137746
+Node: Processing138603
+Node: Procedures139772
+Ref: Figure 18a143090
+Ref: Procedures-Footnote-1150677
+Ref: Procedures-Footnote-2150922
+Ref: Procedures-Footnote-3150980
+Ref: Procedures-Footnote-4151287
+Node: Asynchronous Example151797
+Node: Messages151932
+Node: Messages Overview152366
+Node: Message Type Overview155002
+Ref: Message Type Overview-Footnote-1161383
+Ref: Message Type Overview-Footnote-2161532
+Ref: Message Type Overview-Footnote-3161629
+Ref: Message Type Overview-Footnote-4161640
+Node: Expedited Data161651
+Node: Message Structure161790
+Ref: Message Structure-Footnote-1169613
+Ref: Message Structure-Footnote-2169782
+Ref: Message Structure-Footnote-3169835
+Ref: Message Structure-Footnote-4170012
+Ref: Message Structure-Footnote-5170401
+Node: Message Linkage170559
+Ref: Figure 21171722
+Ref: Figure 21b173976
+Node: Sending and Receiving Messages175019
+Ref: Sending and Receiving Messages-Footnote-1179397
+Ref: Sending and Receiving Messages-Footnote-2179548
+Ref: Sending and Receiving Messages-Footnote-3179753
+Node: putmsg(2)179926
+Node: getmsg(2)183373
+Node: putpmsg(2s)186797
+Node: getpmsg(2s)188688
+Node: Control of Stream Head Processing191441
+Node: Read Options192963
+Ref: Read Options-Footnote-1196607
+Ref: Read Options-Footnote-2196719
+Ref: Read Options-Footnote-3196901
+Ref: Read Options-Footnote-4197125
+Ref: Read Options-Footnote-5197304
+Ref: Read Options-Footnote-6197448
+Node: Write Options197567
+Node: Write Offset199622
+Node: Queues and Priority201198
+Ref: Figure 22203024
+Ref: Figure 23204059
+Node: Queue Priority Utilities205226
+Node: strqget(9)208081
+Node: strqset(9)211505
+Node: Queue Priority Commands212792
+Node: I_FLUSHBAND215643
+Node: I_CKBAND216644
+Node: I_GETBAND217025
+Node: I_CANPUT217411
+Node: I_ATMARK221299
+Node: I_GETSIG226516
+Node: I_SETSIG227531
+Node: The queue Structure228518
+Node: Using queue Information231815
+Node: queue Flags231981
+Node: The qband Structure234274
+Node: Using qband Information236327
+Node: Message Processing236473
+Node: Flow Control236597
+Node: Scheduling236705
+Node: Flow Control Variables236869
+Node: Flow Control Procedures237031
+Node: The STREAMS Scheduler237225
+Node: Service Interfaces237388
+Node: Service Interface Benefits237630
+Node: Service Interface Library Example237818
+Node: Accessing the Service Provider238195
+Node: Closing the Service Provider238409
+Node: Sending Data to the Service Provider238664
+Node: Receiving Data238919
+Node: Module Service Interface Example239134
+Node: Message Allocation239340
+Node: Recovering From No Buffers239541
+Node: Extended Buffers239687
+Node: Polling239816
+Node: Input and Output Polling240063
+Node: Controlling Terminal240217
+Node: Modules and Drivers240363
+Node: Environment240773
+Node: Input-Output Control240900
+Node: Flush Handling241068
+Node: Driver-Kernel Interface241236
+Node: Design Guidelines241419
+Node: Modules241567
+Node: Module241817
+Node: Module Flow Control241916
+Node: Module Design Guidelines242074
+Node: Drivers242227
+Node: External Device Numbers242775
+Node: Internal Device Numbers242929
+Node: spec File System243108
+Node: Clone Device243262
+Node: Named STREAMS Device243405
+Node: Driver243554
+Node: Cloning243670
+Node: Loop-Around Driver243786
+Node: Driver Design Guidelines243942
+Node: Multiplexing244094
+Node: Multiplexors244658
+Node: Connecting and Disconnecting Lower Stream244804
+Node: Multiplexor Construction Example245049
+Node: Multiplexing Driver245283
+Node: Persistent Links245466
+Node: Multiplexing Driver Design Guidelines245648
+Node: Pipes and FIFOs245844
+Node: STREAMS Pipes and FIFOs246283
+Node: Flushing Pipes and FIFOs246432
+Node: Named Streams246621
+Node: Unique Connections246783
+Node: Terminal Subsystem246922
+Node: STREAMS Terminal Subsystem247228
+Node: Pseudo-Terminal Subsystem247390
+Node: Synchronization247566
+Node: MT Configuration248286
+Node: Asynchronous Entry Points248431
+Node: Asynchronous Callbacks248625
+Node: Synchronous Entry Points248821
+Node: Synchronous Callbacks249017
+Node: STREAMS Framework Integrity249212
+Node: MP Message Ordering249414
+Node: MP-UNSAFE Modules249596
+Node: MP Put and Service Procedures249776
+Node: MP Timeout and Buffer Callbacks249992
+Node: MP Open and Close Procedures250225
+Node: MP Module Unloading250442
+Node: MP Locking250620
+Node: MP Asynchronous Callbacks250777
+Node: Stream Integrity250961
+Node: Reference251108
+Node: Files251851
+Node: System Modules251946
+Node: System Drivers252082
+Node: System Calls252225
+Node: Input-Output Controls252371
+Node: Module Entry Points252540
+Node: Structures252703
+Node: Registration252839
+Node: Message Handling252976
+Node: Queue Handling253125
+Node: Miscellaneous Functions253283
+Node: Extensions253453
+Node: Compatibility253596
+Node: Conformance253713
+Node: SVR 4.2 Compatibility254325
+Node: AIX Compatibility254473
+Node: HP-UX Compatibility254641
+Node: OSF/1 Compatibility254811
+Node: UnixWare Compatibility254986
+Node: Solaris Compatibility255169
+Node: SUX Compatibility255348
+Node: UXP Compatibility255514
+Node: LiS Compatibility255676
+Node: Portability255812
+Node: Core Function Support256458
+Node: SVR 4.2 Portability256608
+Node: AIX Portability256778
+Node: HP-UX Portability256936
+Node: OSF/1 Portability257096
+Node: UnixWare Portability257261
+Node: Solaris Portability257434
+Node: SUX Portability257603
+Node: UXP Portability257759
+Node: LiS Portability257911
+Node: Data Structures258041
+Node: Stream Structures258346
+Node: Queue Structures258483
+Node: Message Structures258645
+Node: Input Output Control Structures258825
+Node: Link Structures259030
+Node: Options Structures259203
+Node: Message Types259342
+Node: Message Type259562
+Node: Ordinary Messages259683
+Node: High Priority Messages259845
+Node: Utilities259996
+Node: Debugging260135
+Node: Configuration260274
+Node: Administration260426
+Node: Administrative Utilities260736
+Node: System Controls260892
+Node: /proc File System261056
+Node: Examples261191
+Node: Module Example261413
+Node: Driver Example261532
+Node: Copying261651
+Node: GNU General Public License261854
+Node: GNU Free Documentation License280995
+Node: Glossary300797
+Node: Index318583
+
+End Tag Table

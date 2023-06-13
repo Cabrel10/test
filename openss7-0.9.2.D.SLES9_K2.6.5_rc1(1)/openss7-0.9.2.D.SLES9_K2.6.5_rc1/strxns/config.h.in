@@ -1,0 +1,1455 @@
+/* config.h.in.  Generated from configure.ac by autoheader.  */
+
+/* Define to one of `_getb67', `GETB67', `getb67' for Cray-2 and Cray-YMP
+   systems. This function is required for `alloca.c' support on those systems.
+   */
+#undef CRAY_STACKSEG_END
+
+/* Define to 1 if using `alloca.c'. */
+#undef C_ALLOCA
+
+/* The symbol add_wait_queue_exclusive is not exported by some kernels. Define
+   this if the symbol add_wait_queue_exclusive is exported by your kernel so
+   that kernel modules can be supported properly. */
+#undef HAVE_ADD_WAIT_QUEUE_EXCLUSIVE_EXPORT
+
+/* The symbol add_wait_queue is not exported by some kernels. Define this if
+   the symbol add_wait_queue is exported by your kernel so that kernel modules
+   can be supported properly. */
+#undef HAVE_ADD_WAIT_QUEUE_EXPORT
+
+/* Define to 1 if you have the `alarm' function. */
+#undef HAVE_ALARM
+
+/* Define to 1 if you have `alloca', as a function or macro. */
+#undef HAVE_ALLOCA
+
+/* Define to 1 if you have <alloca.h> and it should be used (not on Ultrix).
+   */
+#undef HAVE_ALLOCA_H
+
+/* The symbol alloc_skb is not exported by some kernels. Define this if the
+   symbol alloc_skb is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_ALLOC_SKB_EXPORT
+
+/* Define to 1 if you have the <arpa/inet.h> header file. */
+#undef HAVE_ARPA_INET_H
+
+/* Linux Fast-STREAMS has this type. */
+#undef HAVE_BCID_T
+
+/* Linux Fast-STREAMS has this type. */
+#undef HAVE_BUFCALL_ID_T
+
+/* The symbol create_proc_entry is not exported by some kernels. Define this
+   if the symbol create_proc_entry is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_CREATE_PROC_ENTRY_EXPORT
+
+/* The symbol del_timer is not exported by some kernels. Define this if the
+   symbol del_timer is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_DEL_TIMER_EXPORT
+
+/* The symbol dev_base is not exported by some kernels. Define this if the
+   symbol dev_base is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_DEV_BASE_EXPORT
+
+/* The symbol dev_base_lock is not exported by some kernels. Define this if
+   the symbol dev_base_lock is exported by your kernel so that kernel modules
+   can be supported properly. */
+#undef HAVE_DEV_BASE_LOCK_EXPORT
+
+/* Define to 1 if you have the <dlfcn.h> header file. */
+#undef HAVE_DLFCN_H
+
+/* The symbol do_softirq is not exported by some kernels. Define this if the
+   symbol do_softirq is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_DO_SOFTIRQ_EXPORT
+
+/* Define to 1 if you have the <fcntl.h> header file. */
+#undef HAVE_FCNTL_H
+
+/* The symbol free_pages is not exported by some kernels. Define this if the
+   symbol free_pages is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_FREE_PAGES_EXPORT
+
+/* Define to 1 if you have the `gettimeofday' function. */
+#undef HAVE_GETTIMEOFDAY
+
+/* The symbol icmp_err_convert is not exported by some kernels. Define this to
+   the address of icmp_err_convert in the kernel system map so that kernel
+   modules can be properly supported. */
+#undef HAVE_ICMP_ERR_CONVERT_ADDR
+
+/* The symbol icmp_err_convert is not exported by some kernels. Define this if
+   the symbol icmp_err_convert is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_ICMP_ERR_CONVERT_EXPORT
+
+/* The symbol icmp_err_convert is not exported by some kernels. Define this if
+   the symbol icmp_err_convert is either exported by your kernel, or can be
+   stripped from the symbol map, so that kernel modules can be supported
+   properly. */
+#undef HAVE_ICMP_ERR_CONVERT_SYMBOL
+
+/* The symbol icmp_statistics is not exported by some kernels. Define this to
+   the address of icmp_statistics in the kernel system map so that kernel
+   modules can be properly supported. */
+#undef HAVE_ICMP_STATISTICS_ADDR
+
+/* The symbol icmp_statistics is not exported by some kernels. Define this if
+   the symbol icmp_statistics is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_ICMP_STATISTICS_EXPORT
+
+/* The symbol icmp_statistics is not exported by some kernels. Define this if
+   the symbol icmp_statistics is either exported by your kernel, or can be
+   stripped from the symbol map, so that kernel modules can be supported
+   properly. */
+#undef HAVE_ICMP_STATISTICS_SYMBOL
+
+/* The symbol inetdev_lock is not exported by some kernels. Define this if the
+   symbol inetdev_lock is exported by your kernel so that kernel modules can
+   be supported properly. */
+#undef HAVE_INETDEV_LOCK_EXPORT
+
+/* The symbol inet_accept is not exported by some kernels. Define this if the
+   symbol inet_accept is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_INET_ACCEPT_EXPORT
+
+/* The symbol inet_addr_type is not exported by some kernels. Define this if
+   the symbol inet_addr_type is exported by your kernel so that kernel modules
+   can be supported properly. */
+#undef HAVE_INET_ADDR_TYPE_EXPORT
+
+/* The symbol inet_add_protocol is not exported by some kernels. Define this
+   if the symbol inet_add_protocol is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_INET_ADD_PROTOCOL_EXPORT
+
+/* The symbol inet_bind is not exported by some kernels. Define this to the
+   address of inet_bind in the kernel system map so that kernel modules can be
+   properly supported. */
+#undef HAVE_INET_BIND_ADDR
+
+/* The symbol inet_bind is not exported by some kernels. Define this if the
+   symbol inet_bind is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_INET_BIND_EXPORT
+
+/* The symbol inet_bind is not exported by some kernels. Define this if the
+   symbol inet_bind is either exported by your kernel, or can be stripped from
+   the symbol map, so that kernel modules can be supported properly. */
+#undef HAVE_INET_BIND_SYMBOL
+
+/* The symbol inet_del_protocol is not exported by some kernels. Define this
+   if the symbol inet_del_protocol is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_INET_DEL_PROTOCOL_EXPORT
+
+/* The symbol inet_family_ops is not exported by some kernels. Define this if
+   the symbol inet_family_ops is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_INET_FAMILY_OPS_EXPORT
+
+/* The symbol inet_getname is not exported by some kernels. Define this to the
+   address of inet_getname in the kernel system map so that kernel modules can
+   be properly supported. */
+#undef HAVE_INET_GETNAME_ADDR
+
+/* The symbol inet_getname is not exported by some kernels. Define this if the
+   symbol inet_getname is exported by your kernel so that kernel modules can
+   be supported properly. */
+#undef HAVE_INET_GETNAME_EXPORT
+
+/* The symbol inet_getname is not exported by some kernels. Define this if the
+   symbol inet_getname is either exported by your kernel, or can be stripped
+   from the symbol map, so that kernel modules can be supported properly. */
+#undef HAVE_INET_GETNAME_SYMBOL
+
+/* The symbol inet_getsockopt is not exported by some kernels. Define this if
+   the symbol inet_getsockopt is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_INET_GETSOCKOPT_EXPORT
+
+/* The symbol inet_ioctl is not exported by some kernels. Define this to the
+   address of inet_ioctl in the kernel system map so that kernel modules can
+   be properly supported. */
+#undef HAVE_INET_IOCTL_ADDR
+
+/* The symbol inet_ioctl is not exported by some kernels. Define this if the
+   symbol inet_ioctl is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_INET_IOCTL_EXPORT
+
+/* The symbol inet_ioctl is not exported by some kernels. Define this if the
+   symbol inet_ioctl is either exported by your kernel, or can be stripped
+   from the symbol map, so that kernel modules can be supported properly. */
+#undef HAVE_INET_IOCTL_SYMBOL
+
+/* The symbol inet_multi_getname is not exported by some kernels. Define this
+   to the address of inet_multi_getname in the kernel system map so that
+   kernel modules can be properly supported. */
+#undef HAVE_INET_MULTI_GETNAME_ADDR
+
+/* The symbol inet_multi_getname is not exported by some kernels. Define this
+   if the symbol inet_multi_getname is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_INET_MULTI_GETNAME_EXPORT
+
+/* The symbol inet_multi_getname is not exported by some kernels. Define this
+   if the symbol inet_multi_getname is either exported by your kernel, or can
+   be stripped from the symbol map, so that kernel modules can be supported
+   properly. */
+#undef HAVE_INET_MULTI_GETNAME_SYMBOL
+
+/* Define to 1 if you have the `inet_ntoa' function. */
+#undef HAVE_INET_NTOA
+
+/* The symbol inet_protos is not exported by some kernels. Define this to the
+   address of inet_protos in the kernel system map so that kernel modules can
+   be properly supported. */
+#undef HAVE_INET_PROTOS_ADDR
+
+/* The symbol inet_protos is not exported by some kernels. Define this if the
+   symbol inet_protos is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_INET_PROTOS_EXPORT
+
+/* The symbol inet_protos is not exported by some kernels. Define this if the
+   symbol inet_protos is either exported by your kernel, or can be stripped
+   from the symbol map, so that kernel modules can be supported properly. */
+#undef HAVE_INET_PROTOS_SYMBOL
+
+/* The symbol inet_proto_lock is not exported by some kernels. Define this to
+   the address of inet_proto_lock in the kernel system map so that kernel
+   modules can be properly supported. */
+#undef HAVE_INET_PROTO_LOCK_ADDR
+
+/* The symbol inet_proto_lock is not exported by some kernels. Define this if
+   the symbol inet_proto_lock is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_INET_PROTO_LOCK_EXPORT
+
+/* The symbol inet_proto_lock is not exported by some kernels. Define this if
+   the symbol inet_proto_lock is either exported by your kernel, or can be
+   stripped from the symbol map, so that kernel modules can be supported
+   properly. */
+#undef HAVE_INET_PROTO_LOCK_SYMBOL
+
+/* The symbol inet_recvmsg is not exported by some kernels. Define this if the
+   symbol inet_recvmsg is exported by your kernel so that kernel modules can
+   be supported properly. */
+#undef HAVE_INET_RECVMSG_EXPORT
+
+/* The symbol inet_register_protosw is not exported by some kernels. Define
+   this if the symbol inet_register_protosw is exported by your kernel so that
+   kernel modules can be supported properly. */
+#undef HAVE_INET_REGISTER_PROTOSW_EXPORT
+
+/* The symbol inet_release is not exported by some kernels. Define this if the
+   symbol inet_release is exported by your kernel so that kernel modules can
+   be supported properly. */
+#undef HAVE_INET_RELEASE_EXPORT
+
+/* The symbol inet_sendmsg is not exported by some kernels. Define this if the
+   symbol inet_sendmsg is exported by your kernel so that kernel modules can
+   be supported properly. */
+#undef HAVE_INET_SENDMSG_EXPORT
+
+/* The symbol inet_setsockopt is not exported by some kernels. Define this if
+   the symbol inet_setsockopt is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_INET_SETSOCKOPT_EXPORT
+
+/* The symbol inet_shutdown is not exported by some kernels. Define this if
+   the symbol inet_shutdown is exported by your kernel so that kernel modules
+   can be supported properly. */
+#undef HAVE_INET_SHUTDOWN_EXPORT
+
+/* The symbol inet_stream_connect is not exported by some kernels. Define this
+   if the symbol inet_stream_connect is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_INET_STREAM_CONNECT_EXPORT
+
+/* The symbol inet_unregister_protosw is not exported by some kernels. Define
+   this if the symbol inet_unregister_protosw is exported by your kernel so
+   that kernel modules can be supported properly. */
+#undef HAVE_INET_UNREGISTER_PROTOSW_EXPORT
+
+/* Define to 1 if you have the <inttypes.h> header file. */
+#undef HAVE_INTTYPES_H
+
+/* The symbol ipsec_sk_policy is not exported by some kernels. Define this to
+   the address of ipsec_sk_policy in the kernel system map so that kernel
+   modules can be properly supported. */
+#undef HAVE_IPSEC_SK_POLICY_ADDR
+
+/* The symbol ipsec_sk_policy is not exported by some kernels. Define this if
+   the symbol ipsec_sk_policy is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_IPSEC_SK_POLICY_EXPORT
+
+/* The symbol ipsec_sk_policy is not exported by some kernels. Define this if
+   the symbol ipsec_sk_policy is either exported by your kernel, or can be
+   stripped from the symbol map, so that kernel modules can be supported
+   properly. */
+#undef HAVE_IPSEC_SK_POLICY_SYMBOL
+
+/* The symbol ip_cmsg_recv is not exported by some kernels. Define this if the
+   symbol ip_cmsg_recv is exported by your kernel so that kernel modules can
+   be supported properly. */
+#undef HAVE_IP_CMSG_RECV_EXPORT
+
+/* The symbol ip_cmsg_send is not exported by some kernels. Define this to the
+   address of ip_cmsg_send in the kernel system map so that kernel modules can
+   be properly supported. */
+#undef HAVE_IP_CMSG_SEND_ADDR
+
+/* The symbol ip_cmsg_send is not exported by some kernels. Define this if the
+   symbol ip_cmsg_send is exported by your kernel so that kernel modules can
+   be supported properly. */
+#undef HAVE_IP_CMSG_SEND_EXPORT
+
+/* The symbol ip_cmsg_send is not exported by some kernels. Define this if the
+   symbol ip_cmsg_send is either exported by your kernel, or can be stripped
+   from the symbol map, so that kernel modules can be supported properly. */
+#undef HAVE_IP_CMSG_SEND_SYMBOL
+
+/* The symbol ip_fragment is not exported by some kernels. Define this if the
+   symbol ip_fragment is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_IP_FRAGMENT_EXPORT
+
+/* The symbol ip_frag_mem is not exported by some kernels. Define this to the
+   address of ip_frag_mem in the kernel system map so that kernel modules can
+   be properly supported. */
+#undef HAVE_IP_FRAG_MEM_ADDR
+
+/* The symbol ip_frag_mem is not exported by some kernels. Define this if the
+   symbol ip_frag_mem is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_IP_FRAG_MEM_EXPORT
+
+/* The symbol ip_frag_mem is not exported by some kernels. Define this if the
+   symbol ip_frag_mem is either exported by your kernel, or can be stripped
+   from the symbol map, so that kernel modules can be supported properly. */
+#undef HAVE_IP_FRAG_MEM_SYMBOL
+
+/* The symbol ip_frag_nqueues is not exported by some kernels. Define this to
+   the address of ip_frag_nqueues in the kernel system map so that kernel
+   modules can be properly supported. */
+#undef HAVE_IP_FRAG_NQUEUES_ADDR
+
+/* The symbol ip_frag_nqueues is not exported by some kernels. Define this if
+   the symbol ip_frag_nqueues is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_IP_FRAG_NQUEUES_EXPORT
+
+/* The symbol ip_frag_nqueues is not exported by some kernels. Define this if
+   the symbol ip_frag_nqueues is either exported by your kernel, or can be
+   stripped from the symbol map, so that kernel modules can be supported
+   properly. */
+#undef HAVE_IP_FRAG_NQUEUES_SYMBOL
+
+/* The symbol ip_getsockopt is not exported by some kernels. Define this to
+   the address of ip_getsockopt in the kernel system map so that kernel
+   modules can be properly supported. */
+#undef HAVE_IP_GETSOCKOPT_ADDR
+
+/* The symbol ip_getsockopt is not exported by some kernels. Define this if
+   the symbol ip_getsockopt is exported by your kernel so that kernel modules
+   can be supported properly. */
+#undef HAVE_IP_GETSOCKOPT_EXPORT
+
+/* The symbol ip_getsockopt is not exported by some kernels. Define this if
+   the symbol ip_getsockopt is either exported by your kernel, or can be
+   stripped from the symbol map, so that kernel modules can be supported
+   properly. */
+#undef HAVE_IP_GETSOCKOPT_SYMBOL
+
+/* Most 2.4 kernels have the function ip_route_output() defined. Newer RH
+   kernels (EL3) use the 2.6 functions and do not provide ip_route_output().
+   Define this macro if your kernel provides ip_route_output(). */
+#undef HAVE_IP_ROUTE_OUTPUT
+
+/* Define if you have the explicit version of ip_route_output. */
+#undef HAVE_IP_ROUTE_OUTPUT_EXPLICIT
+
+/* The symbol ip_route_output_flow is not exported by some kernels. Define
+   this to the address of ip_route_output_flow in the kernel system map so
+   that kernel modules can be properly supported. */
+#undef HAVE_IP_ROUTE_OUTPUT_FLOW_ADDR
+
+/* The symbol ip_route_output_flow is not exported by some kernels. Define
+   this if the symbol ip_route_output_flow is exported by your kernel so that
+   kernel modules can be supported properly. */
+#undef HAVE_IP_ROUTE_OUTPUT_FLOW_EXPORT
+
+/* The symbol ip_route_output_flow is not exported by some kernels. Define
+   this if the symbol ip_route_output_flow is either exported by your kernel,
+   or can be stripped from the symbol map, so that kernel modules can be
+   supported properly. */
+#undef HAVE_IP_ROUTE_OUTPUT_FLOW_SYMBOL
+
+/* The symbol ip_route_output_key is not exported by some kernels. Define this
+   if the symbol ip_route_output_key is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_IP_ROUTE_OUTPUT_KEY_EXPORT
+
+/* The symbol ip_rt_min_pmtu is not exported by some kernels. Define this to
+   the address of ip_rt_min_pmtu in the kernel system map so that kernel
+   modules can be properly supported. */
+#undef HAVE_IP_RT_MIN_PMTU_ADDR
+
+/* The symbol ip_rt_min_pmtu is not exported by some kernels. Define this if
+   the symbol ip_rt_min_pmtu is exported by your kernel so that kernel modules
+   can be supported properly. */
+#undef HAVE_IP_RT_MIN_PMTU_EXPORT
+
+/* The symbol ip_rt_min_pmtu is not exported by some kernels. Define this if
+   the symbol ip_rt_min_pmtu is either exported by your kernel, or can be
+   stripped from the symbol map, so that kernel modules can be supported
+   properly. */
+#undef HAVE_IP_RT_MIN_PMTU_SYMBOL
+
+/* The symbol ip_rt_mtu_expires is not exported by some kernels. Define this
+   to the address of ip_rt_mtu_expires in the kernel system map so that kernel
+   modules can be properly supported. */
+#undef HAVE_IP_RT_MTU_EXPIRES_ADDR
+
+/* The symbol ip_rt_mtu_expires is not exported by some kernels. Define this
+   if the symbol ip_rt_mtu_expires is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_IP_RT_MTU_EXPIRES_EXPORT
+
+/* The symbol ip_rt_mtu_expires is not exported by some kernels. Define this
+   if the symbol ip_rt_mtu_expires is either exported by your kernel, or can
+   be stripped from the symbol map, so that kernel modules can be supported
+   properly. */
+#undef HAVE_IP_RT_MTU_EXPIRES_SYMBOL
+
+/* The symbol ip_rt_update_pmtu is not exported by some kernels. Define this
+   to the address of ip_rt_update_pmtu in the kernel system map so that kernel
+   modules can be properly supported. */
+#undef HAVE_IP_RT_UPDATE_PMTU_ADDR
+
+/* The symbol ip_rt_update_pmtu is not exported by some kernels. Define this
+   if the symbol ip_rt_update_pmtu is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_IP_RT_UPDATE_PMTU_EXPORT
+
+/* The symbol ip_rt_update_pmtu is not exported by some kernels. Define this
+   if the symbol ip_rt_update_pmtu is either exported by your kernel, or can
+   be stripped from the symbol map, so that kernel modules can be supported
+   properly. */
+#undef HAVE_IP_RT_UPDATE_PMTU_SYMBOL
+
+/* The symbol ip_send_check is not exported by some kernels. Define this if
+   the symbol ip_send_check is exported by your kernel so that kernel modules
+   can be supported properly. */
+#undef HAVE_IP_SEND_CHECK_EXPORT
+
+/* The symbol ip_setsockopt is not exported by some kernels. Define this to
+   the address of ip_setsockopt in the kernel system map so that kernel
+   modules can be properly supported. */
+#undef HAVE_IP_SETSOCKOPT_ADDR
+
+/* The symbol ip_setsockopt is not exported by some kernels. Define this if
+   the symbol ip_setsockopt is exported by your kernel so that kernel modules
+   can be supported properly. */
+#undef HAVE_IP_SETSOCKOPT_EXPORT
+
+/* The symbol ip_setsockopt is not exported by some kernels. Define this if
+   the symbol ip_setsockopt is either exported by your kernel, or can be
+   stripped from the symbol map, so that kernel modules can be supported
+   properly. */
+#undef HAVE_IP_SETSOCKOPT_SYMBOL
+
+/* The symbol irq_stat is not exported by some kernels. Define this if the
+   symbol irq_stat is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_IRQ_STAT_EXPORT
+
+/* The symbol jiffies is not exported by some kernels. Define this if the
+   symbol jiffies is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_JIFFIES_EXPORT
+
+/* The symbol kfree is not exported by some kernels. Define this if the symbol
+   kfree is exported by your kernel so that kernel modules can be supported
+   properly. */
+#undef HAVE_KFREE_EXPORT
+
+/* Define to 1 if kernel function dst_mtu() exists. */
+#undef HAVE_KFUNC_DST_MTU
+
+/* Define to 1 if kernel function dst_output() exists. */
+#undef HAVE_KFUNC_DST_OUTPUT
+
+/* Define to 1 if kernel function ip_dst_output() exists. */
+#undef HAVE_KFUNC_IP_DST_OUTPUT
+
+/* Define to 1 if kernel function ip_route_output_key() exists. */
+#undef HAVE_KFUNC_IP_ROUTE_OUTPUT_KEY
+
+/* Define to 1 if kernel function rcu_read_lock() exists. */
+#undef HAVE_KFUNC_RCU_READ_LOCK
+
+/* Define to 1 if kernel function __in_dev_get_rcu() exists. */
+#undef HAVE_KFUNC___IN_DEV_GET_RCU
+
+/* Define if function __ip_select_ident takes 2 arguments. */
+#undef HAVE_KFUNC___IP_SELECT_IDENT_2_ARGS
+
+/* Define if function __ip_select_ident takes 3 arguments. */
+#undef HAVE_KFUNC___IP_SELECT_IDENT_3_ARGS
+
+/* The symbol kill_pg is not exported by some kernels. Define this if the
+   symbol kill_pg is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_KILL_PG_EXPORT
+
+/* The symbol kill_proc is not exported by some kernels. Define this if the
+   symbol kill_proc is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_KILL_PROC_EXPORT
+
+/* Define to 1 if you have the <asm/softirq.h> header file. */
+#undef HAVE_KINC_ASM_SOFTIRQ_H
+
+/* Define to 1 if you have the <linux/brlock.h> header file. */
+#undef HAVE_KINC_LINUX_BRLOCK_H
+
+/* Define to 1 if you have the <linux/kdev_t.h> header file. */
+#undef HAVE_KINC_LINUX_KDEV_T_H
+
+/* Define to 1 if you have the <linux/locks.h> header file. */
+#undef HAVE_KINC_LINUX_LOCKS_H
+
+/* Define to 1 if you have the <linux/namei.h> header file. */
+#undef HAVE_KINC_LINUX_NAMEI_H
+
+/* Define to 1 if you have the <linux/namespace.h> header file. */
+#undef HAVE_KINC_LINUX_NAMESPACE_H
+
+/* Define to 1 if you have the <linux/security.h> header file. */
+#undef HAVE_KINC_LINUX_SECURITY_H
+
+/* Define to 1 if you have the <linux/slab.h> header file. */
+#undef HAVE_KINC_LINUX_SLAB_H
+
+/* Define to 1 if you have the <linux/snmp.h> header file. */
+#undef HAVE_KINC_LINUX_SNMP_H
+
+/* Define to 1 if you have the <linux/statfs.h> header file. */
+#undef HAVE_KINC_LINUX_STATFS_H
+
+/* Define to 1 if you have the <net/dst.h> header file. */
+#undef HAVE_KINC_NET_DST_H
+
+/* Define to 1 if you have the <net/request_sock.h> header file. */
+#undef HAVE_KINC_NET_REQUEST_SOCK_H
+
+/* Define to 1 if you have the <net/xfrm.h> header file. */
+#undef HAVE_KINC_NET_XFRM_H
+
+/* Define to 1 if kernel macro rcu_read_lock() exists. */
+#undef HAVE_KMACRO_RCU_READ_LOCK
+
+/* Define to 1 if `path' is member of `struct dst_entry'. */
+#undef HAVE_KMEMB_STRUCT_DST_ENTRY_PATH
+
+/* Define to 1 if `get_sb' is member of `struct file_system_type'. */
+#undef HAVE_KMEMB_STRUCT_FILE_SYSTEM_TYPE_GET_SB
+
+/* Define to 1 if `read_super' is member of `struct file_system_type'. */
+#undef HAVE_KMEMB_STRUCT_FILE_SYSTEM_TYPE_READ_SUPER
+
+/* Define to 1 if `copy' is member of `struct inet_protocol'. */
+#undef HAVE_KMEMB_STRUCT_INET_PROTOCOL_COPY
+
+/* Define to 1 if `no_policy' is member of `struct inet_protocol'. */
+#undef HAVE_KMEMB_STRUCT_INET_PROTOCOL_NO_POLICY
+
+/* Define to 1 if `protocol' is member of `struct inet_protocol'. */
+#undef HAVE_KMEMB_STRUCT_INET_PROTOCOL_PROTOCOL
+
+/* Define to 1 if `f_type' is member of `struct kstatfs'. */
+#undef HAVE_KMEMB_STRUCT_KSTATFS_F_TYPE
+
+/* Define to 1 if `no_policy' is member of `struct net_protocol'. */
+#undef HAVE_KMEMB_STRUCT_NET_PROTOCOL_NO_POLICY
+
+/* Define to 1 if `proto' is member of `struct net_protocol'. */
+#undef HAVE_KMEMB_STRUCT_NET_PROTOCOL_PROTO
+
+/* Define to 1 if `af_packet_priv' is member of `struct packet_type'. */
+#undef HAVE_KMEMB_STRUCT_PACKET_TYPE_AF_PACKET_PRIV
+
+/* Define to 1 if `data' is member of `struct packet_type'. */
+#undef HAVE_KMEMB_STRUCT_PACKET_TYPE_DATA
+
+/* Define to 1 if the func member of the packet_type structure passes four
+   arguments instead of three. */
+#undef HAVE_KMEMB_STRUCT_PACKET_TYPE_FUNC_4_ARGS
+
+/* Define to 1 if `list' is member of `struct packet_type'. */
+#undef HAVE_KMEMB_STRUCT_PACKET_TYPE_LIST
+
+/* Define to 1 if `next' is member of `struct packet_type'. */
+#undef HAVE_KMEMB_STRUCT_PACKET_TYPE_NEXT
+
+/* Define to 1 if `s_fs_info' is member of `struct super_block'. */
+#undef HAVE_KMEMB_STRUCT_SUPER_BLOCK_S_FS_INFO
+
+/* Define to 1 if `u.generic_sbp' is member of `struct super_block'. */
+#undef HAVE_KMEMB_STRUCT_SUPER_BLOCK_U_GENERIC_SBP
+
+/* Define to 1 if `read_inode2' is member of `struct super_operations'. */
+#undef HAVE_KMEMB_STRUCT_SUPER_OPERATIONS_READ_INODE2
+
+/* Define to 1 if `namespace.sem' is member of `struct task_struct'. */
+#undef HAVE_KMEMB_STRUCT_TASK_STRUCT_NAMESPACE_SEM
+
+/* The symbol kmem_cache_alloc is not exported by some kernels. Define this if
+   the symbol kmem_cache_alloc is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_KMEM_CACHE_ALLOC_EXPORT
+
+/* The symbol kmem_cache_create is not exported by some kernels. Define this
+   if the symbol kmem_cache_create is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_KMEM_CACHE_CREATE_EXPORT
+
+/* The symbol kmem_cache_destroy is not exported by some kernels. Define this
+   if the symbol kmem_cache_destroy is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_KMEM_CACHE_DESTROY_EXPORT
+
+/* The symbol kmem_cache_free is not exported by some kernels. Define this if
+   the symbol kmem_cache_free is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_KMEM_CACHE_FREE_EXPORT
+
+/* The symbol kmem_find_general_cachep is not exported by some kernels. Define
+   this if the symbol kmem_find_general_cachep is exported by your kernel so
+   that kernel modules can be supported properly. */
+#undef HAVE_KMEM_FIND_GENERAL_CACHEP_EXPORT
+
+/* Define to 1 if the system has the type 'irqreturn_t'. */
+#undef HAVE_KTYPE_IRQRETURN_T
+
+/* Define to 1 if the system has the type 'struct inet_protocol'. */
+#undef HAVE_KTYPE_STRUCT_INET_PROTOCOL
+
+/* Define to 1 if the system has the type 'struct net_protocol'. */
+#undef HAVE_KTYPE_STRUCT_NET_PROTOCOL
+
+/* Define to 1 if the system has the type 'struct sockaddr_storage'. */
+#undef HAVE_KTYPE_STRUCT_SOCKADDR_STORAGE
+
+/* Define to 1 if you have the `c' library (-lc). */
+#undef HAVE_LIBC
+
+/* Define to 1 if you have the `LiS' library (-lLiS). */
+#undef HAVE_LIBLIS
+
+/* Define to 1 if you have the `pthread' library (-lpthread). */
+#undef HAVE_LIBPTHREAD
+
+/* Define to 1 if you have the `socket' library (-lsocket). */
+#undef HAVE_LIBSOCKET
+
+/* Define to 1 if you have the `streams' library (-lstreams). */
+#undef HAVE_LIBSTREAMS
+
+/* Define to 1 if you have the `xnet' library (-lxnet). */
+#undef HAVE_LIBXNET
+
+/* Some more recent 2.4.25 and greater kernels have this poorman version of
+   SCTP included in the kernel. Define this symbol if you have such a
+   bastardized kernel. When we have such a kernel we need to define lksctp's
+   header wrapper defines so that none of the lksctp header files are included
+   (we use our own instead). */
+#undef HAVE_LKSCTP_SCTP
+
+/* Define to 1 if you have the <memory.h> header file. */
+#undef HAVE_MEMORY_H
+
+/* Define to 1 if you have the `memset' function. */
+#undef HAVE_MEMSET
+
+/* The symbol module_text_address is not exported by some kernels. Define this
+   to the address of module_text_address in the kernel system map so that
+   kernel modules can be properly supported. */
+#undef HAVE_MODULE_TEXT_ADDRESS_ADDR
+
+/* The symbol module_text_address is not exported by some kernels. Define this
+   if the symbol module_text_address is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_MODULE_TEXT_ADDRESS_EXPORT
+
+/* The symbol module_text_address is not exported by some kernels. Define this
+   if the symbol module_text_address is either exported by your kernel, or can
+   be stripped from the symbol map, so that kernel modules can be supported
+   properly. */
+#undef HAVE_MODULE_TEXT_ADDRESS_SYMBOL
+
+/* The symbol mod_timer is not exported by some kernels. Define this if the
+   symbol mod_timer is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_MOD_TIMER_EXPORT
+
+/* The symbol net_statistics is not exported by some kernels. Define this if
+   the symbol net_statistics is exported by your kernel so that kernel modules
+   can be supported properly. */
+#undef HAVE_NET_STATISTICS_EXPORT
+
+/* Most 2.4 kernels have the old style struct inet_protocol and the old
+   prototype for inet_add_protocol() and inet_del_protocol() defined in
+   <net/protocol.h>. Some more recent RH kernels (such as EL3) use the 2.6
+   style of structure and prototypes. Define this macro if your kernel has the
+   new style structure and prototypes. */
+#undef HAVE_NEW_STYLE_INET_PROTOCOL
+
+/* The symbol nf_hooks is not exported by some kernels. Define this if the
+   symbol nf_hooks is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_NF_HOOKS_EXPORT
+
+/* The symbol nf_hook_slow is not exported by some kernels. Define this if the
+   symbol nf_hook_slow is exported by your kernel so that kernel modules can
+   be supported properly. */
+#undef HAVE_NF_HOOK_SLOW_EXPORT
+
+/* The symbol num_physpages is not exported by some kernels. Define this if
+   the symbol num_physpages is exported by your kernel so that kernel modules
+   can be supported properly. */
+#undef HAVE_NUM_PHYSPAGES_EXPORT
+
+/* Most 2.4 kernels have the old style struct inet_protocol and the old
+   prototype for inet_add_protocol() and inet_del_protocol() defined in
+   <net/protocol.h>. Some more recent RH kernels (such as EL3) use the 2.6
+   style of structure and prototypes. Define this macro if your kernel has the
+   old style structure and prototypes. */
+#undef HAVE_OLD_STYLE_INET_PROTOCOL
+
+/* Define if your kernel supports the OpenSS7 Linux Kernel Sockets SCTP
+   patches. This enables support in the SCTP driver for STREAMS on top of the
+   OpenSS7 Linux Kernel Sockets SCTP implementation. */
+#undef HAVE_OPENSS7_SCTP
+
+/* The symbol panic is not exported by some kernels. Define this if the symbol
+   panic is exported by your kernel so that kernel modules can be supported
+   properly. */
+#undef HAVE_PANIC_EXPORT
+
+/* The symbol printk is not exported by some kernels. Define this if the
+   symbol printk is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_PRINTK_EXPORT
+
+/* The symbol proc_dointvec is not exported by some kernels. Define this if
+   the symbol proc_dointvec is exported by your kernel so that kernel modules
+   can be supported properly. */
+#undef HAVE_PROC_DOINTVEC_EXPORT
+
+/* The symbol proc_dointvec_jiffies is not exported by some kernels. Define
+   this if the symbol proc_dointvec_jiffies is exported by your kernel so that
+   kernel modules can be supported properly. */
+#undef HAVE_PROC_DOINTVEC_JIFFIES_EXPORT
+
+/* The symbol proc_dointvec_minmax is not exported by some kernels. Define
+   this if the symbol proc_dointvec_minmax is exported by your kernel so that
+   kernel modules can be supported properly. */
+#undef HAVE_PROC_DOINTVEC_MINMAX_EXPORT
+
+/* The symbol proc_doulongvec_ms_jiffies_minmax is not exported by some
+   kernels. Define this if the symbol proc_doulongvec_ms_jiffies_minmax is
+   exported by your kernel so that kernel modules can be supported properly.
+   */
+#undef HAVE_PROC_DOULONGVEC_MS_JIFFIES_MINMAX_EXPORT
+
+/* The symbol proc_net is not exported by some kernels. Define this if the
+   symbol proc_net is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_PROC_NET_EXPORT
+
+/* The symbol put_cmsg is not exported by some kernels. Define this if the
+   symbol put_cmsg is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_PUT_CMSG_EXPORT
+
+/* The symbol register_sysctl_table is not exported by some kernels. Define
+   this if the symbol register_sysctl_table is exported by your kernel so that
+   kernel modules can be supported properly. */
+#undef HAVE_REGISTER_SYSCTL_TABLE_EXPORT
+
+/* The symbol remove_proc_entry is not exported by some kernels. Define this
+   if the symbol remove_proc_entry is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_REMOVE_PROC_ENTRY_EXPORT
+
+/* The symbol remove_wait_queue is not exported by some kernels. Define this
+   if the symbol remove_wait_queue is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_REMOVE_WAIT_QUEUE_EXPORT
+
+/* The symbol schedule_timeout is not exported by some kernels. Define this if
+   the symbol schedule_timeout is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_SCHEDULE_TIMEOUT_EXPORT
+
+/* The symbol secure_tcp_sequence_number is not exported by some kernels.
+   Define this if the symbol secure_tcp_sequence_number is exported by your
+   kernel so that kernel modules can be supported properly. */
+#undef HAVE_SECURE_TCP_SEQUENCE_NUMBER_EXPORT
+
+/* The symbol send_sig is not exported by some kernels. Define this if the
+   symbol send_sig is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_SEND_SIG_EXPORT
+
+/* The symbol skbuff_head_cache is not exported by some kernels. Define this
+   to the address of skbuff_head_cache in the kernel system map so that kernel
+   modules can be properly supported. */
+#undef HAVE_SKBUFF_HEAD_CACHE_ADDR
+
+/* The symbol skbuff_head_cache is not exported by some kernels. Define this
+   if the symbol skbuff_head_cache is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_SKBUFF_HEAD_CACHE_EXPORT
+
+/* The symbol skbuff_head_cache is not exported by some kernels. Define this
+   if the symbol skbuff_head_cache is either exported by your kernel, or can
+   be stripped from the symbol map, so that kernel modules can be supported
+   properly. */
+#undef HAVE_SKBUFF_HEAD_CACHE_SYMBOL
+
+/* The symbol skb_clone is not exported by some kernels. Define this if the
+   symbol skb_clone is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_SKB_CLONE_EXPORT
+
+/* The symbol skb_copy_datagram_iovec is not exported by some kernels. Define
+   this if the symbol skb_copy_datagram_iovec is exported by your kernel so
+   that kernel modules can be supported properly. */
+#undef HAVE_SKB_COPY_DATAGRAM_IOVEC_EXPORT
+
+/* The symbol skb_linearize is not exported by some kernels. Define this if
+   the symbol skb_linearize is exported by your kernel so that kernel modules
+   can be supported properly. */
+#undef HAVE_SKB_LINEARIZE_EXPORT
+
+/* The symbol skb_over_panic is not exported by some kernels. Define this if
+   the symbol skb_over_panic is exported by your kernel so that kernel modules
+   can be supported properly. */
+#undef HAVE_SKB_OVER_PANIC_EXPORT
+
+/* The symbol skb_realloc_headroom is not exported by some kernels. Define
+   this if the symbol skb_realloc_headroom is exported by your kernel so that
+   kernel modules can be supported properly. */
+#undef HAVE_SKB_REALLOC_HEADROOM_EXPORT
+
+/* The symbol skb_under_panic is not exported by some kernels. Define this if
+   the symbol skb_under_panic is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_SKB_UNDER_PANIC_EXPORT
+
+/* The symbol sk_alloc is not exported by some kernels. Define this if the
+   symbol sk_alloc is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_SK_ALLOC_EXPORT
+
+/* The symbol sk_free is not exported by some kernels. Define this if the
+   symbol sk_free is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_SK_FREE_EXPORT
+
+/* The symbol sk_run_filter is not exported by some kernels. Define this if
+   the symbol sk_run_filter is exported by your kernel so that kernel modules
+   can be supported properly. */
+#undef HAVE_SK_RUN_FILTER_EXPORT
+
+/* The symbol snmp_get_info is not exported by some kernels. Define this to
+   the address of snmp_get_info in the kernel system map so that kernel
+   modules can be properly supported. */
+#undef HAVE_SNMP_GET_INFO_ADDR
+
+/* The symbol snmp_get_info is not exported by some kernels. Define this if
+   the symbol snmp_get_info is exported by your kernel so that kernel modules
+   can be supported properly. */
+#undef HAVE_SNMP_GET_INFO_EXPORT
+
+/* The symbol snmp_get_info is not exported by some kernels. Define this if
+   the symbol snmp_get_info is either exported by your kernel, or can be
+   stripped from the symbol map, so that kernel modules can be supported
+   properly. */
+#undef HAVE_SNMP_GET_INFO_SYMBOL
+
+/* The symbol socket_get_info is not exported by some kernels. Define this to
+   the address of socket_get_info in the kernel system map so that kernel
+   modules can be properly supported. */
+#undef HAVE_SOCKET_GET_INFO_ADDR
+
+/* The symbol socket_get_info is not exported by some kernels. Define this if
+   the symbol socket_get_info is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_SOCKET_GET_INFO_EXPORT
+
+/* The symbol socket_get_info is not exported by some kernels. Define this if
+   the symbol socket_get_info is either exported by your kernel, or can be
+   stripped from the symbol map, so that kernel modules can be supported
+   properly. */
+#undef HAVE_SOCKET_GET_INFO_SYMBOL
+
+/* The symbol sock_no_mmap is not exported by some kernels. Define this if the
+   symbol sock_no_mmap is exported by your kernel so that kernel modules can
+   be supported properly. */
+#undef HAVE_SOCK_NO_MMAP_EXPORT
+
+/* The symbol sock_no_sendpage is not exported by some kernels. Define this if
+   the symbol sock_no_sendpage is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_SOCK_NO_SENDPAGE_EXPORT
+
+/* The symbol sock_no_socketpair is not exported by some kernels. Define this
+   if the symbol sock_no_socketpair is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_SOCK_NO_SOCKETPAIR_EXPORT
+
+/* The symbol sock_wake_async is not exported by some kernels. Define this if
+   the symbol sock_wake_async is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_SOCK_WAKE_ASYNC_EXPORT
+
+/* The symbol sock_wfree is not exported by some kernels. Define this if the
+   symbol sock_wfree is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_SOCK_WFREE_EXPORT
+
+/* The symbol sprintf is not exported by some kernels. Define this if the
+   symbol sprintf is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_SPRINTF_EXPORT
+
+/* Define to 1 if you have the <stdint.h> header file. */
+#undef HAVE_STDINT_H
+
+/* Define to 1 if you have the <stdlib.h> header file. */
+#undef HAVE_STDLIB_H
+
+/* Define to 1 if you have the <strings.h> header file. */
+#undef HAVE_STRINGS_H
+
+/* Define to 1 if you have the <string.h> header file. */
+#undef HAVE_STRING_H
+
+/* Define to 1 if you have the `strtol' function. */
+#undef HAVE_STRTOL
+
+/* Define to 1 if you have the `strtoul' function. */
+#undef HAVE_STRTOUL
+
+/* Newer RHEL3 kernels change the destination entry structure. Define this
+   macro to use the newer structure. */
+#undef HAVE_STRUCT_DST_ENTRY_PATH
+
+/* Most 2.4 kernels do not define struct sockaddr_storage. Define to 1 if your
+   kernel supports struct sockaddr_storage. */
+#undef HAVE_STRUCT_SOCKADDR_STORAGE
+
+/* The symbol sysctl_intvec is not exported by some kernels. Define this if
+   the symbol sysctl_intvec is exported by your kernel so that kernel modules
+   can be supported properly. */
+#undef HAVE_SYSCTL_INTVEC_EXPORT
+
+/* The symbol sysctl_ip_default_ttl is not exported by some kernels. Define
+   this to the address of sysctl_ip_default_ttl in the kernel system map so
+   that kernel modules can be properly supported. */
+#undef HAVE_SYSCTL_IP_DEFAULT_TTL_ADDR
+
+/* The symbol sysctl_ip_default_ttl is not exported by some kernels. Define
+   this if the symbol sysctl_ip_default_ttl is exported by your kernel so that
+   kernel modules can be supported properly. */
+#undef HAVE_SYSCTL_IP_DEFAULT_TTL_EXPORT
+
+/* The symbol sysctl_ip_dynaddr is not exported by some kernels. Define this
+   to the address of sysctl_ip_dynaddr in the kernel system map so that kernel
+   modules can be properly supported. */
+#undef HAVE_SYSCTL_IP_DYNADDR_ADDR
+
+/* The symbol sysctl_ip_dynaddr is not exported by some kernels. Define this
+   if the symbol sysctl_ip_dynaddr is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_SYSCTL_IP_DYNADDR_EXPORT
+
+/* The symbol sysctl_ip_dynaddr is not exported by some kernels. Define this
+   if the symbol sysctl_ip_dynaddr is either exported by your kernel, or can
+   be stripped from the symbol map, so that kernel modules can be supported
+   properly. */
+#undef HAVE_SYSCTL_IP_DYNADDR_SYMBOL
+
+/* The symbol sysctl_ip_nonlocal_bind is not exported by some kernels. Define
+   this to the address of sysctl_ip_nonlocal_bind in the kernel system map so
+   that kernel modules can be properly supported. */
+#undef HAVE_SYSCTL_IP_NONLOCAL_BIND_ADDR
+
+/* The symbol sysctl_ip_nonlocal_bind is not exported by some kernels. Define
+   this if the symbol sysctl_ip_nonlocal_bind is exported by your kernel so
+   that kernel modules can be supported properly. */
+#undef HAVE_SYSCTL_IP_NONLOCAL_BIND_EXPORT
+
+/* The symbol sysctl_ip_nonlocal_bind is not exported by some kernels. Define
+   this if the symbol sysctl_ip_nonlocal_bind is either exported by your
+   kernel, or can be stripped from the symbol map, so that kernel modules can
+   be supported properly. */
+#undef HAVE_SYSCTL_IP_NONLOCAL_BIND_SYMBOL
+
+/* The symbol sysctl_jiffies is not exported by some kernels. Define this if
+   the symbol sysctl_jiffies is exported by your kernel so that kernel modules
+   can be supported properly. */
+#undef HAVE_SYSCTL_JIFFIES_EXPORT
+
+/* The symbol sysctl_local_port_range is not exported by some kernels. Define
+   this to the address of sysctl_local_port_range in the kernel system map so
+   that kernel modules can be properly supported. */
+#undef HAVE_SYSCTL_LOCAL_PORT_RANGE_ADDR
+
+/* The symbol sysctl_local_port_range is not exported by some kernels. Define
+   this if the symbol sysctl_local_port_range is exported by your kernel so
+   that kernel modules can be supported properly. */
+#undef HAVE_SYSCTL_LOCAL_PORT_RANGE_EXPORT
+
+/* The symbol sysctl_local_port_range is not exported by some kernels. Define
+   this if the symbol sysctl_local_port_range is either exported by your
+   kernel, or can be stripped from the symbol map, so that kernel modules can
+   be supported properly. */
+#undef HAVE_SYSCTL_LOCAL_PORT_RANGE_SYMBOL
+
+/* Define to 1 if you have the <sys/ioctl.h> header file. */
+#undef HAVE_SYS_IOCTL_H
+
+/* Define when the LiS release provides its own module.h file such as 2.17
+   GCOM LiS releases. */
+#undef HAVE_SYS_LIS_MODULE_H
+
+/* Define when the LiS release supports module versions such as the OpenSS7
+   autoconf release of LiS. */
+#undef HAVE_SYS_LIS_MODVERSIONS_H
+
+/* Define to 1 if you have the <sys/stat.h> header file. */
+#undef HAVE_SYS_STAT_H
+
+/* Define when the STREAMS compatibiltiy release supports module versions such
+   as the OpenSS7 autoconf releases. */
+#undef HAVE_SYS_STRCOMP_MODVERSIONS_H
+
+/* Define when the Linux Fast-STREAMS release supports module versions such as
+   the OpenSS7 autoconf releases. */
+#undef HAVE_SYS_STREAMS_MODVERSIONS_H
+
+/* Define to 1 if you have the <sys/time.h> header file. */
+#undef HAVE_SYS_TIME_H
+
+/* Define to 1 if you have the <sys/types.h> header file. */
+#undef HAVE_SYS_TYPES_H
+
+/* Define to 1 if you have <sys/wait.h> that is POSIX.1 compatible. */
+#undef HAVE_SYS_WAIT_H
+
+/* Define to 1 if you have the <unistd.h> header file. */
+#undef HAVE_UNISTD_H
+
+/* The symbol unregister_sysctl_table is not exported by some kernels. Define
+   this if the symbol unregister_sysctl_table is exported by your kernel so
+   that kernel modules can be supported properly. */
+#undef HAVE_UNREGISTER_SYSCTL_TABLE_EXPORT
+
+/* The symbol xfrm_policy_delete is not exported by some kernels. Define this
+   to the address of xfrm_policy_delete in the kernel system map so that
+   kernel modules can be properly supported. */
+#undef HAVE_XFRM_POLICY_DELETE_ADDR
+
+/* The symbol xfrm_policy_delete is not exported by some kernels. Define this
+   if the symbol xfrm_policy_delete is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_XFRM_POLICY_DELETE_EXPORT
+
+/* Define if function xfrm_policy_delete returns int. */
+#undef HAVE_XFRM_POLICY_DELETE_RETURNS_INT
+
+/* The symbol xfrm_policy_delete is not exported by some kernels. Define this
+   if the symbol xfrm_policy_delete is either exported by your kernel, or can
+   be stripped from the symbol map, so that kernel modules can be supported
+   properly. */
+#undef HAVE_XFRM_POLICY_DELETE_SYMBOL
+
+/* The symbol __generic_copy_to_user is not exported by some kernels. Define
+   this if the symbol __generic_copy_to_user is exported by your kernel so
+   that kernel modules can be supported properly. */
+#undef HAVE___GENERIC_COPY_TO_USER_EXPORT
+
+/* The symbol __get_free_pages is not exported by some kernels. Define this if
+   the symbol __get_free_pages is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE___GET_FREE_PAGES_EXPORT
+
+/* The symbol __get_user_4 is not exported by some kernels. Define this if the
+   symbol __get_user_4 is exported by your kernel so that kernel modules can
+   be supported properly. */
+#undef HAVE___GET_USER_4_EXPORT
+
+/* The symbol __ip_route_output_key is not exported by some kernels. Define
+   this to the address of __ip_route_output_key in the kernel system map so
+   that kernel modules can be properly supported. */
+#undef HAVE___IP_ROUTE_OUTPUT_KEY_ADDR
+
+/* The symbol __ip_route_output_key is not exported by some kernels. Define
+   this if the symbol __ip_route_output_key is exported by your kernel so that
+   kernel modules can be supported properly. */
+#undef HAVE___IP_ROUTE_OUTPUT_KEY_EXPORT
+
+/* The symbol __ip_route_output_key is not exported by some kernels. Define
+   this if the symbol __ip_route_output_key is either exported by your kernel,
+   or can be stripped from the symbol map, so that kernel modules can be
+   supported properly. */
+#undef HAVE___IP_ROUTE_OUTPUT_KEY_SYMBOL
+
+/* The symbol __ip_select_ident is not exported by some kernels. Define this
+   if the symbol __ip_select_ident is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE___IP_SELECT_IDENT_EXPORT
+
+/* The symbol __kfree_skb is not exported by some kernels. Define this if the
+   symbol __kfree_skb is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE___KFREE_SKB_EXPORT
+
+/* The symbol __lock_sock is not exported by some kernels. Define this if the
+   symbol __lock_sock is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE___LOCK_SOCK_EXPORT
+
+/* The symbol __out_of_line_bug is not exported by some kernels. Define this
+   if the symbol __out_of_line_bug is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE___OUT_OF_LINE_BUG_EXPORT
+
+/* The symbol __pollwait is not exported by some kernels. Define this if the
+   symbol __pollwait is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE___POLLWAIT_EXPORT
+
+/* The symbol __release_sock is not exported by some kernels. Define this if
+   the symbol __release_sock is exported by your kernel so that kernel modules
+   can be supported properly. */
+#undef HAVE___RELEASE_SOCK_EXPORT
+
+/* The symbol __wake_up is not exported by some kernels. Define this if the
+   symbol __wake_up is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE___WAKE_UP_EXPORT
+
+/* The symbol __xfrm_policy_check is not exported by some kernels. Define this
+   to the address of __xfrm_policy_check in the kernel system map so that
+   kernel modules can be properly supported. */
+#undef HAVE___XFRM_POLICY_CHECK_ADDR
+
+/* The symbol __xfrm_policy_check is not exported by some kernels. Define this
+   if the symbol __xfrm_policy_check is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE___XFRM_POLICY_CHECK_EXPORT
+
+/* The symbol __xfrm_policy_check is not exported by some kernels. Define this
+   if the symbol __xfrm_policy_check is either exported by your kernel, or can
+   be stripped from the symbol map, so that kernel modules can be supported
+   properly. */
+#undef HAVE___XFRM_POLICY_CHECK_SYMBOL
+
+/* The symbol __xfrm_sk_clone_policy is not exported by some kernels. Define
+   this to the address of __xfrm_sk_clone_policy in the kernel system map so
+   that kernel modules can be properly supported. */
+#undef HAVE___XFRM_SK_CLONE_POLICY_ADDR
+
+/* The symbol __xfrm_sk_clone_policy is not exported by some kernels. Define
+   this if the symbol __xfrm_sk_clone_policy is exported by your kernel so
+   that kernel modules can be supported properly. */
+#undef HAVE___XFRM_SK_CLONE_POLICY_EXPORT
+
+/* The symbol __xfrm_sk_clone_policy is not exported by some kernels. Define
+   this if the symbol __xfrm_sk_clone_policy is either exported by your
+   kernel, or can be stripped from the symbol map, so that kernel modules can
+   be supported properly. */
+#undef HAVE___XFRM_SK_CLONE_POLICY_SYMBOL
+
+/* The symbol ___pskb_trim is not exported by some kernels. Define this if the
+   symbol ___pskb_trim is exported by your kernel so that kernel modules can
+   be supported properly. */
+#undef HAVE____PSKB_TRIM_EXPORT
+
+/* Define for the linux 2.4 kernel series. */
+#undef LINUX_2_4
+
+/* Define for the linux 2.6 kernel series. */
+#undef LINUX_2_6
+
+/* Define to 1 if `major', `minor', and `makedev' are declared in <mkdev.h>.
+   */
+#undef MAJOR_IN_MKDEV
+
+/* Define to 1 if `major', `minor', and `makedev' are declared in
+   <sysmacros.h>. */
+#undef MAJOR_IN_SYSMACROS
+
+/* Define to 1 if your C compiler doesn't accept -c and -o together. */
+#undef NO_MINUS_C_MINUS_O
+
+/* Name of package */
+#undef PACKAGE
+
+/* Define to the address where bug reports for this package should be sent. */
+#undef PACKAGE_BUGREPORT
+
+/* The package release date. */
+#undef PACKAGE_DATE
+
+/* The Debian Epoch. This defaults to 0. */
+#undef PACKAGE_DEBEPOCH
+
+/* The Debian Release. This defaults to 0. */
+#undef PACKAGE_DEBRELEASE
+
+/* The Package Epoch. This defaults to 1. */
+#undef PACKAGE_EPOCH
+
+/* The Linux kernel version without EXTRAVERSION. */
+#undef PACKAGE_KNUMBER
+
+/* The Linux kernel version for which the package was configured. */
+#undef PACKAGE_KVERSION
+
+/* Define to the full name of this package. */
+#undef PACKAGE_NAME
+
+/* The Package Release. This defaults to Custom. */
+#undef PACKAGE_RELEASE
+
+/* The RPM Distribution. This defaults to automatic detection. */
+#undef PACKAGE_RPMDIST
+
+/* The RPM Epoch. This defaults to 0. */
+#undef PACKAGE_RPMEPOCH
+
+/* The RPM Extra Release string. This defaults to automatic detection. */
+#undef PACKAGE_RPMEXTRA
+
+/* The RPM Extra Release string. This defaults to automatic detection. */
+#undef PACKAGE_RPMEXTRA2
+
+/* The RPM Release. This defaults to 1. */
+#undef PACKAGE_RPMRELEASE
+
+/* Define to the full name and version of this package. */
+#undef PACKAGE_STRING
+
+/* Define to the one symbol short name of this package. */
+#undef PACKAGE_TARNAME
+
+/* Define to the version of this package. */
+#undef PACKAGE_VERSION
+
+/* Define as the return type of signal handlers (`int' or `void'). */
+#undef RETSIGTYPE
+
+/* If using the C implementation of alloca, define if you know the
+   direction of stack growth for your system; otherwise it will be
+   automatically deduced at run-time.
+	STACK_DIRECTION > 0 => grows toward higher addresses
+	STACK_DIRECTION < 0 => grows toward lower addresses
+	STACK_DIRECTION = 0 => direction of growth unknown */
+#undef STACK_DIRECTION
+
+/* Define to 1 if you have the ANSI C header files. */
+#undef STDC_HEADERS
+
+/* Define to 1 if you can safely include both <sys/time.h> and <time.h>. */
+#undef TIME_WITH_SYS_TIME
+
+/* Version number of package */
+#undef VERSION
+
+/* Define for linux 2.5.48+ .ko kernel modules. */
+#undef WITH_KO_MODULES
+
+/* When defined, XNS is being compiled as a kernel linkable object. */
+#undef XNS_CONFIG
+
+/* Define to perform internal structure tracking within XNS as well as to
+   provide additional /proc filesystem files for examining internal
+   structures. */
+#undef XNS_CONFIG_DEBUG
+
+/* When defined, XNS is being compiled as a loadable kernel module. */
+#undef XNS_CONFIG_MODULE
+
+/* Define to perform no assertion checks but report software errors. This is
+   the smallest footprint, highest performance mode of operation. */
+#undef XNS_CONFIG_NONE
+
+/* Define to perform fundamental assertion checks. This is a safer mode of
+   operation. */
+#undef XNS_CONFIG_SAFE
+
+/* Define to perform performance testing with debugging. This mode does not
+   dump massive amounts of information into system logs, but peforms all
+   assertion checks. */
+#undef XNS_CONFIG_TEST
+
+/* Define for kernel symbol debugging. This has the effect of defeating
+   inlines, making static declarations global, and activating all debugging
+   macros. */
+#undef _DEBUG
+
+/* Enable GNU extensions on systems that have them.  */
+#ifndef _GNU_SOURCE
+# undef _GNU_SOURCE
+#endif
+
+/* Define for maximum performance and minimum size. This has the effect of
+   disabling all safety debugging macros. */
+#undef _NONE
+
+/* Define for kernel image testing (profiling). This has the effect of -O0 -g,
+   and setting assertions to TEST. */
+#undef _OPTIMIZE_NONE
+
+/* Define for kernel image normal optimization. This has the effect of -O2 -g,
+   and setting assertions to SAFE. */
+#undef _OPTIMIZE_NORMAL
+
+/* Define for kernel image size optimizations. This has the effect of -Os and
+   no -g, and disabling all assertions. */
+#undef _OPTIMIZE_SIZE
+
+/* Define for kernel image speed optimizations. This has the effect of -O3 -g,
+   and disabling all assertions. */
+#undef _OPTIMIZE_SPEED
+
+/* Define for kernel safety. This has the effect of enabling safety debugging
+   macros. This is the default. */
+#undef _SAFE
+
+/* Define for kernel testing. This has the same effect as _DEBUG for now. */
+#undef _TEST
+
+/* dnl Define for SuSv3. This is necessary for LiS and LfS and strcompat for
+   that matter. */
+#undef _XOPEN_SOURCE
+
+/* Define for RedHat BIGMEM kernel. */
+#undef __BOOT_KERNEL_BIGMEM
+
+/* Define for RedHat BOOT kernel. */
+#undef __BOOT_KERNEL_BOOT
+
+/* Define for RedHat DEBUG kernel. */
+#undef __BOOT_KERNEL_DEBUG
+
+/* Define for RedHat/Mandrake ENTERPRISE kernel. */
+#undef __BOOT_KERNEL_ENTERPRISE
+
+/* Define for RedHat HUGEMEM kernel. */
+#undef __BOOT_KERNEL_HUGEMEM
+
+/* Define for RedHat/Mandrake kernel. */
+#undef __BOOT_KERNEL_H_
+
+/* Define for Mandrake I586_UP_1GB kernel. */
+#undef __BOOT_KERNEL_I586_UP_1GB
+
+/* Define for Mandrake I686_UP_4GB kernel. */
+#undef __BOOT_KERNEL_I686_UP_4GB
+
+/* Define for Mandrake I686_UP_64GB kernel. */
+#undef __BOOT_KERNEL_I686_UP_64GB
+
+/* Define for Mandrake MAXIMUM kernel. */
+#undef __BOOT_KERNEL_MAXIMUM
+
+/* Define for Mandrake P3_SMP_64GB kernel. */
+#undef __BOOT_KERNEL_P3_SMP_64GB
+
+/* Define for RedHat/Mandrake SECURE kernel. */
+#undef __BOOT_KERNEL_SECURE
+
+/* Define for RedHat/Mandrake SMP kernel. */
+#undef __BOOT_KERNEL_SMP
+
+/* Define for RedHat/Mandrake UP kernel. */
+#undef __BOOT_KERNEL_UP
+
+/* Define for alpha RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_alpha
+
+/* Define for athlon RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_athlon
+
+/* Define for i386 RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_i386
+
+/* Define for i586 RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_i586
+
+/* Define for i686 RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_i686
+
+/* Define for ia32e RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_ia32e
+
+/* Define for ia64 RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_ia64
+
+/* Define for ppc RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_ppc
+
+/* Define for ppc64 RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_ppc64
+
+/* Define for s390 RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_s390
+
+/* Define for s390x RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_s390x
+
+/* Define for sparc RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_sparc
+
+/* Define for sparc64 RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_sparc64
+
+/* Define for x86_64 RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_x86_64
+
+/* Define to empty if `const' does not conform to ANSI C. */
+#undef const
+
+/* Define to `__inline__' or `__inline' if that's what the C compiler
+   calls it, or to nothing if 'inline' is not supported under any name.  */
+#ifndef __cplusplus
+#undef inline
+#endif
+
+/* Define to `unsigned' if <sys/types.h> does not define. */
+#undef size_t
+
+/* Define to empty if the keyword `volatile' does not work. Warning: valid
+   code using `volatile' can become incorrect without. Disable with care. */
+#undef volatile

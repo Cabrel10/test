@@ -1,0 +1,225 @@
+Configuration of striso 0.9.2:
+
+Optional Features:
+  --disable-FEATURE       do not include FEATURE (same as --enable-FEATURE=no)
+  --enable-FEATURE[=ARG]  include FEATURE [ARG=yes]
+  --disable-devel         disable development environment.
+                          [default=enabled]
+  --enable-maintainer-mode  enable make rules and dependencies not useful
+			  (and sometimes confusing) to the casual installer
+  --disable-dependency-tracking  speeds up one-time build
+  --enable-dependency-tracking   do not reject slow dependency extractors
+  --enable-shared[=PKGS]
+                          build shared libraries [default=yes]
+  --enable-static[=PKGS]
+                          build static libraries [default=yes]
+  --enable-fast-install[=PKGS]
+                          optimize for fast installation [default=yes]
+  --disable-libtool-lock  avoid locking (might break parallel builds)
+  --enable-checks         enable preinstall checks. [default=auto]
+  --enable-arch           build and install arch packages. [default=yes]
+  --enable-indep          build and install indep packages.
+                          [default=yes]
+  --disable-compress-manpages
+                          compress manpages with gzip or bzip2 or leave them
+                          uncompressed. [default=yes]
+  --disable-public        disable public release. [default=no]
+  --disable-initscripts   disable installation of init scripts.
+                          [default=enabled]
+  --enable-tools          build and install user packages. [default=yes]
+  --enable-modules        build and install kernel packages.
+                          [default=yes]
+  --enable-k-inline       enable kernel inline functions. [default=no]
+  --enable-k-safe         enable kernel module run-time safety checks.
+                          [default=yes]
+  --enable-k-test         enable kernel module run-time testing.
+                          [default=no]
+  --enable-k-debug        enable kernel module run-time debugging.
+                          [default=no]
+  --enable-k-modversions  specify whether symbol versioning is to be used on
+                          symbols exported from built modules.
+                          [default=yes]
+  --enable-devfs          build for the devfs. [default=auto]
+  --enable-autotest       enable pre- and post-install testing.
+                          [default=auto]
+
+Optional Packages:
+  --with-PACKAGE[=ARG]    use PACKAGE [ARG=yes]
+  --without-PACKAGE       do not use PACKAGE (same as --with-PACKAGE=no)
+  --with-gnu-ld           assume the C compiler uses GNU ld [default=no]
+  --with-pic              try to use only PIC/non-PIC objects [default=use
+                          both]
+  --with-tags[=TAGS]
+                          include additional configurations [automatic]
+  --with-gpg-user=USERNAME
+                          specify the USER for signing DEBs, RPMs and
+                          tarballs. [default=${GNUPGUSER}]
+  --with-gpg-home=HOMEDIR specify the HOME for signing DEBs, RPMs and
+                          tarballs. [default=${GNUPGHOME:-~/.gnupg}]
+  --with-pkg-epoch=EPOCH  specify the EPOCH for the package file.
+                          [default=auto]
+  --with-pkg-release=RELEASE
+                          specify the RELEASE for the package files.
+                          [default=auto]
+  --with-pkg-distdir=DIR  specify the package distribution directory.
+                          [default=.]
+  --with-cooked-manpages  convert manual pages to remove macro dependencies
+                          and grefer references. [default=no]
+  --with-rpm-epoch=EPOCH  specify the EPOCH for the package file.
+                          [default=auto]
+  --with-rpm-release=RELEASE
+                          specify the RELEASE for the package files.
+                          [default=auto]
+  --with-rpm-extra=EXTRA  override or disable the EXTRA release string for
+                          built RPMS. [default=auto]
+  --with-rpm-topdir=DIR   specify the rpm top directory.
+                          [default=PKG-DISTDIR/rpms]
+  --with-deb-epoch=EPOCH  specify the EPOCH for the package file.
+                          [default=auto]
+  --with-deb-release=RELEASE
+                          specify the RELEASE for the package files.
+                          [default=auto]
+  --with-deb-topdir=DIR   specify the deb top directory.
+                          [default=PKG-DISTDIR/debian]
+  --with-k-release=UTSRELEASE
+                          specify the UTS release of the linux kernel for
+                          which the build is targetted. If this option is not
+                          set, the build will be targetted at the kernel
+                          running in the build environment. [default=`uname
+                          -r`]
+  --with-k-linkage=LINKAGE
+                          specify the kernel LINKAGE, either 'loadable' for
+                          loadable modules or 'linkable' for linkable objects.
+                          [default=loadable]
+  --with-k-modules=DIR    specify the directory to which kernel modules will
+                          be installed.
+                          [default=/lib/modules/K-RELEASE/misc]
+  --with-k-build=DIR      specify the base kernel build directory in which
+                          configured kernel source resides.
+                          [default=K-MODULES-DIR/build]
+  --with-k-source=DIR     specify the base kernel source directory in which
+                          source resides separate from the build directory.
+                          [default=/usr/src/K_VERSION]
+  --with-k-sysmap=MAP     specify the kernel system map file.
+                          [default=K-BUILD-DIR/System.map]
+  --with-k-archdir=DIR    specify the kernel source architecture specific
+                          directory. [default=K-BUILD-DIR/arch]
+  --with-k-machdir=DIR    specify the kernel source machine specific
+                          directory. [default=K-ARCHDIR/ARCH]
+  --with-k-config=CONFIG  specify the kernel configuration file.
+                          [default=BOOT/config-K-RELEASE]
+  --with-k-optimize=HOW   specify optimization, normal, size, speed or quick.
+                          [default=normal]
+  --with-k-modver=MAP     specify the kernel module symbol versions file.
+                          [default=K-BUILD-DIR/Module.symvers]
+  --with-lis=HEADERS      specify the LiS header file directory.
+                          [default=INCLUDEDIR/LiS]
+  --with-lfs=HEADERS      specify the LfS header file directory.
+                          [default=INCLUDEDIR/LfS]
+  --with-compat=HEADERS   specify the STREAMS compatibility header file
+                          directory. [default=INCLUDEDIR/strcompat]
+  --with-sctp             include xopen sctp driver in build.
+                          [default=yes]
+  --with-sctp2            include xopen sctp version 2 driver in build.
+                          [default=no]
+  --with-xns              include xopen xns headers in install.
+                          [default=yes]
+  --with-tli              include xopen tli modules in build.
+                          [default=yes]
+  --with-inet             include xopen inet driver in build.
+                          [default=yes]
+  --with-xnet             include xopen xnet library in build.
+                          [default=yes]
+  --with-sock             include xopen sock library in build.
+                          [default=yes]
+  --with-xns=HEADERS      specify the XNS header file directory.
+                          [default=$INCLUDEDIR/strxns]
+  --with-xti=HEADERS      specify the XTI header file directory.
+                          [default=$INCLUDEDIR/xti]
+  --with-inet=HEADERS     specify the INET header file directory.
+                          [default=$INCLUDEDIR/strinet]
+  --with-sctp=HEADERS     specify the SCTP header file directory.
+                          [default=$INCLUDEDIR/strsctp]
+  --with-strconf-master=FILENAME
+                          specify the file name to which the configuration
+                          master file is written [default=Config.master]
+  --with-base-major=MAJOR specify the base major device number from which to
+                          start numbering major devices [default=230]
+  --with-base-modid=MODID specify the base module id number from which to
+                          start numbering modules and devices
+                          [default=1]
+  --with-strconf-pkgdir=DIRECTORY
+                          specify the relative or absolute path to the binary
+                          package configuration directory in which to look for
+                          binary packages [default=pkg]
+
+Some influential environment variables:
+  CC          C compiler command
+  CFLAGS      C compiler flags
+  LDFLAGS     linker flags, e.g. -L<lib dir> if you have libraries in a
+              nonstandard directory <lib dir>
+  CPPFLAGS    C/C++ preprocessor flags, e.g. -I<include dir> if you have
+              headers in a nonstandard directory <include dir>
+  CCAS        assembler compiler command (defaults to CC)
+  CCASFLAGS   assembler compiler flags (defaults to CFLAGS)
+  CXX         C++ compiler command
+  CXXFLAGS    C++ compiler flags
+  CPP         C preprocessor
+  LD          Linker loader command
+  CXXCPP      C++ preprocessor
+  F77         Fortran 77 compiler command
+  FFLAGS      Fortran 77 compiler flags
+  GPG         GPG signature command
+  GNUPGUSER   GPG user name
+  GNUPGHOME   GPG home directory
+  SOELIM      Roff source elminiation command
+  REFER       Roff references command
+  TBL         Roff table command
+  PIC         Roff picture command
+  GZIP        Gzip default compression options [default=--best]
+  GZIP_CMD    Gzip compression command [default=gzip]
+  BZIP2       Bzip2 default compression options [default=]
+  BZIP2_CMD   Bzip2 compression command [default=bzip2]
+  MAKEWHATIS  Makewhatis command
+  CHKCONFIG   Chkconfig command
+  INSSERV     Insserv command
+  RPM         Rpm command
+  RPMBUILD    Build rpms command
+  DPKG        dpkg command
+  DPKG_SOURCE dpkg-source command
+  DPKG_BUILDPACKAGE
+              dpkg-buildpackage command
+  DEB_BUILD_ARCH
+              Debian build architecture
+  DEB_BUILD_GNU_CPU
+              Debian build cpu
+  DEB_BUILD_GNU_SYSTEM
+              Debian build os
+  DEB_BUILD_GNU_TYPE
+              Debian build alias
+  DEB_HOST_ARCH
+              Debian host/target architecture
+  DEB_HOST_GNU_CPU
+              Debian host/target cpu
+  DEB_HOST_GNU_SYSTEM
+              Debian host/target os
+  DEB_HOST_GNU_TYPE
+              Debian host/target alias
+  LDCONFIG    Configure loader command
+  DEPMOD      Build kernel module dependencies command
+  MODPROBE    Probe kernel module dependencies command
+  LSMOD       List kernel modules command
+  LSOF        List open files command
+  GENKSYMS    Generate kernel symbols command
+  KGENKSYMS   Generate kernel symbols command
+  OBJDUMP     Dump object files
+  NM          List object file symbols
+  MODPOST_CACHE
+              Cache file for modpost
+  AUTOM4TE    Autom4te command
+  AUTOTEST    Autotest macro build command
+
+Use these variables to override the choices made by `configure' or to help
+it to find libraries and programs with nonstandard names/locations.
+
+Report bugs to <bugs@openss7.org>.

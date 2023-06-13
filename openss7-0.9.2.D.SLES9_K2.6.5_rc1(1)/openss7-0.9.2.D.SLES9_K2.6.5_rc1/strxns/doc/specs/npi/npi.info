@@ -1,0 +1,122 @@
+This is /home/brian/rel/strxns/doc/specs/npi/npi.info, produced by makeinfo
+version 4.8 from /home/brian/rel/strxns/doc/specs/npi/npi.texi.
+
+INFO-DIR-SECTION OpenGroup
+START-INFO-DIR-ENTRY
+* NPI: (npi).                   Network Provider Interface Specification
+END-INFO-DIR-ENTRY
+
+This file documents the X/Open Network Provider Interface.
+
+This is Edition 0.9.2, last updated 2006-07-11, for OpenSS7 XNS Networking
+version 0.9.2 release 4.rc2 published by OpenSS7 Corporation
+(http://www.openss7.com/).  This specification was originally published by UNIX
+International OSI Work Group in Revision: 2.0.0 (1992/08/17).
+
+Copyright (C) 2001-2004  OpenSS7 Corporation (http://www.openss7.com/)
+Copyright (C) 1997-2000  Brian F. G. Bidulock <bidulock@openss7.org>
+Copyright (C) 1992       UNIX International, Inc.
+
+All Rights Reserved.
+
+Permission is granted to make and distribute verbatim copies of this manual
+provided the copyright notice and this permission notice are preserved on all
+copies.
+
+Permission to use, copy, modify, and distribute this documentation for any
+purpose and without fee is hereby granted, provided that the above copyright
+notice appears in all copies and that both that copyright notice and this
+permission notice appear in supporting documentation, and that the name UNIX
+International not be used in advertising or publicity pertaining to distribution
+of the software without specific, written prior permission. UNIX International
+makes no representations about the suitability of this documentation for any
+purpose. It is provided "as is" without express or implied warranty.
+
+Permission is granted to copy and distribute modified versions of this manual
+under the conditions for verbatim copying, provided the entire resulting
+derived work is distributed under the terms of a permission notice identical to
+this one.
+
+Permission is granted to copy and distribute translations of this manual into
+another language, under the above conditions for modified versions.
+
+
+Indirect:
+npi.info-1: 1996
+npi.info-2: 264767
+
+Tag Table:
+(Indirect)
+Node: Top1996
+Node: Introduction2469
+Node: The Network Layer5269
+Node: Model of the NPI5593
+Node: NPI Services7386
+Node: CONS7827
+Node: CLNS8415
+Node: Local Management9097
+Node: NPI Services Definition14280
+Node: Local Management Services Definition14876
+Node: Network Information Reporting Service15731
+Node: NS User Bind Service16936
+Node: NS User Unbind Service18615
+Node: Receipt Acknowledgement Service19603
+Node: Options Management Service20113
+Node: Error Acknowledgement Service21222
+Node: Connection-Mode Network Services Definition22288
+Node: Connection Establishment Phase26891
+Node: Data Transfer Phase30178
+Node: Reset Operation Primitives35409
+Node: Connection Termination Phase40694
+Node: Connectionless Network Services Definition45931
+Node: NPI Primitives48394
+Node: Management Primitives54307
+Node: N_INFO_REQ54657
+Node: N_INFO_ACK55948
+Ref: N_INFO_ACK-Footnote-163977
+Node: N_BIND_REQ64142
+Node: N_BIND_ACK70337
+Node: N_UNBIND_REQ75133
+Node: N_OPTMGMT_REQ76519
+Node: N_ERROR_ACK79646
+Node: N_OK_ACK82424
+Node: CONS Primitive Format and Rules83935
+Node: Connection Establishment Primitives84591
+Node: N_CONN_REQ85025
+Node: N_CONN_IND89693
+Node: N_CONN_RES93936
+Node: N_CONN_CON99372
+Node: Normal Data Transfer Phase102522
+Node: N_DATA_REQ103092
+Node: N_DATA_IND107858
+Node: Receipt Confirmation Service Primitives109839
+Node: N_DATACK_REQ111301
+Node: N_DATACK_IND113041
+Node: Expedited Data Transfer Service113927
+Node: N_EXDATA_REQ115320
+Node: N_EXDATA_IND117366
+Node: Reset Service118342
+Node: N_RESET_REQ119337
+Node: N_RESET_IND121013
+Node: N_RESET_RES122013
+Node: N_RESET_CON123477
+Node: Network Connection Release Phase124355
+Node: N_DISCON_REQ125329
+Node: N_DISCON_IND129273
+Node: CLNS Primitive Format and Rules132280
+Node: N_UNITDATA_REQ132768
+Node: N_UNITDATA_IND135509
+Node: N_UDERROR_IND137475
+Node: Diagnostics Requirements139014
+Node: References140664
+Node: Addendum for OSI Conformance141843
+Node: Mapping NPI to ISO 8348 and CCITT X.213192661
+Node: State/Event Tables197013
+Node: Primitive Precedence Tables217615
+Node: NPI Header File Listing225594
+Node: Glossary260498
+Node: Acronyms261656
+Node: Bibliography261997
+Node: Index264767
+
+End Tag Table

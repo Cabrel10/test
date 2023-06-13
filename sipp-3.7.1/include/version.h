@@ -1,0 +1,2 @@
+#define SIPP_VERSION VERSION
+#define VERSION "v3.7.1"

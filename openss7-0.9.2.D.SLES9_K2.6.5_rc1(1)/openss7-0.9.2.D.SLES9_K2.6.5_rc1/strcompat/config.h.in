@@ -1,0 +1,986 @@
+/* config.h.in.  Generated from configure.ac by autoheader.  */
+
+/* When defined, Linux Fast STREAMS will attempt to be as compatible as
+   possible (without replicating any bugs) with the AIX(R) 5L Version 5.1
+   release so that STREAMS drivers and modules written for AIX(R) 5L Version
+   5.1 will compile with Linux Fast STREAMS. When undefined, STREAMS drivers
+   and modules written for AIX(R) 5L Version 5.1 will require porting in more
+   respects. This symbol determines whether compatibility will be compiled and
+   linkable with Linux Fast-STREAMS. */
+#undef CONFIG_STREAMS_COMPAT_AIX
+
+/* When defined, Linux Fast STREAMS will attempt to be as compatible as
+   possible (without replicating any bugs) with the AIX(R) 5L Version 5.1
+   release so that STREAMS drivers and modules written for AIX(R) 5L Version
+   5.1 will compile with Linux Fast STREAMS. When undefined, STREAMS drivers
+   and modules written for AIX(R) 5L Version 5.1 will require porting in more
+   respects. This symbol determines whether compatibility will be compiled as
+   a loadable module to Linux Fast-STREAMS. */
+#undef CONFIG_STREAMS_COMPAT_AIX_MODULE
+
+/* When defined, Linux Fast STREAMS will attempt to be as compatible as
+   possible (without replicating any bugs) with the HPUX(R) release so that
+   STREAMS drivers and modules written for HPUX(R) will compile with Linux
+   Fast STREAMS. When undefined, STREAMS drivers and modules written for
+   HPUX(R) will require porting in more respects. This symbol determines
+   whether compatibility will be compiled and linkable with Linux
+   Fast-STREAMS. */
+#undef CONFIG_STREAMS_COMPAT_HPUX
+
+/* When defined, Linux Fast STREAMS will attempt to be as compatible as
+   possible (without replicating any bugs) with the HPUX(R) release so that
+   STREAMS drivers and modules written for HPUX(R) will compile with Linux
+   Fast STREAMS. When undefined, STREAMS drivers and modules written for
+   HPUX(R) will require porting in more respects. This symbol determines
+   whether compatibility will be compiled as a loadable module to Linux
+   Fast-STREAMS. */
+#undef CONFIG_STREAMS_COMPAT_HPUX_MODULE
+
+/* When defined, Linux Fast STREAMS will attempt to be as compatible as
+   possible (without replicating any bugs) with the IRIX(R) release so that
+   STREAMS drivers and modules written for IRIX(R) will compile with Linux
+   Fast STREAMS. When undefined, STREAMS drivers and modules written for
+   IRIX(R) will require porting in more respects. This symbol determines
+   whether compatibility will be compiled and linkable with Linux
+   Fast-STREAMS. */
+#undef CONFIG_STREAMS_COMPAT_IRIX
+
+/* When defined, Linux Fast STREAMS will attempt to be as compatible as
+   possible (without replicating any bugs) with the IRIX(R) release so that
+   STREAMS drivers and modules written for IRIX(R) will compile with Linux
+   Fast STREAMS. When undefined, STREAMS drivers and modules written for
+   IRIX(R) will require porting in more respects. This symbol determines
+   whether compatibility will be compiled as a loadable module to Linux
+   Fast-STREAMS. */
+#undef CONFIG_STREAMS_COMPAT_IRIX_MODULE
+
+/* When defined, Linux STREAMS will attempt to be as compatible as possible
+   (without replicating any bugs) with the LfS release so that STREAMS drivers
+   and modules written for LfS will compile with Linux STREAMS. When
+   undefined, STREAMS drivers and modules written for LfS will require porting
+   in more respects. This symbol determines whether compatibility will be
+   compiled and linkable with Linux STREAMS. */
+#undef CONFIG_STREAMS_COMPAT_LFS
+
+/* When defined, Linux STREAMS will attempt to be as compatible as possible
+   (without replicating any bugs) with the LfS release so that STREAMS drivers
+   and modules written for LfS will compile with Linux STREAMS. When
+   undefined, STREAMS drivers and modules written for LfS will require porting
+   in more respects. This symbol determines whether compatibility will be
+   compiled as a loadable module to Linux STREAMS. */
+#undef CONFIG_STREAMS_COMPAT_LFS_MODULE
+
+/* When defined, Linux Fast STREAMS will attempt to be as compatible as
+   possible (without replicating any bugs) with the LiS release so that
+   STREAMS drivers and modules written for LiS will compile with Linux Fast
+   STREAMS. When undefined, STREAMS drivers and modules written for LiS will
+   require porting in more respects. This symbol determines whether
+   compatibility will be compiled and linkable with Linux Fast-STREAMS. */
+#undef CONFIG_STREAMS_COMPAT_LIS
+
+/* When defined, Linux Fast STREAMS will attempt to be as compatible as
+   possible (without replicating any bugs) with the LiS release so that
+   STREAMS drivers and modules written for LiS will compile with Linux Fast
+   STREAMS. When undefined, STREAMS drivers and modules written for LiS will
+   require porting in more respects. This symbol determines whether
+   compatibility will be compiled as a loadable module to Linux Fast-STREAMS.
+   */
+#undef CONFIG_STREAMS_COMPAT_LIS_MODULE
+
+/* When defined, Linux Fast STREAMS will attempt to be as compatible as
+   possible (without replicating any bugs) with the MacOT(R) release so that
+   STREAMS drivers and modules written for MacOT(R) will compile with Linux
+   Fast STREAMS. When undefined, STREAMS drivers and modules written for
+   MacOT(R) will require porting in more respects. This symbol determines
+   whether compatibility will be compiled and linkable with Linux
+   Fast-STREAMS. */
+#undef CONFIG_STREAMS_COMPAT_MAC
+
+/* When defined, Linux Fast STREAMS will attempt to be as compatible as
+   possible (without replicating any bugs) with the MacOT(R) release so that
+   STREAMS drivers and modules written for MacOT(R) will compile with Linux
+   Fast STREAMS. When undefined, STREAMS drivers and modules written for
+   MacOT(R) will require porting in more respects. This symbol determines
+   whether compatibility will be compiled as a loadable module to Linux
+   Fast-STREAMS. */
+#undef CONFIG_STREAMS_COMPAT_MAC_MODULE
+
+/* When defined, Linux Fast STREAMS will attempt to be as compatible as
+   possible (without replicating any bugs) with the Mentat Portable STREAMS
+   documentation so that STREAMS drivers and modules written for Mentat
+   Portable STREAMS will compile with Linux Fast STREAMS. When undefined,
+   STREAMS drivers and modules written for Mentat Portable STREAMS will
+   require porting in more respects. This symbol determines whether
+   compatibility will be compiled and linkable with Linux Fast-STREAMS. */
+#undef CONFIG_STREAMS_COMPAT_MPS
+
+/* When defined, Linux Fast STREAMS will attempt to be as compatible as
+   possible (without replicating any bugs) with the Mentat Portable STREAMS
+   documentation so that STREAMS drivers and modules written for Mentat
+   Portable STREAMS will compile with Linux Fast STREAMS. When undefined,
+   STREAMS drivers and modules written for Mentat Portable STREAMS will
+   require porting in more respects. This symbol determines whether
+   compatibility will be compiled as a loadable module to Linux Fast-STREAMS.
+   */
+#undef CONFIG_STREAMS_COMPAT_MPS_MODULE
+
+/* When defined, Linux Fast STREAMS will attempt to be as compatible as
+   possible (without replicating any bugs) with the OpenSS7 docs so that
+   STREAMS drivers and modules written to OpenSS7 specs will compile with
+   Linux Fast STREAMS. When undefined, STREAMS drivers and modules written for
+   OpenSS7 will require porting in more respects. This symbol determines
+   whether compatibility will be compiled and linkable with Linux
+   Fast-STREAMS. */
+#undef CONFIG_STREAMS_COMPAT_OS7
+
+/* When defined, Linux Fast STREAMS will attempt to be as compatible as
+   possible (without replicating any bugs) with the OpenSS7 docs so that
+   STREAMS drivers and modules written to OpenSS7 specs will compile with
+   Linux Fast STREAMS. When undefined, STREAMS drivers and modules written for
+   OpenSS7 will require porting in more respects. This symbol determines
+   whether compatibility will be compiled as a loadable module to Linux
+   Fast-STREAMS. */
+#undef CONFIG_STREAMS_COMPAT_OS7_MODULE
+
+/* When defined, Linux Fast STREAMS will attempt to be as compatible as
+   possible (without replicating any bugs) with the OSF(R)/1.2 release so that
+   STREAMS drivers and modules written for OSF(R)/1.2 will compile with Linux
+   Fast STREAMS. When undefined, STREAMS drivers and modules written for
+   OSF(R)/1.2 will require porting in more respects. This symbol determines
+   whether compatibility will be compiled and linkable with Linux
+   Fast-STREAMS. */
+#undef CONFIG_STREAMS_COMPAT_OSF
+
+/* When defined, Linux Fast STREAMS will attempt to be as compatible as
+   possible (without replicating any bugs) with the OSF(R)/1.2 release so that
+   STREAMS drivers and modules written for OSF(R)/1.2 will compile with Linux
+   Fast STREAMS. When undefined, STREAMS drivers and modules written for
+   OSF(R)/1.2 will require porting in more respects. This symbol determines
+   whether compatibility will be compiled as a loadable module to Linux
+   Fast-STREAMS. */
+#undef CONFIG_STREAMS_COMPAT_OSF_MODULE
+
+/* When defined, Linux Fast STREAMS will attempt to be as compatible as
+   possible (without replicating any bugs) with the Solaris(R) 8 release so
+   that STREAMS drivers and modules written for Solaris(R) 8 will compile with
+   Linux Fast STREAMS. When undefined, STREAMS drivers and modules written for
+   Solaris(R) 8 will require porting in more respects. This symbol determines
+   whether compatibility will be compiled and linkable with Linux
+   Fast-STREAMS. */
+#undef CONFIG_STREAMS_COMPAT_SUN
+
+/* When defined, Linux Fast STREAMS will attempt to be as compatible as
+   possible (without replicating any bugs) with the Solaris(R) 8 release so
+   that STREAMS drivers and modules written for Solaris(R) 8 will compile with
+   Linux Fast STREAMS. When undefined, STREAMS drivers and modules written for
+   Solaris(R) 8 will require porting in more respects. This symbol determines
+   whether compatibility will be compiled as a loadable module to Linux
+   Fast-STREAMS. */
+#undef CONFIG_STREAMS_COMPAT_SUN_MODULE
+
+/* When defined, Linux Fast STREAMS will attempt to be as compatible as
+   possible (without replicating any bugs) with the UNIX(R) SVR 3.2 docs so
+   that STREAMS drivers and modules written to UNIX(R) SVR 3.2 specs will
+   compile with Linux Fast STREAMS. When undefined, STREAMS drivers and
+   modules written for UNIX(R) SVR 3.2 will require porting in more respects.
+   This symbol determines whether compatibility will be compiled and linkable
+   with Linux Fast-STREAMS. */
+#undef CONFIG_STREAMS_COMPAT_SVR3
+
+/* When defined, Linux Fast STREAMS will attempt to be as compatible as
+   possible (without replicating any bugs) with the UNIX(R) SVR 3.2 docs so
+   that STREAMS drivers and modules written to UNIX(R) SVR 3.2 specs will
+   compile with Linux Fast STREAMS. When undefined, STREAMS drivers and
+   modules written for UNIX(R) SVR 3.2 will require porting in more respects.
+   This symbol determines whether compatibility will be compiled as a loadable
+   module to Linux Fast-STREAMS. */
+#undef CONFIG_STREAMS_COMPAT_SVR3_MODULE
+
+/* When defined, Linux Fast STREAMS will attempt to be as compatible as
+   possible (without replicating any bugs) with the UNIX(R) SVR 4.2 MP docs so
+   that STREAMS drivers and modules written to UNIX(R) SVR 4.2 MP specs will
+   compile with Linux Fast STREAMS. When undefined, STREAMS drivers and
+   modules written for UNIX(R) SVR 4.2 MP will require porting in more
+   respects. This symbol determines whether compatibility will be compiled and
+   linkable with Linux Fast-STREAMS. */
+#undef CONFIG_STREAMS_COMPAT_SVR4
+
+/* When defined, Linux Fast STREAMS will attempt to be as compatible as
+   possible (without replicating any bugs) with the UNIX(R) SVR 4.2 MP docs so
+   that STREAMS drivers and modules written to UNIX(R) SVR 4.2 MP specs will
+   compile with Linux Fast STREAMS. When undefined, STREAMS drivers and
+   modules written for UNIX(R) SVR 4.2 MP will require porting in more
+   respects. This symbol determines whether compatibility will be compiled as
+   a loadable module to Linux Fast-STREAMS. */
+#undef CONFIG_STREAMS_COMPAT_SVR4_MODULE
+
+/* When defined, Linux Fast STREAMS will attempt to be as compatible as
+   possible (without replicating any bugs) with the UnixWare(R) 7 release so
+   that STREAMS drivers and modules written for UnixWare(R) 7 will compile
+   with Linux Fast STREAMS. When undefined, STREAMS drivers and modules
+   written for UnixWare(R) 7 will require porting in more respects. This
+   symbol determines whether compatibility will be compiled and linkable with
+   Linux Fast-STREAMS. */
+#undef CONFIG_STREAMS_COMPAT_UW7
+
+/* When defined, Linux Fast STREAMS will attempt to be as compatible as
+   possible (without replicating any bugs) with the UnixWare(R) 7 release so
+   that STREAMS drivers and modules written for UnixWare(R) 7 will compile
+   with Linux Fast STREAMS. When undefined, STREAMS drivers and modules
+   written for UnixWare(R) 7 will require porting in more respects. This
+   symbol determines whether compatibility will be compiled as a loadable
+   module to Linux Fast-STREAMS. */
+#undef CONFIG_STREAMS_COMPAT_UW7_MODULE
+
+/* Define to one of `_getb67', `GETB67', `getb67' for Cray-2 and Cray-YMP
+   systems. This function is required for `alloca.c' support on those systems.
+   */
+#undef CRAY_STACKSEG_END
+
+/* Define to 1 if using `alloca.c'. */
+#undef C_ALLOCA
+
+/* Define to 1 if you have the `alarm' function. */
+#undef HAVE_ALARM
+
+/* Define to 1 if you have `alloca', as a function or macro. */
+#undef HAVE_ALLOCA
+
+/* Define to 1 if you have <alloca.h> and it should be used (not on Ultrix).
+   */
+#undef HAVE_ALLOCA_H
+
+/* Define to 1 if you have the <arpa/inet.h> header file. */
+#undef HAVE_ARPA_INET_H
+
+/* Linux Fast-STREAMS has this type. */
+#undef HAVE_BCID_T
+
+/* Linux Fast-STREAMS has this type. */
+#undef HAVE_BUFCALL_ID_T
+
+/* The symbol check_mnt is not exported by some kernels. Define this to the
+   address of check_mnt in the kernel system map so that kernel modules can be
+   properly supported. */
+#undef HAVE_CHECK_MNT_ADDR
+
+/* The symbol check_mnt is not exported by some kernels. Define this if the
+   symbol check_mnt is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_CHECK_MNT_EXPORT
+
+/* The symbol check_mnt is not exported by some kernels. Define this if the
+   symbol check_mnt is either exported by your kernel, or can be stripped from
+   the symbol map, so that kernel modules can be supported properly. */
+#undef HAVE_CHECK_MNT_SYMBOL
+
+/* The symbol clone_mnt is not exported by some kernels. Define this to the
+   address of clone_mnt in the kernel system map so that kernel modules can be
+   properly supported. */
+#undef HAVE_CLONE_MNT_ADDR
+
+/* The symbol clone_mnt is not exported by some kernels. Define this if the
+   symbol clone_mnt is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_CLONE_MNT_EXPORT
+
+/* The symbol def_fifo_fops is not exported by some kernels. Define this to
+   the address of def_fifo_fops in the kernel system map so that kernel
+   modules can be properly supported. */
+#undef HAVE_DEF_FIFO_FOPS_ADDR
+
+/* The symbol def_fifo_fops is not exported by some kernels. Define this if
+   the symbol def_fifo_fops is exported by your kernel so that kernel modules
+   can be supported properly. */
+#undef HAVE_DEF_FIFO_FOPS_EXPORT
+
+/* Define to 1 if you have the <dlfcn.h> header file. */
+#undef HAVE_DLFCN_H
+
+/* The symbol do_umount is not exported by some kernels. Define this to the
+   address of do_umount in the kernel system map so that kernel modules can be
+   properly supported. */
+#undef HAVE_DO_UMOUNT_ADDR
+
+/* The symbol do_umount is not exported by some kernels. Define this if the
+   symbol do_umount is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_DO_UMOUNT_EXPORT
+
+/* Define to 1 if you have the <fcntl.h> header file. */
+#undef HAVE_FCNTL_H
+
+/* The symbol file_move is not exported by some kernels. Define this to the
+   address of file_move in the kernel system map so that kernel modules can be
+   properly supported. */
+#undef HAVE_FILE_MOVE_ADDR
+
+/* The symbol file_move is not exported by some kernels. Define this if the
+   symbol file_move is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_FILE_MOVE_EXPORT
+
+/* Define to 1 if you have the `gettimeofday' function. */
+#undef HAVE_GETTIMEOFDAY
+
+/* The symbol graft_tree is not exported by some kernels. Define this to the
+   address of graft_tree in the kernel system map so that kernel modules can
+   be properly supported. */
+#undef HAVE_GRAFT_TREE_ADDR
+
+/* The symbol graft_tree is not exported by some kernels. Define this if the
+   symbol graft_tree is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_GRAFT_TREE_EXPORT
+
+/* Define to 1 if you have the `inet_ntoa' function. */
+#undef HAVE_INET_NTOA
+
+/* Set if inode_operation lookup function takes nameidata pointer. */
+#undef HAVE_INODE_OPERATIONS_LOOKUP_NAMEIDATA
+
+/* Define to 1 if you have the <inttypes.h> header file. */
+#undef HAVE_INTTYPES_H
+
+/* If the addresses for the necessary symbols above are defined, then define
+   this to include fattach/fdetach support. */
+#undef HAVE_KERNEL_FATTACH_SUPPORT
+
+/* If the addresses for the necessary symbols above are defined, then define
+   this to include pipe support. */
+#undef HAVE_KERNEL_PIPE_SUPPORT
+
+/* Define to 1 if kernel function check_region() exists. */
+#undef HAVE_KFUNC_CHECK_REGION
+
+/* Define to 1 if kernel function cli() exists. */
+#undef HAVE_KFUNC_CLI
+
+/* Define to 1 if kernel function cpu_raise_softirq() exists. */
+#undef HAVE_KFUNC_CPU_RAISE_SOFTIRQ
+
+/* Define to 1 if kernel function force_delete() exists. */
+#undef HAVE_KFUNC_FORCE_DELETE
+
+/* Define to 1 if kernel function iget_locked() exists. */
+#undef HAVE_KFUNC_IGET_LOCKED
+
+/* Define to 1 if kernel function interruptible_sleep_on() exists. */
+#undef HAVE_KFUNC_INTERRUPTIBLE_SLEEP_ON
+
+/* Define to 1 if kernel function kern_umount() exists. */
+#undef HAVE_KFUNC_KERN_UMOUNT
+
+/* Define to 1 if kernel function module_put() exists. */
+#undef HAVE_KFUNC_MODULE_PUT
+
+/* Define to 1 if kernel function MOD_DEC_USE_COUNT() exists. */
+#undef HAVE_KFUNC_MOD_DEC_USE_COUNT
+
+/* Define to 1 if kernel function MOD_INC_USE_COUNT() exists. */
+#undef HAVE_KFUNC_MOD_INC_USE_COUNT
+
+/* Define to 1 if kernel function path_lookup() exists. */
+#undef HAVE_KFUNC_PATH_LOOKUP
+
+/* Define to 1 if kernel function pcibios_find_class() exists. */
+#undef HAVE_KFUNC_PCIBIOS_FIND_CLASS
+
+/* Define to 1 if kernel function pcibios_find_device() exists. */
+#undef HAVE_KFUNC_PCIBIOS_FIND_DEVICE
+
+/* Define to 1 if kernel function pcibios_init() exists. */
+#undef HAVE_KFUNC_PCIBIOS_INIT
+
+/* Define to 1 if kernel function pcibios_present() exists. */
+#undef HAVE_KFUNC_PCIBIOS_PRESENT
+
+/* Define to 1 if kernel function pcibios_read_config_byte() exists. */
+#undef HAVE_KFUNC_PCIBIOS_READ_CONFIG_BYTE
+
+/* Define to 1 if kernel function pcibios_read_config_dword() exists. */
+#undef HAVE_KFUNC_PCIBIOS_READ_CONFIG_DWORD
+
+/* Define to 1 if kernel function pcibios_read_config_word() exists. */
+#undef HAVE_KFUNC_PCIBIOS_READ_CONFIG_WORD
+
+/* Define to 1 if kernel function pcibios_write_config_byte() exists. */
+#undef HAVE_KFUNC_PCIBIOS_WRITE_CONFIG_BYTE
+
+/* Define to 1 if kernel function pcibios_write_config_dword() exists. */
+#undef HAVE_KFUNC_PCIBIOS_WRITE_CONFIG_DWORD
+
+/* Define to 1 if kernel function pcibios_write_config_word() exists. */
+#undef HAVE_KFUNC_PCIBIOS_WRITE_CONFIG_WORD
+
+/* Define to 1 if kernel function pci_dac_dma_sync_single() exists. */
+#undef HAVE_KFUNC_PCI_DAC_DMA_SYNC_SINGLE
+
+/* Define to 1 if kernel function pci_dac_dma_sync_single_for_cpu() exists. */
+#undef HAVE_KFUNC_PCI_DAC_DMA_SYNC_SINGLE_FOR_CPU
+
+/* Define to 1 if kernel function pci_dac_dma_sync_single_for_device() exists.
+   */
+#undef HAVE_KFUNC_PCI_DAC_DMA_SYNC_SINGLE_FOR_DEVICE
+
+/* Define to 1 if kernel function pci_dac_dma_to_offset() exists. */
+#undef HAVE_KFUNC_PCI_DAC_DMA_TO_OFFSET
+
+/* Define to 1 if kernel function pci_dac_dma_to_page() exists. */
+#undef HAVE_KFUNC_PCI_DAC_DMA_TO_PAGE
+
+/* Define to 1 if kernel function pci_dac_page_to_dma() exists. */
+#undef HAVE_KFUNC_PCI_DAC_PAGE_TO_DMA
+
+/* Define to 1 if kernel function pci_dac_set_dma_mask() exists. */
+#undef HAVE_KFUNC_PCI_DAC_SET_DMA_MASK
+
+/* Define to 1 if kernel function pci_dma_sync_sg() exists. */
+#undef HAVE_KFUNC_PCI_DMA_SYNC_SG
+
+/* Define to 1 if kernel function pci_dma_sync_single() exists. */
+#undef HAVE_KFUNC_PCI_DMA_SYNC_SINGLE
+
+/* Define to 1 if kernel function pci_find_class() exists. */
+#undef HAVE_KFUNC_PCI_FIND_CLASS
+
+/* Define to 1 if kernel function process_group() exists. */
+#undef HAVE_KFUNC_PROCESS_GROUP
+
+/* Define to 1 if kernel function read_trylock() exists. */
+#undef HAVE_KFUNC_READ_TRYLOCK
+
+/* Define to 1 if kernel function sleep_on() exists. */
+#undef HAVE_KFUNC_SLEEP_ON
+
+/* Define to 1 if kernel function sleep_on_timeout() exists. */
+#undef HAVE_KFUNC_SLEEP_ON_TIMEOUT
+
+/* Define to 1 if kernel function sti() exists. */
+#undef HAVE_KFUNC_STI
+
+/* Define to 1 if kernel function to_kdev_t() exists. */
+#undef HAVE_KFUNC_TO_KDEV_T
+
+/* Define to 1 if kernel function try_module_get() exists. */
+#undef HAVE_KFUNC_TRY_MODULE_GET
+
+/* Define to 1 if kernel function vfree() exists. */
+#undef HAVE_KFUNC_VFREE
+
+/* Define to 1 if kernel function vmalloc() exists. */
+#undef HAVE_KFUNC_VMALLOC
+
+/* Define to 1 if kernel function write_trylock() exists. */
+#undef HAVE_KFUNC_WRITE_TRYLOCK
+
+/* Define to 1 if you have the <asm/softirq.h> header file. */
+#undef HAVE_KINC_ASM_SOFTIRQ_H
+
+/* Define to 1 if you have the <linux/hardirq.h> header file. */
+#undef HAVE_KINC_LINUX_HARDIRQ_H
+
+/* Define to 1 if you have the <linux/kdev_t.h> header file. */
+#undef HAVE_KINC_LINUX_KDEV_T_H
+
+/* Define to 1 if you have the <linux/locks.h> header file. */
+#undef HAVE_KINC_LINUX_LOCKS_H
+
+/* Define to 1 if you have the <linux/namei.h> header file. */
+#undef HAVE_KINC_LINUX_NAMEI_H
+
+/* Define to 1 if you have the <linux/namespace.h> header file. */
+#undef HAVE_KINC_LINUX_NAMESPACE_H
+
+/* Define to 1 if you have the <linux/security.h> header file. */
+#undef HAVE_KINC_LINUX_SECURITY_H
+
+/* Define to 1 if you have the <linux/slab.h> header file. */
+#undef HAVE_KINC_LINUX_SLAB_H
+
+/* Define to 1 if you have the <linux/statfs.h> header file. */
+#undef HAVE_KINC_LINUX_STATFS_H
+
+/* Define to 1 if kernel macro MOD_DEC_USE_COUNT() exists. */
+#undef HAVE_KMACRO_MOD_DEC_USE_COUNT
+
+/* Define to 1 if kernel macro MOD_INC_USE_COUNT() exists. */
+#undef HAVE_KMACRO_MOD_INC_USE_COUNT
+
+/* Define to 1 if kernel macro read_trylock() exists. */
+#undef HAVE_KMACRO_READ_TRYLOCK
+
+/* Define to 1 if kernel macro write_trylock() exists. */
+#undef HAVE_KMACRO_WRITE_TRYLOCK
+
+/* Define to 1 if `get_sb' is member of `struct file_system_type'. */
+#undef HAVE_KMEMB_STRUCT_FILE_SYSTEM_TYPE_GET_SB
+
+/* Define to 1 if `read_super' is member of `struct file_system_type'. */
+#undef HAVE_KMEMB_STRUCT_FILE_SYSTEM_TYPE_READ_SUPER
+
+/* Define to 1 if `f_type' is member of `struct kstatfs'. */
+#undef HAVE_KMEMB_STRUCT_KSTATFS_F_TYPE
+
+/* Define to 1 if `s_fs_info' is member of `struct super_block'. */
+#undef HAVE_KMEMB_STRUCT_SUPER_BLOCK_S_FS_INFO
+
+/* Define to 1 if `u.generic_sbp' is member of `struct super_block'. */
+#undef HAVE_KMEMB_STRUCT_SUPER_BLOCK_U_GENERIC_SBP
+
+/* Define to 1 if `read_inode2' is member of `struct super_operations'. */
+#undef HAVE_KMEMB_STRUCT_SUPER_OPERATIONS_READ_INODE2
+
+/* Define to 1 if `namespace.sem' is member of `struct task_struct'. */
+#undef HAVE_KMEMB_STRUCT_TASK_STRUCT_NAMESPACE_SEM
+
+/* Define to 1 if `pgrp' is member of `struct task_struct'. */
+#undef HAVE_KMEMB_STRUCT_TASK_STRUCT_PGRP
+
+/* Define to 1 if `session' is member of `struct task_struct'. */
+#undef HAVE_KMEMB_STRUCT_TASK_STRUCT_SESSION
+
+/* Define to 1 if the system has the type 'irqreturn_t'. */
+#undef HAVE_KTYPE_IRQRETURN_T
+
+/* Define to 1 if you have the `c' library (-lc). */
+#undef HAVE_LIBC
+
+/* Define to 1 if you have the `LiS' library (-lLiS). */
+#undef HAVE_LIBLIS
+
+/* Define to 1 if you have the `pthread' library (-lpthread). */
+#undef HAVE_LIBPTHREAD
+
+/* Define to 1 if you have the `socket' library (-lsocket). */
+#undef HAVE_LIBSOCKET
+
+/* Define to 1 if you have the `streams' library (-lstreams). */
+#undef HAVE_LIBSTREAMS
+
+/* Define to 1 if you have the `xnet' library (-lxnet). */
+#undef HAVE_LIBXNET
+
+/* Define to 1 if you have the <memory.h> header file. */
+#undef HAVE_MEMORY_H
+
+/* Define to 1 if you have the `memset' function. */
+#undef HAVE_MEMSET
+
+/* The symbol mount_sem is not exported by some kernels. Define this to the
+   address of mount_sem in the kernel system map so that kernel modules can be
+   properly supported. */
+#undef HAVE_MOUNT_SEM_ADDR
+
+/* The symbol mount_sem is not exported by some kernels. Define this if the
+   symbol mount_sem is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_MOUNT_SEM_EXPORT
+
+/* The symbol mount_sem is not exported by some kernels. Define this if the
+   symbol mount_sem is either exported by your kernel, or can be stripped from
+   the symbol map, so that kernel modules can be supported properly. */
+#undef HAVE_MOUNT_SEM_SYMBOL
+
+/* The symbol namespace_sem is not exported by some kernels. Define this to
+   the address of namespace_sem in the kernel system map so that kernel
+   modules can be properly supported. */
+#undef HAVE_NAMESPACE_SEM_ADDR
+
+/* The symbol namespace_sem is not exported by some kernels. Define this if
+   the symbol namespace_sem is exported by your kernel so that kernel modules
+   can be supported properly. */
+#undef HAVE_NAMESPACE_SEM_EXPORT
+
+/* The symbol namespace_sem is not exported by some kernels. Define this if
+   the symbol namespace_sem is either exported by your kernel, or can be
+   stripped from the symbol map, so that kernel modules can be supported
+   properly. */
+#undef HAVE_NAMESPACE_SEM_SYMBOL
+
+/* The symbol open_softirq is not exported by some kernels. Define this to the
+   address of open_softirq in the kernel system map so that kernel modules can
+   be properly supported. */
+#undef HAVE_OPEN_SOFTIRQ_ADDR
+
+/* The symbol open_softirq is not exported by some kernels. Define this if the
+   symbol open_softirq is exported by your kernel so that kernel modules can
+   be supported properly. */
+#undef HAVE_OPEN_SOFTIRQ_EXPORT
+
+/* The symbol path_lookup is not exported by some kernels. Define this if the
+   symbol path_lookup is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_PATH_LOOKUP_EXPORT
+
+/* The symbol pcibios_init is not exported by some kernels. Define this to the
+   address of pcibios_init in the kernel system map so that kernel modules can
+   be properly supported. */
+#undef HAVE_PCIBIOS_INIT_ADDR
+
+/* The symbol pcibios_init is not exported by some kernels. Define this if the
+   symbol pcibios_init is exported by your kernel so that kernel modules can
+   be supported properly. */
+#undef HAVE_PCIBIOS_INIT_EXPORT
+
+/* The symbol put_filp is not exported by some kernels. Define this to the
+   address of put_filp in the kernel system map so that kernel modules can be
+   properly supported. */
+#undef HAVE_PUT_FILP_ADDR
+
+/* The symbol put_filp is not exported by some kernels. Define this if the
+   symbol put_filp is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_PUT_FILP_EXPORT
+
+/* The symbol raise_softirq is not exported by some kernels. Define this if
+   the symbol raise_softirq is exported by your kernel so that kernel modules
+   can be supported properly. */
+#undef HAVE_RAISE_SOFTIRQ_EXPORT
+
+/* The symbol raise_softirq_irqoff is not exported by some kernels. Define
+   this if the symbol raise_softirq_irqoff is exported by your kernel so that
+   kernel modules can be supported properly. */
+#undef HAVE_RAISE_SOFTIRQ_IRQOFF_EXPORT
+
+/* The symbol sock_readv_writev is not exported by some kernels. Define this
+   to the address of sock_readv_writev in the kernel system map so that kernel
+   modules can be properly supported. */
+#undef HAVE_SOCK_READV_WRITEV_ADDR
+
+/* The symbol sock_readv_writev is not exported by some kernels. Define this
+   if the symbol sock_readv_writev is exported by your kernel so that kernel
+   modules can be supported properly. */
+#undef HAVE_SOCK_READV_WRITEV_EXPORT
+
+/* Define to 1 if you have the <stdint.h> header file. */
+#undef HAVE_STDINT_H
+
+/* Define to 1 if you have the <stdlib.h> header file. */
+#undef HAVE_STDLIB_H
+
+/* Define to 1 if you have the <strings.h> header file. */
+#undef HAVE_STRINGS_H
+
+/* Define to 1 if you have the <string.h> header file. */
+#undef HAVE_STRING_H
+
+/* Define to 1 if you have the `strtol' function. */
+#undef HAVE_STRTOL
+
+/* Define to 1 if you have the `strtoul' function. */
+#undef HAVE_STRTOUL
+
+/* Define to 1 if you have the <sys/ioctl.h> header file. */
+#undef HAVE_SYS_IOCTL_H
+
+/* Define when the LiS release provides its own module.h file such as 2.17
+   GCOM LiS releases. */
+#undef HAVE_SYS_LIS_MODULE_H
+
+/* Define when the LiS release supports module versions such as the OpenSS7
+   autoconf release of LiS. */
+#undef HAVE_SYS_LIS_MODVERSIONS_H
+
+/* The symbol sys_mknod is not exported by some kernels. Define this to the
+   address of sys_mknod in the kernel system map so that kernel modules can be
+   properly supported. */
+#undef HAVE_SYS_MKNOD_ADDR
+
+/* The symbol sys_mknod is not exported by some kernels. Define this if the
+   symbol sys_mknod is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_SYS_MKNOD_EXPORT
+
+/* The symbol sys_mount is not exported by some kernels. Define this to the
+   address of sys_mount in the kernel system map so that kernel modules can be
+   properly supported. */
+#undef HAVE_SYS_MOUNT_ADDR
+
+/* The symbol sys_mount is not exported by some kernels. Define this if the
+   symbol sys_mount is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_SYS_MOUNT_EXPORT
+
+/* Define to 1 if you have the <sys/stat.h> header file. */
+#undef HAVE_SYS_STAT_H
+
+/* Define when the Linux Fast-STREAMS release supports module versions such as
+   the OpenSS7 autoconf releases. */
+#undef HAVE_SYS_STREAMS_MODVERSIONS_H
+
+/* Define to 1 if you have the <sys/time.h> header file. */
+#undef HAVE_SYS_TIME_H
+
+/* Define to 1 if you have the <sys/types.h> header file. */
+#undef HAVE_SYS_TYPES_H
+
+/* The symbol sys_umount is not exported by some kernels. Define this to the
+   address of sys_umount in the kernel system map so that kernel modules can
+   be properly supported. */
+#undef HAVE_SYS_UMOUNT_ADDR
+
+/* The symbol sys_umount is not exported by some kernels. Define this if the
+   symbol sys_umount is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_SYS_UMOUNT_EXPORT
+
+/* The symbol sys_unlink is not exported by some kernels. Define this to the
+   address of sys_unlink in the kernel system map so that kernel modules can
+   be properly supported. */
+#undef HAVE_SYS_UNLINK_ADDR
+
+/* The symbol sys_unlink is not exported by some kernels. Define this if the
+   symbol sys_unlink is exported by your kernel so that kernel modules can be
+   supported properly. */
+#undef HAVE_SYS_UNLINK_EXPORT
+
+/* Define to 1 if you have <sys/wait.h> that is POSIX.1 compatible. */
+#undef HAVE_SYS_WAIT_H
+
+/* Define if do_settimeofday takes struct timespec and returns int. */
+#undef HAVE_TIMESPEC_DO_SETTIMEOFDAY
+
+/* Define to 1 if you have the <unistd.h> header file. */
+#undef HAVE_UNISTD_H
+
+/* The symbol __wake_up_sync is not exported by some kernels. Define this to
+   the address of __wake_up_sync in the kernel system map so that kernel
+   modules can be properly supported. */
+#undef HAVE___WAKE_UP_SYNC_ADDR
+
+/* The symbol __wake_up_sync is not exported by some kernels. Define this if
+   the symbol __wake_up_sync is exported by your kernel so that kernel modules
+   can be supported properly. */
+#undef HAVE___WAKE_UP_SYNC_EXPORT
+
+/* Define for the linux 2.4 kernel series. */
+#undef LINUX_2_4
+
+/* Define for the linux 2.6 kernel series. */
+#undef LINUX_2_6
+
+/* Define to 1 if `major', `minor', and `makedev' are declared in <mkdev.h>.
+   */
+#undef MAJOR_IN_MKDEV
+
+/* Define to 1 if `major', `minor', and `makedev' are declared in
+   <sysmacros.h>. */
+#undef MAJOR_IN_SYSMACROS
+
+/* Define to 1 if your C compiler doesn't accept -c and -o together. */
+#undef NO_MINUS_C_MINUS_O
+
+/* Name of package */
+#undef PACKAGE
+
+/* Define to the address where bug reports for this package should be sent. */
+#undef PACKAGE_BUGREPORT
+
+/* The package release date. */
+#undef PACKAGE_DATE
+
+/* The Debian Epoch. This defaults to 0. */
+#undef PACKAGE_DEBEPOCH
+
+/* The Debian Release. This defaults to 0. */
+#undef PACKAGE_DEBRELEASE
+
+/* The Package Epoch. This defaults to 1. */
+#undef PACKAGE_EPOCH
+
+/* The Linux kernel version without EXTRAVERSION. */
+#undef PACKAGE_KNUMBER
+
+/* The Linux kernel version for which the package was configured. */
+#undef PACKAGE_KVERSION
+
+/* Define to the full name of this package. */
+#undef PACKAGE_NAME
+
+/* The Package Release. This defaults to Custom. */
+#undef PACKAGE_RELEASE
+
+/* The RPM Distribution. This defaults to automatic detection. */
+#undef PACKAGE_RPMDIST
+
+/* The RPM Epoch. This defaults to 0. */
+#undef PACKAGE_RPMEPOCH
+
+/* The RPM Extra Release string. This defaults to automatic detection. */
+#undef PACKAGE_RPMEXTRA
+
+/* The RPM Extra Release string. This defaults to automatic detection. */
+#undef PACKAGE_RPMEXTRA2
+
+/* The RPM Release. This defaults to 1. */
+#undef PACKAGE_RPMRELEASE
+
+/* Define to the full name and version of this package. */
+#undef PACKAGE_STRING
+
+/* Define to the one symbol short name of this package. */
+#undef PACKAGE_TARNAME
+
+/* Define to the version of this package. */
+#undef PACKAGE_VERSION
+
+/* Define as the return type of signal handlers (`int' or `void'). */
+#undef RETSIGTYPE
+
+/* If using the C implementation of alloca, define if you know the
+   direction of stack growth for your system; otherwise it will be
+   automatically deduced at run-time.
+	STACK_DIRECTION > 0 => grows toward higher addresses
+	STACK_DIRECTION < 0 => grows toward lower addresses
+	STACK_DIRECTION = 0 => direction of growth unknown */
+#undef STACK_DIRECTION
+
+/* Define to 1 if you have the ANSI C header files. */
+#undef STDC_HEADERS
+
+/* Define to 1 if you can safely include both <sys/time.h> and <time.h>. */
+#undef TIME_WITH_SYS_TIME
+
+/* Version number of package */
+#undef VERSION
+
+/* Define for linux 2.5.48+ .ko kernel modules. */
+#undef WITH_KO_MODULES
+
+/* Define for kernel symbol debugging. This has the effect of defeating
+   inlines, making static declarations global, and activating all debugging
+   macros. */
+#undef _DEBUG
+
+/* Enable GNU extensions on systems that have them.  */
+#ifndef _GNU_SOURCE
+# undef _GNU_SOURCE
+#endif
+
+/* Define for maximum performance and minimum size. This has the effect of
+   disabling all safety debugging macros. */
+#undef _NONE
+
+/* Define for kernel image testing (profiling). This has the effect of -O0 -g,
+   and setting assertions to TEST. */
+#undef _OPTIMIZE_NONE
+
+/* Define for kernel image normal optimization. This has the effect of -O2 -g,
+   and setting assertions to SAFE. */
+#undef _OPTIMIZE_NORMAL
+
+/* Define for kernel image size optimizations. This has the effect of -Os and
+   no -g, and disabling all assertions. */
+#undef _OPTIMIZE_SIZE
+
+/* Define for kernel image speed optimizations. This has the effect of -O3 -g,
+   and disabling all assertions. */
+#undef _OPTIMIZE_SPEED
+
+/* Define for kernel safety. This has the effect of enabling safety debugging
+   macros. This is the default. */
+#undef _SAFE
+
+/* Define for kernel testing. This has the same effect as _DEBUG for now. */
+#undef _TEST
+
+/* Define for RedHat BIGMEM kernel. */
+#undef __BOOT_KERNEL_BIGMEM
+
+/* Define for RedHat BOOT kernel. */
+#undef __BOOT_KERNEL_BOOT
+
+/* Define for RedHat DEBUG kernel. */
+#undef __BOOT_KERNEL_DEBUG
+
+/* Define for RedHat/Mandrake ENTERPRISE kernel. */
+#undef __BOOT_KERNEL_ENTERPRISE
+
+/* Define for RedHat HUGEMEM kernel. */
+#undef __BOOT_KERNEL_HUGEMEM
+
+/* Define for RedHat/Mandrake kernel. */
+#undef __BOOT_KERNEL_H_
+
+/* Define for Mandrake I586_UP_1GB kernel. */
+#undef __BOOT_KERNEL_I586_UP_1GB
+
+/* Define for Mandrake I686_UP_4GB kernel. */
+#undef __BOOT_KERNEL_I686_UP_4GB
+
+/* Define for Mandrake I686_UP_64GB kernel. */
+#undef __BOOT_KERNEL_I686_UP_64GB
+
+/* Define for Mandrake MAXIMUM kernel. */
+#undef __BOOT_KERNEL_MAXIMUM
+
+/* Define for Mandrake P3_SMP_64GB kernel. */
+#undef __BOOT_KERNEL_P3_SMP_64GB
+
+/* Define for RedHat/Mandrake SECURE kernel. */
+#undef __BOOT_KERNEL_SECURE
+
+/* Define for RedHat/Mandrake SMP kernel. */
+#undef __BOOT_KERNEL_SMP
+
+/* Define for RedHat/Mandrake UP kernel. */
+#undef __BOOT_KERNEL_UP
+
+/* Define for alpha RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_alpha
+
+/* Define for athlon RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_athlon
+
+/* Define for i386 RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_i386
+
+/* Define for i586 RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_i586
+
+/* Define for i686 RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_i686
+
+/* Define for ia32e RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_ia32e
+
+/* Define for ia64 RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_ia64
+
+/* Define for ppc RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_ppc
+
+/* Define for ppc64 RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_ppc64
+
+/* Define for s390 RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_s390
+
+/* Define for s390x RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_s390x
+
+/* Define for sparc RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_sparc
+
+/* Define for sparc64 RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_sparc64
+
+/* Define for x86_64 RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_x86_64
+
+/* Define to empty if `const' does not conform to ANSI C. */
+#undef const
+
+/* Define to `__inline__' or `__inline' if that's what the C compiler
+   calls it, or to nothing if 'inline' is not supported under any name.  */
+#ifndef __cplusplus
+#undef inline
+#endif
+
+/* Define to `unsigned' if <sys/types.h> does not define. */
+#undef size_t
+
+/* Define to empty if the keyword `volatile' does not work. Warning: valid
+   code using `volatile' can become incorrect without. Disable with care. */
+#undef volatile

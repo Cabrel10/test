@@ -1,0 +1,356 @@
+#!/bin/bash
+# debian/striso-core.prerm.  Generated from striso-core.prerm.in by configure.
+# =============================================================================
+# 
+# @(#) striso-core.prerm.in,v OpenSS7-0_9_2_D_rc2(0.9.2.1) 2006/04/07 22:01:26
+#
+# -----------------------------------------------------------------------------
+#
+# Copyright (c) 2001-2006  OpenSS7 Corporation <http://www.openss7.com/>
+# Copyright (c) 1997-2000  Brian F. G. Bidulock <bidulock@openss7.org>
+#
+# All Rights Reserved.
+#
+# This program is free software; you can redistribute it and/or modify it under
+# the terms of the GNU General Public License as published by the Free Software
+# Foundation; version 2 of the License.
+#
+# This program is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+# FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+# details.
+#
+# You should have received a copy of the GNU General Public License along with
+# this program; if not, write to the Free Software Foundation, Inc., 675 Mass
+# Ave, Cambridge, MA 02139, USA.
+#
+# -----------------------------------------------------------------------------
+#
+# U.S. GOVERNMENT RESTRICTED RIGHTS.  If you are licensing this Software on
+# behalf of the U.S. Government ("Government"), the following provisions apply
+# to you.  If the Software is supplied by the Department of Defense ("DoD"), it
+# is classified as "Commercial Computer Software" under paragraph 252.227-7014
+# of the DoD Supplement to the Federal Acquisition Regulations ("DFARS") (or any
+# successor regulations) and the Government is acquiring only the license rights
+# granted herein (the license rights customarily provided to non-Government
+# users).  If the Software is supplied to any unit or agency of the Government
+# other than DoD, it is classified as "Restricted Computer Software" and the
+# Government's rights in the Software are defined in paragraph 52.227-19 of the
+# Federal Acquisition Regulations ("FAR") (or any successor regulations) or, in
+# the cases of NASA, in paragraph 18.52.227-86 of the NASA Supplement to the FAR
+# (or any successor regulations).
+#
+# -----------------------------------------------------------------------------
+#
+# Commercial licensing and support of this software is available from OpenSS7
+# Corporation at a fee.  See http://www.openss7.com/
+#
+# -----------------------------------------------------------------------------
+#
+# Last Modified 2006/04/07 22:01:26 by brian
+#
+# =============================================================================
+
+##!/bin/bash
+## debian/mscript_header.  Generated from mscript_header.in by configure.
+## =============================================================================
+## 
+# @(#) mscript_header.in,v OpenSS7-0_9_2_D_rc2(0.9.2.1) 2006/04/07 22:01:26
+##
+## -----------------------------------------------------------------------------
+##
+## Copyright (c) 2001-2006  OpenSS7 Corporation <http://www.openss7.com/>
+## Copyright (c) 1997-2000  Brian F. G. Bidulock <bidulock@openss7.org>
+##
+## All Rights Reserved.
+##
+## This program is free software; you can redistribute it and/or modify it under
+## the terms of the GNU General Public License as published by the Free Software
+## Foundation; version 2 of the License.
+##
+## This program is distributed in the hope that it will be useful, but WITHOUT
+## ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+## FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+## details.
+##
+## You should have received a copy of the GNU General Public License along with
+## this program; if not, write to the Free Software Foundation, Inc., 675 Mass
+## Ave, Cambridge, MA 02139, USA.
+##
+## -----------------------------------------------------------------------------
+##
+## U.S. GOVERNMENT RESTRICTED RIGHTS.  If you are licensing this Software on
+## behalf of the U.S. Government ("Government"), the following provisions apply
+## to you.  If the Software is supplied by the Department of Defense ("DoD"), it
+## is classified as "Commercial Computer Software" under paragraph 252.227-7014
+## of the DoD Supplement to the Federal Acquisition Regulations ("DFARS") (or any
+## successor regulations) and the Government is acquiring only the license rights
+## granted herein (the license rights customarily provided to non-Government
+## users).  If the Software is supplied to any unit or agency of the Government
+## other than DoD, it is classified as "Restricted Computer Software" and the
+## Government's rights in the Software are defined in paragraph 52.227-19 of the
+## Federal Acquisition Regulations ("FAR") (or any successor regulations) or, in
+## the cases of NASA, in paragraph 18.52.227-86 of the NASA Supplement to the FAR
+## (or any successor regulations).
+##
+## -----------------------------------------------------------------------------
+##
+## Commercial licensing and support of this software is available from OpenSS7
+## Corporation at a fee.  See http://www.openss7.com/
+##
+## -----------------------------------------------------------------------------
+##
+## Last Modified 2006/04/07 22:01:26 by brian
+##
+## =============================================================================
+set -e
+
+tmppath=/var/tmp
+
+base=striso
+name=striso
+
+kversion="2.6.5-7.282-smp"
+prefix="/usr"
+exec_prefix="${prefix}"
+rootdir=""
+infodir="${prefix}/share/info"
+kmoduledir="${rootdir}/lib/modules/${kversion}"
+mandir="${prefix}/share/man"
+sysconfdir="${rootdir}/etc"
+initrddir="/etc/init.d"
+modutildir="${sysconfdir}/modutils"
+
+KERNEL_MODCONF=conf.modules
+KERNEL_MODULES="streams-x224"
+KERNEL_PRELOADS=
+KERNEL_SUBDIR=striso
+KMODCONF_EXT=striso
+kmodext=striso
+ksubdir=striso
+
+STRCONF_CONFMOD=conf.modules
+STRCONF_MAJBASE=180
+
+modules="streams-ip_strm_mod streams-ip_to_dlpi streams-ldl"
+preloads=
+libraries=
+tools="striso_mknod"
+infofiles="$name"
+initfiles=
+
+## =============================================================================
+##
+## mscript_header.in,v
+## Revision 0.9.2.1  2006/04/07 22:01:26  brian
+## - initial branch
+##
+## Revision 0.9  2006/04/07 21:56:39  brian
+## - initial addition of striso files
+##
+## =============================================================================
+## vim: ft=sh sw=4 noet nocin nosi formatoptions+=tcqlorn
+
+#
+# If we are upgrading and the upgrade is for the running kernel, or we are installing new on the
+# running kernel, we have to worry about previous loaded modules for the old version or a non-deb
+# version kicking around.  This scriplet kills any streams modules that are loaded and running.
+#
+function prerm_modules() {
+    if [ ":$kversion" = ":`uname -r`" ] ; then
+	for m in $KERNEL_MODULES
+	do
+	    if ( /sbin/lsmod | grep -q "^$m" ) ; then
+#		module running, kick the stack
+		/sbin/modprobe -r `/sbin/lsmod | grep "^$m" | cut -f1 '-d '`
+		if ( /sbin/lsmod | grep -q "^$m" ) ; then
+		    fdetach -a 2>/dev/null
+		    /sbin/modprobe -r `/sbin/lsmod | grep "^$m" | cut -f1 '-d '`
+		    if ( /sbin/lsmod | grep -q "^$m" ) ; then
+			/usr/sbin/lsof | while read -a tokens; do
+			    if [ :"$tokens[4]" = :"CHR" ]; then
+				major=`echo "$tokens[5]" | sed -e 's|,.*||'`
+				if [ $major -eq $STRCONF_MAJBASE ]; then
+				    eval "kill -HUP $tokens[1]"
+				fi
+			    fi
+			done
+			/sbin/sleep 5 # wait for processes to die and close streams
+			/sbin/modprobe -r `/sbin/lsmod | grep "^$m" | cut -f1 '-d '`
+			if ( /sbin/lsmod | grep -q "^$m" ) ; then
+			    echo "Cannot install or upgrade with $m module running." >&2
+			    exit 1
+			fi
+		    fi
+		fi
+	    fi
+	done
+    fi
+    return 0
+}
+
+function prerm_oldmods() {
+    prerm_modules
+}
+
+function prerm_preload() {
+    prel_old=$sysconfdir/$preload
+    if [ -f $prel_old ] ; then
+	prel_new=$tmppath/$preload.new.$$
+	prel_tmp=$tmppath/$preload.tmp.$$
+	cp -f $prel_old $prel_new
+	for m in $KERNEL_PRELOADS ; do
+	    sed -e "/^$m\>/d" $prel_new > $prel_tmp
+	    mv -f $prel_tmp $prel_new
+	done
+	chmod --reference=$prel_old $prel_new
+	cp -fb --suffix=.dpkg-save $prel_new $prel_old
+	rm -f $prel_new
+    fi
+}
+
+function remove_core_prerm() { :
+    prerm_modules
+    prerm_preload
+}
+
+function conflict_core_prerm() { :
+    prerm_modules
+    prerm_preload
+}
+
+function upgrade_core_prerm() { :
+    prerm_modules
+    prerm_preload
+}
+
+function failed_upgrade_core_prerm() { :
+    prerm_oldmods
+    prerm_preload
+}
+
+function deconfigure_core_prerm() { :
+    prerm_modules
+    prerm_preload
+}
+
+subpkg=core
+
+
+##!/bin/bash
+## debian/mscript_prerm.  Generated from mscript_prerm.in by configure.
+## =============================================================================
+## 
+# @(#) mscript_prerm.in,v OpenSS7-0_9_2_D_rc2(0.9.2.1) 2006/04/07 22:01:26
+##
+## -----------------------------------------------------------------------------
+##
+## Copyright (c) 2001-2006  OpenSS7 Corporation <http://www.openss7.com/>
+## Copyright (c) 1997-2000  Brian F. G. Bidulock <bidulock@openss7.org>
+##
+## All Rights Reserved.
+##
+## This program is free software; you can redistribute it and/or modify it under
+## the terms of the GNU General Public License as published by the Free Software
+## Foundation; version 2 of the License.
+##
+## This program is distributed in the hope that it will be useful, but WITHOUT
+## ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+## FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+## details.
+##
+## You should have received a copy of the GNU General Public License along with
+## this program; if not, write to the Free Software Foundation, Inc., 675 Mass
+## Ave, Cambridge, MA 02139, USA.
+##
+## -----------------------------------------------------------------------------
+##
+## U.S. GOVERNMENT RESTRICTED RIGHTS.  If you are licensing this Software on
+## behalf of the U.S. Government ("Government"), the following provisions apply
+## to you.  If the Software is supplied by the Department of Defense ("DoD"), it
+## is classified as "Commercial Computer Software" under paragraph 252.227-7014
+## of the DoD Supplement to the Federal Acquisition Regulations ("DFARS") (or any
+## successor regulations) and the Government is acquiring only the license rights
+## granted herein (the license rights customarily provided to non-Government
+## users).  If the Software is supplied to any unit or agency of the Government
+## other than DoD, it is classified as "Restricted Computer Software" and the
+## Government's rights in the Software are defined in paragraph 52.227-19 of the
+## Federal Acquisition Regulations ("FAR") (or any successor regulations) or, in
+## the cases of NASA, in paragraph 18.52.227-86 of the NASA Supplement to the FAR
+## (or any successor regulations).
+##
+## -----------------------------------------------------------------------------
+##
+## Commercial licensing and support of this software is available from OpenSS7
+## Corporation at a fee.  See http://www.openss7.com/
+##
+## -----------------------------------------------------------------------------
+##
+## Last Modified 2006/04/07 22:01:26 by brian
+##
+## =============================================================================
+
+[ ":${subpkg+set}" = ":set" ] || subpkg=
+
+echo "striso-${subpkg}(0.9.2.1.rc2-0): $*" >&2
+
+case "$1" in
+
+    (remove) :
+	if [ ":${3+set}" = ":set" ]
+	then : # conflict-prerm remove in-favour package new-version
+	    eval "conflict_${subpkg}_prerm"
+	else : # remove-prerm remove
+	    eval "remove_${subpkg}_prerm"
+	fi
+	;;
+
+    (upgrade) :
+	# old-prerm upgrade new-version
+	eval "upgrade_${subpkg}_prerm"
+	;;
+
+    (failed-upgrade) :
+	# old-prerm upgrade new-version ... failed
+	# new-prerm failed-upgrade old-version
+	eval "failed_upgrade_${subpkg}_prerm"
+	;;
+
+    (deconfigure) :
+	# deconfigure-prerm deconfigure in-favour package-being-installed version removing conflicting-package version
+	eval "deconfigure_${subpkg}_prerm"
+	;;
+
+esac
+
+## =============================================================================
+##
+# The following are debhelper script fragments under separate copyright:
+##
+## =============================================================================
+
+#DEBHELPER#
+
+## =============================================================================
+##
+## mscript_prerm.in,v
+## Revision 0.9.2.1  2006/04/07 22:01:26  brian
+## - initial branch
+##
+## Revision 0.9  2006/04/07 21:56:39  brian
+## - initial addition of striso files
+##
+## =============================================================================
+## vim: ft=sh sw=4 noet nocin nosi formatoptions+=tcqlorn
+
+# =============================================================================
+#
+# striso-core.prerm.in,v
+# Revision 0.9.2.1  2006/04/07 22:01:26  brian
+# - initial branch
+#
+# Revision 0.9  2006/04/07 21:56:39  brian
+# - initial addition of striso files
+#
+# =============================================================================
+# vim: ft=sh sw=4 noet nocin nosi formatoptions+=tcqlorn

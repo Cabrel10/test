@@ -1,0 +1,428 @@
+2006-07-09  Brian Bidulock  <bidulock@openss7.org>
+
+	* README: updated quick installation instructions
+
+2006-07-08  Brian Bidulock  <bidulock@openss7.org>
+
+	* .pkgrelease: bumped version to release candidate 2
+	* NEWS: bumped version to release candidate 2
+	* debian/changelog: bumped version to release candidate 2
+	* debian/rules.in: clean deb package master build
+
+2006-07-07  Brian Bidulock  <bidulock@openss7.org>
+
+	* debian/copyright: typo
+
+2006-07-06  Brian Bidulock  <bidulock@openss7.org>
+
+	* debian/changelog: packaged release candidate for Mark Fugate
+	* debian/control.in: first full debian master package build of debs on Ubuntu
+	* debian/rules.in:: first full debian master package build of debs on Ubuntu
+
+2006-07-05  Brian Bidulock  <bidulock@openss7.org>
+
+	* NEWS: package release candidate for Mark Fugate
+	* .pkgrelease: package release candidate for Mark Fugate
+
+2006-07-04  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/kernel/os7compat.c: corrections for LiS-only compile on FC5
+	* src/include/sys/os7/compat.h: corrections for LiS-only compile on FC5
+	* strcompat.spec.in: place all include files in development sub-package
+	* doc/man/Makefile.am: corrections for complete distribution check,
+	  missing manual page in LiS-only build.
+
+2006-07-03  Brian Bidulock  <bidulock@openss7.org>
+
+	* README: updated for release
+	* README-cvs: updated for release
+	* README-nexusware: updated for release
+	* acinclude.m4: updated for release
+	* doc/manual/releases.texi: updated for release
+	* src/kernel/lfscompat.c: changes to correct LiS-only compile on FC5
+	* src/kernel/irixcompat.c: changes to correct LiS-only compile on FC5
+	* src/kernel/hpuxcompat.c: changes to correct LiS-only compile on FC5
+	* src/kernel/aixcompat.c: changes to correct LiS-only compile on FC5
+	* src/kernel/uw7compat.c: changes to correct LiS-only compile on FC5
+	* src/kernel/svr4compat.c: changes to correct LiS-only compile on FC5
+	* src/kernel/svr3compat.c: changes to correct LiS-only compile on FC5
+	* src/kernel/suncompat.c: changes to correct LiS-only compile on FC5
+	* src/kernel/osfcompat.c: changes to correct LiS-only compile on FC5
+	* src/kernel/mpscompat.c: changes to correct LiS-only compile on FC5
+	* src/kernel/maccompat.c: changes to correct LiS-only compile on FC5
+	* src/kernel/liscompat.c: changes to correct LiS-only compile on FC5
+
+2006-07-02  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/manual/releases.texi: updates for release
+	* src/kernel/aixcompat.c: changes for gcc 4.1.1 compile
+
+2006-07-01  Brian Bidulock  <bidulock@openss7.org>
+
+	* debian/changelog: changes for Ubuntu dpkg build
+	* debian/control.in: changes for Ubuntu dpkg build
+	* debian/rules.in: changes for Ubuntu dpkg build
+	* Makefile.am: added new KERNEL_BLDFLAGS build flags for 2.6.16+
+	* strcompat.lsm.in: updates for next release
+
+2006-06-22  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/include/sys/aix/ddi.h: corrected extern inline for quick compile
+	* src/include/sys/aix/strconf.h: corrected extern inline for quick compile
+	* src/include/sys/aix/stream.h: corrected extern inline for quick compile
+	* src/include/sys/hpux/ddi.h: corrected extern inline for quick compile
+	* src/include/sys/hpux/strconf.h: corrected extern inline for quick compile
+	* src/include/sys/hpux/stream.h: corrected extern inline for quick compile
+	* src/include/sys/irix/ddi.h: corrected extern inline for quick compile
+	* src/include/sys/irix/strconf.h: corrected extern inline for quick compile
+	* src/include/sys/irix/stream.h: corrected extern inline for quick compile
+	* src/include/sys/lfs/ddi.h: corrected extern inline for quick compile
+	* src/include/sys/lfs/strconf.h: corrected extern inline for quick compile
+	* src/include/sys/lfs/stream.h: corrected extern inline for quick compile
+	* src/include/sys/lis/ddi.h: corrected extern inline for quick compile
+	* src/include/sys/lis/strconf.h: corrected extern inline for quick compile
+	* src/include/sys/lis/stream.h: corrected extern inline for quick compile
+	* src/include/sys/mac/ddi.h: corrected extern inline for quick compile
+	* src/include/sys/mac/strconf.h: corrected extern inline for quick compile
+	* src/include/sys/mac/stream.h: corrected extern inline for quick compile
+	* src/include/sys/mps/ddi.h: corrected extern inline for quick compile
+	* src/include/sys/mps/strconf.h: corrected extern inline for quick compile
+	* src/include/sys/mps/stream.h: corrected extern inline for quick compile
+	* src/include/sys/os7/ddi.h: corrected extern inline for quick compile
+	* src/include/sys/os7/strconf.h: corrected extern inline for quick compile
+	* src/include/sys/os7/stream.h: corrected extern inline for quick compile
+	* src/include/sys/osf/ddi.h: corrected extern inline for quick compile
+	* src/include/sys/osf/strconf.h: corrected extern inline for quick compile
+	* src/include/sys/osf/stream.h: corrected extern inline for quick compile
+	* src/include/sys/sun/ddi.h: corrected extern inline for quick compile
+	* src/include/sys/sun/strconf.h: corrected extern inline for quick compile
+	* src/include/sys/sun/stream.h: corrected extern inline for quick compile
+	* src/include/sys/sun/strsun.h: corrected extern inline for quick compile
+	* src/include/sys/svr3/ddi.h: corrected extern inline for quick compile
+	* src/include/sys/svr3/strconf.h: corrected extern inline for quick compile
+	* src/include/sys/svr3/stream.h: corrected extern inline for quick compile
+	* src/include/sys/svr4/ddi.h: corrected extern inline for quick compile
+	* src/include/sys/svr4/strconf.h: corrected extern inline for quick compile
+	* src/include/sys/svr4/stream.h: corrected extern inline for quick compile
+	* src/include/sys/uw7/ddi.h: corrected extern inline for quick compile
+	* src/include/sys/uw7/strconf.h: corrected extern inline for quick compile
+	* src/include/sys/uw7/stream.h: corrected extern inline for quick compile
+	* src/kernel/aixcompat.c: corrected extern inline for quick compile
+	* src/kernel/hpuxcompat.c: corrected extern inline for quick compile
+	* src/kernel/irixcompat.c: corrected extern inline for quick compile
+	* src/kernel/lfscompat.c: corrected extern inline for quick compile
+	* src/kernel/liscompat.c: corrected extern inline for quick compile
+	* src/kernel/maccompat.c: corrected extern inline for quick compile
+	* src/kernel/mpscompat.c: corrected extern inline for quick compile
+	* src/kernel/os7compat.c: corrected extern inline for quick compile
+	* src/kernel/osfcompat.c: corrected extern inline for quick compile
+	* src/kernel/suncompat.c: corrected extern inline for quick compile
+	* src/kernel/svr3compat.c: corrected extern inline for quick compile
+	* src/kernel/svr4compat.c: corrected extern inline for quick compile
+	* src/kernel/uw7compat.c: corrected extern inline for quick compile
+
+2006-06-21  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/include/sys/os7/allocb.h: some optimizations and one bug (by
+	  inspection)
+
+2006-06-19  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/kernel/os7compat.c: more optimizations
+
+2006-06-18  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/kernel/os7compat.c: some optimizations
+
+2006-06-14  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/include/sys/os7/compat.h: added null section statements for LiS
+	* src/include/sys/os7/debug.h: rationalized to streams/strdebug.h for LiS
+	* src/include/sys/os7/strconf.h: sp correction
+	* src/kernel/os7compat.c: forward declaration for LiS
+
+2006-06-13  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/man/strcompat.refs: updated references for IUA, DUA, M2PA
+
+2006-05-25  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/kernel/os7compat.c: added noinline in strategic places
+
+2006-05-24  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/kernel/os7compat.c: inlined queue locking functions
+
+2006-05-23  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/include/sys/aix/stream.h: mark normal inline functions unlikely
+	* src/include/sys/irix/ddi.h: mark normal inline functions unlikely
+	* src/include/sys/lfs/ddi.h: mark normal inline functions unlikely
+	* src/include/sys/lfs/strconf.h: mark normal inline functions unlikely
+	* src/include/sys/lfs/stream.h: mark normal inline functions unlikely
+	* src/include/sys/lis/ddi.h: mark normal inline functions unlikely
+	* src/include/sys/lis/stream.h: mark normal inline functions unlikely
+	* src/include/sys/mps/ddi.h: mark normal inline functions unlikely
+	* src/include/sys/mps/stream.h: mark normal inline functions unlikely
+	* src/include/sys/os7/allocb.h: mark normal inline functions unlikely
+	* src/include/sys/os7/bufpool.h: mark normal inline functions unlikely
+	* src/include/sys/os7/bufq.h: mark normal inline functions unlikely
+	* src/include/sys/os7/timer.h: mark normal inline functions unlikely
+	* src/include/sys/osf/ddi.h: mark normal inline functions unlikely
+	* src/include/sys/osf/stream.h: mark normal inline functions unlikely
+	* src/include/sys/sun/ddi.h: mark normal inline functions unlikely
+	* src/include/sys/sun/strconf.h: mark normal inline functions unlikely
+	* src/include/sys/sun/stream.h: mark normal inline functions unlikely
+	* src/include/sys/sun/strsun.h: mark normal inline functions unlikely
+	* src/include/sys/svr3/ddi.h: mark normal inline functions unlikely
+	* src/include/sys/svr4/ddi.h: mark normal inline functions unlikely
+	* src/include/sys/uw7/ddi.h: mark normal inline functions unlikely
+
+2006-05-08  Brian Bidulock  <bidulock@openss7.org>
+
+	* scripts/strconf-sh: added module id base to strconf
+	* m4/strconf.m4: added module id base to strconf
+	* am/strconf.am: added module id base to strconf
+	* acinclude.m4: added module id base to strconf
+
+	* strcompat.spec.in: updated headers, corrected init script removal
+	* src/util/init/README: updated headers
+	* src/util/init/strcompat: updated headers
+	* src/util/init/strcompat.sh: updated headers
+	* src/util/modutils/strcompat.in: updated headers
+	* src/util/sysconfig/README: updated headers
+	* src/util/sysconfig/strcompat: updated headers
+	* src/util/sysconfig/strcompat.conf: updated headers
+
+2006-04-25  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/man/strcompat.refs: more references
+
+2006-04-23  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/include/sys/os7/priv.h: minor corrections
+	* src/kernel/os7compat.c: minor corrections
+
+2006-04-22  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/man/strcompat.refs: added a few more references
+	* src/include/sys/os7/allocb.h: updated header and optimizations
+	* src/include/sys/os7/bufpool.h: updated header and optimizations
+	* src/include/sys/os7/bufq.h: updated header and optimizations
+	* src/include/sys/os7/compat.h: updated header and optimizations
+	* src/include/sys/os7/ddi.h: updated header and optimizations
+	* src/include/sys/os7/debug.h: updated header and optimizations
+	* src/include/sys/os7/lock.h: updated header and optimizations
+	* src/include/sys/os7/priv.h: updated header and optimizations
+	* src/include/sys/os7/queue.h: updated header and optimizations
+	* src/include/sys/os7/strconf.h: updated header and optimizations
+	* src/include/sys/os7/stream.h: updated header and optimizations
+	* src/include/sys/os7/timer.h: updated header and optimizations
+	* src/kernel/os7compat.c: optimizations
+
+2006-04-08  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/man/strcompat.refs: corrected spelling error reported by spammer
+
+2006-04-07  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/man/strcompat.refs: added some RFC references
+
+2006-04-05  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/man*/*.man: Moved all .so xxx.macros lines down beneath .R2 with a
+	  script.  SuSE 10's broken man(1) program thinks that .so lines after a
+	  comment line is a redirect, but it is not.  No other man(1) is that
+	  stupid.  OTOH SuSE 10's man(1) uses zsoelim, so it doesn't matter if
+	  our .macros file gets compressed (just our .refs file).  Also updated
+	  all copyright headers.
+
+2006-03-30  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/include/sys/os7/queue.h: new prototype for ss7_putq without the
+	  call to wakeup function
+
+2006-03-28  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/include/sys/os7/allocb.h: rationalized to working versions in
+	  strinet
+	* src/include/sys/os7/priv.h: rationalized to working versions in
+	  strinet
+	* src/kernel/os7compat.c: rationalized to working versions in strinet
+
+	- this is in preparation for converting external modules that use
+	  similar versions of these functions to use the compatibility module
+	  versions instead
+
+2006-03-24  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/man/strcompat.refs: updated LiS and STREAMS release numbers
+	* strcompat.spec.in (%package test): described send-pr
+
+2006-03-23  Brian Bidulock  <bidulock@openss7.org>
+
+	* strcompat.spec.in: added send-pr files
+	* NEWS: updated release notes
+	* doc/manual/releases.texi: updated release notes
+
+2006-03-22  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/manual/strcompat.texi: added makefile target index
+	* doc/manual/releases.text: bumped release number
+	* strcompat.lsm.in: boutelli can't handle decimal point in lsm
+
+2006-03-21  Brian Bidulock  <bidulock@openss7.org>
+
+	* .cvsignore: added *.pr files
+	* Makefile.am: added pr.am for problem reports
+	* acinclude.m4: added pr.m4 and call _AUTOPR for problem reports
+
+2006-03-20  Brian Bidulock  <bidulock@openss7.org>
+
+	* Makefile.am: added checks for DEVELOPMENT
+	* src/Makefile.am: added checks for DEVELOPMENT
+	* strcompat.spec.in: tied in --disable-devel flag
+	* configure.ac: updated and rationalized
+	* doc/manual/Makefile.am: added checks for DEVELOPMENT
+
+2006-03-16  Brian Bidulock  <bidulock@openss7.org>
+
+	* ANNOUNCE: added announcement file for release
+	* .pkgrelease: bumped release number after release
+	* NEWS: prepare for next release
+
+2006-03-15  Brian Bidulock  <bidulock@openss7.org>
+
+	* configure.ac (AC_CONFIG_SRCDIR): change unique file to .lsm.in file
+	* tests/local.at: set better defaults for stand-alone test suites
+
+2006-03-14  Brian Bidulock  <bidulock@openss7.org>
+	
+	* strcompat.spec.in: added second rpmextra string
+
+2006-03-11  Brian Bidulock  <bidulock@openss7.org>
+
+	* configure.ac: allow --disable-dependency-tracking in maintainer mode
+
+2006-03-10  Brian Bidulock  <bidulock@openss7.org>
+
+	* strcompat.spec.in: updated description fields and headers
+
+2006-03-09  Brian Bidulock  <bidulock@openss7.org>
+
+	* strcompat.lsm.in: make suitable for Linux Software Map submission
+
+2006-03-08  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/manual/releases.texi (Prerequisites): updated for release
+
+2006-03-07  Brian Bidulock  <bidulock@openss7.org>
+
+	* Makefile.am: compile tools static for distcheck
+	* am/help.am: documented remove target
+	* am/openss7.am: added remove target and reverse recursive targets
+	* debian/changelog: updated release numbering
+	* debian/copyright: updated headers
+	* debian/control.in: updated deprecated references to LiS
+
+2006-03-06  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/man/Makefile.am: updated headers
+	* doc/manual/Makefile.am: updated headers
+	* doc/Makefile.am: updated headers
+	* src/include/Makefile.am: updated headers
+	* src/Makefile.am: updated headers
+	* tests/Makefile.am: updated headers
+	* Makefile.am: updated headers
+
+2006-03-05  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/include/sys/lis/strconf.h: removed deprecated attribute from
+	  lis_(un)register_strdev/strmod
+
+2006-03-04  Brian Bidulock  <bidulock@openss7.org>
+
+	* tests/local.at: updated headers
+
+2006-03-03  Brian Bidulock  <bidulock@openss7.org>
+
+	* THANKS: updated for release
+	* doc/man/strcompat.macros: updated for release
+	* doc/man/strcompat.refs: updated references
+	* README-nexusware: updated for release
+	* AUTHORS: updated for release
+	* NEWS: updated for release
+	* src/include/sys/sun/strsun.h: 64-bit compatibility
+	* src/kernel/lfscompat.c (drv_getparm): correction to UCRED
+	* src/kernel/mpscompat.c: 64-bit compatibility
+	* src/kernel/svr4compat.c: SMP compatibility
+
+2006-03-02  Brian Bidulock  <bidulock@openss7.org>
+
+	* README: updated for release
+	* doc/manual/releases.texi: updated release notes
+	* doc/manual/releases.texi (Bugs, Known Bugs, Maturity): updated release notes
+	* doc/manual/strcompat.texi (detailed node listing): added missing Troubleshooting
+	* README-cvs: updated for release
+
+2006-03-01  Brian Bidulock  <bidulock@openss7.org>
+
+	* ChangeLog: corrected format of change log
+	* TODO: updated to do list
+	* README: updated for release
+
+2006-02-23  Brian Bidulock  <bidulock@openss7.org>
+
+	* ChangeLog: modified -- updated for new release
+	* Makefile.am: modified -- added TODO file to distribution
+	* TODO: added -- added TODO file to distribution
+
+2006-02-13  Brian Bidulock  <bidulock@openss7.org>
+
+	- Changes from strcompat 0.9.2.2 release:
+	* m4/kernel.m4: changes for Gentoo and 2.6.15 kernels
+
+2005-06-04  Brian Bidulock  <bidulock@openss7.org>
+
+	- first cut at streams compatibility package
+
+-----
+
+Copyright (c) 2001-2006  OpenSS7 Corporation <http://www.openss7.com>
+Copyright (c) 1997-2000  Brian F. G. Bidulock <bidulock@openss7.org>
+
+All Rights Reserved.
+
+This program is free software; you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation; version 2 of the License.
+
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+details.
+
+You should have received a copy of the GNU General Public License along with
+this program; if not, write to the Free Software Foundation, Inc., 675 Mass
+Ave, Cambridge, MA 02139, USA.
+
+
+U.S. GOVERNMENT RESTRICTED RIGHTS.  If you are licensing this Software on
+behalf of the U.S. Government ("Government"), the following provisions apply
+to you.  If the Software is supplied by the Department of Defense ("DoD"), it
+is classified as "Commercial Computer Software" under paragraph 252.227-7014
+of the DoD Supplement to the Federal Acquisition Regulations ("DFARS") (or any
+successor regulations) and the Government is acquiring only the license rights
+granted herein (the license rights customarily provided to non-Government
+users).  If the Software is supplied to any unit or agency of the Government
+other than DoD, it is classified as "Restricted Computer Software" and the
+Government's rights in the Software are defined in paragraph 52.227-19 of the
+Federal Acquisition Regulations ("FAR") (or any successor regulations) or, in
+the cases of NASA, in paragraph 18.52.227-86 of the NASA Supplement to the FAR
+(or any successor regulations).
+
+
+Commercial licensing and support of this software is available from OpenSS7
+Corporation at a fee.  See http://www.openss7.com/
+
+vim: ft=changelog tw=80 com=fb\:*,fb\:- fo+=tcqlorn nocin nosi

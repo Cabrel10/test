@@ -1,0 +1,265 @@
+This is /home/brian/rel/strcompat/doc/manual/strcompat.info, produced by
+makeinfo version 4.8 from /home/brian/rel/strcompat/doc/manual/strcompat.texi.
+
+INFO-DIR-SECTION Kernel
+START-INFO-DIR-ENTRY
+* OpenSS7 COMPAT: (strcompat).	An Open STREAMS Compatibility Package.
+END-INFO-DIR-ENTRY
+
+This file provides the Installation and Reference Manual for OpenSS7 STREAMS
+Compatibility.
+
+This is Edition 0.9.2, last updated 2006-07-11, of the `OpenSS7 STREAMS
+Compatibility Installation and Reference Manual', for Version 0.9.2 Release
+4.rc2.
+
+Copyright (C) 2001-2006  OpenSS7 Corporation (http://www.openss7.com/)
+Copyright (C) 1997-2000  Brian F. G. Bidulock <bidulock@openss7.org>
+
+All Rights Reserved.
+
+Permission is granted to make and distribute verbatim copies of this manual
+provided the copyright notice and this permission notice are preserved on all
+copies.
+
+Permission is granted to copy and distribute modified versions of this manual
+under the conditions for verbatim copying, provided the entire resulting
+derived work is distributed under the terms of a permission notice identical to
+this one.
+
+Permission is granted to copy and distribute translations of this manual into
+another language, under the above conditions for modified versions.
+
+
+Indirect:
+strcompat.info-1: 1252
+strcompat.info-2: 294547
+
+Tag Table:
+(Indirect)
+Node: Top1252
+Node: Acknowledgments3754
+Node: Sponsors4143
+Node: Contributors4686
+Node: Introduction5198
+Node: Notice5594
+Node: Overview6178
+Node: Organization6445
+Node: Conventions6996
+Node: Objective7198
+Node: Rationale9326
+Node: Reference12072
+Node: Files12407
+Node: Drivers12498
+Node: Modules14483
+Node: Utilities16472
+Node: AIX Utilities18998
+Node: HP-UX Utilities19125
+Node: IRIX Utilities19279
+Node: LfS Utilities19431
+Node: LiS Utilities19579
+Node: MacOT Utilities19728
+Node: MPS Utilities19881
+Node: OSF Utilities20030
+Node: Solaris Utilities20181
+Node: SUPER-UX Utilities20345
+Node: SVR3 Utilities20514
+Node: SVR4 Utilities20672
+Node: UnixWare Utilities20830
+Node: UXP/V Utilities20997
+Node: Development21135
+Node: Conformance21246
+Node: STREAMS Compatibility21412
+Node: SVR 3.2 Compatibility24255
+Node: UNIX System V Release 3.2 Functions25938
+Node: SVR 4.2 Compatibility26123
+Node: UNIX System V Release 4 STREAMS Functions::26621
+Node: UNIX System V Release 4 MP STREAMS Functions31200
+Node: UNIX System V Release 4.0 DDI/DKI Functions33945
+Node: UNIX System V Release 4.0 MP DDI/DKI Functions37078
+Node: UNIX System V Release 4.2 DDI/DKI Functions37894
+Node: UNIX System V Release 4.2 MP DDI/DKI Functions38410
+Node: MPS Compatibility40687
+Node: Mentat Portable Streams (MPS) Utility Functions40932
+Node: AIX Compatibility43761
+Node: AIX 5L Version 5.1 Portable STREAMS Environment (PSE) STREAMS Functions44028
+Node: HP-UX Compatibility44757
+Node: IRIX Compatibility44943
+Node: LfS Compatibility45127
+Node: LiS Compatibility45307
+Node: MacOT Compatibility45488
+Node: OSF/1 Compatibility45675
+Node: Solaris Compatibility45868
+Node: SUX Compatibility46063
+Node: UnixWare Compatibility46253
+Node: UXP Compatibility46449
+Node: Porting46609
+Node: SVR 3.2 Porting50563
+Node: SVR 4.2 Porting50694
+Node: MPS Porting50845
+Node: AIX Porting50984
+Node: HP-UX Porting51121
+Node: IRIX Porting51263
+Node: LfS Porting51403
+Node: LiS Porting51539
+Node: MacOT Porting51676
+Node: OSF/1 Porting51819
+Node: Solaris Porting51968
+Node: SUX Porting52119
+Node: UnixWare Porting52265
+Node: UXP Porting52417
+Node: Releases52539
+Ref: Releases-Footnote-153671
+Ref: Releases-Footnote-253746
+Ref: Releases-Footnote-353821
+Node: Prerequisites53896
+Ref: Prerequisites-Footnote-154625
+Ref: Prerequisites-Footnote-254685
+Ref: Prerequisites-Footnote-354900
+Node: Compatibility55088
+Node: GNU/Linux Distributions55569
+Ref: GNU/Linux Distributions-Footnote-157420
+Node: Linux Kernel57596
+Ref: Linux Kernel-Footnote-159292
+Node: Linux Architectures59486
+Node: Linux STREAMS60252
+Ref: Linux STREAMS-Footnote-160964
+Node: Linux Fast-STREAMS61039
+Node: Release Notes61486
+Node: Release strcompat-0.9.2.4.rc261965
+Node: Release strcompat-0.9.2.362284
+Node: Release strcompat-0.9.2.263574
+Node: Release strcompat-0.9.2.164064
+Node: Maturity64763
+Node: Pre-Alpha Releases65313
+Node: Alpha Releases65910
+Node: Beta Releases66688
+Node: Gamma Releases67583
+Node: Production Releases68504
+Node: Bugs69370
+Node: Defect Notices69588
+Ref: Defect Notices-Footnote-170821
+Node: Known Defects70892
+Node: Schedule71270
+Node: History71382
+Node: Installation71479
+Node: Downloading71894
+Node: Downloading the Binary RPM73312
+Ref: Downloading the Binary RPM-Footnote-182845
+Ref: Downloading the Binary RPM-Footnote-283275
+Ref: Downloading the Binary RPM-Footnote-383424
+Ref: Downloading the Binary RPM-Footnote-483553
+Ref: Downloading the Binary RPM-Footnote-583849
+Ref: Downloading the Binary RPM-Footnote-684023
+Ref: Downloading the Binary RPM-Footnote-784279
+Ref: Downloading the Binary RPM-Footnote-884353
+Ref: Downloading the Binary RPM-Footnote-984427
+Ref: Downloading the Binary RPM-Footnote-1084501
+Ref: Downloading the Binary RPM-Footnote-1184639
+Ref: Downloading the Binary RPM-Footnote-1284714
+Ref: Downloading the Binary RPM-Footnote-1384856
+Node: Downloading the Debian DEB84931
+Ref: Downloading the Debian DEB-Footnote-194239
+Ref: Downloading the Debian DEB-Footnote-294434
+Ref: Downloading the Debian DEB-Footnote-394583
+Ref: Downloading the Debian DEB-Footnote-494712
+Ref: Downloading the Debian DEB-Footnote-595008
+Ref: Downloading the Debian DEB-Footnote-695182
+Ref: Downloading the Debian DEB-Footnote-795438
+Ref: Downloading the Debian DEB-Footnote-895512
+Ref: Downloading the Debian DEB-Footnote-995586
+Ref: Downloading the Debian DEB-Footnote-1095660
+Ref: Downloading the Debian DEB-Footnote-1195798
+Ref: Downloading the Debian DEB-Footnote-1295873
+Ref: Downloading the Debian DEB-Footnote-1396015
+Node: Downloading the Source RPM96090
+Node: Downloading the Debian DSC96863
+Node: Downloading the Tar Ball97710
+Node: Downloading from CVS99323
+Ref: Downloading from CVS-Footnote-1103979
+Node: Configuration104015
+Node: Configuring the Binary RPM104444
+Ref: Configuring the Binary RPM-Footnote-1107577
+Ref: Configuring the Binary RPM-Footnote-2107651
+Node: Configuring the Debian DEB107809
+Node: Configuring the Source RPM108178
+Ref: Configuring the Source RPM-Footnote-1124106
+Node: Configuring the Debian DSC124369
+Node: Configuring the Tar Ball124954
+Node: Configure Options125454
+Ref: Configure Options-Footnote-1148686
+Node: Environment Variables148949
+Node: Building156630
+Node: Building from the Source RPM156935
+Ref: Building from the Source RPM-Footnote-1158233
+Node: Building from the Debian DSC158307
+Ref: Building from the Debian DSC-Footnote-1159852
+Node: Building from the Tar Ball159926
+Ref: Building from the Tar Ball-Footnote-1167772
+Ref: Building from the Tar Ball-Footnote-2167931
+Node: Installing168179
+Node: Installing the Binary RPM168472
+Node: Installing the Debian DEB169776
+Node: Installing the Tar Ball170464
+Node: Removing171201
+Node: Removing the Binary RPM171598
+Node: Removing the Debian DEB172057
+Node: Removing the Source RPM172551
+Node: Removing the Debian DSC173071
+Node: Removing the Tar Ball173713
+Node: Loading174523
+Ref: Loading-Footnote-1177169
+Ref: Loading-Footnote-2177243
+Node: Maintenance177400
+Node: Makefile Targets177543
+Node: User Targets178231
+Ref: User Targets-Footnote-1183414
+Ref: User Targets-Footnote-2183636
+Ref: User Targets-Footnote-3183836
+Node: Maintainer Targets183891
+Node: Clean Targets185473
+Node: Release Targets188084
+Node: Logging Targets190186
+Ref: Logging Targets-Footnote-1193222
+Node: Problem Report Targets193494
+Node: Release Archive Targets195108
+Node: RPM Build Targets197454
+Node: Debian Build Targets200482
+Node: Troubleshooting202446
+Node: Test Suites202735
+Node: Pre-installation Checks202998
+Ref: testsuite:ex0204375
+Ref: testsuite:ex1205243
+Ref: testsuite:ex2206074
+Ref: Pre-installation Checks-Footnote-1213183
+Node: Post-installation Checks213285
+Node: Running Test Suites214172
+Ref: testsuite:ex3215033
+Ref: testsuite:ex4216239
+Node: Problem Reports216607
+Node: Problem Report Guidelines216894
+Node: Generating Problem Reports219508
+Ref: autopr:ex0220852
+Ref: Generating Problem Reports-Footnote-1222059
+Node: Automatic Problem Reports222150
+Ref: autopr:ex2222896
+Node: Stand Alone Problem Reports224299
+Ref: autopr:ex2225002
+Node: Known Problems226452
+Node: GPL226943
+Node: GNU General Public License227057
+Node: LGPL246150
+Node: GNU Lesser General Public License246254
+Node: FDL274249
+Node: GNU Free Documentation License274355
+Node: Indices294113
+Node: Concept Index294547
+Node: Type Index311532
+Node: Function Index311703
+Node: Variable Index311895
+Node: File Index315416
+Node: Option Index319087
+Node: Makefile Target Index325921
+Node: Author Index330264
+
+End Tag Table

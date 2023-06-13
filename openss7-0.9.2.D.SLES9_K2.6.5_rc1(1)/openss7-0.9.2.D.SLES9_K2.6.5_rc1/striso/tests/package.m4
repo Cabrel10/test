@@ -1,0 +1,6 @@
+m4_define([AT_PACKAGE_NAME], [striso])
+m4_define([AT_PACKAGE_TARNAME], [striso])
+m4_define([AT_PACKAGE_VERSION], [0.9.2.1.rc2])
+m4_define([AT_PACKAGE_RELEASE], [1.rc2])
+m4_define([AT_PACKAGE_STRING], [striso 0.9.2.1.rc2])
+m4_define([AT_PACKAGE_BUGREPORT], [bugs@openss7.org])

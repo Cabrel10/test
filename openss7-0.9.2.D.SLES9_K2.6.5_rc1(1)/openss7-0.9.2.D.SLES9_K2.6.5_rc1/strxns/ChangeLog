@@ -1,0 +1,503 @@
+2006-07-11  Brian Bidulock  <bidulock@openss7.org>
+
+	* Makefile.am: distribute ISO and other partial implementations
+	* src/drivers/cd.c: changes for partial compile
+	* src/drivers/dl.c: changes for parital compile
+	* src/drivers/lis.conf: roughed in driver definitions
+
+2006-07-09  Brian Bidulock  <bidulock@openss7.org>
+
+	* README: updated quick installation instructions
+
+2006-07-08  Brian Bidulock  <bidulock@openss7.org>
+
+	* .pkgrelease: bumped version to release candidate 2
+	* NEWS: bumped version to release candidate 2
+	* debian/changelog: bumped version to release candidate 2
+	* debian/rules.in: clean deb package master build
+	* src/test/test-ip.c: removed trigraphs
+	* src/test/test-np_ip.c: removed trigraphs
+	* src/drivers/np_ip.c: handle old SLES 9 2.6.5 kernel
+
+2006-07-07  Brian Bidulock  <bidulock@openss7.org>
+
+	* debian/copyright: typo
+
+2006-07-06  Brian Bidulock  <bidulock@openss7.org>
+
+	* debian/changelog: packaged release candidate for Mark Fugate
+	* debian/control.in: first full debian master package build of debs on Ubuntu
+	* debian/rules.in:: first full debian master package build of debs on Ubuntu
+
+2006-07-05  Brian Bidulock  <bidulock@openss7.org>
+
+	* NEWS: package release candidate for Mark Fugate
+	* .pkgrelease: package release candidate for Mark Fugate
+
+2006-07-04  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/np_ip.c: changes to correct LiS only compile on FC5
+	* strxns.spec.in: place all include files in development sub-package
+	* src/drivers/ip_hooks.h.in: correct compile back to RH 7.2
+	* acinclude.m4: corrections for compile on FC5 with 2.6.17 kernel
+
+2006-07-03  Brian Bidulock  <bidulock@openss7.org>
+
+	* README: updated for release
+	* README-alpha: updated for release
+	* README-cvs: updated for release
+	* README-nexusware: updated for release
+	* doc/manual/releases.texi: updated for release
+
+2006-07-02  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/manual/releases.texi: updates for release
+	* src/drivers/np_ip.c: changes for 2.6.17 kernel
+	* src/test/ldltest.c: changes for gcc 4.1.1 compile
+	* acinclude.m4: make inet tests compatible
+	* src/drivers/ip_hooks.h.in: make inet tests compatible
+
+2006-07-01  Brian Bidulock  <bidulock@openss7.org>
+
+	* debian/changelog: changes for Ubuntu dpkg build
+	* debian/control.in: changes for Ubuntu dpkg build
+	* debian/rules.in: changes for Ubuntu dpkg build
+	* Makefile.am: added new KERNEL_BLDFLAGS build flags for 2.6.16+
+	* strxns.lsm.in: updates for next release
+
+2006-06-16  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/np_ip.c: const'ness and a little rationalization back to
+	  next gen upd driver
+	* TODO: updated things to do
+
+2006-06-13  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/man/strxns.refs: updated references for IUA, DUA, M2PA
+
+2006-06-04  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/np_ip.c: minor optimization tweaks
+
+2006-05-19  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/util/init/strxns.sh: corrected removal for debian
+
+2006-05-18  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/np_ip.c: rationalized to RAWIP driver
+
+2006-05-14  Brian Bidulock  <bidulock@openss7.org>
+
+	* .indent.pro: added np_long and friends to types
+	* src/drivers/nf.c: removed redundant QR_ definitions
+	* src/drivers/np_ip.c: corrected buffer leaks
+	* tests/testsuite-np_ip.at: added buffer leak checks
+
+2006-05-12  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/np_ip.c: corrections from testing
+	* src/test/test-np_ip.c: additional test cases
+	* tests/testsuite-np_ip.at: additional test cases
+
+2006-05-11  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/np_ip.c: corrections from testing
+	* src/test/test-np_ip.c: additional test cases
+	* tests/testsuite-np_ip.at: additional test cases
+
+2006-05-10  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/np_ip.c: corrections from testing
+	* src/test/test-np_ip.c: additional test cases
+	* tests/testsuite-np_ip.at: additional test cases
+
+2006-05-09  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/np_ip.c: use info.CURRENT_state instead of i_state
+	* src/test/test-np_ip.c: expand printout of N_INFO_ACK
+	* tests/testsuite-np_ip.at: guard timer test expected to fail
+	* src/drivers/np_ip.c: changes from initial testing
+	* src/test/test-np_ip.c: changes from initial testing
+	* tests/testsuite-np_ip.at: changes from initial testing
+	* src/drivers/np_ip.c: changes from testing
+	* src/test/test-np_ip.c: changes from testing
+	* tests/testsuite-np_ip.at: changes from testing
+
+2006-05-08  Brian Bidulock  <bidulock@openss7.org>
+
+	* scripts/strconf-sh: added module id base to strconf
+	* m4/strconf.m4: added module id base to strconf
+	* am/strconf.am: added module id base to strconf
+	* acinclude.m4: added module id base to strconf
+	* Makefile.am: added init scripts for XNS
+	* src/util/init/README: added init scripts for XNS
+	* src/util/init/strxns: added init scripts for XNS
+	* src/util/init/strxns.sh: added init scripts for XNS
+	* src/util/modutils/strxns.in: added init scripts for XNS
+	* src/util/sysconfig/README: added init scripts for XNS
+	* src/util/sysconfig/strxns: added init scripts for XNS
+	* src/util/sysconfig/strxns.conf: added init scripts for XNS
+	* strxns.spec.in: added np_ip module, corrected init script removal
+	* NEWS: updates
+	* README: updates
+	* src/modules/ip_strm_mod.c: added two debug statements
+	* acinclude.m4: add check for module_text_address symbol
+	* src/drivers/ip.c: rip module_text_address, hash table changes
+	* src/drivers/np.c: rip module_text_address
+	* src/drivers/np_ip.c: rip module_text_address, hash table changes
+	* src/drivers/dl.c: new gcc mishandles ++ of cast pointers
+	* src/drivers/dl_ip.c: new gcc mishandles ++ of cast pointers
+	* src/drivers/ip.c: new gcc mishandles ++ of cast pointers
+	* src/drivers/np.c: new gcc mishandles ++ of cast pointers
+	* src/drivers/np_ip.c: new gcc mishandles ++ of cast pointers
+	* src/drivers/np_ip.c: working through first few test cases
+	* src/test/test-np_ip.c: working through first few test cases
+	* tests/testsuite-np_ip.at: working through first few test cases
+	* tests/testsuite.at: working through first few test cases
+
+2006-05-07  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/man/Makefile.am: shifted over to np_ip for NPI-IP
+	* doc/man/man4/ipcl.4.man: shifted over to np_ip for NPI-IP
+	* doc/man/man4/ipco.4.man: shifted over to np_ip for NPI-IP
+	* doc/man/man4/np_ip.4.man: shifted over to np_ip for NPI-IP
+	* doc/man/man4/npi_ip.4.man: shifted over to np_ip for NPI-IP
+	* doc/man/man8/test-np_ip.8.man: shifted over to np_ip for NPI-IP
+	* src/drivers/ip.c: shifted over to np_ip for NPI-IP
+	* src/drivers/lis.conf: shifted over to np_ip for NPI-IP
+	* src/drivers/np_ip.c: shifted over to np_ip for NPI-IP
+	* src/test/test-ip.c: working up test program
+	* src/test/test-np_ip.c: shifted over to np_ip for NPI-IP
+	* tests/Makefile.am: shifted over to np_ip for NPI-IP
+	* tests/testsuite-np_ip.at: shifted over to np_ip for NPI-IP
+	* acinclude.m4: changed major base offset
+
+2006-05-06  Brian Bidulock  <bidulock@openss7.org>
+
+	* Makefile.am: added test program
+	* doc/man/Makefile.am: added test-ip manual page
+	* doc/man/man7/npi_ip.7.man: updated documentation
+	* doc/man/man8/test-ip.8.man: added test-ip manual page
+	* src/drivers/ip.c: working up NPI-IP driver
+	* src/include/sys/npi_ip.h: added TOS values
+	* src/test/test-ip.c: added test program
+	* tests/Makefile.am: added NPI-IP driver test suite
+	* tests/testsuite-ip.at: added NPI-IP driver test suite
+	* tests/testsuite.at: added NPI-IP driver test suite
+
+2006-05-05  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/ip.c: working up NPI-IP driver
+	* src/include/sys/npi_ip.h: working up NPI-IP driver
+
+2006-05-03  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/ip.c: working up NPI-IP driver
+	* src/include/sys/npi_ip.h: working up NPI-IP driver
+
+2006-04-25  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/man/strxns.refs: more references
+	* src/drivers/ip.c: working up NPI-IP driver
+
+2006-04-23  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/ip.c: call interface correction
+
+2006-04-22  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/man/strxns.refs: added a few more references
+	* doc/man/man4/ip.4.man: updating manual pages
+	* doc/man/man4/np.4.man: updating manual pages
+	* doc/man/man7/npi_ip.7.man: updating manual pages
+	* src/drivers/np.c: working up NP driver
+
+2006-04-11  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/dl.c: added new DL driver
+
+2006-04-08  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/man/strxns.refs: corrected spelling error reported by spammer
+
+2006-04-07  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/man/strxns.refs: added some RFC references
+
+2006-04-05  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/man*/*.man: Moved all .so xxx.macros lines down beneath .R2 with a
+	  script.  SuSE 10's broken man(1) program thinks that .so lines after a
+	  comment line is a redirect, but it is not.  No other man(1) is that
+	  stupid.  OTOH SuSE 10's man(1) uses zsoelim, so it doesn't matter if
+	  our .macros file gets compressed (just our .refs file).  Also updated
+	  all copyright headers.
+
+2006-04-03  Brian Bidulock  <bidulock@openss7.org>
+
+	* acinclude.m4: xfrm_policy_delete returns int on 2.6.13+.
+	* src/drivers/ip_hooks.h.in: xfrm_policy_delete returns int on 2.6.13+.
+	* src/drivers/ip.c (ip_free, ip_open, ip_close): gcc 4 does not like
+	  different attributes between declaration and definition.
+
+2006-03-31  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/ip.c: working up NPI IP test and mux driver
+
+2006-03-30  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/ip.c: working up NPI IP test and mux driver
+	* src/include/sys/npi_ip.h: working up NPI IP test and mux driver
+	* src/drivers/ip.c: corrections for x86_64 compile
+
+2006-03-25  Brian Bidulock  <bidulock@openss7.org>
+
+	* TODO: added netfilter driver to TODO list
+
+2006-03-24  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/man/strxns.refs: updated LiS and STREAMS release numbers
+	* strxns.spec.in (%package test): described send-pr
+	* acinclude.m4: 2.6.15 has no proto member in net_protocol
+
+2006-03-23  Brian Bidulock  <bidulock@openss7.org>
+
+	* acinclude.m4: added missing IP_ROUTE_OUTPUT_EXPLICIT
+	* src/drivers/ip.c: corrections for old 2.4 kernel (RH7) build
+	* strxns.spec.in: added send-pr files
+	* NEWS: updated release notes
+	* doc/manual/releases.texi: updated release notes
+	* acinclude.m4: rationalized to strinet
+	* src/drivers/ip.c: 64 bit corrections
+
+2006-03-22  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/manual/strxns.texi: added makefile target index
+	* doc/manual/releases.texi: bumped release number
+	* strxns.lsm.in: boutelli can't handle decimal point in lsm
+
+2006-03-21  Brian Bidulock  <bidulock@openss7.org>
+
+	* .cvsignore: added *.pr files
+	* Makefile.am: added pr.am for problem reports
+	* acinclude.m4: added pr.m4 and call _AUTOPR for problem reports
+
+2006-03-20  Brian Bidulock  <bidulock@openss7.org>
+
+	* Makefile.am: added checks for DEVELOPMENT
+	* src/Makefile.am: added checks for DEVELOPMENT
+	* strxns.spec.in: tied in --disable-devel flag
+	* src/drivers/ip.c: working up IP driver
+	* configure.ac: updated and rationalized
+	* doc/manual/Makefile.am: added checks for DEVELOPMENT
+	* doc/specs/dlpi/Makefile.am: added checks for DEVELOPMENT
+	* doc/specs/npi/Makefile.am: added checks for DEVELOPMENT
+	* doc/specs/tpi/Makefile.am: added checks for DEVELOPMENT
+
+2006-03-17  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/ip.c: working up NPI-IP driver
+	* doc/man/man4/ip.4.man: documentation for ip driver
+	* doc/man/man7/npi_ip.7.man: documentation for ip driver
+	* Makefile.am: added ip(4) driver to build
+	* doc/man/Makefile.am: added ip(4) driver manpages
+	* src/drviers/lis.conf: added ip(4) driver
+	* acinclude.m4: check members for inet_protocol, net_protocol
+	- get symbol address for inet_proto_lock
+	- check existence of inet_protocol or net_protocol
+	- added lots of checks from strsctp/acinclude.m4
+	* src/drivers/ip_hooks.h.in: added config file
+	* configure.ac: added src/drivers/ip_hooks.h to config files
+	* Makefile.am: added ip_hooks.h file
+	* src/include/sys/npi_ip.h: added ip specific npi file
+	* src/include/Makefile.am: added npi_ip.h file
+
+2006-03-16  Brian Bidulock  <bidulock@openss7.org>
+
+	* ANNOUNCE: added announcement file for release
+	* .pkgrelease: bumped release number after release
+	* NEWS: prepare for next release
+
+2006-03-15  Brian Bidulock  <bidulock@openss7.org>
+
+	* configure.ac (AC_CONFIG_SRCDIR): change unique file to .lsm.in file
+	* tests/local.at: set better defaults for stand-alone test suites
+
+2006-03-14  Brian Bidulock  <bidulock@openss7.org>
+	
+	* strxns.spec.in: added second rpmextra string
+
+2006-03-11  Brian Bidulock  <bidulock@openss7.org>
+
+	* configure.ac: allow --disable-dependency-tracking in maintainer mode
+
+2006-03-10  Brian Bidulock  <bidulock@openss7.org>
+
+	* strxns.spec.in: updated description fields and headers
+
+2006-03-09  Brian Bidulock  <bidulock@openss7.org>
+
+	* strxns.lsm.in: make suitable for Linux Software Map submission
+
+2006-03-08  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/manual/releases.texi (Prerequisites): updated for release
+
+2006-03-07  Brian Bidulock  <bidulock@openss7.org>
+
+	* Makefile.am: compile tools static for distcheck
+	* am/help.am: documented remove target
+	* am/openss7.am: added remove target and reverse recursive targets
+	* debian/changelog: updated release numbering
+	* debian/copyright: updated headers
+	* debian/control.in: updated deprecated references to LiS
+
+2006-03-06  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/man/Makefile.am: updated headers
+	* doc/manual/Makefile.am: updated headers
+	* doc/specs/dlpi/Makefile.am: updated headers
+	* doc/specs/npi/Makefile.am: updated headers
+	* doc/specs/tpi/Makefile.am: updated headers
+	* doc/specs/Makefile.am: updated headers
+	* doc/Makefile.am: updated headers
+	* src/include/Makefile.am: updated headers
+	* src/Makefile.am: updated headers
+	* tests/Makefile.am: updated headers
+	* Makefile.am: updated headers
+
+2006-03-04  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/ldl.c: corrections for FC4 x86_64 build
+	* src/include/sys/ldl.h: corrections for FC4 x86_64 build
+	* tests/local.at: updated headers
+
+2006-03-03  Brian Bidulock  <bidulock@openss7.org>
+
+	* THANKS: updated for release
+	* doc/man/strxns.macros: updated for release
+	* doc/man/strxns.refs: updated references
+	* README-nexusware: updated for release
+	* AUTHORS: updated for release
+	* src/include/sys/ldl.h: 32/64-bit compatibility, remove dependency on
+	  atomic_t from kernel
+	* src/include/sys/npi.h: 32/64-bit compatibility, some reformatting
+	* src/modules/ip_strm_mod.c: 32/64-bit ioctl compatibility
+	* src/test/ldltest.c: 64-bit compatibility
+	* src/util/ldlconfig.c: 64-bit compatibility
+
+2006-03-02  Brian Bidulock  <bidulock@openss7.org>
+
+	* README: updated for release
+	* doc/manual/releases.texi (Bugs, Known Bugs, Maturity): updated release notes
+	* src/drivers/ldl.c: corrections to typos introduced
+	* doc/manual/strxns.texi (detailed node listing): added missing Troubleshooting
+	* README-alpha: added alpha readme file for release
+	* README-cvs: updated for release
+
+2006-03-01  Brian Bidulock  <bidulock@openss7.org>
+
+	* ChangeLog: modified -- corrected format and upated
+	* Makefile.am: modified -- added README-LiS to distribution
+	* NEWS: modified -- updated for release
+	* README: modified -- updated for release
+	* README-LiS: added -- README file to capture LiS binary
+	  compatibility issues (if any).
+	* src/drivers/ip_to_dlpi.c: modified -- 64-bit compatibility for
+	  printk statements.
+	* src/drivers/ldl.c: modified -- added 64-bit compatibility,
+	  32-bit ioctl compatibility, TRANPARENT ioctl capability,
+	  removed issues with atomic_t being placed in a user header.
+	* src/include/sys/cdi.h: modified -- Applied t_uscalar_t
+	  approach to 64-bit and 32-bit compatibility in this header
+	  file (cd_long and cd_ulong are 32-bit on both 64-bit and
+	  32-bit models).
+	* src/include/sys/dlpi.h: modified -- Applied t_uscalar_t
+	  approach to 64-bit and 32-bit compatibility in this header
+	  file (cd_long and cd_ulong are 32-bit on both 64-bit and
+	  32-bit models).
+	* TODO: updated to do items
+	* README: updated for release
+
+2006-02-23  Brian Bidulock  <bidulock@openss7.org>
+
+	* ChangeLog: modified -- updated for new release
+	* Makefile.am: modified -- added TODO file to distribution
+	* TODO: added -- added TODO file to distribution
+
+2006-02-13  Brian Bidulock  <bidulock@openss7.org>
+
+	- Changes from strsctp 0.9.2.2 release:
+	* m4/kernel.m4: changes for Gentoo and 2.6.15 kernels
+
+2005-09-14  Brian Bidulock  <bidulock@openss7.org>
+
+	- Revision 0.9.2.5  2005/09/14 23:42:08  brian
+	- bumped release numbers and change logs
+
+2005-07-04  Brian Bidulock  <bidulock@openss7.org>
+
+	- Revision 0.9.2.4  2005/07/04 20:19:01  brian
+	- updated dates
+
+2005-05-15  Brian Bidulock  <bidulock@openss7.org>
+
+	- Revision 0.9.2.3  2005/05/14 08:26:03  brian
+	- copyright header correction
+
+2004-08-14  Brian Bidulock  <bidulock@openss7.org>
+
+	- Revision 0.9.2.2  2004/08/14 12:35:51  brian
+	- Serious work on updating documentation.
+
+
+2004-07-03  Brian Bidulock  <bidulock@openss7.org>
+
+	- Revision 0.9.2.1  2004/07/04 00:54:07  brian
+	- Initial import of strxns package.
+
+2004-07-03  Brian Bidulock  <bidulock@openss7.org>
+
+	- started separate xns packaging
+
+-----
+
+Copyright (c) 2001-2006  OpenSS7 Corporation <http://www.openss7.com>
+Copyright (c) 1997-2000  Brian F. G. Bidulock <bidulock@openss7.org>
+
+All Rights Reserved.
+
+This program is free software; you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation; version 2 of the License.
+
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+details.
+
+You should have received a copy of the GNU General Public License along with
+this program; if not, write to the Free Software Foundation, Inc., 675 Mass
+Ave, Cambridge, MA 02139, USA.
+
+
+U.S. GOVERNMENT RESTRICTED RIGHTS.  If you are licensing this Software on
+behalf of the U.S. Government ("Government"), the following provisions apply
+to you.  If the Software is supplied by the Department of Defense ("DoD"), it
+is classified as "Commercial Computer Software" under paragraph 252.227-7014
+of the DoD Supplement to the Federal Acquisition Regulations ("DFARS") (or any
+successor regulations) and the Government is acquiring only the license rights
+granted herein (the license rights customarily provided to non-Government
+users).  If the Software is supplied to any unit or agency of the Government
+other than DoD, it is classified as "Restricted Computer Software" and the
+Government's rights in the Software are defined in paragraph 52.227-19 of the
+Federal Acquisition Regulations ("FAR") (or any successor regulations) or, in
+the cases of NASA, in paragraph 18.52.227-86 of the NASA Supplement to the FAR
+(or any successor regulations).
+
+
+Commercial licensing and support of this software is available from OpenSS7
+Corporation at a fee.  See http://www.openss7.com/
+
+vim: ft=changelog tw=80 com=fb\:*,fb\:- fo+=tcqlorn nocin nosi

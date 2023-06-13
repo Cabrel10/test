@@ -1,0 +1,292 @@
+This is /home/brian/rel/LiS/manual/LiS.info, produced by makeinfo version 4.8
+from /home/brian/rel/LiS/manual/LiS.texi.
+
+INFO-DIR-SECTION Kernel
+START-INFO-DIR-ENTRY
+* Linux STREAMS: (LiS).                         Sys V STREAMS for Linux.
+END-INFO-DIR-ENTRY
+
+This file provides the Installation and Reference Manual for Linux STREAMS
+(LiS).
+
+This is Edition 4.rc2, last updated 2006-07-11, of the `Linux STREAMS (LiS)
+Installation and Reference Manual', for Version 2.18 Release 4.rc2.
+
+Copyright (C) 2001-2006  OpenSS7 Corporation (http://www.openss7.com/)
+Copyright (C) 1997-2000  Brian F. G. Bidulock <bidulock@openss7.org>
+
+All Rights Reserved.
+
+Permission is granted to make and distribute verbatim copies of this manual
+provided the copyright notice and this permission notice are preserved on all
+copies.
+
+Permission is granted to copy and distribute modified versions of this manual
+under the conditions for verbatim copying, provided the entire resulting
+derived work is distributed under the terms of a permission notice identical to
+this one.
+
+Permission is granted to copy and distribute translations of this manual into
+another language, under the above conditions for modified versions.
+
+
+Indirect:
+LiS.info-1: 1202
+LiS.info-2: 300239
+
+Tag Table:
+(Indirect)
+Node: Top1202
+Node: Acknowledgements2102
+Node: Sponsors2290
+Node: Contributors2501
+Ref: Contributors-Footnote-14024
+Node: Introduction4209
+Node: Notice4590
+Node: Overview5187
+Node: Organization6299
+Node: Conventions7309
+Node: Objective7505
+Node: Reference7615
+Node: Files8018
+Node: Drivers8291
+Node: clone-drvr9287
+Node: fifo10933
+Node: loop-around17438
+Node: mini-mux21026
+Node: printk22909
+Node: sad23355
+Node: Modules26656
+Node: connld27646
+Node: pipemod30866
+Node: relay relay231797
+Node: Libraries32314
+Node: Library Routines33531
+Node: Using the Library36118
+Node: Utilities37128
+Node: fattach38195
+Node: fdetach41984
+Node: polltst44376
+Node: streams45008
+Node: strmakenodes50834
+Node: strtst51750
+Node: timetst52479
+Node: Development52996
+Node: Coding STREAMS Applications58247
+Node: LiS SMP Implementation60417
+Node: CPU Scheduling60964
+Node: Queue Locking64671
+Node: Service Procedure Context66870
+Node: Scheduling Statistics68477
+Node: Operating System Interface70862
+Node: PCI BIOS Interface71805
+Node: PCI Interface73850
+Node: IRQ Interface75227
+Node: I/O Memory Mapping75781
+Node: I/O Port Access76387
+Node: Memory Allocation76826
+Node: DMA Routines77381
+Node: Delay Routines77840
+Node: Printing Routines78466
+Node: Timer Routines78939
+Node: Sleep and Wakeup Routines80008
+Node: Thread Creation80713
+Node: Major/Minor Device Numbering83053
+Node: LiS Memory Allocation85004
+Node: LiS malloc and free Equivalents85628
+Node: LiS Kernel Memory Allocators87341
+Node: LiS Page Allocator89242
+Node: LiS PCI Interface90255
+Node: The LiS PCI Device Structure91081
+Node: LiS PCI Search Routines94198
+Node: LiS PCI Configuration Space Routines96335
+Node: LiS PCI DMA Routines98125
+Node: LiS Atomic Functions101532
+Node: LiS Locks102739
+Node: LiS Spin Locks105638
+Node: Lock Nesting111980
+Node: LiS Read/Write Locks114296
+Node: LiS Interrupt Enable/Disable116960
+Node: LiS Semaphores118691
+Node: Debugging Spin Locks124305
+Node: Lock Semaphore and Queue Contention129629
+Node: Debugging Semaphores130696
+Node: STREAMS Utility Routines132948
+Node: Freezing Streams133502
+Node: Flushing Queue Bands137083
+Node: Utility Prototypes139796
+Node: System Calls from within the Kernel143917
+Node: Conformance145260
+Node: STREAMS Compatibility145420
+Node: Porting147845
+Node: Releases151337
+Node: Prerequisites152101
+Ref: Prerequisites-Footnote-1152688
+Ref: Prerequisites-Footnote-2152748
+Node: Compatibility152963
+Node: GNU/Linux Distributions153438
+Ref: GNU/Linux Distributions-Footnote-1155273
+Node: Linux Kernel155449
+Ref: Linux Kernel-Footnote-1157119
+Node: Linux Architectures157313
+Node: Kernel Version 2.3.x158149
+Node: Kernel Version 2.2.x161700
+Node: Kernel Version 2.0.36162110
+Node: Linux STREAMS162932
+Node: LiS-2.18 Kernel and Driver Compatibility163596
+Node: LiS-2.16 Kernel and Driver Compatibility165040
+Ref: LiS-2.16 Kernel and Driver Compatibility-Footnote-1165640
+Node: LiS-2.15 Kernel and Driver Compatibility166041
+Node: LiS-2.14 Kernel and Driver Compatibility167804
+Node: LiS-2.13 Kernel and Driver Compatibility168434
+Node: LiS-2.12 Kernel and Driver Compatibility169403
+Node: LiS-2.10 Kernel and Driver Compatibility171659
+Node: Linux Fast-STREAMS172810
+Node: Release Notes173238
+Node: Release LiS-2.18.4.rc2174539
+Node: Release LiS-2.18.2174824
+Node: Release LiS-2.18.2175551
+Ref: Release LiS-2.18.2-Footnote-1177169
+Node: Release LiS-2.18.1177274
+Node: Release LiS-2.16.19178879
+Node: Release LiS-2.16.18-22179080
+Node: Release LiS-2.16.18-21179576
+Node: Release LiS-2.16.18-20180335
+Node: Release LiS-2.16.18-19180641
+Node: Release LiS-2.16.18-18181310
+Node: Release LiS-2.16.18-17181720
+Node: Release LiS-2.16.18-16183934
+Node: Release LiS-2.16.18-15185662
+Node: Release LiS-2.16.18-14185970
+Node: Release LiS-2.16.18-13186236
+Node: Release LiS-2.16.18-12186522
+Node: Release LiS-2.16.18-11187131
+Node: Release LiS-2.16.18-10187423
+Node: Release LiS-2.16.18-9189974
+Node: Release LiS-2.16.18-8190448
+Node: Release LiS-2.16.18-7190729
+Node: Release LiS-2.16.18-6190995
+Node: Release LiS-2.16.18-5191348
+Node: Release LiS-2.16.18-4191706
+Node: Release LiS-2.16.18-3191973
+Node: Release LiS-2.16.18-2192184
+Node: Release LiS-2.16.18-1192395
+Node: Release LiS-2.16.16-1192703
+Ref: Release LiS-2.16.16-1-Footnote-1195978
+Node: Maturity196141
+Node: Pre-Alpha Releases196685
+Node: Alpha Releases197276
+Node: Beta Releases198048
+Node: Gamma Releases198937
+Node: Production Releases199852
+Node: Bugs200712
+Node: Defect Notices200924
+Ref: Defect Notices-Footnote-1202143
+Node: Known Defects202213
+Node: Schedule205038
+Node: History205144
+Node: Installation205235
+Node: Downloading205644
+Node: Downloading the Binary RPM207027
+Ref: Downloading the Binary RPM-Footnote-1212300
+Ref: Downloading the Binary RPM-Footnote-2212730
+Ref: Downloading the Binary RPM-Footnote-3213026
+Ref: Downloading the Binary RPM-Footnote-4213200
+Ref: Downloading the Binary RPM-Footnote-5213456
+Node: Downloading the Debian DEB213530
+Ref: Downloading the Debian DEB-Footnote-1218441
+Ref: Downloading the Debian DEB-Footnote-2218636
+Ref: Downloading the Debian DEB-Footnote-3218785
+Ref: Downloading the Debian DEB-Footnote-4219081
+Ref: Downloading the Debian DEB-Footnote-5219255
+Ref: Downloading the Debian DEB-Footnote-6219511
+Node: Downloading the Source RPM219585
+Node: Downloading the Debian DSC220286
+Node: Downloading the Tar Ball221047
+Node: Downloading from CVS222571
+Ref: Downloading from CVS-Footnote-1227162
+Node: Configuration227198
+Node: Configuring the Binary RPM227621
+Ref: Configuring the Binary RPM-Footnote-1230372
+Ref: Configuring the Binary RPM-Footnote-2230446
+Node: Configuring the Debian DEB230604
+Node: Configuring the Source RPM230967
+Ref: Configuring the Source RPM-Footnote-1241713
+Node: Configuring the Debian DSC241976
+Node: Configuring the Tar Ball242555
+Node: Configure Options243049
+Ref: Configure Options-Footnote-1259567
+Node: Environment Variables259830
+Node: Building267505
+Node: Building from the Source RPM267804
+Ref: Building from the Source RPM-Footnote-1269030
+Node: Building from the Debian DSC269104
+Ref: Building from the Debian DSC-Footnote-1270557
+Node: Building from the Tar Ball270631
+Ref: Building from the Tar Ball-Footnote-1278115
+Ref: Building from the Tar Ball-Footnote-2278274
+Node: Installing278522
+Node: Installing the Binary RPM278809
+Node: Installing the Debian DEB280087
+Node: Installing the Tar Ball280762
+Node: Removing281493
+Node: Removing the Binary RPM281884
+Node: Removing the Debian DEB282331
+Node: Removing the Source RPM282813
+Node: Removing the Debian DSC283315
+Node: Removing the Tar Ball283927
+Node: Loading284704
+Ref: Loading-Footnote-1287284
+Ref: Loading-Footnote-2287358
+Node: Maintenance287515
+Node: Makefile Targets287652
+Node: User Targets288334
+Ref: User Targets-Footnote-1293505
+Ref: User Targets-Footnote-2293721
+Ref: User Targets-Footnote-3293921
+Node: Maintainer Targets293976
+Node: Clean Targets295538
+Node: Release Targets298143
+Node: Logging Targets300239
+Ref: Logging Targets-Footnote-1303269
+Node: Problem Report Targets303541
+Node: Release Archive Targets305149
+Node: RPM Build Targets307461
+Node: Debian Build Targets310469
+Node: Troubleshooting312413
+Node: Test Suites312700
+Node: Pre-installation Checks312957
+Ref: testsuite:ex0314319
+Ref: testsuite:ex1315166
+Ref: testsuite:ex2315976
+Ref: Pre-installation Checks-Footnote-1323064
+Node: Post-installation Checks323166
+Node: Running Test Suites324047
+Ref: testsuite:ex3324902
+Ref: testsuite:ex4326087
+Node: Problem Reports326449
+Node: Problem Report Guidelines326730
+Node: Generating Problem Reports329328
+Ref: autopr:ex0330656
+Ref: Generating Problem Reports-Footnote-1331863
+Node: Automatic Problem Reports331954
+Ref: autopr:ex2332684
+Node: Stand Alone Problem Reports334087
+Ref: autopr:ex2334768
+Node: Known Problems336194
+Node: Copying336669
+Node: GNU General Public License336865
+Node: GNU Lesser General Public License355982
+Node: Documentation License383994
+Node: GNU Free Documentation License384176
+Node: Indices403930
+Node: Concept Index404391
+Node: Type Index417306
+Node: Function Index418824
+Node: Variable Index420383
+Node: File Index424945
+Node: Option Index429981
+Node: Makefile Target Index435678
+Node: Author Index440071
+
+End Tag Table

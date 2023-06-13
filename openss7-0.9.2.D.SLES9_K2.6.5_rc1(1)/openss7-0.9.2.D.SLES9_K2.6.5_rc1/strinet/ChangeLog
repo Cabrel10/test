@@ -1,0 +1,592 @@
+2006-07-11  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/udp.c: fixed mysterious testcase 1074 1222 failure
+	* Makefile.am: added ISO files to the distribution
+
+2006-07-09  Brian Bidulock  <bidulock@openss7.org>
+
+	* README: updated quick installation instructions
+
+2006-07-08  Brian Bidulock  <bidulock@openss7.org>
+
+	* .pkgrelease: bumped version to release candidate 2
+	* NEWS: bumped version to release candidate 2
+	* debian/changelog: bumped version to release candidate 2
+	* debian/rules.in: clean deb package master build
+	* src/test/test-inet_raw.c: removed trigraphs
+	* src/test/test-inet_sctp.c: removed trigraphs
+	* src/test/test-inet_tcp.c: removed trigraphs
+	* src/test/test-inet_udp.c: removed trigraphs
+	* acinclude.m4: handle old SLES 9 2.6.5 kernel
+	* src/drivers/rawip.c: handle old SLES 9 2.6.5 kernel
+	* src/drivers/tcp.c: handle old SLES 9 2.6.5 kernel
+	* src/drivers/udp.c: handle old SLES 9 2.6.5 kernel
+
+2006-07-07  Brian Bidulock  <bidulock@openss7.org>
+
+	* debian/copyright: typo
+	* BUGS: added bug file to capture development bugs
+
+2006-07-06  Brian Bidulock  <bidulock@openss7.org>
+
+	* debian/control.in: first full debian master package build of debs on Ubuntu
+	* debian/rules.in:: first full debian master package build of debs on Ubuntu
+	* debian/changelog: packaged release candidate for Mark Fugate
+
+2006-07-05  Brian Bidulock  <bidulock@openss7.org>
+
+	* NEWS: package release candidate for Mark Fugate
+	* .pkgrelease: package release candidate for Mark Fugate
+
+2006-07-04  Brian Bidulock  <bidulock@openss7.org>
+
+	* strinet.spec.in: place all include files in development sub-package
+	* src/drivers/inet.c: correct compile back to RH 7.2
+	* src/drivers/udp.c: correct compile back to RH 7.2
+	* src/drivers/rawip.c: correct compile back to RH 7.2
+	* src/drivers/tcp.c: correct compile back to RH 7.2
+	* src/drivers/udp_hooks.h.in: correct compile back to RH 7.2
+	* acinclude.m4: correct compile back to RH 7.2
+
+2006-07-03  Brian Bidulock  <bidulock@openss7.org>
+
+	* README: updated for release
+	* README-cvs: updated for release
+	* README-nexusware: updated for release
+	* doc/manual/releases.texi: updated for release
+
+2006-07-02  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/manual/releases.texi: updates for release
+	* src/drivers/rawip.c: changes for 2.6.17 kernel
+	* src/drivers/tcp.c: changes for 2.6.17 kernel
+	* src/drivers/udp.c: changes for 2.6.17 kernel
+	* acinclude.m4: make inet tests compatible
+	* src/drivers/udp_hooks.h.in: make inet tests compatible
+
+2006-07-01  Brian Bidulock  <bidulock@openss7.org>
+
+	* debian/changelog: changes for Ubuntu dpkg build
+	* debian/control.in: changes for Ubuntu dpkg build
+	* debian/rules.in: changes for Ubuntu dpkg build
+	* Makefile.am: added new KERNEL_BLDFLAGS build flags for 2.6.16+
+	* strinet.lsm.in: updates for next release
+	* src/drivers/udp.c: gets and puts can't be fastcalled
+
+2006-06-22  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/udp.c:
+	  - corrected minor bug in optimization
+	  - receive and send buffer reports
+	  - stream high and low water marks
+
+2006-06-21  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/udp.c: more oprofile optimizations
+
+2006-06-19  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/udp.c: some optimization; dest caching
+
+2006-06-18  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/rawip.c: use msgsize instead of msgdsize
+	* src/drivers/tcp.c: use msgsize instead of msgdsize
+	* src/drivers/udp.c: use msgsize instead of msgdsize
+	  - fast path factoring
+
+2006-06-16  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/udp.c:
+	  - found very noxious buffer overflow bug
+	  - some rework, passes verification testsuite fine
+	* src/drivers/rawip.c:
+	  - rationalized to udp driver
+	  - some rework, passes verification testsuite fine
+	* TODO: updated things to do
+
+2006-06-14  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/inet.c: can't preallocate qband structures under LiS
+	* src/drivers/rawip.c: rationalize to udp driver
+	* src/drivers/tcp.c:
+	  - add missing definitions for LiS
+	  - correct printf warnings for LiS
+	* src/drivers/udp.c: 
+	  - defeated trace statements in debug mode
+	  - reworked m_error and te_error_reply
+	  - added const'ness
+
+2006-06-13  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/man/strinet.refs: updated references for IUA, DUA, M2PA
+
+2006-06-07  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/inet.c: minor bug found by inspection in inet.c
+	- should not affect any real use of the driver
+
+2006-06-06  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/udp.c: strapped in zero-copy and write offset and padding
+	- this tests well now
+
+2006-06-04  Brian Bidulock  <bidulock@openss7.org>
+
+	* acinclude.m4: find symbol skbuff_head_cache
+	* src/drivers/udp.c: working up zero-copy architecture
+
+2006-05-31  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/udp.c: started zero-copy architecture
+	* src/drivers/rawip.c: rationalized to 2nd gen udp driver
+
+2006-05-29  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/udp.c: roughing in zero-copy architecture
+
+2006-05-25  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/rawip.c: added noinline in strategic places
+	* src/drivers/udp.c: added noinline in strategic places
+
+2006-05-24  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/udp.c: optimization from profiling
+
+2006-05-23  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/rawip.c: working up performance tests of 2nd gen drivers
+	* src/drivers/udp.c: working up performance tests of 2nd gen drivers
+	* src/drivers/inet.c: FC4 does not export sysctl_ip_default_ttl
+	* src/drivers/udp_hooks.h: FC4 does not export sysctl_ip_default_ttl
+	* acinclude.m4: FC4 does not export sysctl_ip_default_ttl
+
+2006-05-22  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/rawip.c: working up performance tests of 2nd gen drivers
+	* src/drivers/udp.c: working up performance tests of 2nd gen drivers
+
+2006-05-19  Brian Bidulock  <bidulock@openss7.org>
+
+	* ChangeLog: updated
+	* src/drivers/inet.c: minor corrections
+	* src/drivers/lis.conf.in: avoid conflicts
+	* src/drivers/rawip.c: working up RAWIP driver
+	* src/drivers/udp.c: working up UDP driver
+	* src/test/test-inet_raw.c: working up RAWIP driver
+	* src/test/test-inet_sctp.c: spelling correction, rationalized
+	* src/test/test-inet_tcp.c: spelling correction, rationalized
+	* src/test/test-inet_udp.c: working up UDP driver
+	* tests/Makefile.am: added test suites for 2nd get drivers
+	* tests/testsuite-inet_raw2.at: added test suites for 2nd get drivers
+	* tests/testsuite-inet_udp2.at: added test suites for 2nd get drivers
+	* tests/testsuite.at: added test suites for 2nd get drivers
+	* strinet.spec.in: added 2nd gen drivers
+	* src/util/init/strinet: added 2nd gen drivers
+	* src/util/init/strinet.sh: added 2nd gen drivers
+
+2006-05-18  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/rawip.c: working up RAWIP driver
+	* src/drivers/udp.c: rationalized to RAWIP driver
+	* tests/testsuite-inet_raw2.at: added test suite for 2nd gen driver
+	* tests/testsuite-inet_udp2.at: added test suite for 2nd gen driver
+	* tests/testsuite.at: added test suites for 2nd gen drivers
+	* tests/Makefile.am: added test suites for 2nd gen drivers
+	* src/test/test-inet_raw.c: make sizes appropriate for 2nd gen drivers too
+	* src/test/test-inet_udp.c: make sizes appropriate for 2nd gen drivers too
+	* src/drivers/inet.c: correct SDU sizes for rawip and udp
+
+2006-05-14  Brian Bidulock  <bidulock@openss7.org>
+
+	* NEWS: updated
+	* tests/testsuite-inet_raw.at: added buffer leak checks
+	* tests/testsuite-inet_sctp.at: added buffer leak checks
+	* tests/testsuite-inet_tcp.at: added buffer leak checks
+	* tests/testsuite-inet_udp.at: added buffer leak checks
+	* src/drivers/inet.c: removed redundant QR_ definitions
+	* acinclude.m4: changes for compile and load
+	* src/drivers/rawip.c: changes for compile and load
+	* src/drivers/tcp.c: changes for compile and load
+	* src/drivers/udp.c: changes for compile and load
+
+2006-05-08  Brian Bidulock  <bidulock@openss7.org>
+
+	* scripts/strconf-sh: added module id base to strconf
+	* m4/strconf.m4: added module id base to strconf
+	* am/strconf.am: added module id base to strconf
+	* acinclude.m4: added module id base to strconf
+
+	* strinet.spec.in: updated headers, corrected init script removal
+	* src/util/init/README: updated headers
+	* src/util/init/strinet: updated headers
+	* src/util/init/strinet.sh: updated headers
+	* src/util/modutils/strinet.in: updated headers
+	* src/util/sysconfig/README: updated headers
+	* src/util/sysconfig/strinet: updated headers
+	* src/util/sysconfig/strinet.conf: updated headers
+
+	* src/drivers/rawip.c: new gcc mishandles ++ of cast pointers
+	* src/drivers/tcp.c: new gcc mishandles ++ of cast pointers
+	* src/drivers/udp.c: new gcc mishandles ++ of cast pointers
+
+2006-05-07  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/man/Makefile.am: added tcp2 manual page
+	* doc/man/man4/tcp2.4.man: additional manual pages for new tcp driver
+	* src/drivers/tcp.c: strapped out missing cksum_generate()
+	* src/drivers/udp.c: strapped out missing cksum_generate()
+	* acinclude.m4: changed major base offset
+
+2006-05-03  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/rawip.c: changes for compile
+	* src/drivers/tcp.c: changes for compile
+	* src/drivers/udp.c: changes for compile
+
+2006-04-25  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/man/strinet.refs: more references
+	* doc/man/man3/xti_tcp.3.man: updated manual page
+	* doc/man/man7/tpi_ip.7.man: updated manual page
+	* doc/man/man7/tpi_tcp.7.man: updated manual page
+	* Makefile.am: added 2nd gen TCP driver
+	* src/drivers/lis.conf.in: added 2nd gen TCP driver
+	* src/drivers/tcp.c: added 2nd gen TCP driver
+
+2006-04-24  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/rawip.c: working up RAWIP driver
+	* src/drivers/udp.c: working up UDP driver
+	* doc/man/strinet.refs: updated references
+	* doc/man/man4/rawip.4.man: updated references
+	* doc/man/man7/tpi_ip.7.man: updated references
+	* doc/man/man7/tpi_tcp.7.man: updated references
+	* src/drivers/lis.conf.in: corrected loadable rawip
+
+2006-04-23  Brian Bidulock  <bidulock@openss7.org>
+
+	* Makefile.am: reorder
+	* acinclude.m4: additional checks for udp2 and rawip2
+	* src/drivers/rawip.c: changes for compile
+	* src/drivers/udp.c: changes for compile
+
+2006-04-22  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/man/strinet.refs: added a few more references
+	* doc/man/man3/xti_udp.3.man: updating manual pages
+	* doc/man/man7/tpi_ip.7.man: updating manual pages
+	* doc/man/man7/tpi_udp.7.man: updating manual pages
+	* src/drivers/udp.c: working up second generation UPD driver
+	* src/drivers/inet.c: locking correction
+
+2006-04-11  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/modules/cmot.c: added module for cmot
+	* src/modules/isot.c: added module for isot
+	* src/modules/itot.c: added module for itot
+	* src/modules/lpp.c: added module for lpp
+	* src/modules/tcpns.c: added module for tcpns
+	* src/modules/xot.c: added module for xot
+
+2006-04-08  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/man/strinet.refs: corrected spelling error reported by spammer
+
+2006-04-07  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/man/strinet.refs: added some RFC references
+
+2006-04-05  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/man*/*.man: Moved all .so xxx.macros lines down beneath .R2 with a
+	  script.  SuSE 10's broken man(1) program thinks that .so lines after a
+	  comment line is a redirect, but it is not.  No other man(1) is that
+	  stupid.  OTOH SuSE 10's man(1) uses zsoelim, so it doesn't matter if
+	  our .macros file gets compressed (just our .refs file).  Also updated
+	  all copyright headers.
+
+2006-04-04  Brian Bidulock  <bidulock@openss7.org>
+
+	* acinclude.m4: handling of __tcp_push_pending_frames on 2.6.13+ kernel
+	* src/drivers/inet.c: handling of __tcp_push_pending_frames on 2.6.13+
+	  kernel
+
+2006-04-03  Brian Bidulock  <bidulock@openss7.org>
+
+	* acinclude.m4: add check for <net/request_sock.h> for 2.6.13 kernels.
+	  I finally stumbled across a 2.6.13 kernel (in SuSE 10) that has a
+	  request_sock structure but no inet_csk().  This handles that case.
+	  Also, xfrm_policy_delete returns int on 2.6.13+.
+	* src/drivers/inet.c: handles request_sock with no inet_connection_sock
+	* src/drivers/udp.c (udp_open, udp_close): gcc 4 does not like different
+	  attributes between declaration and definition.
+	* src/drivers/rawip.c (rawip_open, rawip_close): gcc 4 does not like
+	  different attributes between declaration and definition.
+	* src/drivers/udp_hooks.h.in: xfrm_policy_delete returns int on 2.6.13+.
+	* src/drivers/inet.c: have to put freezestr/unfreezestr around strqset
+
+2006-03-31  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/inet.c: significant changes to the INET driver
+	  - largely rewrote ss_sock_sendmsg
+	  - ss_sock_sendmsg has been causing some problems over the last number
+	    of releases.  This version queues messages retrieved from the socket
+	    on the read queue when there are buffer allocation failures.
+	  - optimizations
+
+2006-03-30  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/rawip.c: working up second gen rawip driver
+	* src/drivers/rawip.c: corrections for x86_64 compile
+	* src/drivers/inet.c (ss_sock_recvmsg): fixed buffer leak reported by
+	  John Wenker
+	* scripts/texi/funding.texi: added John Wenker to contributors list
+
+2006-03-25  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/test/test-inet_tcp.c: rationalized to test-inet_sctp.c
+	* src/drivers/udp.c: corrected some compile problems
+
+2006-03-24  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/man/strinet.refs: updated LiS and STREAMS release numbers
+	* doc/man/Makefile.am: added manpages for new udp and rawip drivers
+	* doc/man/man4/rawip.4.man: added manpages for new udp and rawip drivers
+	* doc/man/man4/rawip2.4.man: added manpages for new udp and rawip drivers
+	* doc/man/man4/tcp.4.man: added manpages for new udp and rawip drivers
+	* doc/man/man4/udp.4.man: added manpages for new udp and rawip drivers
+	* doc/man/man4/udp2.4.man: added manpages for new udp and rawip drivers
+	* strinet.spec.in (%package test): described send-pr
+	* acinclude.m4: 2.6.15 has no proto member in net_protocol
+	* src/drivers/lis.conf.in: correction
+	* src/drivers/rawip.c: changes to compile on x86_64 2.6.15
+	* src/drivers/udp.c: changes to compile on x86_64 2.6.15
+	* src/drivers/udp.c: working up UDP driver
+	* src/test/test-inet_sctp.c: rationalized to strsctp package
+
+2006-03-24  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/rawip.c: added new rawip driver
+	* src/drivers/lis.conf.in: added new rawip driver
+	* Maekfile.am: added new rawip driver
+
+2006-03-23  Brian Bidulock  <bidulock@openss7.org>
+
+	* strinet.spec.in: added send-pr files
+	* NEWS: updated release notes
+	* doc/manual/releases.texi: updated release notes
+	* src/drivers/lis.conf.in: added new udp driver
+	* Makefile.am: added new udp driver
+	* configure.ac: added src/drivers/udp_hooks.h config header
+	* acinclude.m4: rationalized to strxns (added missing checks)
+	* src/drivers/udp.c: first compile pass
+
+2006-03-22  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/manual/strinet.texi: added makefile target index
+	* doc/manual/releases.texi: bumped release number
+	* strinet.lsm.in: boutelli can't handle decimal point in lsm
+
+2006-03-21  Brian Bidulock  <bidulock@openss7.org>
+
+	* .cvsignore: added *.pr files
+	* Makefile.am: added pr.am for problem reports
+	* acinclude.m4: added pr.m4 and call _AUTOPR for problem reports
+
+2006-03-20  Brian Bidulock  <bidulock@openss7.org>
+
+	* Makefile.am: added checks for DEVELOPMENT
+	* src/Makefile.am: added checks for DEVELOPMENT
+	* strinet.spec.in: tied in --disable-devel flag
+	* src/drivers/udp.c: added new approach to UDP
+	* configure.ac: updated and rationalized
+	* doc/manual/Makefile.am: added checks for DEVELOPMENT
+
+2006-03-18  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/drivers/inet.c: moved ss_sock_recvmsg inside locks
+	  - might fix problem reported by Kutluk
+
+2006-03-16  Brian Bidulock  <bidulock@openss7.org>
+
+	* ANNOUNCE: added announcement file for release
+	* .pkgrelease: bumped release number after release
+	* NEWS: prepare for next release
+
+2006-03-15  Brian Bidulock  <bidulock@openss7.org>
+
+	* configure.ac (AC_CONFIG_SRCDIR): change unique file to .lsm.in file
+	* tests/local.at: set better defaults for stand-alone test suites
+
+2006-03-14  Brian Bidulock  <bidulock@openss7.org>
+	
+	* strinet.spec.in: added second rpmextra string
+
+2006-03-11  Brian Bidulock  <bidulock@openss7.org>
+
+	* configure.ac: allow --disable-dependency-tracking in maintainer mode
+
+2006-03-10  Brian Bidulock  <bidulock@openss7.org>
+
+	* strinet.spec.in: updated description fields and headers
+	* .indent.pro: added -Tss_t for proper spacing of ss_t *
+	* src/drivers/inet.c: reindent with above to reduce diff to last version
+
+2006-03-09  Brian Bidulock  <bidulock@openss7.org>
+
+	* strinet.lsm.in: make suitable for Linux Software Map submission
+
+2006-03-08  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/manual/releases.texi (Prerequisites): updated for release
+
+2006-03-07  Brian Bidulock  <bidulock@openss7.org>
+
+	* Makefile.am: compile tools static for distcheck
+	* am/help.am: documented remove target
+	* am/openss7.am: added remove target and reverse recursive targets
+	* debian/changelog: updated release numbering
+	* debian/copyright: updated headers
+	* debian/control.in: updated deprecated references to LiS
+
+2006-03-06  Brian Bidulock  <bidulock@openss7.org>
+
+	* doc/man/Makefile.am: updated headers
+	* doc/manual/Makefile.am: updated headers
+	* doc/Makefile.am: updated headers
+	* src/include/Makefile.am: updated headers
+	* src/Makefile.am: updated headers
+	* tests/Makefile.am: updated headers
+	* Makefile.am: updated headers
+
+2006-03-04  Brian Bidulock  <bidulock@openss7.org>
+
+	* tests/local.at: updated headers
+
+2006-03-03  Brian Bidulock  <bidulock@openss7.org>
+
+	* THANKS: updated for release
+	* doc/man/strinet.macros: updated for release
+	* doc/man/strinet.refs: updated references
+	* README-nexusware: updated for release
+
+2006-03-02  Brian Bidulock  <bidulock@openss7.org>
+
+	* README: updated for release
+	* doc/manual/releases.texi (Bugs, Known Bugs, Maturity): updated release notes
+	* doc/manual/strinet.texi (detailed node listing): added missing Troubleshooting
+	* README-cvs: updated for release
+
+2006-03-01  Brian Bidulock  <bidulock@openss7.org>
+
+	* ChangeLog: corrected format
+	* Makefile.am: updated headers
+	* README: updated headers
+	* TODO: updated to do items
+	* README: updated for release
+
+2006-02-23  Brian Bidulock  <bidulock@openss7.org>
+
+	* ChangeLog: modified -- updated for new release
+	* Makefile.am: modified -- added TODO file to distribution
+	* TODO: added -- added TODO file to distribution
+
+2006-02-23  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/test/test-inet_raw.c: modified
+	* src/test/test-inet_sctp.c: modified
+	* src/test/test-inet_tcp.c: modified
+	* src/test/test-inet_udp.c: modified
+	- 64bit changes
+	- suppress lockf for SMP operation
+	* tests/testsuite-inet_raw.at: modified
+	* tests/testsuite-inet_sctp.at: modified
+	* tests/testsuite-inet_tcp.at: modified
+	* tests/testsuite-inet_udp.at: modified
+	- corrected verbosity
+	* src/drivers/inet.c: modified
+	- a couple of bug corrections reported by sponsors
+	- 64bit changes
+	* TODO: added
+	* Makefile.am: modified - added TODO file to distribution
+
+2006-02-20  Brian Bidulock  <bidulock@openss7.org>
+
+	* .indent.pro: modified - added new types
+	* strinet.spec.in: modified - updated for 64bit distribution
+	* m4/dist.m4: modified - updated for 64bit distribution
+	* src/.indent.pro: modified - added new types
+
+2006-02-19  Brian Bidulock  <bidulock@openss7.org>
+
+	* README: modified - updated for new release
+
+2006-02-13  Brian Bidulock  <bidulock@openss7.org>
+
+	* .pkgrelease: modified - bumped release number to 3
+	* ChangeLog: modified - updated for new release
+	* NEWS: modified - updated for new release
+	* m4/kernel.m4: changes for Gentoo and 2.6.15 kernels
+
+2006-01-17  Brian Bidulock  <bidulock@openss7.org>
+
+	* src/util/init/strinet.sh: modified
+	- corrected type in debian init script
+
+2005-09-14  Brian Bidulock  <bidulock@openss7.org>
+
+	- Revision 0.9.2.2  2005/09/14 23:41:35  brian
+	- bumped release numbers and change logs
+
+2004-07-27  Brian Bidulock  <bidulock@openss7.org>
+
+	- Revision 0.9.2.1  2004/06/27 08:15:37  brian
+	- Building strinet release.
+
+2004-06-27  Brian Bidulock  <bidulock@openss7.org>
+
+	* strinet
+	- built up initial release of this package
+
+-----
+
+Copyright (c) 2001-2006  OpenSS7 Corporation <http://www.openss7.com>
+Copyright (c) 1997-2000  Brian F. G. Bidulock <bidulock@openss7.org>
+
+All Rights Reserved.
+
+This program is free software; you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation; version 2 of the License.
+
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+details.
+
+You should have received a copy of the GNU General Public License along with
+this program; if not, write to the Free Software Foundation, Inc., 675 Mass
+Ave, Cambridge, MA 02139, USA.
+
+
+U.S. GOVERNMENT RESTRICTED RIGHTS.  If you are licensing this Software on
+behalf of the U.S. Government ("Government"), the following provisions apply
+to you.  If the Software is supplied by the Department of Defense ("DoD"), it
+is classified as "Commercial Computer Software" under paragraph 252.227-7014
+of the DoD Supplement to the Federal Acquisition Regulations ("DFARS") (or any
+successor regulations) and the Government is acquiring only the license rights
+granted herein (the license rights customarily provided to non-Government
+users).  If the Software is supplied to any unit or agency of the Government
+other than DoD, it is classified as "Restricted Computer Software" and the
+Government's rights in the Software are defined in paragraph 52.227-19 of the
+Federal Acquisition Regulations ("FAR") (or any successor regulations) or, in
+the cases of NASA, in paragraph 18.52.227-86 of the NASA Supplement to the FAR
+(or any successor regulations).
+
+
+Commercial licensing and support of this software is available from OpenSS7
+Corporation at a fee.  See http://www.openss7.com/
+
+vim: ft=changelog tw=80 com=fb\:*,fb\:- fo+=tcqlorn nocin nosi

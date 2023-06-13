@@ -1,0 +1,622 @@
+/* config.h.in.  Generated from configure.ac by autoheader.  */
+
+/* Define to one of `_getb67', `GETB67', `getb67' for Cray-2 and Cray-YMP
+   systems. This function is required for `alloca.c' support on those systems.
+   */
+#undef CRAY_STACKSEG_END
+
+/* Define to 1 if using `alloca.c'. */
+#undef C_ALLOCA
+
+/* Define to 1 if you have the `alarm' function. */
+#undef HAVE_ALARM
+
+/* Define to 1 if you have `alloca', as a function or macro. */
+#undef HAVE_ALLOCA
+
+/* Define to 1 if you have <alloca.h> and it should be used (not on Ultrix).
+   */
+#undef HAVE_ALLOCA_H
+
+/* Define to 1 if you have the <argz.h> header file. */
+#undef HAVE_ARGZ_H
+
+/* Define to 1 if you have the <arpa/inet.h> header file. */
+#undef HAVE_ARPA_INET_H
+
+/* Define to 1 if you have the `atexit' function. */
+#undef HAVE_ATEXIT
+
+/* Linux Fast-STREAMS has this type. */
+#undef HAVE_BCID_T
+
+/* Linux Fast-STREAMS has this type. */
+#undef HAVE_BUFCALL_ID_T
+
+/* Define to 1 if you have the `bzero' function. */
+#undef HAVE_BZERO
+
+/* Define to 1 if you have the <dlfcn.h> header file. */
+#undef HAVE_DLFCN_H
+
+/* Define to 1 if you don't have `vprintf' but do have `_doprnt.' */
+#undef HAVE_DOPRNT
+
+/* Define to 1 if you have the <fcntl.h> header file. */
+#undef HAVE_FCNTL_H
+
+/* Define to 1 if you have the <float.h> header file. */
+#undef HAVE_FLOAT_H
+
+/* Define to 1 if you have the `fork' function. */
+#undef HAVE_FORK
+
+/* Define to 1 if you have the `getcwd' function. */
+#undef HAVE_GETCWD
+
+/* Define to 1 if you have the `gethostbyname' function. */
+#undef HAVE_GETHOSTBYNAME
+
+/* Define to 1 if you have the `gethrtime' function. */
+#undef HAVE_GETHRTIME
+
+/* Define to 1 if you have the `getpagesize' function. */
+#undef HAVE_GETPAGESIZE
+
+/* Define to 1 if you have the `gettimeofday' function. */
+#undef HAVE_GETTIMEOFDAY
+
+/* Define to 1 if you have the `inet_ntoa' function. */
+#undef HAVE_INET_NTOA
+
+/* Define to 1 if you have the <inttypes.h> header file. */
+#undef HAVE_INTTYPES_H
+
+/* Define to 1 if the system has the type 'irqreturn_t'. */
+#undef HAVE_KTYPE_IRQRETURN_T
+
+/* Define to 1 if you have the <langinfo.h> header file. */
+#undef HAVE_LANGINFO_H
+
+/* Define to 1 if you have the `c' library (-lc). */
+#undef HAVE_LIBC
+
+/* Define to 1 if you have the <libintl.h> header file. */
+#undef HAVE_LIBINTL_H
+
+/* Define to 1 if you have the `LiS' library (-lLiS). */
+#undef HAVE_LIBLIS
+
+/* Define to 1 if you have the `pthread' library (-lpthread). */
+#undef HAVE_LIBPTHREAD
+
+/* Define to 1 if you have the `socket' library (-lsocket). */
+#undef HAVE_LIBSOCKET
+
+/* Define to 1 if you have the `streams' library (-lstreams). */
+#undef HAVE_LIBSTREAMS
+
+/* Define to 1 if you have the `xnet' library (-lxnet). */
+#undef HAVE_LIBXNET
+
+/* Define to 1 if you have the <limits.h> header file. */
+#undef HAVE_LIMITS_H
+
+/* Define to 1 if you have the <locale.h> header file. */
+#undef HAVE_LOCALE_H
+
+/* Define to 1 if you have the `localtime_r' function. */
+#undef HAVE_LOCALTIME_R
+
+/* Define to 1 if your system has a GNU libc compatible `malloc' function, and
+   to 0 otherwise. */
+#undef HAVE_MALLOC
+
+/* Define to 1 if you have the <malloc.h> header file. */
+#undef HAVE_MALLOC_H
+
+/* Define to 1 if you have the <memory.h> header file. */
+#undef HAVE_MEMORY_H
+
+/* Define to 1 if you have the `mempcpy' function. */
+#undef HAVE_MEMPCPY
+
+/* Define to 1 if you have the `memset' function. */
+#undef HAVE_MEMSET
+
+/* Define to 1 if you have a working `mmap' system call. */
+#undef HAVE_MMAP
+
+/* Define to 1 if you have the `munmap' function. */
+#undef HAVE_MUNMAP
+
+/* Define to 1 if you have the <netdb.h> header file. */
+#undef HAVE_NETDB_H
+
+/* Define to 1 if you have the <netinet/in.h> header file. */
+#undef HAVE_NETINET_IN_H
+
+/* Define to 1 if you have the `nl_langinfo' function. */
+#undef HAVE_NL_LANGINFO
+
+/* Define to 1 if you have the `pstat_getdynamic' function. */
+#undef HAVE_PSTAT_GETDYNAMIC
+
+/* Define to 1 if the system has the type `ptrdiff_t'. */
+#undef HAVE_PTRDIFF_T
+
+/* Define to 1 if your system has a GNU libc compatible `realloc' function,
+   and to 0 otherwise. */
+#undef HAVE_REALLOC
+
+/* Define to 1 if you have the `select' function. */
+#undef HAVE_SELECT
+
+/* Define to 1 if you have the `setlocale' function. */
+#undef HAVE_SETLOCALE
+
+/* Define to 1 if you have the `socket' function. */
+#undef HAVE_SOCKET
+
+/* Define to 1 if you have the `sqrt' function. */
+#undef HAVE_SQRT
+
+/* Define to 1 if `stat' has the bug that it succeeds when given the
+   zero-length file name argument. */
+#undef HAVE_STAT_EMPTY_STRING_BUG
+
+/* Define to 1 if stdbool.h conforms to C99. */
+#undef HAVE_STDBOOL_H
+
+/* Define to 1 if you have the <stddef.h> header file. */
+#undef HAVE_STDDEF_H
+
+/* Define to 1 if you have the <stdint.h> header file. */
+#undef HAVE_STDINT_H
+
+/* Define to 1 if you have the <stdio_ext.h> header file. */
+#undef HAVE_STDIO_EXT_H
+
+/* Define to 1 if you have the <stdlib.h> header file. */
+#undef HAVE_STDLIB_H
+
+/* Define to 1 if you have the `stpcpy' function. */
+#undef HAVE_STPCPY
+
+/* Define to 1 if you have the `strcasecmp' function. */
+#undef HAVE_STRCASECMP
+
+/* Define to 1 if you have the `strchr' function. */
+#undef HAVE_STRCHR
+
+/* Define to 1 if you have the `strcspn' function. */
+#undef HAVE_STRCSPN
+
+/* Define to 1 if you have the `strdup' function. */
+#undef HAVE_STRDUP
+
+/* Define to 1 if you have the `strerror' function. */
+#undef HAVE_STRERROR
+
+/* Define to 1 if you have the `strftime' function. */
+#undef HAVE_STRFTIME
+
+/* Define to 1 if you have the <strings.h> header file. */
+#undef HAVE_STRINGS_H
+
+/* Define to 1 if you have the <string.h> header file. */
+#undef HAVE_STRING_H
+
+/* Define to 1 if you have the `strrchr' function. */
+#undef HAVE_STRRCHR
+
+/* Define to 1 if you have the `strstr' function. */
+#undef HAVE_STRSTR
+
+/* Define to 1 if you have the `strtol' function. */
+#undef HAVE_STRTOL
+
+/* Define to 1 if you have the `strtoul' function. */
+#undef HAVE_STRTOUL
+
+/* Define to 1 if `st_blksize' is member of `struct stat'. */
+#undef HAVE_STRUCT_STAT_ST_BLKSIZE
+
+/* Define to 1 if `st_blocks' is member of `struct stat'. */
+#undef HAVE_STRUCT_STAT_ST_BLOCKS
+
+/* Define to 1 if `st_rdev' is member of `struct stat'. */
+#undef HAVE_STRUCT_STAT_ST_RDEV
+
+/* Define to 1 if your `struct stat' has `st_blocks'. Deprecated, use
+   `HAVE_STRUCT_STAT_ST_BLOCKS' instead. */
+#undef HAVE_ST_BLOCKS
+
+/* Define to 1 if you have the <syslog.h> header file. */
+#undef HAVE_SYSLOG_H
+
+/* Define when the STREAMS INET release supports module versions such as the
+   OpenSS7 autoconf releases. */
+#undef HAVE_SYS_INET_MODVERSIONS_H
+
+/* Define to 1 if you have the <sys/ioctl.h> header file. */
+#undef HAVE_SYS_IOCTL_H
+
+/* Define when the LiS release provides its own module.h file such as 2.17
+   GCOM LiS releases. */
+#undef HAVE_SYS_LIS_MODULE_H
+
+/* Define when the LiS release supports module versions such as the OpenSS7
+   autoconf release of LiS. */
+#undef HAVE_SYS_LIS_MODVERSIONS_H
+
+/* Define to 1 if you have the <sys/mount.h> header file. */
+#undef HAVE_SYS_MOUNT_H
+
+/* Define to 1 if you have the <sys/param.h> header file. */
+#undef HAVE_SYS_PARAM_H
+
+/* Define when the STREAMS SCTP release supports module versions such as the
+   OpenSS7 autoconf releases. */
+#undef HAVE_SYS_SCTP_MODVERSIONS_H
+
+/* Define to 1 if you have the <sys/select.h> header file. */
+#undef HAVE_SYS_SELECT_H
+
+/* Define to 1 if you have the <sys/socket.h> header file. */
+#undef HAVE_SYS_SOCKET_H
+
+/* Define when the STREAMS SS7 release supports module versions such as the
+   OpenSS7 autoconf releases. */
+#undef HAVE_SYS_SS7_MODVERSIONS_H
+
+/* Define to 1 if you have the <sys/stat.h> header file. */
+#undef HAVE_SYS_STAT_H
+
+/* Define when the STREAMS compatibiltiy release supports module versions such
+   as the OpenSS7 autoconf releases. */
+#undef HAVE_SYS_STRCOMP_MODVERSIONS_H
+
+/* Define when the Linux Fast-STREAMS release supports module versions such as
+   the OpenSS7 autoconf releases. */
+#undef HAVE_SYS_STREAMS_MODVERSIONS_H
+
+/* Define to 1 if you have the <sys/time.h> header file. */
+#undef HAVE_SYS_TIME_H
+
+/* Define to 1 if you have the <sys/types.h> header file. */
+#undef HAVE_SYS_TYPES_H
+
+/* Define to 1 if you have <sys/wait.h> that is POSIX.1 compatible. */
+#undef HAVE_SYS_WAIT_H
+
+/* Define when the STREAMS XNET release supports module versions such as the
+   OpenSS7 autoconf releases. */
+#undef HAVE_SYS_XNET_MODVERSIONS_H
+
+/* Define when the STREAMS XNS release supports module versions such as the
+   OpenSS7 autoconf releases. */
+#undef HAVE_SYS_XNS_MODVERSIONS_H
+
+/* Define to 1 if you have the <termios.h> header file. */
+#undef HAVE_TERMIOS_H
+
+/* Define to 1 if you have the `uname' function. */
+#undef HAVE_UNAME
+
+/* Define to 1 if you have the <unistd.h> header file. */
+#undef HAVE_UNISTD_H
+
+/* Define to 1 if you have the <values.h> header file. */
+#undef HAVE_VALUES_H
+
+/* Define to 1 if you have the `vfork' function. */
+#undef HAVE_VFORK
+
+/* Define to 1 if you have the <vfork.h> header file. */
+#undef HAVE_VFORK_H
+
+/* Define to 1 if you have the `vprintf' function. */
+#undef HAVE_VPRINTF
+
+/* Define to 1 if you have the <wchar.h> header file. */
+#undef HAVE_WCHAR_H
+
+/* Define to 1 if `fork' works. */
+#undef HAVE_WORKING_FORK
+
+/* Define to 1 if `vfork' works. */
+#undef HAVE_WORKING_VFORK
+
+/* Define to 1 if the system has the type `_Bool'. */
+#undef HAVE__BOOL
+
+/* Define to 1 if you have the `__argz_count' function. */
+#undef HAVE___ARGZ_COUNT
+
+/* Define to 1 if you have the `__argz_next' function. */
+#undef HAVE___ARGZ_NEXT
+
+/* Define to 1 if you have the `__argz_stringify' function. */
+#undef HAVE___ARGZ_STRINGIFY
+
+/* Define for the linux 2.4 kernel series. */
+#undef LINUX_2_4
+
+/* Define for the linux 2.6 kernel series. */
+#undef LINUX_2_6
+
+/* Define to 1 if `lstat' dereferences a symlink specified with a trailing
+   slash. */
+#undef LSTAT_FOLLOWS_SLASHED_SYMLINK
+
+/* Define to 1 if `major', `minor', and `makedev' are declared in <mkdev.h>.
+   */
+#undef MAJOR_IN_MKDEV
+
+/* Define to 1 if `major', `minor', and `makedev' are declared in
+   <sysmacros.h>. */
+#undef MAJOR_IN_SYSMACROS
+
+/* Define to 1 if your C compiler doesn't accept -c and -o together. */
+#undef NO_MINUS_C_MINUS_O
+
+/* Name of package */
+#undef PACKAGE
+
+/* Define to the address where bug reports for this package should be sent. */
+#undef PACKAGE_BUGREPORT
+
+/* The package release date. */
+#undef PACKAGE_DATE
+
+/* The Debian Epoch. This defaults to 0. */
+#undef PACKAGE_DEBEPOCH
+
+/* The Debian Release. This defaults to 0. */
+#undef PACKAGE_DEBRELEASE
+
+/* The Package Epoch. This defaults to 1. */
+#undef PACKAGE_EPOCH
+
+/* The Linux kernel version without EXTRAVERSION. */
+#undef PACKAGE_KNUMBER
+
+/* The Linux kernel version for which the package was configured. */
+#undef PACKAGE_KVERSION
+
+/* Define to the full name of this package. */
+#undef PACKAGE_NAME
+
+/* The Package Release. This defaults to Custom. */
+#undef PACKAGE_RELEASE
+
+/* The RPM Distribution. This defaults to automatic detection. */
+#undef PACKAGE_RPMDIST
+
+/* The RPM Epoch. This defaults to 0. */
+#undef PACKAGE_RPMEPOCH
+
+/* The RPM Extra Release string. This defaults to automatic detection. */
+#undef PACKAGE_RPMEXTRA
+
+/* The RPM Extra Release string. This defaults to automatic detection. */
+#undef PACKAGE_RPMEXTRA2
+
+/* The RPM Release. This defaults to 1. */
+#undef PACKAGE_RPMRELEASE
+
+/* Define to the full name and version of this package. */
+#undef PACKAGE_STRING
+
+/* Define to the one symbol short name of this package. */
+#undef PACKAGE_TARNAME
+
+/* Define to the version of this package. */
+#undef PACKAGE_VERSION
+
+/* Define as the return type of signal handlers (`int' or `void'). */
+#undef RETSIGTYPE
+
+/* Define to the type of arg 1 for `select'. */
+#undef SELECT_TYPE_ARG1
+
+/* Define to the type of args 2, 3 and 4 for `select'. */
+#undef SELECT_TYPE_ARG234
+
+/* Define to the type of arg 5 for `select'. */
+#undef SELECT_TYPE_ARG5
+
+/* Define to 1 if the `setpgrp' function takes no argument. */
+#undef SETPGRP_VOID
+
+/* If using the C implementation of alloca, define if you know the
+   direction of stack growth for your system; otherwise it will be
+   automatically deduced at run-time.
+	STACK_DIRECTION > 0 => grows toward higher addresses
+	STACK_DIRECTION < 0 => grows toward lower addresses
+	STACK_DIRECTION = 0 => direction of growth unknown */
+#undef STACK_DIRECTION
+
+/* Define to 1 if the `S_IS*' macros in <sys/stat.h> do not work properly. */
+#undef STAT_MACROS_BROKEN
+
+/* Define to 1 if you have the ANSI C header files. */
+#undef STDC_HEADERS
+
+/* Define to 1 if you can safely include both <sys/time.h> and <time.h>. */
+#undef TIME_WITH_SYS_TIME
+
+/* Define to 1 if your <sys/time.h> declares `struct tm'. */
+#undef TM_IN_SYS_TIME
+
+/* Version number of package */
+#undef VERSION
+
+/* Define for linux 2.5.48+ .ko kernel modules. */
+#undef WITH_KO_MODULES
+
+/* Define for kernel symbol debugging. This has the effect of defeating
+   inlines, making static declarations global, and activating all debugging
+   macros. */
+#undef _DEBUG
+
+/* Enable GNU extensions on systems that have them.  */
+#ifndef _GNU_SOURCE
+# undef _GNU_SOURCE
+#endif
+
+/* Define for maximum performance and minimum size. This has the effect of
+   disabling all safety debugging macros. */
+#undef _NONE
+
+/* Define for kernel image testing (profiling). This has the effect of -O0 -g,
+   and setting assertions to TEST. */
+#undef _OPTIMIZE_NONE
+
+/* Define for kernel image normal optimization. This has the effect of -O2 -g,
+   and setting assertions to SAFE. */
+#undef _OPTIMIZE_NORMAL
+
+/* Define for kernel image size optimizations. This has the effect of -Os and
+   no -g, and disabling all assertions. */
+#undef _OPTIMIZE_SIZE
+
+/* Define for kernel image speed optimizations. This has the effect of -O3 -g,
+   and disabling all assertions. */
+#undef _OPTIMIZE_SPEED
+
+/* Define for kernel safety. This has the effect of enabling safety debugging
+   macros. This is the default. */
+#undef _SAFE
+
+/* Define for kernel testing. This has the same effect as _DEBUG for now. */
+#undef _TEST
+
+/* dnl Define for SuSv3. This is necessary for LiS and LfS and strss7 for that
+   matter. */
+#undef _XOPEN_SOURCE
+
+/* Define for RedHat BIGMEM kernel. */
+#undef __BOOT_KERNEL_BIGMEM
+
+/* Define for RedHat BOOT kernel. */
+#undef __BOOT_KERNEL_BOOT
+
+/* Define for RedHat DEBUG kernel. */
+#undef __BOOT_KERNEL_DEBUG
+
+/* Define for RedHat/Mandrake ENTERPRISE kernel. */
+#undef __BOOT_KERNEL_ENTERPRISE
+
+/* Define for RedHat HUGEMEM kernel. */
+#undef __BOOT_KERNEL_HUGEMEM
+
+/* Define for RedHat/Mandrake kernel. */
+#undef __BOOT_KERNEL_H_
+
+/* Define for Mandrake I586_UP_1GB kernel. */
+#undef __BOOT_KERNEL_I586_UP_1GB
+
+/* Define for Mandrake I686_UP_4GB kernel. */
+#undef __BOOT_KERNEL_I686_UP_4GB
+
+/* Define for Mandrake I686_UP_64GB kernel. */
+#undef __BOOT_KERNEL_I686_UP_64GB
+
+/* Define for Mandrake MAXIMUM kernel. */
+#undef __BOOT_KERNEL_MAXIMUM
+
+/* Define for Mandrake P3_SMP_64GB kernel. */
+#undef __BOOT_KERNEL_P3_SMP_64GB
+
+/* Define for RedHat/Mandrake SECURE kernel. */
+#undef __BOOT_KERNEL_SECURE
+
+/* Define for RedHat/Mandrake SMP kernel. */
+#undef __BOOT_KERNEL_SMP
+
+/* Define for RedHat/Mandrake UP kernel. */
+#undef __BOOT_KERNEL_UP
+
+/* Define for alpha RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_alpha
+
+/* Define for athlon RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_athlon
+
+/* Define for i386 RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_i386
+
+/* Define for i586 RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_i586
+
+/* Define for i686 RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_i686
+
+/* Define for ia32e RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_ia32e
+
+/* Define for ia64 RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_ia64
+
+/* Define for ppc RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_ppc
+
+/* Define for ppc64 RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_ppc64
+
+/* Define for s390 RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_s390
+
+/* Define for s390x RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_s390x
+
+/* Define for sparc RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_sparc
+
+/* Define for sparc64 RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_sparc64
+
+/* Define for x86_64 RedHat/Mandrake kernel. */
+#undef __MODULE_KERNEL_x86_64
+
+/* Define to empty if `const' does not conform to ANSI C. */
+#undef const
+
+/* Define to `int' if <sys/types.h> doesn't define. */
+#undef gid_t
+
+/* Define to `__inline__' or `__inline' if that's what the C compiler
+   calls it, or to nothing if 'inline' is not supported under any name.  */
+#ifndef __cplusplus
+#undef inline
+#endif
+
+/* Define to rpl_malloc if the replacement function should be used. */
+#undef malloc
+
+/* Define to `int' if <sys/types.h> does not define. */
+#undef mode_t
+
+/* Define to `long' if <sys/types.h> does not define. */
+#undef off_t
+
+/* Define to `int' if <sys/types.h> does not define. */
+#undef pid_t
+
+/* Define to rpl_realloc if the replacement function should be used. */
+#undef realloc
+
+/* Define to `unsigned' if <sys/types.h> does not define. */
+#undef size_t
+
+/* Define to `int' if <sys/types.h> doesn't define. */
+#undef uid_t
+
+/* Define as `fork' if `vfork' does not work. */
+#undef vfork
+
+/* Define to empty if the keyword `volatile' does not work. Warning: valid
+   code using `volatile' can become incorrect without. Disable with care. */
+#undef volatile

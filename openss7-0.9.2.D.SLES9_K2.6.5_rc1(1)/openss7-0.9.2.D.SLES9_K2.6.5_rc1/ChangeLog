@@ -1,0 +1,418 @@
+2006-07-11  Brian Bidulock  <bidulock@openss7.org>
+
+	* README-LiS: new README file warning of deprecated LiS
+	* README-nexusware: new missing README file for NexusWare
+	* Makefile.am: distribute TODO and README files
+	* am/genksyms.am: NexusWare hates empty load scripts
+
+2006-07-09  Brian Bidulock  <bidulock@openss7.org>
+
+	* README: updated quick installation instructions
+	* am/openss7.am: added tag ids for optimization defines
+
+2006-07-08  Brian Bidulock  <bidulock@openss7.org>
+
+	* .pkgrelease: bumped version to release candidate 2
+	* NEWS: bumped version to release candidate 2
+	* debian/changelog: bumped version to release candidate 2
+	* debian/rules.in: clean deb package master build
+
+2006-07-07  Brian Bidulock  <bidulock@openss7.org>
+
+	* debian/copyright: typo
+
+2006-07-06  Brian Bidulock  <bidulock@openss7.org>
+
+	* debian/changelog: packaged release candidate for Mark Fugate
+	* debian/control.in: first full debian master package build of debs on Ubuntu
+	* debian/rules.in:: first full debian master package build of debs on Ubuntu
+
+2006-07-05  Brian Bidulock  <bidulock@openss7.org>
+
+	* NEWS: package release candidate for Mark Fugate
+	* README: package release candidate for Mark Fugate
+	* .pkgrelease: package release candidate for Mark Fugate
+	* acinclude.m4: package release candidate for Mark Fugate
+
+2006-07-04  Brian Bidulock  <bidulock@openss7.org>
+
+	* openss7.spec.in: place all include files in development sub-package
+
+2006-07-03  Brian Bidulock  <bidulock@openss7.org>
+
+	* README: updated for release
+	* README-alpha: updated for release
+	* README-cvs: updated for release
+	* scripts/texi/install.texi: updated for release
+	* scripts/texi/testsuite.texi: updated for release
+	* texi/install.texi: updated for release
+	* texi/testsuite.texi: updated for release
+	* m4/kernel.m4: still a problem with KBUILD_STR quotes
+	* am/openss7.am: make logging targets precious
+
+2006-07-01  Brian Bidulock  <bidulock@openss7.org>
+
+	* m4/kernel.m4: changes for 2.6.17 kernel
+	* scripts/cflagscheck: check for KBUILD_STR
+	* am/kernel.am: add new build flags to modpost
+	* debian/changelog: changes for Ubuntu dpkg build
+	* debian/control.in: changes for Ubuntu dpkg build
+
+2006-06-30  Brian Bidulock  <bidulock@openss7.org>
+
+	* m4/rpm.m4: changes for Fedora Core 5
+	* m4/deb.m4: changes for Fedora Core 5
+	* m4/kernel.m4: changes for Fedora Core 5
+
+2006-06-29  Brian Bidulock  <bidulock@openss7.org>
+
+	* m4/rpm.m4: variations for Ubuntu
+	* m4/deb.m4: variations for Ubuntu
+	* m4/kernel.m4: changes for Ubuntu
+
+2006-06-21  Brian Bidulock  <bidulock@openss7.org>
+
+	* m4/kernel.m4: kick out -fno-unit-at-a-time flags
+	* am/openss7.am: added noinline stuff to tags ignore list
+
+2006-06-16  Brian Bidulock  <bidulock@openss7.org>
+
+	* TODO: updated things to do
+
+2006-06-13  Brian Bidulock  <bidulock@openss7.org>
+
+	* openss7.refs: updated references for IUA, DUA, M2PA
+
+2006-06-08  Brian Bidulock  <bidulock@openss7.org>
+
+	* m4/kernel.m4: strip -fno-reorder-blocks which is keeping
+	  __builtin_expect from working on x86_64
+
+2006-05-25  Brian Bidulock  <bidulock@openss7.org>
+
+	* .indent.pro: removed storage classes (inline)
+
+2006-05-24  Brian Bidulock  <bidulock@openss7.org>
+
+	* scripts/hot.lds: try write path priority over read path
+	* m4/kernel.m4: add -fno-inline-functions at -O2
+
+2006-05-21  Brian Bidulock  <bidulock@openss7.org>
+
+	* am/genksyms.am: load script missing -T option for 2.6
+
+2006-05-08  Brian Bidulock  <bidulock@openss7.org>
+
+	* scripts/strconf-sh: added module id base to strconf
+	* m4/strconf.m4: added module id base to strconf
+	* am/strconf.am: added module id base to strconf
+	* acinclude.m4: added module id base to strconf
+	* openss7.spec.in: updated headers
+
+2006-04-25  Brian Bidulock  <bidulock@openss7.org>
+
+	* openss7.refs: more references
+
+2006-04-22  Brian Bidulock  <bidulock@openss7.org>
+
+	* openss7.refs: added a few more references
+
+2006-04-08  Brian Bidulock  <bidulock@openss7.org>
+
+	* openss7.refs: corrected spelling error reported by spammer
+
+2006-04-07  Brian Bidulock  <bidulock@openss7.org>
+
+	* openss7.refs: added some RFC references
+
+2006-04-05  Brian Bidulock  <bidulock@openss7.org>
+
+	* */man*/*.man, */man/man*/*.man, */doc/man/man*/*.man:
+	  Moved all .so xxx.macros lines down beneath .R2 with a script.  SuSE
+	  10's broken man(1) program thinks that .so lines after a comment line
+	  is a redirect, but it is not.  No other man(1) is that stupid.  OTOH
+	  SuSE 10's man(1) uses zsoelim, so it doesn't matter if our .macros
+	  file gets compressed (just our .refs file).  Also updated all
+	  copyright headers.
+
+2006-04-03  Brian Bidulock  <bidulock@openss7.org>
+
+	* m4/dist.m4: better detection of SuSE 10 distribution
+	  - SuSE 10 uses all caps in SuSE-release for some stupid reason.
+	  - Check for OSS as a SuSE codename (SuSE never had codenames).
+	  - Expect Mandrake to use Mandriva in random places.
+	* m4/rpm.m4 (PACKAGE_RPMDIST): add codename
+	* scripts/send-pr: do not remove leading space from included lines
+
+2006-03-31  Brian Bidulock  <bidulock@openss7.org>
+
+	* scripts/hot.lds: miss-ordering of hot.put and hot.get
+
+2006-03-25  Brian Bidulock  <bidulock@openss7.org>
+
+	* m4/openss7.m4: got enable_static backwards
+
+2006-03-24  Brian Bidulock  <bidulock@openss7.org>
+
+	* openss7.refs: updated LiS and STREAMS release numbers
+	* am/pr.am: scrpits/send-pr missing from distribution
+	* openss7.spec.in (%package test): described send-pr
+	* am/autotest.am: stylistic changes
+	* am/pr.am: only install noarch
+
+2006-03-23  Brian Bidulock  <bidulock@openss7.org>
+
+	* scripts/send-pr: added (renamed from auto-pr)
+	* scripts/auto-pr: deleted (renamed to send-pr)
+	* scripts/send-pr.config.in: added (renamed from auto-pr.config.in)
+	* scripts/auto-pr.config.in: deleted (renamed to send-pr.config.in)
+	* am/openss7.am: renamed auto-pr to send-pr
+	* am/pr.am: renamed auto-pr to send-pr
+	* m4/pr.m4: renamed auto-pr to send-pr
+	* texi/install.texi: changed auto-pr and mail-pr to send-pr
+	* texi/testsuite.texi: changed auto-pr and mail-pr to send-pr
+	* scripts/texi/install.texi: changed auto-pr and mail-pr to send-pr
+	* scripts/texi/testsuite.texi: changed auto-pr and mail-pr to send-pr
+
+2006-03-22  Brian Bidulock  <bidulock@openss7.org>
+
+	* am/pr.am: changed some target names
+	- made mail-pr call auto-pr with --mail argument
+	* scripts/auto-pr: working up auto-pr
+	- added --mail argument
+	* texi/install.texi: added makefile target documentation
+	* scripts/texi/install.texi: added makefile target documentation
+	* texi/testsuite.texi: added problem reports with auto-pr
+	* scripts/texi/testsuite.texi: added problem reports with auto-pr
+	* am/help.am: spelling
+
+2006-03-21  Brian Bidulock  <bidulock@openss7.org>
+
+	* m4/pr.m4: configuration for auto-pr problem reports
+	* scripts/auto-pr: automagically generate problem reports
+	* am/man.am: handle .PHONY correctly
+	* .cvsignore: added *.pr files
+	* am/openss7.am: added auto-pr on failure to logging targets
+	* am/pr.am: new automake fragement for problem reports
+	* Makefile.am: added pr.am for problem reports
+	* acinclude.m4: added pr.m4 and call _AUTOPR for problem reports
+	* scripts/auto-pr.config.in: configuration file for auto-pr
+
+2006-03-20  Brian Bidulock  <bidulock@openss7.org>
+
+	* TODO: updated todo items for common packaging
+	* m4/openss7.m4: added check for --disable-devel
+	* am/info.am: add DEVELOPMENT check
+	* am/man.am: add DEVELOPMENT check
+	* openss7.spec.in: tied in --disable-devel flag
+	* texi/install.texi: documented --disable-devel flag
+	* scripts/texi/install.texi: documented --disable-devel flag
+	* m4/openss7.m4: don't build libtool static libraries no devel
+	* configure.ac: updated and rationalized
+
+2006-03-17  Brian Bidulock  <bidulock@openss7.org>
+
+	* TODO: updated todo items for common packaging
+
+2006-03-16  Brian Bidulock  <bidulock@openss7.org>
+
+	* ANNOUNCE: added announcement file for release
+	* .pkgrelease: bumped release number after release
+	* NEWS: prepare for next release
+
+2006-03-15  Brian Bidulock  <bidulock@openss7.org>
+
+	* configure.ac (AC_CONFIG_SRCDIR): changed unique file to openss7.lsm.in
+	* acinclude.m4: check for presense of source subdirectories
+	* am/info.am: build and distribute text info documentation
+	* am/info.am: can't distribute pdf and txt images
+
+2006-03-14  Brian Bidulock  <bidulock@openss7.org>
+
+	* m4/devfs.m4: minor syntax consistency
+	* m4/dist.m4: minor syntax consistency
+	* m4/genksyms.m4: minor syntax consistency
+	* m4/init.m4: minor syntax consistency
+	* m4/kernel.m4: minor syntax consistency
+	* m4/strconf.m4: minor syntax consistency
+	* m4/inet.m4: advanced search capabilities
+	* m4/sctp.m4: advanced search capabilities
+	* m4/ss7.m4: added new search file for ss7 directories
+	* m4/strcomp.m4: advanced search capabilities
+	* m4/streams.m4: advanced search capabilities
+	* m4/xns.m4: advanced search capabilities
+	* m4/xti.m4: advanced search capabilities
+	* m4/kernel.m4: sed quotation correction
+	* m4/rpm.m4: added second rpmextra string
+	* am/rpm.am: added second rpmextra string
+	* openss7.spec.in: added second rpmextra string
+	* acinclude.m4: moved BCM to end, corrected directory searches
+
+2006-03-13  Brian Bidulock  <bidulock@openss7.org>
+
+	* m4/inet.m4: even smarter about finding directories
+	* m4/sctp.m4: even smarter about finding directories
+	* m4/strcomp.m4: even smarter about finding directories
+	* m4/streams.m4: even smarter about finding directories
+	* m4/xns.m4: even smarter about finding directories
+	* m4/xti.m4: even smarter about finding directories
+	* Makefile.am: pass down master_srcdir and master_builddir
+	* acinclude.m4: susbstitute master_srcdir and master_builddir
+
+2006-03-11  Brian Bidulock  <bidulock@openss7.org>
+
+	* autotest.m4: updated headers, vim tags
+	* deb.m4: updated headers, vim tags
+	* devfs.m4: updated headers, vim tags
+	* dist.m4: updated headers, vim tags
+	* genksyms.m4: updated headers, vim tags
+	* inet.m4: updated headers, vim tags, include directory search
+	* init.m4: updated headers, vim tags
+	* kernel.m4: updated headers, vim tags
+	* libraries.m4: updated headers, vim tags
+	* man.m4: updated headers, vim tags
+	* openss7.m4: updated headers, vim tags
+	* public.m4: updated headers, vim tags
+	* rpm.m4: updated headers, vim tags
+	* sctp.m4: updated headers, vim tags, include directory search
+	* strcomp.m4: updated headers, vim tags, include directory search
+	* strconf.m4: updated headers, vim tags
+	* streams.m4: updated headers, vim tags, include directory search
+	* xns.m4: updated headers, vim tags, include directory search
+	* xopen.m4: updated headers, vim tags
+	* xti.m4: updated headers, vim tags, include directory search
+	* configure.ac: allow --disable-dependency-tracking in maintainer mode
+	* am/info.am: try to avoid rebuilding docs when unnecessary
+	* m4/inet.m4: uppercase LDADD is too loud
+	* m4/sctp.m4: uppercase LDADD is too loud
+	* m4/strcomp.m4: uppercase LDADD is too loud
+	* m4/xns.m4: uppercase LDADD is too loud
+	* m4/streams.m4: uppercase LDADD is too loud
+	* m4/xti.m4: uppercase LDADD is too loud
+	* acinclude.m4: wider range of initial checks
+
+2006-03-10  Brian Bidulock  <bidulock@openss7.org>
+
+	* openss7.spec.in: updated description fields and headers
+
+2006-03-09  Brian Bidulock  <bidulock@openss7.org>
+
+	* configure.ac: got rid of autoconf nits
+	* am/strconf.am: suppress rebuilds on package file or directory for now
+	* openss7.lsm.in: make suitable for Linux Software Map submission
+
+2006-03-08  Brian Bidulock  <bidulock@openss7.org>
+
+	* scripts/strconf-sh: updated headers
+	* scripts/strconf-sh: added pkgobject to defaults
+	* am/strconf.am (STRCONF_PKGDIR): added binary package directory detection
+	* m4/strconf.m4 (STRCONF_PKGDIR): added binary package directory detection
+	* scripts/strconf-sh: added pkgobject and packagedir
+	* m4/strconf.m4: corrected typo
+	* m4/kernel.m4: correct autoconf warnings
+	* m4/openss7.m4: change AC_HELP_STRING to AS_HELP_STRING
+	* m4/autotest.m4: change AC_HELP_STRING to AS_HELP_STRING
+	* m4/sctp.m4: change AC_HELP_STRING to AS_HELP_STRING
+	* m4/xns.m4: change AC_HELP_STRING to AS_HELP_STRING
+	* m4/xti.m4: change AC_HELP_STRING to AS_HELP_STRING
+	* m4/inet.m4: change AC_HELP_STRING to AS_HELP_STRING
+
+2006-03-07  Brian Bidulock  <bidulock@openss7.org>
+
+	* .pkgrelease: corrected package number bump
+	* NEWS: updated for release
+	* am/info.am: keep docs from being rebuilt outside of maintianer mode
+	* Makefile.am: must clean out module symbols and caches for distcheck
+	* acinclude.m4: be smarter about which packages to build
+	* configure.ac (pkg_save_LIBS): correct error
+	* am/help.am: documented remove target
+	* am/openss7.am: added remove target and reverse recursive targets
+	* acinclude.m4: a little smarter still
+	* debian/changelog: updated release numbering
+	* debian/copyright: updated headers
+	* debian/control.in: updated deprecated references to LiS
+	* acinclude.m4: added strbcm package
+
+2006-03-06  Brian Bidulock  <bidulock@openss7.org>
+
+	* Makefile.am: updated headers
+	* am/archive.am: updated headers
+	* am/autotest.am: updated headers
+	* am/deb.am: updated headers
+	* am/genksyms.am: updated headers
+	* am/help.am: updated headers
+	* am/info.am: updated headers
+	* am/init.am: updated headers
+	* am/kernel.am: updated headers
+	* am/libraries.am: updated headers
+	* am/lsm.am: updated headers
+	* am/man.am: updated headers
+	* am/openss7.am: updated headers
+	* am/rpm.am: updated headers
+	* am/sctp.am: updated headers
+	* am/strconf.am: updated headers
+
+2006-03-03  Brian Bidulock  <bidulock@openss7.org>
+
+	* THANKS: updated for release
+	* openss7.macros: new file with manpage macros
+	* openss7.refs: updated references
+	* README-nexusware: updated for release
+
+2006-03-02  Brian Bidulock  <bidulock@openss7.org>
+
+	* README: updated for release
+	* README-alpha: updated for release
+	* README-cvs: updated for release
+
+2006-03-01  Brian Bidulock  <bidulock@openss7.org>
+
+	* ChangeLog: started actively mantaining this change log
+	* TODO: update to do items
+	* README: updated for release
+
+2005-09-14  Brian Bidulock  <bidulock@openss7.org>
+
+	- Revision 0.9.2.2  2005/09/14 23:40:47  brian
+	- bumped release numbers and change logs
+
+-----
+
+Copyright (c) 2001-2006  OpenSS7 Corporation <http://www.openss7.com>
+Copyright (c) 1997-2000  Brian F. G. Bidulock <bidulock@openss7.org>
+
+All Rights Reserved.
+
+This program is free software; you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation; version 2 of the License.
+
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+details.
+
+You should have received a copy of the GNU General Public License along with
+this program; if not, write to the Free Software Foundation, Inc., 675 Mass
+Ave, Cambridge, MA 02139, USA.
+
+
+U.S. GOVERNMENT RESTRICTED RIGHTS.  If you are licensing this Software on
+behalf of the U.S. Government ("Government"), the following provisions apply
+to you.  If the Software is supplied by the Department of Defense ("DoD"), it
+is classified as "Commercial Computer Software" under paragraph 252.227-7014
+of the DoD Supplement to the Federal Acquisition Regulations ("DFARS") (or any
+successor regulations) and the Government is acquiring only the license rights
+granted herein (the license rights customarily provided to non-Government
+users).  If the Software is supplied to any unit or agency of the Government
+other than DoD, it is classified as "Restricted Computer Software" and the
+Government's rights in the Software are defined in paragraph 52.227-19 of the
+Federal Acquisition Regulations ("FAR") (or any successor regulations) or, in
+the cases of NASA, in paragraph 18.52.227-86 of the NASA Supplement to the FAR
+(or any successor regulations).
+
+
+Commercial licensing and support of this software is available from OpenSS7
+Corporation at a fee.  See http://www.openss7.com/
+
+vim: ft=changelog tw=80 com=fb\:*,fb\:- fo+=tcqlorn nocin nosi

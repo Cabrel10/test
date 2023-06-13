@@ -1,0 +1,1081 @@
+This is /home/brian/rel/streams/doc/manual/SPG2.info, produced by makeinfo
+version 4.8 from /home/brian/rel/streams/doc/manual/SPG2.texi.
+
+INFO-DIR-SECTION STREAMS
+START-INFO-DIR-ENTRY
+* SPG2: (SPG2).			STREAMS Programmer's Guide (Take 2)
+END-INFO-DIR-ENTRY
+
+This file provides the STREAMS Programmer's Guide for Linux Fast-STREAMS.
+
+This is Edition 6.rc2, last updated 2006-07-11, of the `Linux Fast-STREAMS
+STREAMS Programmer's Guide', for Version 0.7a Release 6.rc2.
+
+Copyright (C) 2001-2005  OpenSS7 Corporation (http://www.openss7.com/)
+Copyright (C) 1997-2000  Brian F. G. Bidulock <bidulock@openss7.org>
+
+All Rights Reserved.
+
+Permission is granted to make and distribute verbatim copies of this guide
+provided the copyright notice and this permission notice are preserved on all
+copies.
+
+Permission is granted to copy and distribute modified versions of this guide
+under the conditions for verbatim copying, provided the entire resulting
+derived work is distributed under the terms of a permission notice identical to
+this one.
+
+Permission is granted to copy and distribute translations of this guide into
+another language, under the above conditions for modified versions.
+
+
+File: SPG2.info,  Node: Glossary,  Next: Index,  Prev: Copying,  Up: Top
+
+ Glossary
+*********
+
+"anchor"                  A "STREAMS" locking mechanism that prevents the
+                         removal of "STREAMS" modules with the `I_POP' `ioctl'.
+                         Anchors are placed on "STREAMS" modules by adding the
+                         `[anchor]' flag to `autopush(8)' (*note
+                         (*manpages*)autopush(8)::) configuration files or
+                         directly with the `I_ANCHOR' `ioctl'.
+"autopush"                A "STREAMS" mechanism that enables a pre-specified
+                         list of modules to be pushed automatically onto a
+                         "Stream" when a "STREAMS" device is opened.  This
+                         mechanism is used only for administrative purposes.
+"back-enable"             To enable (by "STREAMS") a preceding blocked queue's
+                         `service' procedure when "STREAMS" determines that a
+                         succeeding queue has reached its low-water mark.
+"blocked"                 A queue's `service' procedure that cannot be enabled
+                         due to flow control.
+"clone device"            A "STREAMS" device that returns an unused major/minor
+                         device number when initially opened, rather than
+                         requiring the minor device to be specified by name in
+                         the `open' call.
+"close procedure"         A routine that is called when a module is popped from
+                         a "Stream" or when a driver is closed.  A pointer to
+                         this procedure is specified in the QI_QOPEN member of
+                         the `queue(9)' (*note (*manpages*)queue(9)::) structure
+                         associated with the read side of the module's queue
+                         pair.
+"control Stream"          A "Stream" above a multiplexing driver used to
+                         establish lower multiplexer connections.  Multiplexed
+                         "Stream" configurations are maintained through the
+                         controlling "Stream" to a multiplexing driver.
+"Device Driver            An interface that facilitates driver portability
+Interface"               across different `UNIX' system versions.
+"device driver"           A "Stream" component whose principle functions are
+                         handling an associated physical device and transforming
+                         data and information between the external interface and
+                         the "Stream".
+"Driver Kernel            An interface between the `UNIX' system kernel and
+Interface"               different types of drivers.  It consists of a set of
+                         driver defined functions that are called by the kernel.
+                         These functions are entry points into a driver.
+"downstream"              A direction of data flow going from the "Stream head"
+                         toward a driver.  Also called the "write-side" and
+                         "output-side".
+"driver"                  A module that forms the "Stream end".  It can be a
+                         device driver or a pseudo-device driver.  It is a
+                         required component in "STREAMS" (except in
+                         "STREAMS"-based pipes and FIFOs), and is physically
+                         identical to a module.  It typically handles data
+                         transfer between the kernel and a device and does
+                         little or no processing of data.
+"enable"                  A term used to describe scheduling of a queue's
+                         `service' procedure.
+"FIFO"                    "First In, First Out".  A term used in "STREAMS" for
+                         named pipes.  This term is also used in queue
+                         scheduling.
+"flow control"            A "STREAMS" mechanism that regulates the rate of
+                         message transfer within a "Strema" and from user space
+                         into a "Stream".
+"hardware emulation       A module required when the terminal line discipline is
+module"                  on a "Stream" but there is no terminal driver at the
+                         "Stream end".  This module recognizes all `termio(7)'
+                         (*note (*manpages*)termio(7)::) `ioctl's necessary to
+                         support terminal semantics specified by `termio(9)'
+                         (*note (*manpages*)termio(9)::) and `termios(9)' (*note
+                         (*manpages*)termios(9)::).
+"input side"              A direction of data flow going from a driver toward
+                         the "Stream head".  Also called "read-side" and
+                         "upstream".
+"line discipline"         A "STREAMS" module that performs `termio(7)' (*note
+                         (*manpages*)termio(7)::) canonical and non-canonical
+                         processing.  It shares some `termio(7)' (*note
+                         (*manpages*)termio(7)::) processing with a driver in a
+                         "STREAMS" terminal subsystem.
+"lower Stream"            A "Stream" connected beneath a multiplexing
+                         pseudo-device driver, by means of an `I_LINK' or
+                         `I_PLINK' `ioctl'.  The far end of a lower "Stream"
+                         terminates at a device driver or another multiplexer
+                         driver.
+"master driver"           A "STREAMS"-based device supported by the
+                         pseudo-terminal subsystem.  It is the controlling part
+                         of the pseudo-terminal subsystem (also called `ptm').
+"message"                 One or more linked message blocks.  A message is
+                         referenced by its first message block and its type is
+                         defined by the message type of that block.
+"message block"           A triplet consisting of a data buffer and associated
+                         control structures, a `msgb(9)' (*note
+                         (*manpages*)msgb(9)::) structure, a `datab(9)' (*note
+                         (*manpages*)datab(9)::) structure.  It carries data or
+                         information, as identified by its message type, in a
+                         "Stream".
+"message queue"           A linked list of zero or more messages connected
+                         together.
+"message type"            A enumerated set of values identifying the contents of
+                         a message.
+"module"                  A defined set of kernel-level routines and data
+                         structure used to process data, status, and control
+                         information on a "Stream".  It is an optional element,
+                         but there can be many modules in one "Stream".  It
+                         consists of a pair of queues (read queue and write
+                         queue), and it communicates to other components in a
+                         "Stream" by passing messages.
+"multiplexer"             A "STREAMS" mechanism that allows message to be routed
+                         among multiple "Streams" in the kernel.  A multiplexing
+                         configuration includes at least one multiplexing
+                         pseudo-device driver connected to one or more upper
+                         "Streams" and one or more lower "Streams".
+"named Stream"            A "Stream", typically a pipe, with a name associated
+                         with it by way of a call to `fattach(3)' (*note
+                         (*manpages*)fattach(3)::) (that is, a `mount(2)' (*note
+                         (*manpages*)mount(2)::) operation).  This is different
+                         from a named pipe (FIFO) in two ways: a named pipe
+                         (FIFO) is unidirectional while a named "Stream" is
+                         bidirectional; a name "Stream" need not refer to a
+                         pipe, but can be another type of "Stream".
+"open routine"            A procedure in each "STREAMS" driver and module called
+                         by "STREAMS" on each `open' system call made on the
+                         "Stream".  A module's `open' procedure is also called
+                         when the module is pushed.
+"packet mode"             A feature supported by the "STREAMS"-based
+                         pseudo-terminal subsystem.  It is used to inform a
+                         process on the master side when state changes occur on
+                         the slave side of a pseudo-TTY.  It is enabled by
+                         pushing a module called `pckt' on the master side.
+"persistent link"         A connection below a multiplexer that can exist
+                         without having an open controlling "Stream" associated
+                         with it.
+"pipe"                    See "STREAMS"-based pipe.
+"pop"                     A term used when a module that is immediately below
+                         the "Stream" head is removed.
+"pseudo-device driver"    A software driver, not directly associated with a
+                         physical device, that performs functions internal to a
+                         "Stream" such as a multiplexer or `log(4)' (*note
+                         (*manpages*)log(4)::) driver.
+"pseudo-terminal          A user interface identical to a terminal subsystem
+subsystem"               except that there is a process in place of a hardware
+                         device.  It consists of at least a master device, slave
+                         device, line discipline module, and hardware emulation
+                         module.
+"push"                    A term used when a muodule is inserted in a "Stream"
+                         immediately below the "Stream head".
+"pushable module"         A module put between the "Stream head" and driver.  It
+                         performs intermediate transformations on messages
+                         flowing between the "Stream head" and driver.  A driver
+                         is a non-pushable module.
+"put procedure"           A routine in a module or driver associated with a
+                         queue that receives messages from the preceding queue.
+                         It is the single entry point into a queue from a
+                         preceding queue.  It may perform processing on the
+                         message and will then generally either queue the
+                         message for subsequent processing by this queue's
+                         `service' procedure, or will pass the message to the
+                         `put' procedure of the following queue (using
+                         `putnext(9)' (*note (*manpages*)putnext(9)::)).
+"queue"                   A data structure that contains status information, a
+                         pointer to routines processing message, and pointers
+                         for administering a "Stream".  It typically contains
+                         pointer to `put' and `service' procedures, a message
+                         queue, and private data.
+"read-side"               A direction of data flow going from a driver toward
+                         the "Stream head".  Also called "upstream" and
+                         "input-side".
+"read queue"              A message queue in a module or driver containing
+                         messages moving "upstream".  Associated with the
+                         `read(2)' (*note (*manpages*)read(2)::) system call and
+                         input from a driver.
+"remote mode"             A feature available with the pseudo-terminal
+                         subsystem.  It is used for applications that perform
+                         the canonical and echoing functions normally done by
+                         line discipline module and TTY driver.  It enables
+                         applications on the master side to turn off the
+                         canonical processing.
+"STREAMS Administrative   A "STREAMS" Administrative Driver that provides an
+Driver"                  interface to the `autopush(8)' (*note
+                         (*manpages*)autopush(8)::) mechanism.
+"schedule"                To place a queue on the internal list of queues that
+                         will subsequently have their service procedure called
+                         by the "STREAMS" scheduler.  "STREAMS" scheduling is
+                         independent of `Linux' process scheduling.
+"service interface"       A set of primitives that define a service at the
+                         boundary between a service user and a service provider
+                         and the rules (typically represented by a state
+                         machine) for allowable sequences of the primitives
+                         across the boundary.  At a "Stream"/user boundary, the
+                         primitives are typically contained in the control part
+                         of a message; within a "Stream", in `M_PROTO' or
+                         `M_PCPROTO' message blocks.
+"service procedure"       A module or driver routine associated with a queue
+                         that receives messages queue for it by the `put'
+                         procedure is called by the "STREAMS" scheduler.  It may
+                         perform processing on the message and generally passes
+                         the message to the `put' procedure of the following
+                         queue.
+"service provider"        An entity in a service interface that responds to
+                         request primitives from the service user with response
+                         and event primitives.
+"service user"            An entity in a service interface that generates
+                         request primitives for the service provider and
+                         consumes response and event primitives.
+"slave driver"            A "STREAMS"-based device supported by the
+                         pseudo-terminal subsystem.  It is also called `pts' and
+                         works with a line discipline module and hardware
+                         emulation module to provide an interface to a user
+                         process.
+"standard pipe"           A mechanism for the unidirectional flow of data
+                         between two processes where data written by one process
+                         becomes data read by the other process.
+"Stream"                  A kernel level aggregate created by connecting
+                         "STREAMS" components, resulting from an application of
+                         the "STREAMS" mechanism.  The primary components are
+                         the "Stream head", the driver (or "Stream end"), and
+                         zero or more pushable modules between the "Stream head"
+                         and driver.
+"STREAMS-based pipe"      A mechanism used for bidirectional data transfer
+                         implemented using "STREAMS", and sharing the properties
+                         of "STREAMS"-based devices.
+"Stream end"              A "Stream" component furthest from the user process
+                         that contains a driver.
+"Stream head"             A "Stream" component closest to the user process.  It
+                         provides the interface between the "Stream" and the
+                         user process.
+"STREAMS"                 A kernel mechanism that provides the framework for
+                         network services and data communication.  It defines
+                         interface standards for character intput/output within
+                         the kernel, and between the kernel and user level.  The
+                         "STREAMS" mechanism includes integral functions,
+                         utility routines, kernel facilities, and a set of
+                         structures.
+"TTY driver"              A "STREAMS"-based device used in a terminal subsystem.
+"upper stream"            A "Stream" that terminates above a multiplexing
+                         driver.  The beginning of an upper "Stream" originates
+                         at the "Stream head" or another multiplexing driver.
+"upstream"                A direction of data flow going from a driver toward
+                         the "Stream head".  Also called "read-side" and "input
+                         side".
+"water mark"              A limit value used in flow control.  Each queue has a
+                         high-water mark and a low-water mark.  The high-water
+                         mark value indicates the upper limit related to the
+                         number of bytes contained on the queue.  When the
+                         queued character reaches its high water mark, "STREAMS"
+                         causes another queue that attempts to send a message to
+                         this queue to become blocked.  When the characters in
+                         this queue are reduced to the low-water mark value, the
+                         other queue is unblocked by "STREAMS".
+"write queue"             A message queue in a module or driver containing
+                         messages moving downstream.  Associated with the
+                         `write(2)' (*note (*manpages*)write(2)::) system call
+                         and output from a user process.
+"write-side"              A direction of data flow going from the "Stream head"
+                         toward a driver.  Also called downstream and output
+                         side.
+
+
+File: SPG2.info,  Node: Index,  Next: Sponsors,  Prev: Glossary,  Up: Top
+
+ Index
+******
+
+ [index ]
+* Menu:
+
+* allocb(9):                             Message Structure.           (line  64)
+* anchor:                                Glossary.                    (line   6)
+* ANYBAND:                               I_CANPUT.                    (line  22)
+* ANYMARK:                               I_ATMARK.                    (line  25)
+* autopush:                              Glossary.                    (line  12)
+* autopush(8):                           Glossary.                    (line   6)
+* b_band <1>:                            getpmsg(2s).                 (line   8)
+* b_band <2>:                            putpmsg(2s).                 (line   8)
+* b_band <3>:                            Sending and Receiving Messages.
+                                                                      (line  69)
+* b_band <4>:                            Message Linkage.             (line  13)
+* b_band:                                Message Structure.           (line  53)
+* b_cont <1>:                            Message Linkage.             (line   8)
+* b_cont:                                Message Structure.           (line  48)
+* b_datap:                               Message Structure.           (line  51)
+* b_flag <1>:                            I_ATMARK.                    (line  36)
+* b_flag:                                Message Structure.           (line  55)
+* b_next <1>:                            Message Linkage.             (line  15)
+* b_next:                                Message Structure.           (line  46)
+* b_pad1:                                Message Structure.           (line  54)
+* b_pad2:                                Message Structure.           (line  57)
+* b_prev <1>:                            Message Linkage.             (line  15)
+* b_prev:                                Message Structure.           (line  47)
+* b_rptr <1>:                            Message Linkage.             (line  59)
+* b_rptr:                                Message Structure.           (line  49)
+* b_wptr <1>:                            Message Linkage.             (line  61)
+* b_wptr:                                Message Structure.           (line  50)
+* back-enable:                           Glossary.                    (line  16)
+* bandinfo(9):                           I_FLUSHBAND.                 (line  14)
+* bcanput(9) <1>:                        Queue Priority Commands.     (line  41)
+* bcanput(9):                            Queue Priority Utilities.    (line  23)
+* bcanputnext(9):                        Queue Priority Utilities.    (line  25)
+* blocked:                               Glossary.                    (line  19)
+* buf <1>:                               getmsg(2).                   (line  58)
+* buf:                                   putmsg(2).                   (line  60)
+* canput(9) <1>:                         Queue Priority Commands.     (line  40)
+* canput(9):                             Queue Priority Utilities.    (line  22)
+* canputnext(9):                         Queue Priority Utilities.    (line  24)
+* cdevsw(9):                             Opening a STREAMS Device File.
+                                                                      (line 100)
+* clone device:                          Glossary.                    (line  21)
+* close procedure:                       Glossary.                    (line  25)
+* close(2) <1>:                          Sending and Receiving Messages.
+                                                                      (line  28)
+* close(2) <2>:                          Closing the Stream.          (line   7)
+* close(2) <3>:                          Mechanism Overview.          (line  78)
+* close(2) <4>:                          Driver Component.            (line  53)
+* close(2) <5>:                          Basic Streams Operations.    (line  39)
+* close(2):                              What is STREAMS?.            (line  20)
+* contributors:                          Contributors.                (line   6)
+* control Stream:                        Glossary.                    (line  31)
+* copyb(9) <1>:                          Message Linkage.             (line  50)
+* copyb(9):                              Message Component.           (line  90)
+* copymsg(9) <1>:                        Message Linkage.             (line  50)
+* copymsg(9):                            Message Component.           (line  91)
+* credits:                               Acknowledgements.            (line   6)
+* D_CLONE:                               Opening a STREAMS Device File.
+                                                                      (line 100)
+* datab(9) <1>:                          Glossary.                    (line  89)
+* datab(9) <2>:                          Message Structure.           (line  13)
+* datab(9) <3>:                          Message Type Overview.       (line   6)
+* datab(9) <4>:                          Messages Overview.           (line  38)
+* datab(9):                              Message Component.           (line  13)
+* db_base <1>:                           Message Linkage.             (line  64)
+* db_base:                               Message Structure.           (line 147)
+* db_cache:                              Message Structure.           (line 156)
+* db_class:                              Message Structure.           (line 151)
+* db_filler:                             Message Structure.           (line 159)
+* db_filler2:                            Message Structure.           (line 154)
+* db_freep:                              Message Structure.           (line 145)
+* db_frtnp:                              Message Structure.           (line 146)
+* db_iswhat:                             Message Structure.           (line 152)
+* db_lim <1>:                            Message Linkage.             (line  65)
+* db_lim:                                Message Structure.           (line 148)
+* db_msgaddr:                            Message Structure.           (line 157)
+* db_pad:                                Message Structure.           (line 153)
+* db_ref <1>:                            Message Linkage.             (line  37)
+* db_ref:                                Message Structure.           (line 149)
+* db_size:                               Message Structure.           (line 155)
+* db_type <1>:                           Message Linkage.             (line  10)
+* db_type:                               Message Structure.           (line 150)
+* db_users:                              Message Structure.           (line 164)
+* DELETE:                                Module and Driver Control.   (line  70)
+* device driver:                         Glossary.                    (line  37)
+* Device Driver Interface:               Glossary.                    (line  35)
+* document abstract:                     Preface.                     (line  24)
+* document audience:                     Preface.                     (line  58)
+* document disclaimer:                   Preface.                     (line 153)
+* document information:                  Preface.                     (line   9)
+* document intent:                       Preface.                     (line  46)
+* document notice:                       Preface.                     (line  12)
+* document objective:                    Preface.                     (line  29)
+* document revisions:                    Preface.                     (line  73)
+* downstream:                            Glossary.                    (line  45)
+* driver:                                Glossary.                    (line  48)
+* Driver Kernel Interface:               Glossary.                    (line  41)
+* dupb(9) <1>:                           Message Linkage.             (line  33)
+* dupb(9):                               Message Component.           (line  87)
+* dupmsg(9) <1>:                         Message Linkage.             (line  34)
+* dupmsg(9):                             Message Component.           (line  88)
+* EBADMSG:                               Read Options.                (line  58)
+* EINVAL <1>:                            I_ATMARK.                    (line  89)
+* EINVAL:                                I_CANPUT.                    (line  41)
+* EIO:                                   I_CANPUT.                    (line  45)
+* enable:                                Glossary.                    (line  55)
+* ENXIO <1>:                             I_CANPUT.                    (line  48)
+* ENXIO:                                 Inserting Modules.           (line  88)
+* EPIPE:                                 I_CANPUT.                    (line  51)
+* errno(3) <1>:                          I_ATMARK.                    (line  81)
+* errno(3):                              I_CANPUT.                    (line  33)
+* esballoc(9):                           Message Structure.           (line  24)
+* ESTRPIPE:                              I_CANPUT.                    (line  55)
+* ETIME:                                 Module and Driver Control.   (line 105)
+* exit(2) <1>:                           Stream Dismantling with Modules.
+                                                                      (line  21)
+* exit(2):                               Basic Streams Operations.    (line  40)
+* f_inode:                               Opening a STREAMS Device File.
+                                                                      (line  48)
+* fattach(3) <1>:                        Glossary.                    (line 111)
+* fattach(3) <2>:                        Closing the Stream.          (line  17)
+* fattach(3):                            Queue Component.             (line  74)
+* fattach(8):                            Closing the Stream.          (line  62)
+* fdetach(3) <1>:                        Closing the Stream.          (line  19)
+* fdetach(3):                            Queue Component.             (line  78)
+* FIFO:                                  Glossary.                    (line  57)
+* file <1>:                              Closing the Stream.          (line  57)
+* file <2>:                              Creating a STREAMS-based Pipe.
+                                                                      (line  19)
+* file <3>:                              Opening a STREAMS-based FIFO.
+                                                                      (line  26)
+* file:                                  Opening a STREAMS Device File.
+                                                                      (line  76)
+* flow control:                          Glossary.                    (line  60)
+* flushband(9) <1>:                      I_FLUSHBAND.                 (line   8)
+* flushband(9) <2>:                      Queue Priority Commands.     (line  26)
+* flushband(9):                          Queue Priority Utilities.    (line  16)
+* flushq(9) <1>:                         I_FLUSHBAND.                 (line   7)
+* flushq(9) <2>:                         Queue Priority Commands.     (line  25)
+* flushq(9):                             Queue Priority Utilities.    (line  15)
+* FLUSHR:                                I_FLUSHBAND.                 (line  29)
+* FLUSHRW:                               I_FLUSHBAND.                 (line  29)
+* FLUSHW:                                I_FLUSHBAND.                 (line  29)
+* FMNAMESZ:                              Inserting Modules.           (line  77)
+* freemsg(9):                            Message Component.           (line  75)
+* getmsg(2) <1>:                         getpmsg(2s).                 (line   6)
+* getmsg(2) <2>:                         getmsg(2).                   (line   6)
+* getmsg(2) <3>:                         Sending and Receiving Messages.
+                                                                      (line  46)
+* getmsg(2) <4>:                         Message Type Overview.       (line  20)
+* getmsg(2) <5>:                         Mechanism Overview.          (line  50)
+* getmsg(2) <6>:                         Message Component.           (line  47)
+* getmsg(2) <7>:                         Basic Streams Operations.    (line  33)
+* getmsg(2):                             What is STREAMS?.            (line  21)
+* getmsg(2p):                            getmsg(2).                   (line  66)
+* getpmsg(2):                            Queue Priority Commands.     (line  16)
+* getpmsg(2p):                           getpmsg(2s).                 (line  65)
+* getpmsg(2s) <1>:                       getpmsg(2s).                 (line   6)
+* getpmsg(2s) <2>:                       Sending and Receiving Messages.
+                                                                      (line  47)
+* getpmsg(2s) <3>:                       Message Type Overview.       (line  20)
+* getpmsg(2s) <4>:                       Mechanism Overview.          (line  50)
+* getpmsg(2s) <5>:                       Message Component.           (line  48)
+* getpmsg(2s) <6>:                       Basic Streams Operations.    (line  34)
+* getpmsg(2s):                           What is STREAMS?.            (line  21)
+* getq(9):                               Queues and Priority.         (line  66)
+* hardware emulation module:             Glossary.                    (line  63)
+* I_ANCHOR:                              Glossary.                    (line   6)
+* I_LINK <1>:                            Glossary.                    (line  78)
+* I_LINK <2>:                            Closing the Stream.          (line  24)
+* I_LINK:                                Multiplexing of Streams.     (line  50)
+* i_pipe:                                Opening a STREAMS Device File.
+                                                                      (line  72)
+* I_PLINK <1>:                           Glossary.                    (line  78)
+* I_PLINK:                               Multiplexing of Streams.     (line  50)
+* I_POP <1>:                             Glossary.                    (line   6)
+* I_POP <2>:                             Stream Construction Example Summary.
+                                                                      (line   9)
+* I_POP <3>:                             Stream Dismantling with Modules.
+                                                                      (line  30)
+* I_POP <4>:                             Popping Modules.             (line   6)
+* I_POP <5>:                             Adding and Removing Modules. (line  30)
+* I_POP:                                 Driver Component.            (line  56)
+* I_PUNLINK:                             Multiplexing of Streams.     (line  50)
+* I_PUSH <1>:                            Stream Construction Example Summary.
+                                                                      (line   9)
+* I_PUSH <2>:                            Pushing Modules.             (line   6)
+* I_PUSH <3>:                            Adding and Removing Modules. (line  30)
+* I_PUSH:                                Driver Component.            (line  56)
+* I_STR:                                 Module and Driver Control.   (line  46)
+* I_UNLINK <1>:                          Closing the Stream.          (line  26)
+* I_UNLINK:                              Multiplexing of Streams.     (line  50)
+* ic_cmd:                                Module and Driver Control.   (line  63)
+* ic_dp:                                 Module and Driver Control.   (line  67)
+* ic_len:                                Module and Driver Control.   (line  66)
+* ic_timout:                             Module and Driver Control.   (line  64)
+* inode <1>:                             Closing the Stream.          (line  57)
+* inode <2>:                             Creating a STREAMS-based Pipe.
+                                                                      (line  12)
+* inode <3>:                             Opening a STREAMS-based FIFO.
+                                                                      (line  24)
+* inode:                                 Opening a STREAMS Device File.
+                                                                      (line  47)
+* input side:                            Glossary.                    (line  70)
+* int <1>:                               I_GETSIG.                    (line  13)
+* int:                                   I_GETBAND.                   (line  11)
+* ioc_cmd:                               Module and Driver Control.   (line  91)
+* ioct(2):                               Inserting Modules.           (line  73)
+* ioctl:                                 Stream Construction Example Summary.
+                                                                      (line  12)
+* ioctl(2) <1>:                          I_SETSIG.                    (line   8)
+* ioctl(2) <2>:                          I_GETSIG.                    (line   8)
+* ioctl(2) <3>:                          I_ATMARK.                    (line   7)
+* ioctl(2) <4>:                          I_CANPUT.                    (line   7)
+* ioctl(2) <5>:                          I_FLUSHBAND.                 (line   6)
+* ioctl(2) <6>:                          Queue Priority Commands.     (line  19)
+* ioctl(2) <7>:                          Write Options.               (line  13)
+* ioctl(2) <8>:                          Read Options.                (line   8)
+* ioctl(2) <9>:                          Control of Stream Head Processing.
+                                                                      (line  29)
+* ioctl(2) <10>:                         Message Type Overview.       (line  23)
+* ioctl(2) <11>:                         Stream Dismantling with Modules.
+                                                                      (line  29)
+* ioctl(2) <12>:                         Module and Driver Control.   (line   9)
+* ioctl(2) <13>:                         Inserting Modules.           (line  58)
+* ioctl(2) <14>:                         Adding and Removing Modules. (line  24)
+* ioctl(2) <15>:                         Mechanism Overview.          (line  20)
+* ioctl(2) <16>:                         Driver Component.            (line  56)
+* ioctl(2) <17>:                         Message Component.           (line  51)
+* ioctl(2):                              What is STREAMS?.            (line  20)
+* ioctl(2p) <1>:                         I_ATMARK.                    (line  95)
+* ioctl(2p) <2>:                         I_CANPUT.                    (line  77)
+* ioctl(2p):                             Mechanism Overview.          (line  23)
+* kmem_alloc(9):                         Message Structure.           (line  22)
+* LASTMARK:                              I_ATMARK.                    (line  29)
+* len <1>:                               getmsg(2).                   (line  54)
+* len:                                   putmsg(2).                   (line  58)
+* license, FDL:                          GNU Free Documentation License.
+                                                                      (line   6)
+* license, GNU Free Documentation License: GNU Free Documentation License.
+                                                                      (line   6)
+* license, GNU General Public License:   GNU General Public License.  (line   6)
+* license, GPL:                          GNU General Public License.  (line   6)
+* licensing:                             Preface.                     (line  12)
+* line discipline:                       Glossary.                    (line  73)
+* log(4):                                Glossary.                    (line 134)
+* long <1>:                              strqset(9).                  (line  30)
+* long:                                  strqget(9).                  (line  30)
+* lower Stream:                          Glossary.                    (line  78)
+* M_BACKDONE:                            Message Type Overview.       (line 112)
+* M_BACKWASH:                            Message Type Overview.       (line  60)
+* M_BREAK:                               Message Type Overview.       (line  43)
+* M_COPYIN:                              Message Type Overview.       (line  90)
+* M_COPYOUT:                             Message Type Overview.       (line  92)
+* M_CTL:                                 Message Type Overview.       (line  47)
+* M_DATA <1>:                            Write Offset.                (line   7)
+* M_DATA <2>:                            Write Options.               (line   8)
+* M_DATA <3>:                            getmsg(2).                   (line   7)
+* M_DATA <4>:                            putmsg(2).                   (line   7)
+* M_DATA <5>:                            Sending and Receiving Messages.
+                                                                      (line  20)
+* M_DATA <6>:                            Message Linkage.             (line  12)
+* M_DATA <7>:                            Message Type Overview.       (line  16)
+* M_DATA <8>:                            Module and Driver Control.   (line  87)
+* M_DATA <9>:                            Message Component.           (line  44)
+* M_DATA:                                What is STREAMS?.            (line 295)
+* M_DELAY:                               Message Type Overview.       (line  46)
+* M_DONTPLAY:                            Message Type Overview.       (line 111)
+* M_ERROR <1>:                           I_CANPUT.                    (line  69)
+* M_ERROR <2>:                           Write Options.               (line  29)
+* M_ERROR:                               Message Type Overview.       (line  88)
+* M_EVENT:                               Message Type Overview.       (line  58)
+* M_FLUSH:                               Message Type Overview.       (line  83)
+* M_HANGUP <1>:                          Write Options.               (line  29)
+* M_HANGUP <2>:                          Read Options.                (line  76)
+* M_HANGUP:                              Message Type Overview.       (line  86)
+* M_HPDATA <1>:                          getmsg(2).                   (line  47)
+* M_HPDATA <2>:                          Sending and Receiving Messages.
+                                                                      (line  73)
+* M_HPDATA:                              Message Type Overview.       (line 109)
+* M_IOCACK:                              Message Type Overview.       (line  78)
+* M_IOCDATA:                             Message Type Overview.       (line  94)
+* M_IOCNAK:                              Message Type Overview.       (line  79)
+* M_IOCTL <1>:                           Message Linkage.             (line  11)
+* M_IOCTL <2>:                           Message Type Overview.       (line  49)
+* M_IOCTL <3>:                           Module and Driver Control.   (line  87)
+* M_IOCTL:                               Closing the Stream.          (line  26)
+* M_LETSPLAY:                            Message Type Overview.       (line 110)
+* M_NOTIFY:                              Message Type Overview.       (line 108)
+* M_PASSFP:                              Message Type Overview.       (line  44)
+* M_PCCTL:                               Message Type Overview.       (line 104)
+* M_PCEVENT:                             Message Type Overview.       (line 106)
+* M_PCPROTO <1>:                         Glossary.                    (line 183)
+* M_PCPROTO <2>:                         Queues and Priority.         (line  58)
+* M_PCPROTO <3>:                         Write Options.               (line   7)
+* M_PCPROTO <4>:                         getmsg(2).                   (line   7)
+* M_PCPROTO <5>:                         putmsg(2).                   (line   7)
+* M_PCPROTO <6>:                         Sending and Receiving Messages.
+                                                                      (line  19)
+* M_PCPROTO <7>:                         Message Type Overview.       (line  16)
+* M_PCPROTO:                             Message Component.           (line  44)
+* M_PCRSE:                               Message Type Overview.       (line  96)
+* M_PCSETOPTS:                           Message Type Overview.       (line 105)
+* M_PCSIG:                               Message Type Overview.       (line  81)
+* M_PCTTY:                               Message Type Overview.       (line 113)
+* M_PROTO <1>:                           Glossary.                    (line 183)
+* M_PROTO <2>:                           Write Options.               (line   7)
+* M_PROTO <3>:                           getmsg(2).                   (line   7)
+* M_PROTO <4>:                           putmsg(2).                   (line   7)
+* M_PROTO <5>:                           Sending and Receiving Messages.
+                                                                      (line  19)
+* M_PROTO <6>:                           Message Type Overview.       (line  16)
+* M_PROTO <7>:                           Message Component.           (line  44)
+* M_PROTO:                               What is STREAMS?.            (line 295)
+* M_READ <1>:                            Read Options.                (line  47)
+* M_READ:                                Message Type Overview.       (line  82)
+* M_RSE:                                 Message Type Overview.       (line  52)
+* M_SETOPTS <1>:                         Write Offset.                (line  12)
+* M_SETOPTS <2>:                         Write Options.               (line  15)
+* M_SETOPTS <3>:                         Read Options.                (line  11)
+* M_SETOPTS <4>:                         Control of Stream Head Processing.
+                                                                      (line  15)
+* M_SETOPTS:                             Message Type Overview.       (line  51)
+* M_SIG:                                 Message Type Overview.       (line  45)
+* M_START:                               Message Type Overview.       (line  85)
+* M_STARTI:                              Message Type Overview.       (line  98)
+* M_STOP:                                Message Type Overview.       (line  84)
+* M_STOPI:                               Message Type Overview.       (line  97)
+* M_TRAIL:                               Message Type Overview.       (line  59)
+* M_UNHANGUP:                            Message Type Overview.       (line 107)
+* master driver:                         Glossary.                    (line  83)
+* maxlen <1>:                            getmsg(2).                   (line  52)
+* maxlen:                                putmsg(2).                   (line  56)
+* message:                               Glossary.                    (line  86)
+* message block:                         Glossary.                    (line  89)
+* message queue:                         Glossary.                    (line  95)
+* message type:                          Glossary.                    (line  97)
+* mknod(2):                              Basic Streams Operations.    (line  11)
+* module:                                Glossary.                    (line  99)
+* module_info:                           Stream Construction.         (line 108)
+* module_info(9):                        Stream Construction.         (line  76)
+* module_init <1>:                       Pushing Modules.             (line  11)
+* module_init <2>:                       Opening a STREAMS Device File.
+                                                                      (line  84)
+* module_init:                           Stream Construction.         (line  56)
+* module_init(9):                        Stream Construction.         (line  87)
+* module_stat:                           Stream Construction.         (line  57)
+* module_stat(9):                        Stream Construction.         (line  76)
+* mount(2):                              Glossary.                    (line 111)
+* MSG_ANY:                               getpmsg(2s).                 (line  26)
+* MSG_BAND:                              getpmsg(2s).                 (line  30)
+* MSG_HIPRI:                             getpmsg(2s).                 (line  35)
+* MSGATTEN:                              Message Structure.           (line 105)
+* msgb(9) <1>:                           Glossary.                    (line  89)
+* msgb(9) <2>:                           I_ATMARK.                    (line  37)
+* msgb(9) <3>:                           Message Linkage.             (line   6)
+* msgb(9) <4>:                           Message Structure.           (line  13)
+* msgb(9) <5>:                           Messages Overview.           (line  37)
+* msgb(9):                               Message Component.           (line  12)
+* MSGCOMPRESS:                           Message Structure.           (line 109)
+* MSGDELIM <1>:                          I_ATMARK.                    (line  47)
+* MSGDELIM:                              Message Structure.           (line  99)
+* MSGLOG:                                Message Structure.           (line 107)
+* MSGMARK <1>:                           I_ATMARK.                    (line  36)
+* MSGMARK:                               Message Structure.           (line  97)
+* MSGMARKNET:                            I_ATMARK.                    (line  38)
+* MSGMARKNEXT:                           Message Structure.           (line 106)
+* MSGNOGET:                              Message Structure.           (line 104)
+* MSGNOLOOP:                             Message Structure.           (line  98)
+* MSGNOTIFY:                             Message Structure.           (line 110)
+* MSGNOTMARKNET:                         I_ATMARK.                    (line  38)
+* MSGNOTMARKNEXT:                        Message Structure.           (line 108)
+* multiplexer:                           Glossary.                    (line 106)
+* named Stream:                          Glossary.                    (line 111)
+* NULL <1>:                              The qband Structure.         (line  31)
+* NULL <2>:                              The queue Structure.         (line  41)
+* NULL <3>:                              Message Linkage.             (line  26)
+* NULL <4>:                              Procedures.                  (line 106)
+* NULL:                                  Opening a STREAMS Device File.
+                                                                      (line  35)
+* O_NDELAY <1>:                          Closing the Stream.          (line  41)
+* O_NDELAY:                              Basic Streams Operations.    (line 112)
+* O_NDLEAY:                              Basic Streams Operations.    (line  97)
+* O_NONBLOCK <1>:                        Closing the Stream.          (line  42)
+* O_NONBLOCK:                            Basic Streams Operations.    (line  97)
+* open routine:                          Glossary.                    (line 119)
+* open(2) <1>:                           getmsg(2).                   (line  24)
+* open(2) <2>:                           putmsg(2).                   (line  24)
+* open(2) <3>:                           Sending and Receiving Messages.
+                                                                      (line  27)
+* open(2) <4>:                           Inserting Modules.           (line  46)
+* open(2) <5>:                           Creating a STREAMS-based Pipe.
+                                                                      (line  13)
+* open(2) <6>:                           Opening a STREAMS-based FIFO.
+                                                                      (line   6)
+* open(2) <7>:                           Opening a STREAMS Device File.
+                                                                      (line   6)
+* open(2) <8>:                           Stream Construction.         (line 130)
+* open(2) <9>:                           Mechanism Overview.          (line  10)
+* open(2) <10>:                          Multiplexing of Streams.     (line   8)
+* open(2) <11>:                          Driver Component.            (line  52)
+* open(2) <12>:                          Basic Streams Operations.    (line  17)
+* open(2):                               What is STREAMS?.            (line  20)
+* organization:                          Preface.                     (line 192)
+* packet mode:                           Glossary.                    (line 123)
+* persistent link:                       Glossary.                    (line 128)
+* pipe:                                  Glossary.                    (line 131)
+* pipe(2) <1>:                           getmsg(2).                   (line  25)
+* pipe(2) <2>:                           putmsg(2).                   (line  25)
+* pipe(2) <3>:                           Creating a STREAMS-based Pipe.
+                                                                      (line   6)
+* pipe(2) <4>:                           Stream Construction.         (line 136)
+* pipe(2) <5>:                           Mechanism Overview.          (line  90)
+* pipe(2) <6>:                           Multiplexing of Streams.     (line   8)
+* pipe(2):                               Basic Streams Operations.    (line 121)
+* poll(2) <1>:                           I_CANPUT.                    (line  82)
+* poll(2) <2>:                           Mechanism Overview.          (line  40)
+* poll(2):                               What is STREAMS?.            (line  21)
+* POLLRDBAND:                            Mechanism Overview.          (line  97)
+* POLLWRBAND:                            I_CANPUT.                    (line  82)
+* pop:                                   Glossary.                    (line 132)
+* private_data:                          Opening a STREAMS Device File.
+                                                                      (line  76)
+* pseudo-device driver:                  Glossary.                    (line 134)
+* pseudo-terminal subsystem:             Glossary.                    (line 138)
+* push:                                  Glossary.                    (line 143)
+* pushable module:                       Glossary.                    (line 145)
+* put procedure:                         Glossary.                    (line 149)
+* put(9) <1>:                            Messages Overview.           (line  45)
+* put(9) <2>:                            Procedures.                  (line  39)
+* put(9) <3>:                            Driver Component.            (line  32)
+* put(9) <4>:                            Message Component.           (line  20)
+* put(9):                                Queue Component.             (line  35)
+* putbq(9) <1>:                          Queues and Priority.         (line  69)
+* putbq(9) <2>:                          Message Component.           (line  79)
+* putbq(9):                              Queue Component.             (line  51)
+* putctl(9):                             Procedures.                  (line  40)
+* putctl1(9):                            Procedures.                  (line  41)
+* putctl2(9):                            Procedures.                  (line  41)
+* putmsg(2) <1>:                         putpmsg(2s).                 (line   6)
+* putmsg(2) <2>:                         putmsg(2).                   (line   6)
+* putmsg(2) <3>:                         Sending and Receiving Messages.
+                                                                      (line  43)
+* putmsg(2) <4>:                         Message Type Overview.       (line  21)
+* putmsg(2) <5>:                         Mechanism Overview.          (line  43)
+* putmsg(2) <6>:                         Message Component.           (line  49)
+* putmsg(2) <7>:                         Basic Streams Operations.    (line  35)
+* putmsg(2):                             What is STREAMS?.            (line  21)
+* putmsg(2p):                            putmsg(2).                   (line  73)
+* putnext(9) <1>:                        Glossary.                    (line 149)
+* putnext(9) <2>:                        Messages Overview.           (line  45)
+* putnext(9) <3>:                        Procedures.                  (line  40)
+* putnext(9) <4>:                        Module Component.            (line  34)
+* putnext(9) <5>:                        Message Component.           (line  20)
+* putnext(9):                            Queue Component.             (line  38)
+* putnextctl(9):                         Procedures.                  (line  42)
+* putnextctl1(9):                        Procedures.                  (line  43)
+* putnextctl2(9):                        Procedures.                  (line  44)
+* putpmsg(2):                            Queue Priority Commands.     (line  16)
+* putpmsg(2p):                           putpmsg(2s).                 (line  40)
+* putpmsg(2s) <1>:                       putpmsg(2s).                 (line   6)
+* putpmsg(2s) <2>:                       Sending and Receiving Messages.
+                                                                      (line  43)
+* putpmsg(2s) <3>:                       Message Type Overview.       (line  21)
+* putpmsg(2s) <4>:                       Mechanism Overview.          (line  43)
+* putpmsg(2s) <5>:                       Message Component.           (line  49)
+* putpmsg(2s) <6>:                       Basic Streams Operations.    (line  35)
+* putpmsg(2s):                           What is STREAMS?.            (line  21)
+* putq(9) <1>:                           Queues and Priority.         (line  39)
+* putq(9) <2>:                           Procedures.                  (line 120)
+* putq(9) <3>:                           Message Component.           (line  78)
+* putq(9):                               Queue Component.             (line  47)
+* q_bandp:                               The queue Structure.         (line  54)
+* q_blocked:                             The queue Structure.         (line  58)
+* q_count <1>:                           The queue Structure.         (line  48)
+* q_count:                               strqget(9).                  (line  62)
+* q_first <1>:                           The queue Structure.         (line  41)
+* q_first:                               strqget(9).                  (line  64)
+* q_flag <1>:                            The queue Structure.         (line  49)
+* q_flag:                                strqget(9).                  (line  70)
+* q_ftmsg:                               The queue Structure.         (line  66)
+* q_hiwat <1>:                           The queue Structure.         (line  52)
+* q_hiwat <2>:                           strqget(9).                  (line  58)
+* q_hiwat:                               Control of Stream Head Processing.
+                                                                      (line  20)
+* q_init <1>:                            Pushing Modules.             (line   9)
+* q_init:                                Opening a STREAMS Device File.
+                                                                      (line  82)
+* q_last <1>:                            The queue Structure.         (line  43)
+* q_last:                                strqget(9).                  (line  67)
+* q_link:                                The queue Structure.         (line  46)
+* q_lock:                                The queue Structure.         (line  65)
+* q_lowat <1>:                           The queue Structure.         (line  53)
+* q_lowat:                               strqget(9).                  (line  59)
+* q_maxpsz <1>:                          The queue Structure.         (line  51)
+* q_maxpsz <2>:                          strqget(9).                  (line  60)
+* q_maxpsz:                              Control of Stream Head Processing.
+                                                                      (line  20)
+* q_minpsz <1>:                          The queue Structure.         (line  50)
+* q_minpsz <2>:                          strqget(9).                  (line  61)
+* q_minpsz:                              Control of Stream Head Processing.
+                                                                      (line  20)
+* q_msgs:                                The queue Structure.         (line  64)
+* q_nband:                               The queue Structure.         (line  56)
+* q_next <1>:                            The queue Structure.         (line  45)
+* q_next <2>:                            Creating a STREAMS-based Pipe.
+                                                                      (line  34)
+* q_next <3>:                            Opening a STREAMS-based FIFO.
+                                                                      (line  37)
+* q_next:                                Opening a STREAMS Device File.
+                                                                      (line  88)
+* q_ptr:                                 The queue Structure.         (line  47)
+* q_qinfo:                               The queue Structure.         (line  39)
+* QB_BACK:                               The qband Structure.         (line  45)
+* qb_count <1>:                          The qband Structure.         (line  30)
+* qb_count:                              strqget(9).                  (line  62)
+* qb_first <1>:                          The qband Structure.         (line  31)
+* qb_first:                              strqget(9).                  (line  64)
+* qb_flag <1>:                           The qband Structure.         (line  35)
+* qb_flag:                               strqget(9).                  (line  70)
+* QB_FULL:                               The qband Structure.         (line  42)
+* qb_hiwat <1>:                          The qband Structure.         (line  33)
+* qb_hiwat:                              strqget(9).                  (line  58)
+* qb_last <1>:                           The qband Structure.         (line  32)
+* qb_last:                               strqget(9).                  (line  67)
+* qb_lowat <1>:                          The qband Structure.         (line  34)
+* qb_lowat:                              strqget(9).                  (line  59)
+* qb_maxpsz:                             strqget(9).                  (line  60)
+* qb_minpsz:                             strqget(9).                  (line  61)
+* qb_msgs:                               The qband Structure.         (line  37)
+* qb_next:                               The qband Structure.         (line  29)
+* qb_pad1:                               The qband Structure.         (line  36)
+* qb_padq:                               The qband Structure.         (line  37)
+* QB_WANTW:                              The qband Structure.         (line  43)
+* QBACK:                                 queue Flags.                 (line  35)
+* qband(9) <1>:                          The qband Structure.         (line  10)
+* qband(9) <2>:                          The queue Structure.         (line  54)
+* qband(9) <3>:                          strqset(9).                  (line  16)
+* qband(9) <4>:                          strqget(9).                  (line  16)
+* qband(9) <5>:                          Queue Priority Utilities.    (line  36)
+* qband(9) <6>:                          Queues and Priority.         (line  42)
+* qband(9) <7>:                          Stream Construction.         (line  55)
+* qband(9):                              Message Component.           (line 167)
+* qband_t(9):                            The qband Structure.         (line  10)
+* QCOUNT:                                strqget(9).                  (line  62)
+* QENAB:                                 queue Flags.                 (line  28)
+* qfields_t:                             strqget(9).                  (line  48)
+* qfields_t(9):                          strqget(9).                  (line  33)
+* QFIRST:                                strqget(9).                  (line  64)
+* QFLAG:                                 strqget(9).                  (line  70)
+* QFULL:                                 queue Flags.                 (line  31)
+* QHIWAT:                                strqget(9).                  (line  58)
+* QHLIST:                                queue Flags.                 (line  37)
+* qi_lowat:                              Control of Stream Head Processing.
+                                                                      (line  20)
+* qi_minfo:                              Opening a STREAMS Device File.
+                                                                      (line  86)
+* qi_putp <1>:                           Procedures.                  (line  51)
+* qi_putp:                               Processing.                  (line  20)
+* qi_qadmin:                             Processing.                  (line  13)
+* qi_qclose <1>:                         Sending and Receiving Messages.
+                                                                      (line  29)
+* qi_qclose <2>:                         Processing.                  (line  12)
+* qi_qclose:                             Popping Modules.             (line   8)
+* qi_qopen <1>:                          Glossary.                    (line  25)
+* qi_qopen <2>:                          Sending and Receiving Messages.
+                                                                      (line  29)
+* qi_qopen <3>:                          Processing.                  (line  12)
+* qi_qopen <4>:                          Pushing Modules.             (line  16)
+* qi_qopen:                              Opening a STREAMS Device File.
+                                                                      (line  92)
+* qi_srvp <1>:                           Procedures.                  (line 103)
+* qi_srvp:                               Processing.                  (line  20)
+* qinit <1>:                             Popping Modules.             (line   8)
+* qinit <2>:                             Pushing Modules.             (line   9)
+* qinit:                                 Opening a STREAMS Device File.
+                                                                      (line  32)
+* qinit(9) <1>:                          The queue Structure.         (line  39)
+* qinit(9) <2>:                          Procedures.                  (line  51)
+* qinit(9) <3>:                          Processing.                  (line  13)
+* qinit(9):                              Stream Construction.         (line  56)
+* QLAST:                                 strqget(9).                  (line  67)
+* QLOWAT:                                strqget(9).                  (line  59)
+* QMAXPSZ:                               strqget(9).                  (line  60)
+* QMINPSZ:                               strqget(9).                  (line  61)
+* QNOENB:                                queue Flags.                 (line  34)
+* QOLD:                                  queue Flags.                 (line  36)
+* qpad1:                                 The queue Structure.         (line  59)
+* QPROCS:                                queue Flags.                 (line  49)
+* QREADR:                                queue Flags.                 (line  32)
+* qreply(9) <1>:                         Messages Overview.           (line  46)
+* qreply(9) <2>:                         Procedures.                  (line  45)
+* qreply(9) <3>:                         Module Component.            (line  41)
+* qreply(9):                             Message Component.           (line  21)
+* QSAFE:                                 queue Flags.                 (line  45)
+* QSVCBUSY:                              queue Flags.                 (line  47)
+* QSYNCH:                                queue Flags.                 (line  44)
+* QTOENAB:                               queue Flags.                 (line  43)
+* queue <1>:                             Glossary.                    (line 158)
+* queue <2>:                             Popping Modules.             (line   9)
+* queue <3>:                             Creating a STREAMS-based Pipe.
+                                                                      (line  35)
+* queue:                                 Opening a STREAMS Device File.
+                                                                      (line  63)
+* queue(9) <1>:                          Glossary.                    (line  25)
+* queue(9) <2>:                          queue Flags.                 (line  25)
+* queue(9) <3>:                          The queue Structure.         (line  11)
+* queue(9) <4>:                          strqset(9).                  (line  15)
+* queue(9) <5>:                          strqget(9).                  (line  15)
+* queue(9) <6>:                          Queue Priority Utilities.    (line  35)
+* queue(9) <7>:                          Queues and Priority.         (line  44)
+* queue(9) <8>:                          Procedures.                  (line   6)
+* queue(9) <9>:                          Processing.                  (line  14)
+* queue(9) <10>:                         Stream Construction.         (line  55)
+* queue(9):                              Message Component.           (line 118)
+* QUP:                                   queue Flags.                 (line  42)
+* QUSE:                                  queue Flags.                 (line  33)
+* QWANTR:                                queue Flags.                 (line  29)
+* QWANTW:                                queue Flags.                 (line  30)
+* QWCLOSE:                               queue Flags.                 (line  48)
+* QWELDED:                               queue Flags.                 (line  46)
+* read queue:                            Glossary.                    (line 166)
+* read(2) <1>:                           Glossary.                    (line 166)
+* read(2) <2>:                           I_ATMARK.                    (line  39)
+* read(2) <3>:                           Read Options.                (line  20)
+* read(2) <4>:                           Sending and Receiving Messages.
+                                                                      (line  37)
+* read(2) <5>:                           Message Type Overview.       (line  19)
+* read(2) <6>:                           Mechanism Overview.          (line  17)
+* read(2) <7>:                           Message Component.           (line  46)
+* read(2) <8>:                           Basic Streams Operations.    (line  31)
+* read(2):                               What is STREAMS?.            (line  20)
+* read-side:                             Glossary.                    (line 163)
+* readv(2):                              Read Options.                (line  20)
+* remote mode:                           Glossary.                    (line 170)
+* RFILL:                                 Read Options.                (line  44)
+* RMSGD:                                 Read Options.                (line  31)
+* RMSGN:                                 Read Options.                (line  40)
+* RNORM:                                 Read Options.                (line  24)
+* RPROCOMPRESS:                          Read Options.                (line 100)
+* RPROTCOMPRESS:                         Read Options.                (line  71)
+* RPROTDAT:                              Read Options.                (line  63)
+* RPROTDIS:                              Read Options.                (line  67)
+* RPROTNORM:                             Read Options.                (line  56)
+* S_BANDURG <1>:                         I_SETSIG.                    (line   7)
+* S_BANDURG <2>:                         I_GETSIG.                    (line   7)
+* S_BANDURG:                             Queue Priority Commands.     (line  55)
+* S_IFIFO:                               Creating a STREAMS-based Pipe.
+                                                                      (line  26)
+* S_RDBAND <1>:                          I_SETSIG.                    (line   7)
+* S_RDBAND <2>:                          I_GETSIG.                    (line   7)
+* S_RDBAND:                              Queue Priority Commands.     (line  54)
+* S_WRBAND <1>:                          I_SETSIG.                    (line   7)
+* S_WRBAND <2>:                          I_GETSIG.                    (line   7)
+* S_WRBAND:                              Queue Priority Commands.     (line  54)
+* schedule:                              Glossary.                    (line 179)
+* sd_file:                               Opening a STREAMS Device File.
+                                                                      (line  77)
+* sd_inode:                              Opening a STREAMS Device File.
+                                                                      (line  71)
+* service interface:                     Glossary.                    (line 183)
+* service procedure:                     Glossary.                    (line 191)
+* service provider:                      Glossary.                    (line 197)
+* service user:                          Glossary.                    (line 200)
+* sfx(4):                                Creating a STREAMS-based Pipe.
+                                                                      (line  52)
+* SIGPIPE <1>:                           Write Options.               (line  27)
+* SIGPIPE:                               Creating a STREAMS-based Pipe.
+                                                                      (line  61)
+* SIGPOLL <1>:                           I_SETSIG.                    (line   7)
+* SIGPOLL <2>:                           I_GETSIG.                    (line   7)
+* SIGPOLL:                               Queue Priority Commands.     (line  54)
+* SIGURG <1>:                            I_SETSIG.                    (line   7)
+* SIGURG <2>:                            I_GETSIG.                    (line   7)
+* SIGURG:                                Queue Priority Commands.     (line  54)
+* slave driver:                          Glossary.                    (line 203)
+* SNDHOLD:                               Write Options.               (line  33)
+* SNDPIPE <1>:                           Write Options.               (line  26)
+* SNDPIPE:                               Creating a STREAMS-based Pipe.
+                                                                      (line  62)
+* SNDZERO <1>:                           Write Options.               (line  17)
+* SNDZERO:                               Creating a STREAMS-based Pipe.
+                                                                      (line  63)
+* snode:                                 Opening a STREAMS Device File.
+                                                                      (line  58)
+* so_readopt:                            Read Options.                (line  10)
+* SO_READOPT:                            Read Options.                (line  10)
+* so_wroff:                              Write Offset.                (line  11)
+* SO_WROFF:                              Write Offset.                (line  10)
+* sockmod(4):                            Read Options.                (line  94)
+* sponsors:                              Sponsors.                    (line   6)
+* st_muxrinit:                           Opening a STREAMS Device File.
+                                                                      (line  33)
+* st_muxwinit:                           Opening a STREAMS Device File.
+                                                                      (line  33)
+* st_rdinit:                             Opening a STREAMS Device File.
+                                                                      (line  31)
+* st_wrinit:                             Opening a STREAMS Device File.
+                                                                      (line  32)
+* standard pipe:                         Glossary.                    (line 208)
+* stdata <1>:                            Closing the Stream.          (line  56)
+* stdata <2>:                            Creating a STREAMS-based Pipe.
+                                                                      (line  27)
+* stdata <3>:                            Opening a STREAMS-based FIFO.
+                                                                      (line  23)
+* stdata:                                Opening a STREAMS Device File.
+                                                                      (line  63)
+* stdata(9):                             Opening a STREAMS Device File.
+                                                                      (line  61)
+* strbuf(5) <1>:                         getmsg(2).                   (line  29)
+* strbuf(5):                             putmsg(2).                   (line  29)
+* Stream:                                Glossary.                    (line 211)
+* Stream end:                            Glossary.                    (line 220)
+* Stream head:                           Glossary.                    (line 222)
+* streamio(7) <1>:                       Queue Priority Commands.     (line  17)
+* streamio(7) <2>:                       Write Offset.                (line  13)
+* streamio(7) <3>:                       Message Type Overview.       (line  22)
+* streamio(7) <4>:                       Stream Construction Example Summary.
+                                                                      (line  12)
+* streamio(7) <5>:                       Mechanism Overview.          (line  23)
+* streamio(7) <6>:                       Multiplexing of Streams.     (line  49)
+* streamio(7) <7>:                       Message Component.           (line  50)
+* streamio(7):                           Preface.                     (line 270)
+* STREAMS:                               Glossary.                    (line 225)
+* STREAMS Administrative Driver:         Glossary.                    (line 176)
+* STREAMS(9):                            Preface.                     (line  49)
+* STREAMS-based pipe:                    Glossary.                    (line 217)
+* streamtab <1>:                         Pushing Modules.             (line   7)
+* streamtab:                             Opening a STREAMS Device File.
+                                                                      (line  21)
+* streamtab(9):                          Opening a STREAMS Device File.
+                                                                      (line  20)
+* strioctl:                              Module and Driver Control.   (line  47)
+* stroptions(9) <1>:                     Write Offset.                (line  11)
+* stroptions(9) <2>:                     Read Options.                (line  10)
+* stroptions(9):                         Control of Stream Head Processing.
+                                                                      (line  17)
+* strqget(9) <1>:                        strqget(9).                  (line   6)
+* strqget(9):                            Queue Priority Utilities.    (line  33)
+* strqset(9) <1>:                        strqset(9).                  (line   6)
+* strqset(9) <2>:                        strqget(9).                  (line  49)
+* strqset(9):                            Queue Priority Utilities.    (line  32)
+* sys/stream.h <1>:                      The qband Structure.         (line  11)
+* sys/stream.h <2>:                      The queue Structure.         (line  11)
+* sys/stream.h <3>:                      strqset(9).                  (line   7)
+* sys/stream.h <4>:                      strqget(9).                  (line   7)
+* sys/stream.h <5>:                      Message Structure.           (line  27)
+* sys/stream.h:                          Message Type Overview.       (line   8)
+* sys/stropts.h <1>:                     I_FLUSHBAND.                 (line  18)
+* sys/stropts.h <2>:                     getpmsg(2s).                 (line  10)
+* sys/stropts.h <3>:                     putpmsg(2s).                 (line  10)
+* sys/stropts.h <4>:                     getmsg(2).                   (line  14)
+* sys/stropts.h <5>:                     putmsg(2).                   (line  14)
+* sys/stropts.h:                         Module and Driver Control.   (line  48)
+* tcp(4):                                I_ATMARK.                    (line  58)
+* termio(7):                             Glossary.                    (line  63)
+* termio(9):                             Glossary.                    (line  63)
+* termios(9):                            Glossary.                    (line  63)
+* timod(4):                              Read Options.                (line  89)
+* tirdwr(4):                             Read Options.                (line  90)
+* TTY driver:                            Glossary.                    (line 232)
+* UNIX System V Release 3.0:             Background.                  (line   8)
+* UNIX System V Release 4:               Background.                  (line   9)
+* UNIX System V Release 4.2:             Background.                  (line   9)
+* upper stream:                          Glossary.                    (line 233)
+* upstream:                              Glossary.                    (line 236)
+* vnode:                                 Opening a STREAMS Device File.
+                                                                      (line  51)
+* vnodes:                                Creating a STREAMS-based Pipe.
+                                                                      (line  57)
+* water mark:                            Glossary.                    (line 239)
+* write queue:                           Glossary.                    (line 248)
+* write(2) <1>:                          Glossary.                    (line 248)
+* write(2) <2>:                          Write Offset.                (line   7)
+* write(2) <3>:                          Write Options.               (line   6)
+* write(2) <4>:                          Sending and Receiving Messages.
+                                                                      (line  35)
+* write(2) <5>:                          Message Type Overview.       (line  19)
+* write(2) <6>:                          Mechanism Overview.          (line  16)
+* write(2) <7>:                          Message Component.           (line  47)
+* write(2) <8>:                          Basic Streams Operations.    (line  31)
+* write(2):                              What is STREAMS?.            (line  20)
+* write-side:                            Glossary.                    (line 252)
+* XCASE:                                 Module and Driver Control.   (line  70)
+* xti(3):                                Read Options.                (line  91)
+
+

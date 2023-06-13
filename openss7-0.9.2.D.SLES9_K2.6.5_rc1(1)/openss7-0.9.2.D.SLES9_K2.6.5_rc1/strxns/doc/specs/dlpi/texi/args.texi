@@ -1,0 +1,123 @@
+@c -*- texinfo -*- vim: ft=texinfo
+@c =========================================================================
+@c
+@c @(#) args.texi.in,v 0.9.2.8 2006/05/23 22:43:39 brian Exp
+@c
+@c =========================================================================
+@c
+@c Copyright (c) 2001-2006  OpenSS7 Corporation <www.openss7.com>
+@c Copyright (c) 1997-2000  Brian F. G. Bidulock <bidulock@openss7.org>
+@c
+@c All Rights Reserved.
+@c
+@c Permission is granted to make and distribute verbatim copies of this
+@c manual provided the copyright notice and this permission notice are
+@c preserved on all copies.
+@c
+@c Permission is granted to copy and distribute modified versions of this
+@c manual under the conditions for verbatim copying, provided that the
+@c entire resulting derived work is distributed under the terms of a
+@c permission notice identical to this one.
+@c 
+@c Since the Linux kernel and libraries are constantly changing, this
+@c manual page may be incorrect or out-of-date.  The author(s) assume no
+@c responsibility for errors or omissions, or for damages resulting from
+@c the use of the information contained herein.  The author(s) may not
+@c have taken the same level of care in the production of this manual,
+@c which is licensed free of charge, as they might when working
+@c professionally.
+@c 
+@c Formatted or processed versions of this manual, if unaccompanied by
+@c the source, must acknowledge the copyright and authors of this work.
+@c
+@c -------------------------------------------------------------------------
+@c
+@c U.S. GOVERNMENT RESTRICTED RIGHTS.  If you are licensing this Software
+@c on behalf of the U.S. Government ("Government"), the following
+@c provisions apply to you.  If the Software is supplied by the Department
+@c of Defense ("DoD"), it is classified as "Commercial Computer Software"
+@c under paragraph 252.227-7014 of the DoD Supplement to the Federal
+@c Acquisition Regulations ("DFARS") (or any successor regulations) and the
+@c Government is acquiring only the license rights granted herein (the
+@c license rights customarily provided to non-Government users).  If the
+@c Software is supplied to any unit or agency of the Government other than
+@c DoD, it is classified as "Restricted Computer Software" and the
+@c Government's rights in the Software are defined in paragraph 52.227-19
+@c of the Federal Acquisition Regulations ("FAR") (or any successor
+@c regulations) or, in the cases of NASA, in paragraph 18.52.227-86 of the
+@c NASA Supplement to the FAR (or any successor regulations).
+@c
+@c =========================================================================
+@c 
+@c Commercial licensing and support of this software is available from
+@c OpenSS7 Corporation at a fee.  See http://www.openss7.com/
+@c 
+@c =========================================================================
+@c
+@c Last Modified 2006/05/23 22:43:39 by brian
+@c
+@c =========================================================================
+
+@set PACKAGE strxns
+@set VERSION 0.9.2.4.rc2
+@c @set PACKAGE_BUGREPORT bugs@openss7.org
+@set PACKAGE_DATE 2006-07-11
+@set PACKAGE_DEBEPOCH 0
+@set PACKAGE_DEBOPTIONS '--without-SCTP' '--without-IPERF' '--with-LIS' '--without-STRSCTP' '--without-NETPERF' '--without-STACKS' '--with-STRISO' '--without-util' '--without-sctp' '--without-ss7' '--disable-devfs' '--without-compat'
+@set PACKAGE_DEBRELEASE 0
+@set PACKAGE_DEBTOPDIR $(PACKAGE_DISTDIR)/debian
+@set PACKAGE_DISTDIR /u6/buildrc2
+@set PACKAGE_EPOCH 2
+@set PACKAGE_KNUMBER 2.6.17
+@set PACKAGE_KVERSION 2.6.17-1.2139_FC5
+@set PACKAGE_LCNAME strxns
+@set PACKAGE_NAME strxns
+@set PACKAGE_RELEASE 4.rc2
+@set PACKAGE_RPMDIST Fedora Core 5 (Bordeaux)
+@set PACKAGE_RPMEPOCH 0
+@set PACKAGE_RPMEXTRA .FC5
+@set PACKAGE_RPMOPTIONS --define "_without_SCTP --without-SCTP" --define "_without_IPERF --without-IPERF" --define "_with_LIS --with-LIS" --define "_without_STRSCTP --without-STRSCTP" --define "_without_NETPERF --without-NETPERF" --define "_without_STACKS --without-STACKS" --define "_with_STRISO --with-STRISO" --define "_without_util --without-util" --define "_without_sctp --without-sctp" --define "_without_ss7 --without-ss7" --define "_without_devfs --disable-devfs" --define "_without_compat --without-compat"
+@set PACKAGE_RPMRELEASE 1
+@set PACKAGE_SHORTTITLE XNS
+@set PACKAGE_STRING strxns 0.9.2
+@set PACKAGE_TARNAME strxns
+@set PACKAGE_TITLE OpenSS7 XNS Networking
+@set PACKAGE_UCNAME STRXNS
+@set PACKAGE_VERSION 0.9.2
+
+@set _bindir /usr/bin
+@set _datadir /usr/share
+@set _exec_prefix /usr
+@set _includedir /usr/include
+@set _infodir /usr/share/info
+@set _kmoduledir ${rootdir}/lib/modules/${kversion}
+@set _rootdir 
+@set _ksysmap /boot/System.map-2.6.17-1.2139_FC5
+@set _kversion 2.6.17-1.2139_FC5
+@set _libdir /usr/lib
+@set _libexecdir /usr/libexec
+@set _localstatedir ${prefix}/var
+@set _mandir /usr/share/man
+@set _oldincludedir /usr/include
+@set _prefix /usr
+@set _sbindir /usr/sbin
+@set _sharedstatedir /usr/com
+@set _sysconfdir /etc
+
+@set _build x86_64-redhat-linux
+@set _build_alias 
+@set _build_cpu x86_64
+@set _build_os linux
+@set _build_vendor redhat
+
+@set _host x86_64-redhat-linux
+@set _host_alias 
+@set _host_cpu x86_64
+@set _host_os linux
+@set _host_vendor redhat
+
+@set _target x86_64-redhat-linux
+@set _target_alias 
+@set _target_cpu x86_64
+@set _target_os linux
+@set _target_vendor redhat

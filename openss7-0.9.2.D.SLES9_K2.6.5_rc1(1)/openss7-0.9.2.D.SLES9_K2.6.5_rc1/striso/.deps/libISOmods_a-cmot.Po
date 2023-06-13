@@ -1,0 +1,8 @@
+libISOmods_a-cmot.o libISOmods_a-cmot.o: src/modules/cmot.c config.h \
+  strconf.h /usr/include/LiS/sys/LiS/config.h
+
+config.h:
+
+strconf.h:
+
+/usr/include/LiS/sys/LiS/config.h:

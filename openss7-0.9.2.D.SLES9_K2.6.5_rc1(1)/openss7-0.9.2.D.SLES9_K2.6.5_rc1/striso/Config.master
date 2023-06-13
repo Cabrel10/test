@@ -1,0 +1,62 @@
+#
+# included from /root/XTI.Work/openss7-0.9.2.D.rc2/striso/src/modules/lis.conf Sun Oct  1 16:42:39 CDT 2006
+#
+file ./src/modules/lis.conf
+# @(#) lis.conf,v OpenSS7-0_9_2_D_rc2(0.9.2.2) 2006/07/11 12:32:05
+# Copyright (c) 2001-2006  OpenSS7 Corporation <http://www.openss7.com>
+# Copyright (c) 1997-2000  Brian F. G. Bidulock <bidulock@openss7.org>
+
+module	cmot		cmot_
+#module	isot		isot_
+#module	itot		itot_
+#module	lpp		lpp_
+#module	tcpns		tcpns_
+#module	xot		xot_
+
+objname	module	cmot		cmot
+#objname	module	isot		isot
+#objname module	itot		itot
+#objname	module	lpp		lpp
+#objname module	tcpns		tcpns
+#objname	module	xot		xot
+
+loadable    cmot
+#loadable    isot
+#loadable    itot
+#loadable    lpp
+#loadable    tcpns
+#loadable    xot
+
+#
+# included from /root/XTI.Work/openss7-0.9.2.D.rc2/striso/src/drivers/lis.conf Sun Oct  1 16:42:39 CDT 2006
+#
+file ./src/drivers/lis.conf
+# @(#) lis.conf,v OpenSS7-0_9_2_D_rc2(0.9.2.2) 2006/07/11 12:32:04
+# Copyright (c) 2001-2006  OpenSS7 Corporation <http://www.openss7.com>
+# Copyright (c) 1997-2000  Brian F. G. Bidulock <bidulock@openss7.org>
+
+driver	clns		clns_		*
+#driver	tp		tp_		*
+#driver	x25-lapb	lapb_		*
+#driver	x25-plp		plp_		*
+
+objname	driver	clns		clns
+#objname	driver	tp		tp
+#objname	driver	x25-lapb	x25-lapb
+#objname	driver	x25-plp		x25-plp
+
+loadable    clns
+#loadable    tp
+#loadable    x25-lapb
+#loadable    x25-plp
+
+node	/dev/clns	    c	0666	clns		0
+#node	/dev/tp		    c	0666	230		tp
+#node	/dev/tp0	    c	0666	tp		1
+#node	/dev/tp1	    c	0666	tp		2
+#node	/dev/tp2	    c	0666	tp		3
+#node	/dev/tp3	    c	0666	tp		4
+#node	/dev/tp4	    c	0666	tp		5
+#node	/dev/x25-lapb	    c	0666	230		x25-lapb
+#node	/dev/x25-plp	    c	0666	230		x25-plp
+

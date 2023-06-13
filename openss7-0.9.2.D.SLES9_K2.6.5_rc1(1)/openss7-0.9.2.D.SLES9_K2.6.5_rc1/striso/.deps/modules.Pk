@@ -1,0 +1,8 @@
+stamp-mobjects:  streams_cmot.mod.c streams_clns.mod.c  
+
+stamp-kobjects:  streams_cmot.o streams_clns.o  
+
+sinclude .deps/streams_cmot.mod.Po
+sinclude .deps/streams_cmot.Pko
+sinclude .deps/streams_clns.mod.Po
+sinclude .deps/streams_clns.Pko

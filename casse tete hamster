@@ -1,0 +1,14 @@
+Explications des Modifications
+Bloc de classe :
+
+Paramètres :
+pos: Position initiale du bloc (tuple (x, y)).
+size: Taille du bloc (tuple (width, height)).
+is_horizontal: Définit si le bloc se déplace horizontalement ( True) ou verticalement ( False).
+Attributs :
+dragging: Indiquez si le bloc est en cours de déplacement avec la souris.
+Création des blocs :
+
+Chaque bloc est créé avec des positions spécifiques et des tailles définies.
+Exemple : Block(RED, (2 * BLOCK_SIZE, 0), (BLOCK_SIZE, 2 * BLOCK_SIZE), False)crée un bloc rouge vertical de 2 cases de hauteur placé en position (2, 0).
+
